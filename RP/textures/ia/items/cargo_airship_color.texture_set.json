@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "cargo_airship_color",
+    "metalness_emissive_roughness_subsurface": "cargo_airship_color_mers",
+    "heightmap": "cargo_airship_color_heightmap"
+  }
+}

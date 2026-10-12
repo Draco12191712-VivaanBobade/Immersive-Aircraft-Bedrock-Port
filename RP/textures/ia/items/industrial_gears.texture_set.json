@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "industrial_gears",
+    "metalness_emissive_roughness_subsurface": "industrial_gears_mers",
+    "heightmap": "industrial_gears_heightmap"
+  }
+}

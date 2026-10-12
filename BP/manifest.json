@@ -1,67 +1,75 @@
 {
-  "format_version": 2,
-  "metadata": {
-    "authors": [
-      "Draco12191712 (Vivaan Bobade)",
-      "Conczin (original Immersive Aircraft)"
-    ],
-    "license": "GPL-3.0",
-    "url": "https://github.com/Luke100000/ImmersiveAircraft",
-    "product_type": "addon"
-  },
-  "header": {
-    "name": "§6§lImmersive Aircraft§r §c[BP]§r",
-    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3",
-    "min_engine_version": [
-      1,
-      26,
-      0
-    ],
-    "uuid": "8f4c2b1e-6d3a-4e7f-9b2c-1a5d7e3f9c40",
-    "version": [
-      1,
-      0,
-      0
-    ]
-  },
-  "modules": [
-    {
-      "type": "data",
-      "uuid": "2b7e9d14-5c8a-4f3e-a1d6-9e0b4c7f2a85",
-      "version": [
-        1,
-        0,
-        0
-      ]
-    },
-    {
-      "type": "script",
-      "language": "javascript",
-      "uuid": "c6a1f3e8-9b2d-4d7c-8e5f-3a4b6c9d1e27",
-      "entry": "scripts/main.js",
-      "version": [
-        1,
-        0,
-        0
-      ]
-    }
-  ],
-  "dependencies": [
-    {
-      "uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
-      "version": [
-        1,
-        0,
-        0
-      ]
-    },
-    {
-      "module_name": "@minecraft/server",
-      "version": "2.10.0"
-    },
-    {
-      "module_name": "@minecraft/server-ui",
-      "version": "2.2.0"
-    }
-  ]
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Draco12191712 (Vivaan Bobade)",
+			"Conczin (original Immersive Aircraft)"
+		],
+		"license": "GPL-3.0",
+		"url": "https://github.com/Luke100000/ImmersiveAircraft",
+		"product_type": "addon",
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "§6§lImmersive Aircraft§r §c[BP]§r",
+		"description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3",
+		"min_engine_version": [
+			1,
+			26,
+			0
+		],
+		"uuid": "8f4c2b1e-6d3a-4e7f-9b2c-1a5d7e3f9c40",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "2b7e9d14-5c8a-4f3e-a1d6-9e0b4c7f2a85",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "c6a1f3e8-9b2d-4d7c-8e5f-3a4b6c9d1e27",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.10.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.2.0"
+		}
+	]
 }

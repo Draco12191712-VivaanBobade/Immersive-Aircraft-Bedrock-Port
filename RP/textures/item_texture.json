@@ -1,0 +1,96 @@
+{
+  "resource_pack_name": "immersive_aircraft",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "ia_hull": {
+      "textures": "textures/ia/items/hull"
+    },
+    "ia_engine": {
+      "textures": "textures/ia/items/engine"
+    },
+    "ia_sail": {
+      "textures": "textures/ia/items/sail"
+    },
+    "ia_propeller": {
+      "textures": "textures/ia/items/propeller"
+    },
+    "ia_boiler": {
+      "textures": "textures/ia/items/boiler"
+    },
+    "ia_airship": {
+      "textures": "textures/ia/items/airship_icon"
+    },
+    "ia_airship_dyed": {
+      "textures": "textures/ia/items/airship_dyed"
+    },
+    "ia_cargo_airship": {
+      "textures": "textures/ia/items/cargo_airship_icon"
+    },
+    "ia_cargo_airship_dyed": {
+      "textures": "textures/ia/items/cargo_airship_dyed"
+    },
+    "ia_warship": {
+      "textures": "textures/ia/items/warship_icon"
+    },
+    "ia_warship_dyed": {
+      "textures": "textures/ia/items/warship_dyed"
+    },
+    "ia_biplane": {
+      "textures": "textures/ia/items/biplane"
+    },
+    "ia_gyrodyne": {
+      "textures": "textures/ia/items/gyrodyne"
+    },
+    "ia_quadrocopter": {
+      "textures": "textures/ia/items/quadrocopter"
+    },
+    "ia_bamboo_hopper": {
+      "textures": "textures/ia/items/bamboo_hopper"
+    },
+    "ia_rotary_cannon": {
+      "textures": "textures/ia/items/rotary_cannon"
+    },
+    "ia_heavy_crossbow": {
+      "textures": "textures/ia/items/heavy_crossbow"
+    },
+    "ia_telescope": {
+      "textures": "textures/ia/items/telescope"
+    },
+    "ia_bomb_bay": {
+      "textures": "textures/ia/items/bomb_bay"
+    },
+    "ia_enhanced_propeller": {
+      "textures": "textures/ia/items/enhanced_propeller"
+    },
+    "ia_eco_engine": {
+      "textures": "textures/ia/items/eco_engine"
+    },
+    "ia_nether_engine": {
+      "textures": "textures/ia/items/nether_engine"
+    },
+    "ia_steel_boiler": {
+      "textures": "textures/ia/items/steel_boiler"
+    },
+    "ia_industrial_gears": {
+      "textures": "textures/ia/items/industrial_gears"
+    },
+    "ia_sturdy_pipes": {
+      "textures": "textures/ia/items/sturdy_pipes"
+    },
+    "ia_gyroscope": {
+      "textures": "textures/ia/items/gyroscope"
+    },
+    "ia_gyroscope_hud": {
+      "textures": "textures/ia/items/gyroscope_hud"
+    },
+    "ia_gyroscope_dials": {
+      "textures": "textures/ia/items/gyroscope_dials"
+    },
+    "ia_hull_reinforcement": {
+      "textures": "textures/ia/items/hull_reinforcement"
+    },
+    "ia_improved_landing_gear": {
+      "textures": "textures/ia/items/improved_landing_gear"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ia:rotary_cannon",
+      "menu_category": {
+        "category": "equipment",
+        "group": "ia:itemGroup.name.immersive_aircraft"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "ia_rotary_cannon"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.ia:rotary_cannon"
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}

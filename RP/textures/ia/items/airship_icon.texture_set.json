@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "airship_icon",
+    "metalness_emissive_roughness_subsurface": "airship_icon_mers",
+    "heightmap": "airship_icon_heightmap"
+  }
+}

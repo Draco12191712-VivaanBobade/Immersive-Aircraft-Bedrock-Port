@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ia:boiler",
+      "menu_category": {
+        "category": "items",
+        "group": "ia:itemGroup.name.immersive_aircraft"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "ia_boiler"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.ia:boiler"
+      },
+      "minecraft:max_stack_size": 8
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ia:improved_landing_gear",
+      "menu_category": {
+        "category": "items",
+        "group": "ia:itemGroup.name.immersive_aircraft"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "ia_improved_landing_gear"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.ia:improved_landing_gear"
+      },
+      "minecraft:max_stack_size": 8
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ia:hull_reinforcement",
+      "menu_category": {
+        "category": "items",
+        "group": "ia:itemGroup.name.immersive_aircraft"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "ia_hull_reinforcement"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.ia:hull_reinforcement"
+      },
+      "minecraft:max_stack_size": 8
+    }
+  }
+}
