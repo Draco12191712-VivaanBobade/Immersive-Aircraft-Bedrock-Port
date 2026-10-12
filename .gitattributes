@@ -1,0 +1,56 @@
+* text=auto eol=lf
+*.json linguist-language=JavaScript
+*.js text eol=lf linguist-language=JavaScript
+*.mcfunction linguist-language=mcfunction
+*.lang text eol=lf
+*.molang text eol=lf
+*.material text eol=lf
+*.fx text eol=lf
+*.glsl text eol=lf
+*.md text eol=lf
+*.ts text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.dds binary
+*.ico binary
+*.psd binary
+*.ogg binary
+*.wav binary
+*.fsb binary
+*.ttf binary
+*.otf binary
+*.mcstructure binary
+*.material.bin binary linguist-generated=true
+*.bin binary linguist-generated=true
+*.mcpack binary
+*.mcaddon binary
+*.mcworld binary
+*.mctemplate binary
+*.zip binary
+*.7z binary
+*.gz binary
+*.bbmodel -diff linguist-language=JSON
+*.gif binary
+*.mp4 binary
+*.webp binary
+*.pdf binary
+dist/** linguist-generated=true
+build/** linguist-generated=true
+out/** linguist-generated=true
+node_modules/** linguist-vendored=true
+.gitignore export-ignore
+.gitattributes export-ignore
+.editorconfig export-ignore
+.vscode export-ignore
+.bridge export-ignore
+.history export-ignore
+docs export-ignore
+tests export-ignore
+test export-ignore
+*.code-workspace export-ignore
