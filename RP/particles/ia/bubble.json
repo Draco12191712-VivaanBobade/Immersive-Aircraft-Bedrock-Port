@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "ia:bubble",
+      "basic_render_parameters": {
+        "material": "particles_alpha",
+        "texture": "textures/particle/particles"
+      }
+    },
+    "components": {
+      "minecraft:emitter_lifetime_once": {},
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 2
+      },
+      "minecraft:emitter_shape_box": {
+        "half_dimensions": [
+          "v.hw ?? 1",
+          "v.hh ?? 1",
+          "v.hw ?? 1"
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ]
+      },
+      "minecraft:particle_initial_speed": 0.5,
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "math.random(0.3, 1.0)"
+      },
+      "minecraft:particle_expire_if_not_in_blocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+      ],
+      "minecraft:particle_motion_dynamic": {
+        "linear_acceleration": [
+          0,
+          0.8,
+          0
+        ],
+        "linear_drag_coefficient": 5
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [
+          0.06,
+          0.06
+        ],
+        "facing_camera_mode": "lookat_xyz",
+        "uv": {
+          "texture_width": 128,
+          "texture_height": 128,
+          "uv": [
+            0,
+            16
+          ],
+          "uv_size": [
+            8,
+            8
+          ]
+        }
+      }
+    }
+  }
+}
