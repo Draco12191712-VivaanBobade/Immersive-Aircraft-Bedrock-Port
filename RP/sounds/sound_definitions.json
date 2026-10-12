@@ -1,0 +1,146 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "ia.engine_start": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/engine_start",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.engine_start_warship": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/engine_start_warship",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.engine_start_bamboo_hopper": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/engine_start_bamboo_hopper",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.warship": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/warship",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.propeller": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/propeller",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.propeller_bamboo_hopper": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/propeller_bamboo_hopper",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.propeller_small": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/propeller_small",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.propeller_tiny": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/propeller_tiny",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.woosh": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/woosh",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.cannon": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/cannon",
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ia.repair": {
+      "category": "neutral",
+      "min_distance": 1.0,
+      "max_distance": 16.0,
+      "sounds": [
+        {
+          "name": "sounds/ia/repair_0",
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ia/repair_1",
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ia/repair_2",
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ia/repair_3",
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ia/repair_4",
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ia/repair_5",
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}
