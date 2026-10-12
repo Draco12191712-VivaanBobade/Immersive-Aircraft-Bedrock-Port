@@ -1,0 +1,37 @@
+{
+  "type": "minecraftBedrock",
+  "name": "Immersive Aircraft: Bedrock Port",
+  "namespace": "ia",
+  "authors": ["Draco12191712 (Vivaan Bobade)"],
+  "targetVersion": "1.26.0",
+  "description": "A set of vanilla style, customizable and upgradable aircraft, from biplanes to airships. Original by Conczin. Bedrock port by Draco12191712 (Vivaan Bobade) V0.0.1",
+  "experimentalGameplay": {},
+  "bdsProject": false,
+  "packs": {
+    "behaviorPack": "./BP",
+    "resourcePack": "./RP"
+  },
+  "worlds": ["./worlds/*"],
+  "compiler": {
+    "plugins": [
+      "generatorScripts",
+      "typeScript",
+      "entityIdentifierAlias",
+      "customEntityComponents",
+      "customItemComponents",
+      "customBlockComponents",
+      "customCommands",
+      "moLang",
+      [
+        "simpleRewrite",
+        {
+          "packName": "Immersive Aircraft: Bedrock Port"
+        }
+      ],
+      "formatVersionCorrection"
+    ]
+  },
+  "bridge": {
+    "formatVersion": 1
+  }
+}
