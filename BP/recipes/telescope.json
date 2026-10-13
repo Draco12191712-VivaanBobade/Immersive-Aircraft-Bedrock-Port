@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:telescope"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "T",
+      "C"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:spyglass"
+      },
+      "C": {
+        "item": "minecraft:copper_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:telescope",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:cargo_hold",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/ia/entity/bullet"
+      },
+      "geometry": {
+        "default": "geometry.ia.empty"
+      },
+      "render_controllers": [
+        "controller.render.ia.empty"
+      ]
+    }
+  }
+}

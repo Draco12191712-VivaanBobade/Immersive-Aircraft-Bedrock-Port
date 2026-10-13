@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:gyrodyne"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " S ",
+      "HPH",
+      " S "
+    ],
+    "key": {
+      "S": {
+        "item": "ia:sail"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "P": {
+        "item": "ia:propeller"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:gyrodyne",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.bamboo_hopper.main": {
+      "loop": true,
+      "bones": {
+        "ia_root": {
+          "rotation": [
+            "v.rx",
+            0,
+            0
+          ]
+        },
+        "ia_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.rz"
+          ]
+        },
+        "propellor_center": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 60"
+          ]
+        },
+        "right_rudder": {
+          "rotation": [
+            0,
+            "-(-v.ix * 20)",
+            0.0
+          ]
+        },
+        "left_rudder": {
+          "rotation": [
+            0,
+            "-(-v.ix * 20)",
+            0.0
+          ]
+        },
+        "propellor_left": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 100"
+          ]
+        },
+        "flap": {
+          "rotation": [
+            "-(v.iz * 20)",
+            0,
+            0.0
+          ]
+        },
+        "propellor_right": {
+          "rotation": [
+            0,
+            0,
+            "-v.eng_rot * 100"
+          ]
+        },
+        "w0_rc_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_0_pitch": {
+          "rotation": [
+            "-(v.w0_rc_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_rc_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_1_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_1_pitch": {
+          "rotation": [
+            "-(v.w0_rc_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_0_pitch": {
+          "rotation": [
+            "-(v.w0_ts_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_1_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_1_pitch": {
+          "rotation": [
+            "-(v.w0_ts_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w1_rc_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_rc_0_yaw)",
+            0.0
+          ]
+        },
+        "w1_rc_0_pitch": {
+          "rotation": [
+            "-(v.w1_rc_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_rc_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "w1_rc_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_rc_1_yaw)",
+            0.0
+          ]
+        },
+        "w1_rc_1_pitch": {
+          "rotation": [
+            "-(v.w1_rc_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_rc_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "w1_ts_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_ts_0_yaw)",
+            0.0
+          ]
+        },
+        "w1_ts_0_pitch": {
+          "rotation": [
+            "-(v.w1_ts_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_ts_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "w1_ts_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_ts_1_yaw)",
+            0.0
+          ]
+        },
+        "w1_ts_1_pitch": {
+          "rotation": [
+            "-(v.w1_ts_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_ts_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "trail_0": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 48.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.bamboo_hopper.fx_damage": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "damage",
+            "locator": "center",
+            "pre_effect_script": "v.health = q.property('ia:health'); v.hw = 2.25; v.hh = 1.125;"
+          }
+        ]
+      }
+    },
+    "animation.ia.bamboo_hopper.fx_bubbles": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "bubble",
+            "locator": "center",
+            "pre_effect_script": "v.hw = 2.25; v.hh = 1.125;"
+          }
+        ]
+      }
+    },
+    "animation.ia.bamboo_hopper.fx_boost": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "firework",
+            "locator": "center"
+          }
+        ]
+      }
+    },
+    "animation.ia.bamboo_hopper.fx_engine": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "smoke",
+            "locator": "smoke_l",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.vx = 0; v.vz = -0.2;"
+          },
+          {
+            "effect": "smoke",
+            "locator": "smoke_r",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.vx = 0; v.vz = -0.2;"
+          },
+          {
+            "effect": "flame",
+            "locator": "smoke_l",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.vx = 0; v.vz = -0.2;"
+          },
+          {
+            "effect": "flame",
+            "locator": "smoke_r",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.vx = 0; v.vz = -0.2;"
+          }
+        ]
+      }
+    },
+    "animation.ia.bamboo_hopper.fx_splash": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "splash",
+            "locator": "splash_l",
+            "pre_effect_script": "v.speed = q.property('ia:speed'); v.fluid = q.property('ia:fluid');"
+          },
+          {
+            "effect": "splash",
+            "locator": "splash_r",
+            "pre_effect_script": "v.speed = q.property('ia:speed'); v.fluid = q.property('ia:fluid');"
+          }
+        ]
+      }
+    },
+    "animation.ia.bamboo_hopper.fx_trails": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "trail",
+            "locator": "trail_0_a",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(v.power * q.property('ia:speed'), 0, 1); v.gray = 1.0; v.life = 1.0; v.size = 0.5;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_0_b",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(v.power * q.property('ia:speed'), 0, 1); v.gray = 1.0; v.life = 1.0; v.size = 0.5;"
+          }
+        ]
+      }
+    }
+  }
+}

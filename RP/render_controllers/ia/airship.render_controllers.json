@@ -1,0 +1,395 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ia.airship.banner_0": {
+      "geometry": "Geometry.banner_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.banner"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": "math.mod(math.floor(q.property('ia:banner') / 65536), 256) / 255",
+        "g": "math.mod(math.floor(q.property('ia:banner') / 256), 256) / 255",
+        "b": "math.mod(q.property('ia:banner'), 256) / 255",
+        "a": 0.85
+      },
+      "part_visibility": [
+        {
+          "*": "q.property('ia:banner') >= 0"
+        },
+        {
+          "lod1": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_front": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_small": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "lod0": "(q.property('ia:banner') >= 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_front_2": "(q.property('ia:banner') >= 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_small_2": "(q.property('ia:banner') >= 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_2": "(q.property('ia:banner') >= 0) && (q.distance_from_camera < 32)"
+        }
+      ]
+    },
+    "controller.render.ia.airship.colored_1": {
+      "geometry": "Geometry.colored_1",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex1"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": "math.mod(math.floor(q.property('ia:dye') / 65536), 256) / 255",
+        "g": "math.mod(math.floor(q.property('ia:dye') / 256), 256) / 255",
+        "b": "math.mod(q.property('ia:dye'), 256) / 255",
+        "a": 0.8
+      },
+      "part_visibility": [
+        {
+          "*": "q.property('ia:dye') >= 0"
+        },
+        {
+          "lod1": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_front": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_small": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "lod0": "(q.property('ia:dye') >= 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_front_2": "(q.property('ia:dye') >= 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_small_2": "(q.property('ia:dye') >= 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_2": "(q.property('ia:dye') >= 0) && (q.distance_from_camera < 32)"
+        }
+      ]
+    },
+    "controller.render.ia.airship.main_0": {
+      "geometry": "Geometry.main_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex0"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.15,
+        "b": 0.15,
+        "a": "(1 - q.property('ia:health')) * 0.5"
+      },
+      "part_visibility": [
+        {
+          "lod1": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_front": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_small": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag": "q.distance_from_camera >= 32"
+        },
+        {
+          "lod0": "q.distance_from_camera < 32"
+        },
+        {
+          "flag_front_2": "q.distance_from_camera < 32"
+        },
+        {
+          "flag_small_2": "q.distance_from_camera < 32"
+        },
+        {
+          "flag_2": "q.distance_from_camera < 32"
+        }
+      ]
+    },
+    "controller.render.ia.airship.sails_0": {
+      "geometry": "Geometry.sails_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex0"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": "math.mod(math.floor(q.property('ia:sail') / 65536), 256) / 255",
+        "g": "math.mod(math.floor(q.property('ia:sail') / 256), 256) / 255",
+        "b": "math.mod(q.property('ia:sail'), 256) / 255",
+        "a": 0.65
+      },
+      "part_visibility": [
+        {
+          "lod1": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_front": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_small": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag": "q.distance_from_camera >= 32"
+        },
+        {
+          "lod0": "q.distance_from_camera < 32"
+        },
+        {
+          "flag_front_2": "q.distance_from_camera < 32"
+        },
+        {
+          "flag_small_2": "q.distance_from_camera < 32"
+        },
+        {
+          "flag_2": "q.distance_from_camera < 32"
+        }
+      ]
+    },
+    "controller.render.ia.airship.uncolored_0": {
+      "geometry": "Geometry.uncolored_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex0"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": "q.property('ia:dye') < 0"
+        },
+        {
+          "lod1": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_front": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_small": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "lod0": "(q.property('ia:dye') < 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_front_2": "(q.property('ia:dye') < 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_small_2": "(q.property('ia:dye') < 0) && (q.distance_from_camera < 32)"
+        },
+        {
+          "flag_2": "(q.property('ia:dye') < 0) && (q.distance_from_camera < 32)"
+        }
+      ]
+    },
+    "controller.render.ia.airship.wpn_bb_0": {
+      "geometry": "Geometry.wpn_bb_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_bb"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_bb_0": "q.property('ia:wpn0') == 4"
+        },
+        {
+          "w0_bb_0_base": "q.property('ia:wpn0') == 4"
+        },
+        {
+          "w0_bb_1": "q.property('ia:wpn0') == 4"
+        },
+        {
+          "w0_bb_1_base": "q.property('ia:wpn0') == 4"
+        }
+      ]
+    },
+    "controller.render.ia.airship.wpn_hc_0": {
+      "geometry": "Geometry.wpn_hc_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_hc"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_hc_0": "q.property('ia:wpn0') == 2"
+        },
+        {
+          "w0_hc_0_base": "q.property('ia:wpn0') == 2"
+        },
+        {
+          "w0_hc_1": "q.property('ia:wpn0') == 2"
+        },
+        {
+          "w0_hc_1_base": "q.property('ia:wpn0') == 2"
+        }
+      ]
+    },
+    "controller.render.ia.airship.wpn_rc_0": {
+      "geometry": "Geometry.wpn_rc_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_rc"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_rc_0": "q.property('ia:wpn0') == 1"
+        },
+        {
+          "w0_rc_0_base": "q.property('ia:wpn0') == 1"
+        },
+        {
+          "w0_rc_0_yaw": "q.property('ia:wpn0') == 1"
+        },
+        {
+          "w0_rc_0_pitch": "q.property('ia:wpn0') == 1"
+        },
+        {
+          "w0_rc_0_roll": "q.property('ia:wpn0') == 1"
+        }
+      ]
+    },
+    "controller.render.ia.airship.wpn_ts_0": {
+      "geometry": "Geometry.wpn_ts_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_ts"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_ts_0": "q.property('ia:wpn0') == 3"
+        },
+        {
+          "w0_ts_0_base": "q.property('ia:wpn0') == 3"
+        },
+        {
+          "w0_ts_0_yaw": "q.property('ia:wpn0') == 3"
+        },
+        {
+          "w0_ts_0_pitch": "q.property('ia:wpn0') == 3"
+        },
+        {
+          "w0_ts_0_roll": "q.property('ia:wpn0') == 3"
+        }
+      ]
+    }
+  }
+}

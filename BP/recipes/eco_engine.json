@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:eco_engine"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CNC",
+      "NEN",
+      "RRR"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:slime_ball"
+      },
+      "R": {
+        "item": "minecraft:brick"
+      },
+      "N": {
+        "item": "minecraft:gold_ingot"
+      },
+      "E": {
+        "item": "ia:engine"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:eco_engine",
+      "count": 1
+    }
+  }
+}

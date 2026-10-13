@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:heavy_crossbow"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CH",
+      "W "
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:crossbow"
+      },
+      "H": {
+        "item": "minecraft:tripwire_hook"
+      },
+      "W": {
+        "tag": "minecraft:logs"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:heavy_crossbow",
+      "count": 1
+    }
+  }
+}

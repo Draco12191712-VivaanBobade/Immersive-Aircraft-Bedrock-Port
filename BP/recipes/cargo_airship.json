@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:cargo_airship"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CAC",
+      "CHC"
+    ],
+    "key": {
+      "A": {
+        "item": "ia:airship"
+      },
+      "C": {
+        "item": "minecraft:chest"
+      },
+      "H": {
+        "item": "ia:hull"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:cargo_airship",
+      "count": 1
+    }
+  }
+}

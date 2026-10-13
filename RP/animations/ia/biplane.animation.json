@@ -1,0 +1,181 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.biplane.main": {
+      "loop": true,
+      "bones": {
+        "ia_root": {
+          "rotation": [
+            "v.rx",
+            0,
+            0
+          ]
+        },
+        "ia_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.rz"
+          ]
+        },
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 100"
+          ]
+        },
+        "rudder": {
+          "rotation": [
+            0,
+            "-(-v.ix * 18)",
+            0.0
+          ]
+        },
+        "elevator": {
+          "rotation": [
+            "-(-v.iz * 15)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_0_pitch": {
+          "rotation": [
+            "-(v.w0_rc_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_0_pitch": {
+          "rotation": [
+            "-(v.w0_ts_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        }
+      }
+    },
+    "animation.ia.biplane.fx_damage": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "damage",
+            "locator": "center",
+            "pre_effect_script": "v.health = q.property('ia:health'); v.hw = 1.3125; v.hh = 0.6375;"
+          }
+        ]
+      }
+    },
+    "animation.ia.biplane.fx_bubbles": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "bubble",
+            "locator": "center",
+            "pre_effect_script": "v.hw = 1.3125; v.hh = 0.6375;"
+          }
+        ]
+      }
+    },
+    "animation.ia.biplane.fx_boost": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "firework",
+            "locator": "center"
+          }
+        ]
+      }
+    },
+    "animation.ia.biplane.fx_engine": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "smoke",
+            "locator": "smoke_l",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.side = 1; v.vx = 0.2;"
+          },
+          {
+            "effect": "smoke",
+            "locator": "smoke_r",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.side = 1; v.vx = -0.2;"
+          },
+          {
+            "effect": "flame",
+            "locator": "smoke_l",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.side = 1; v.vx = 0.2;"
+          },
+          {
+            "effect": "flame",
+            "locator": "smoke_r",
+            "pre_effect_script": "v.spin = q.property('ia:spin'); v.side = 1; v.vx = -0.2;"
+          }
+        ]
+      }
+    },
+    "animation.ia.biplane.fx_trails": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "trail",
+            "locator": "trail_0_a",
+            "pre_effect_script": "v.tx = -3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_0_b",
+            "pre_effect_script": "v.tx = -3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_1_a",
+            "pre_effect_script": "v.tx = 3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_1_b",
+            "pre_effect_script": "v.tx = 3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+          }
+        ]
+      }
+    }
+  }
+}

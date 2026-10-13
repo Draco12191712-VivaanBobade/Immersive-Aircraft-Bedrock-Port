@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:gyroscope_dials"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CCC",
+      "SGV"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:noteblock"
+      },
+      "G": {
+        "item": "ia:gyroscope"
+      },
+      "C": {
+        "item": "minecraft:clock"
+      },
+      "V": {
+        "item": "minecraft:lever"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:gyroscope_dials",
+      "count": 1
+    }
+  }
+}

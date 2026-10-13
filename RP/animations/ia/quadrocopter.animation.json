@@ -1,0 +1,139 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.quadrocopter.main": {
+      "loop": true,
+      "bones": {
+        "ia_root": {
+          "rotation": [
+            "v.rx",
+            0,
+            0
+          ]
+        },
+        "ia_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.rz"
+          ]
+        },
+        "propellor_0": {
+          "rotation": [
+            0,
+            "-(v.eng_rot * 150)",
+            0.0
+          ]
+        },
+        "propellor_3": {
+          "rotation": [
+            0,
+            "-(v.eng_rot * 150)",
+            0.0
+          ]
+        },
+        "propellor_2": {
+          "rotation": [
+            0,
+            "-(-v.eng_rot * 150)",
+            0.0
+          ]
+        },
+        "propellor_1": {
+          "rotation": [
+            0,
+            "-(-v.eng_rot * 150)",
+            0.0
+          ]
+        },
+        "engine": {
+          "position": [
+            "math.random(-0.5, 0.5) * v.power / 8",
+            "math.random(-0.5, 0.5) * v.power / 8",
+            "math.random(-0.5, 0.5) * v.power / 8"
+          ]
+        },
+        "w0_rc_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_0_pitch": {
+          "rotation": [
+            "-(v.w0_rc_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_0_pitch": {
+          "rotation": [
+            "-(v.w0_ts_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        }
+      }
+    },
+    "animation.ia.quadrocopter.fx_damage": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "damage",
+            "locator": "center",
+            "pre_effect_script": "v.health = q.property('ia:health'); v.hw = 1.125; v.hh = 0.375;"
+          }
+        ]
+      }
+    },
+    "animation.ia.quadrocopter.fx_bubbles": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "bubble",
+            "locator": "center",
+            "pre_effect_script": "v.hw = 1.125; v.hh = 0.375;"
+          }
+        ]
+      }
+    },
+    "animation.ia.quadrocopter.fx_boost": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "firework",
+            "locator": "center"
+          }
+        ]
+      }
+    }
+  }
+}

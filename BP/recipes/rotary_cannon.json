@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:rotary_cannon"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "D",
+      "G",
+      "C"
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:dispenser"
+      },
+      "G": {
+        "item": "ia:industrial_gears"
+      },
+      "C": {
+        "item": "minecraft:copper_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:rotary_cannon",
+      "count": 1
+    }
+  }
+}

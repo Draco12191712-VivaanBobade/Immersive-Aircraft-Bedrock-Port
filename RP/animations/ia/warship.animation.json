@@ -1,0 +1,543 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.warship.main": {
+      "loop": true,
+      "bones": {
+        "ia_root": {
+          "rotation": [
+            "v.rx",
+            0,
+            0
+          ]
+        },
+        "ia_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.rz"
+          ]
+        },
+        "arms_joint": {
+          "rotation": [
+            "-(v.turret_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "turret_seat": {
+          "rotation": [
+            0,
+            "-(v.turret_yaw)",
+            0.0
+          ]
+        },
+        "lid4": {
+          "rotation": [
+            0,
+            0,
+            "v.chest"
+          ]
+        },
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40"
+          ]
+        },
+        "envelope": {
+          "rotation": [
+            "-(v.balloon_pitch)",
+            0,
+            "v.balloon_roll"
+          ]
+        },
+        "propeller2": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40"
+          ]
+        },
+        "propeller4": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40"
+          ]
+        },
+        "propeller3": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40"
+          ]
+        },
+        "bolt": {
+          "position": [
+            0,
+            0.0,
+            "(1-v.turret_cd)*2"
+          ]
+        },
+        "string_hinge": {
+          "rotation": [
+            0,
+            "-((1-v.turret_cd)*20)",
+            0.0
+          ]
+        },
+        "right_limb_base": {
+          "rotation": [
+            0,
+            "-((1-v.turret_cd)*5)",
+            0.0
+          ]
+        },
+        "string_hinge2": {
+          "rotation": [
+            0,
+            "-(-(1-v.turret_cd)*20)",
+            0.0
+          ]
+        },
+        "lid3": {
+          "rotation": [
+            0,
+            0,
+            "v.chest"
+          ]
+        },
+        "lid2": {
+          "rotation": [
+            0,
+            0,
+            "v.chest"
+          ]
+        },
+        "lid5": {
+          "rotation": [
+            0,
+            0,
+            "v.chest"
+          ]
+        },
+        "left_limb_base": {
+          "rotation": [
+            0,
+            "-(-(1-v.turret_cd)*4)",
+            0.0
+          ]
+        },
+        "net": {
+          "position": [
+            "(math.cos(v.time * 229.18) + math.cos(v.time * 389.6)) * (0.005 + q.property('ia:speed') * 0.05) * 16",
+            0,
+            "(math.sin(v.time * 229.18) + math.sin(v.time * 389.6)) * (0.005 + q.property('ia:speed') * 0.05) * 16"
+          ]
+        },
+        "nose_fin_bottom_flag": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 740) * 2.5",
+            "math.cos(v.time * 389.6 + 1060) * 2.5",
+            0
+          ]
+        },
+        "nose_fin_top_flag": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 629) * 2.5",
+            "math.cos(v.time * 389.6 + 901) * 2.5",
+            0
+          ]
+        },
+        "tail_fin_flag": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 481) * 2.5",
+            "math.cos(v.time * 389.6 + 689) * 2.5",
+            0
+          ]
+        },
+        "w0_rc_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_0_pitch": {
+          "rotation": [
+            "-(v.w0_rc_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_rc_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_1_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_1_pitch": {
+          "rotation": [
+            "-(v.w0_rc_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_rc_2_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_2_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_2_pitch": {
+          "rotation": [
+            "-(v.w0_rc_2_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_2_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_rc_3_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_rc_3_yaw)",
+            0.0
+          ]
+        },
+        "w0_rc_3_pitch": {
+          "rotation": [
+            "-(v.w0_rc_3_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_rc_3_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_0_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_0_pitch": {
+          "rotation": [
+            "-(v.w0_ts_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_1_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_1_pitch": {
+          "rotation": [
+            "-(v.w0_ts_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_2_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_2_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_2_pitch": {
+          "rotation": [
+            "-(v.w0_ts_2_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_2_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w0_ts_3_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w0_ts_3_yaw)",
+            0.0
+          ]
+        },
+        "w0_ts_3_pitch": {
+          "rotation": [
+            "-(v.w0_ts_3_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w0_ts_3_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin0"
+          ]
+        },
+        "w1_rc_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_rc_0_yaw)",
+            0.0
+          ]
+        },
+        "w1_rc_0_pitch": {
+          "rotation": [
+            "-(v.w1_rc_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_rc_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "w1_rc_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_rc_1_yaw)",
+            0.0
+          ]
+        },
+        "w1_rc_1_pitch": {
+          "rotation": [
+            "-(v.w1_rc_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_rc_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "w1_ts_0_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_ts_0_yaw)",
+            0.0
+          ]
+        },
+        "w1_ts_0_pitch": {
+          "rotation": [
+            "-(v.w1_ts_0_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_ts_0_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "w1_ts_1_yaw": {
+          "rotation": [
+            0,
+            "-(-v.w1_ts_1_yaw)",
+            0.0
+          ]
+        },
+        "w1_ts_1_pitch": {
+          "rotation": [
+            "-(v.w1_ts_1_pitch)",
+            0,
+            0.0
+          ]
+        },
+        "w1_ts_1_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.spin1"
+          ]
+        },
+        "trail_0": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40.0"
+          ]
+        },
+        "trail_1": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40.0"
+          ]
+        },
+        "trail_2": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40.0"
+          ]
+        },
+        "trail_3": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 40.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.warship.fx_damage": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "damage",
+            "locator": "center",
+            "pre_effect_script": "v.health = q.property('ia:health'); v.hw = 3.75; v.hh = 4.875;"
+          }
+        ]
+      }
+    },
+    "animation.ia.warship.fx_bubbles": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "bubble",
+            "locator": "center",
+            "pre_effect_script": "v.hw = 3.75; v.hh = 4.875;"
+          }
+        ]
+      }
+    },
+    "animation.ia.warship.fx_boost": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "firework",
+            "locator": "center"
+          }
+        ]
+      }
+    },
+    "animation.ia.warship.fx_engine": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "smoke",
+            "locator": "chimney",
+            "pre_effect_script": "v.spin = 0; v.vx = 0; v.vz = 0; v.jitter = 0.2;"
+          }
+        ]
+      }
+    },
+    "animation.ia.warship.fx_trails": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "trail",
+            "locator": "trail_0_a",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.75; v.size = 0.25;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_0_b",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.75; v.size = 0.25;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_1_a",
+            "pre_effect_script": "v.tx = 2.5; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.7; v.size = 0.25;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_1_b",
+            "pre_effect_script": "v.tx = 2.5; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.7; v.size = 0.25;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_2_a",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.8; v.size = 0.25;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_2_b",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.8; v.size = 0.25;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_3_a",
+            "pre_effect_script": "v.tx = -2.5; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.7; v.size = 0.25;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_3_b",
+            "pre_effect_script": "v.tx = -2.5; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.25; v.life = 0.7; v.size = 0.25;"
+          }
+        ]
+      }
+    }
+  }
+}

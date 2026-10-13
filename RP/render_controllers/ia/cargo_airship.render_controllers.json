@@ -1,0 +1,193 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ia.cargo_airship.banner_0": {
+      "geometry": "Geometry.banner_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.banner"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": "math.mod(math.floor(q.property('ia:banner') / 65536), 256) / 255",
+        "g": "math.mod(math.floor(q.property('ia:banner') / 256), 256) / 255",
+        "b": "math.mod(q.property('ia:banner'), 256) / 255",
+        "a": 0.85
+      },
+      "part_visibility": [
+        {
+          "*": "q.property('ia:banner') >= 0"
+        },
+        {
+          "lod1": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_front": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_small": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag": "(q.property('ia:banner') >= 0) && (q.distance_from_camera >= 32)"
+        }
+      ]
+    },
+    "controller.render.ia.cargo_airship.colored_1": {
+      "geometry": "Geometry.colored_1",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex1"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": "math.mod(math.floor(q.property('ia:dye') / 65536), 256) / 255",
+        "g": "math.mod(math.floor(q.property('ia:dye') / 256), 256) / 255",
+        "b": "math.mod(q.property('ia:dye'), 256) / 255",
+        "a": 0.8
+      },
+      "part_visibility": [
+        {
+          "*": "q.property('ia:dye') >= 0"
+        },
+        {
+          "lod1": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_front": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_small": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
+        }
+      ]
+    },
+    "controller.render.ia.cargo_airship.main_0": {
+      "geometry": "Geometry.main_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex0"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.15,
+        "b": 0.15,
+        "a": "(1 - q.property('ia:health')) * 0.5"
+      },
+      "part_visibility": [
+        {
+          "lod1": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_front": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_small": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag": "q.distance_from_camera >= 32"
+        }
+      ]
+    },
+    "controller.render.ia.cargo_airship.sails_0": {
+      "geometry": "Geometry.sails_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex0"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": "math.mod(math.floor(q.property('ia:sail') / 65536), 256) / 255",
+        "g": "math.mod(math.floor(q.property('ia:sail') / 256), 256) / 255",
+        "b": "math.mod(q.property('ia:sail'), 256) / 255",
+        "a": 0.65
+      },
+      "part_visibility": [
+        {
+          "lod1": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_front": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag_small": "q.distance_from_camera >= 32"
+        },
+        {
+          "flag": "q.distance_from_camera >= 32"
+        }
+      ]
+    },
+    "controller.render.ia.cargo_airship.uncolored_0": {
+      "geometry": "Geometry.uncolored_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex0"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": "q.property('ia:dye') < 0"
+        },
+        {
+          "lod1": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_front": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag_small": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        },
+        {
+          "flag": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
+        }
+      ]
+    }
+  }
+}

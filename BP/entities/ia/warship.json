@@ -1,0 +1,478 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ia:warship",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "properties": {
+        "ia:rx": {
+          "type": "float",
+          "range": [
+            -720,
+            720
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:rz": {
+          "type": "float",
+          "range": [
+            -720,
+            720
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:ix": {
+          "type": "float",
+          "range": [
+            -1,
+            1
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:iy": {
+          "type": "float",
+          "range": [
+            -1,
+            1
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:iz": {
+          "type": "float",
+          "range": [
+            -1,
+            1
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:engine": {
+          "type": "float",
+          "range": [
+            0,
+            1
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:prop": {
+          "type": "float",
+          "range": [
+            0,
+            4
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:spin": {
+          "type": "float",
+          "range": [
+            0,
+            16
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:health": {
+          "type": "float",
+          "range": [
+            0,
+            1
+          ],
+          "default": 1.0,
+          "client_sync": true
+        },
+        "ia:speed": {
+          "type": "float",
+          "range": [
+            0,
+            16
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:vy": {
+          "type": "float",
+          "range": [
+            -16,
+            16
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:fluid": {
+          "type": "float",
+          "range": [
+            0,
+            8
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:boost": {
+          "type": "int",
+          "range": [
+            0,
+            100000
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "ia:dye": {
+          "type": "int",
+          "range": [
+            -1,
+            16777215
+          ],
+          "default": -1,
+          "client_sync": true
+        },
+        "ia:sail": {
+          "type": "int",
+          "range": [
+            0,
+            16777215
+          ],
+          "default": 16383998,
+          "client_sync": true
+        },
+        "ia:banner": {
+          "type": "int",
+          "range": [
+            -1,
+            16777215
+          ],
+          "default": -1,
+          "client_sync": true
+        },
+        "ia:wpn0": {
+          "type": "int",
+          "range": [
+            0,
+            4
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "ia:wpn1": {
+          "type": "int",
+          "range": [
+            0,
+            4
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "ia:aim0y": {
+          "type": "float",
+          "range": [
+            -720,
+            720
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:aim0p": {
+          "type": "float",
+          "range": [
+            -180,
+            180
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:aim1y": {
+          "type": "float",
+          "range": [
+            -720,
+            720
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:aim1p": {
+          "type": "float",
+          "range": [
+            -180,
+            180
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:spin0": {
+          "type": "float",
+          "range": [
+            -100000,
+            100000
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:spin1": {
+          "type": "float",
+          "range": [
+            -100000,
+            100000
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:trails": {
+          "type": "bool",
+          "default": true,
+          "client_sync": true
+        },
+        "ia:tyaw": {
+          "type": "float",
+          "range": [
+            -180,
+            180
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:tpitch": {
+          "type": "float",
+          "range": [
+            -180,
+            180
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:tcd": {
+          "type": "float",
+          "range": [
+            0,
+            1
+          ],
+          "default": 0.0,
+          "client_sync": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "ia_aircraft",
+          "ia_warship",
+          "inanimate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 5.0,
+        "height": 6.5
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 5.0,
+            "height": 6.5,
+            "pivot": [
+              0,
+              3.25,
+              0
+            ]
+          }
+        ]
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": true
+      },
+      "minecraft:is_collidable": {},
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": true
+      },
+      "minecraft:body_rotation_always_follows_head": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "breathes_air": true,
+        "breathes_water": true,
+        "breathes_lava": true,
+        "breathes_solids": true
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "has_damage",
+                    "value": "fall"
+                  },
+                  {
+                    "test": "has_damage",
+                    "value": "suffocation"
+                  },
+                  {
+                    "test": "has_damage",
+                    "value": "drowning"
+                  },
+                  {
+                    "test": "has_damage",
+                    "value": "fly_into_wall"
+                  },
+                  {
+                    "test": "has_damage",
+                    "value": "starve"
+                  },
+                  {
+                    "test": "has_damage",
+                    "value": "freezing"
+                  }
+                ]
+              }
+            },
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 0,
+          "use_motion_prediction_hints": true
+        }
+      },
+      "minecraft:rideable": {
+        "seat_count": 4,
+        "controlling_seat": 0,
+        "crouching_skip_interact": true,
+        "pull_in_entities": false,
+        "passenger_max_width": 5.0,
+        "interact_text": "action.interact.ia.board",
+        "family_types": [
+          "player",
+          "mob"
+        ],
+        "seats": [
+          {
+            "position": [
+              0.0,
+              0.5125,
+              0.6
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 1,
+            "lock_rider_rotation": 105
+          },
+          {
+            "position": [
+              0.0,
+              0.5125,
+              0.6
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 105
+          },
+          {
+            "position": [
+              0.0,
+              0.2,
+              2.5
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 45
+          },
+          {
+            "position": [
+              0.0,
+              0.5125,
+              0.6
+            ],
+            "min_rider_count": 3,
+            "max_rider_count": 3,
+            "lock_rider_rotation": 105
+          },
+          {
+            "position": [
+              0.0,
+              0.2,
+              2.5
+            ],
+            "min_rider_count": 3,
+            "max_rider_count": 3,
+            "lock_rider_rotation": 45
+          },
+          {
+            "position": [
+              0.0,
+              0.5125,
+              -0.3
+            ],
+            "min_rider_count": 3,
+            "max_rider_count": 3,
+            "lock_rider_rotation": 105
+          },
+          {
+            "position": [
+              0.0,
+              0.5125,
+              0.6
+            ],
+            "min_rider_count": 4,
+            "max_rider_count": 4,
+            "lock_rider_rotation": 105
+          },
+          {
+            "position": [
+              0.0,
+              0.2,
+              2.5
+            ],
+            "min_rider_count": 4,
+            "max_rider_count": 4,
+            "lock_rider_rotation": 45
+          },
+          {
+            "position": [
+              0.3,
+              0.5125,
+              -0.25
+            ],
+            "min_rider_count": 4,
+            "max_rider_count": 4,
+            "lock_rider_rotation": 105
+          },
+          {
+            "position": [
+              -0.3,
+              0.5125,
+              -0.35
+            ],
+            "min_rider_count": 4,
+            "max_rider_count": 4,
+            "lock_rider_rotation": 105
+          }
+        ]
+      },
+      "minecraft:inventory": {
+        "container_type": "inventory",
+        "inventory_size": 54,
+        "can_be_siphoned_from": false,
+        "private": true,
+        "restrict_to_owner": false
+      }
+    },
+    "events": {}
+  }
+}

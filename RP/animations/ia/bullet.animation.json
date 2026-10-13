@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.bullet.fx": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "bullet"
+          }
+        ]
+      }
+    }
+  }
+}

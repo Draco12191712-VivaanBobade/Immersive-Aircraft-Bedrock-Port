@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:airship"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SSS",
+      "SSS",
+      "HHE"
+    ],
+    "key": {
+      "S": {
+        "item": "ia:sail"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "E": {
+        "item": "ia:engine"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:airship",
+      "count": 1
+    }
+  }
+}

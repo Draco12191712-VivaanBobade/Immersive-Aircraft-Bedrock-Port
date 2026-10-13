@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:enhanced_propeller"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CC ",
+      " P ",
+      " CC"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "P": {
+        "item": "ia:propeller"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:enhanced_propeller",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:bamboo_hopper"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PHP",
+      "BEB",
+      "BBB"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:bamboo_block"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "E": {
+        "item": "ia:engine"
+      },
+      "P": {
+        "item": "ia:biplane"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:bamboo_hopper",
+      "count": 1
+    }
+  }
+}

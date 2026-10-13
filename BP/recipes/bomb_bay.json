@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:bomb_bay"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ITI",
+      "I I"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:tnt"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:bomb_bay",
+      "count": 1
+    }
+  }
+}

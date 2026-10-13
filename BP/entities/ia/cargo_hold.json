@@ -1,0 +1,62 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ia:cargo_hold",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "ia_cargo_hold",
+          "inanimate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.01,
+        "height": 0.01
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "breathes_water": true,
+        "breathes_air": true,
+        "breathes_lava": true,
+        "breathes_solids": true
+      },
+      "minecraft:inventory": {
+        "container_type": "inventory",
+        "inventory_size": 54,
+        "can_be_siphoned_from": false,
+        "private": true
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 0,
+            "height": 0,
+            "pivot": [
+              0,
+              -1000,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "events": {}
+  }
+}

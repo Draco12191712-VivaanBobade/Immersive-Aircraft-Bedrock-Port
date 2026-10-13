@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:sail"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CCS",
+      "CCS",
+      "CCS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:string"
+      },
+      "C": {
+        "item": "minecraft:white_carpet"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:sail",
+      "count": 1
+    }
+  }
+}

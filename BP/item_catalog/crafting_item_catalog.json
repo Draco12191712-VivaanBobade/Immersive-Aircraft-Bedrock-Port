@@ -1,0 +1,60 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "ia:biplane",
+              "name": "ia:itemGroup.name.immersive_aircraft"
+            },
+            "items": [
+              "ia:airship",
+              "ia:cargo_airship",
+              "ia:warship",
+              "ia:biplane",
+              "ia:gyrodyne",
+              "ia:quadrocopter",
+              "ia:bamboo_hopper",
+              "ia:rotary_cannon",
+              "ia:heavy_crossbow",
+              "ia:telescope",
+              "ia:bomb_bay"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "ia:engine",
+              "name": "ia:itemGroup.name.immersive_aircraft"
+            },
+            "items": [
+              "ia:hull",
+              "ia:engine",
+              "ia:sail",
+              "ia:propeller",
+              "ia:boiler",
+              "ia:enhanced_propeller",
+              "ia:eco_engine",
+              "ia:nether_engine",
+              "ia:steel_boiler",
+              "ia:industrial_gears",
+              "ia:sturdy_pipes",
+              "ia:gyroscope",
+              "ia:gyroscope_hud",
+              "ia:gyroscope_dials",
+              "ia:hull_reinforcement",
+              "ia:improved_landing_gear"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

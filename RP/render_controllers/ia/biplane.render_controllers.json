@@ -1,0 +1,170 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ia.biplane.main_0": {
+      "geometry": "Geometry.main_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tex0"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.15,
+        "b": 0.15,
+        "a": "(1 - q.property('ia:health')) * 0.5"
+      }
+    },
+    "controller.render.ia.biplane.wpn_bb_0": {
+      "geometry": "Geometry.wpn_bb_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_bb"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_bb_0": "q.property('ia:wpn0') == 4"
+        },
+        {
+          "w0_bb_0_base": "q.property('ia:wpn0') == 4"
+        },
+        {
+          "w0_bb_1": "q.property('ia:wpn0') == 4"
+        },
+        {
+          "w0_bb_1_base": "q.property('ia:wpn0') == 4"
+        }
+      ]
+    },
+    "controller.render.ia.biplane.wpn_hc_0": {
+      "geometry": "Geometry.wpn_hc_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_hc"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_hc_0": "q.property('ia:wpn0') == 2"
+        },
+        {
+          "w0_hc_0_base": "q.property('ia:wpn0') == 2"
+        },
+        {
+          "w0_hc_1": "q.property('ia:wpn0') == 2"
+        },
+        {
+          "w0_hc_1_base": "q.property('ia:wpn0') == 2"
+        }
+      ]
+    },
+    "controller.render.ia.biplane.wpn_rc_0": {
+      "geometry": "Geometry.wpn_rc_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_rc"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_rc_0": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_rc_0_base": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_rc_0_yaw": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_rc_0_pitch": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_rc_0_roll": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+        }
+      ]
+    },
+    "controller.render.ia.biplane.wpn_ts_0": {
+      "geometry": "Geometry.wpn_ts_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_ts"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_ts_0": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_ts_0_base": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_ts_0_yaw": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_ts_0_pitch": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+        },
+        {
+          "w0_ts_0_roll": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+        }
+      ]
+    }
+  }
+}

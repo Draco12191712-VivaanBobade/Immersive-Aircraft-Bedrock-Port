@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.tiny_tnt.swell": {
+      "loop": true,
+      "bones": {
+        "tnt": {
+          "scale": "math.pow(math.clamp(1 - (q.property('ia:fuse') + 1) / 10, 0, 1), 4) * 0.3 + 1"
+        }
+      }
+    }
+  }
+}

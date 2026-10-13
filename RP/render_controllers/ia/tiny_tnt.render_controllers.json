@@ -1,0 +1,56 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ia.tiny_tnt.side": {
+      "geometry": "Geometry.side",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.side"
+      ],
+      "overlay_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": "math.mod(math.floor(q.property('ia:fuse') / 5), 2) < 1 ? 0.6 : 0"
+      }
+    },
+    "controller.render.ia.tiny_tnt.top": {
+      "geometry": "Geometry.top",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.top"
+      ],
+      "overlay_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": "math.mod(math.floor(q.property('ia:fuse') / 5), 2) < 1 ? 0.6 : 0"
+      }
+    },
+    "controller.render.ia.tiny_tnt.bottom": {
+      "geometry": "Geometry.bottom",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.bottom"
+      ],
+      "overlay_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": "math.mod(math.floor(q.property('ia:fuse') / 5), 2) < 1 ? 0.6 : 0"
+      }
+    }
+  }
+}

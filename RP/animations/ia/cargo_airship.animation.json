@@ -1,0 +1,204 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.cargo_airship.main": {
+      "loop": true,
+      "bones": {
+        "ia_root": {
+          "rotation": [
+            "v.rx",
+            0,
+            0
+          ]
+        },
+        "ia_roll": {
+          "rotation": [
+            0,
+            0,
+            "-v.rz"
+          ]
+        },
+        "small_propeller_left": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 120"
+          ]
+        },
+        "small_propeller_right": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 120"
+          ]
+        },
+        "controller": {
+          "rotation": [
+            "-(v.iz * 30)",
+            0,
+            "-v.ix * 20"
+          ]
+        },
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 80"
+          ]
+        },
+        "flag_front": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 370) * 2.5",
+            "math.cos(v.time * 389.6 + 530) * 2.5",
+            0
+          ]
+        },
+        "flag_small": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 370) * 2.5",
+            "math.cos(v.time * 389.6 + 530) * 2.5",
+            0
+          ]
+        },
+        "flag": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 148) * 2.5",
+            "math.cos(v.time * 389.6 + 212) * 2.5",
+            0
+          ]
+        },
+        "flag_front_2": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 444) * 2.5",
+            "math.cos(v.time * 389.6 + 636) * 2.5",
+            0
+          ]
+        },
+        "flag_small_2": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 444) * 2.5",
+            "math.cos(v.time * 389.6 + 636) * 2.5",
+            0
+          ]
+        },
+        "flag_2": {
+          "rotation": [
+            "math.sin(v.time * 229.18 + 222) * 2.5",
+            "math.cos(v.time * 389.6 + 318) * 2.5",
+            0
+          ]
+        },
+        "trail_0": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 50.0"
+          ]
+        },
+        "trail_1": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 65.0"
+          ]
+        },
+        "trail_2": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 65.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.cargo_airship.fx_damage": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "damage",
+            "locator": "center",
+            "pre_effect_script": "v.health = q.property('ia:health'); v.hw = 1.3125; v.hh = 2.25;"
+          }
+        ]
+      }
+    },
+    "animation.ia.cargo_airship.fx_bubbles": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "bubble",
+            "locator": "center",
+            "pre_effect_script": "v.hw = 1.3125; v.hh = 2.25;"
+          }
+        ]
+      }
+    },
+    "animation.ia.cargo_airship.fx_boost": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "firework",
+            "locator": "center"
+          }
+        ]
+      }
+    },
+    "animation.ia.cargo_airship.fx_engine": {
+      "loop": true,
+      "animation_length": 0.1,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "smoke",
+            "locator": "chimney",
+            "pre_effect_script": "v.spin = 0; v.vx = 0; v.vz = 0; v.jitter = 0.2;"
+          }
+        ]
+      }
+    },
+    "animation.ia.cargo_airship.fx_trails": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "trail",
+            "locator": "trail_0_a",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.5; v.life = 0.75; v.size = 0.15;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_0_b",
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.5; v.life = 0.75; v.size = 0.15;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_1_a",
+            "pre_effect_script": "v.tx = 1.15625; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.5; v.life = 0.5; v.size = 0.125;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_1_b",
+            "pre_effect_script": "v.tx = 1.15625; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.5; v.life = 0.5; v.size = 0.125;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_2_a",
+            "pre_effect_script": "v.tx = -1.15625; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.5; v.life = 0.5; v.size = 0.125;"
+          },
+          {
+            "effect": "trail",
+            "locator": "trail_2_b",
+            "pre_effect_script": "v.tx = -1.15625; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 0.5; v.life = 0.5; v.size = 0.125;"
+          }
+        ]
+      }
+    }
+  }
+}

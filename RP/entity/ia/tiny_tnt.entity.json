@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:tiny_tnt",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "side": "textures/blocks/tnt_side",
+        "top": "textures/blocks/tnt_top",
+        "bottom": "textures/blocks/tnt_bottom"
+      },
+      "geometry": {
+        "side": "geometry.ia.tiny_tnt.side",
+        "top": "geometry.ia.tiny_tnt.top",
+        "bottom": "geometry.ia.tiny_tnt.bottom"
+      },
+      "animations": {
+        "swell": "animation.ia.tiny_tnt.swell"
+      },
+      "particle_effects": {
+        "smoke": "ia:smoke"
+      },
+      "scripts": {
+        "animate": [
+          "swell"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ia.tiny_tnt.side",
+        "controller.render.ia.tiny_tnt.top",
+        "controller.render.ia.tiny_tnt.bottom"
+      ]
+    }
+  }
+}

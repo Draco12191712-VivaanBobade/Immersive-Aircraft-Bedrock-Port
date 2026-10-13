@@ -1,0 +1,48 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:gyroscope_hud"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "NPN",
+      "ILI",
+      "SGV"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:noteblock"
+      },
+      "G": {
+        "item": "ia:gyroscope"
+      },
+      "I": {
+        "item": "minecraft:gold_ingot"
+      },
+      "L": {
+        "item": "minecraft:redstone_lamp"
+      },
+      "N": {
+        "item": "minecraft:gold_nugget"
+      },
+      "P": {
+        "item": "minecraft:glass_pane"
+      },
+      "V": {
+        "item": "minecraft:lever"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:gyroscope_hud",
+      "count": 1
+    }
+  }
+}

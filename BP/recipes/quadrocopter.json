@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:quadrocopter"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PBP",
+      "BEB",
+      "PBP"
+    ],
+    "key": {
+      "E": {
+        "item": "ia:engine"
+      },
+      "B": {
+        "item": "minecraft:bamboo"
+      },
+      "P": {
+        "item": "ia:propeller"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:quadrocopter",
+      "count": 1
+    }
+  }
+}

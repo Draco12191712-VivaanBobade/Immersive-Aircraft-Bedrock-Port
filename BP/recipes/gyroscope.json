@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:gyroscope"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RCR"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:compass"
+      },
+      "R": {
+        "item": "minecraft:comparator"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:gyroscope",
+      "count": 1
+    }
+  }
+}

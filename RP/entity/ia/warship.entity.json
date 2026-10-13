@@ -1,0 +1,168 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:warship",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "tex1": "textures/ia/entity/warship_color",
+        "tex0": "textures/ia/entity/warship",
+        "wpn_bb": "textures/ia/entity/bomb_bay",
+        "wpn_hc": "textures/ia/entity/heavy_crossbow",
+        "wpn_rc": "textures/ia/entity/rotary_cannon",
+        "wpn_ts": "textures/ia/entity/telescope"
+      },
+      "geometry": {
+        "colored_1": "geometry.ia.warship.colored_1",
+        "main_0": "geometry.ia.warship.main_0",
+        "sails_0": "geometry.ia.warship.sails_0",
+        "uncolored_0": "geometry.ia.warship.uncolored_0",
+        "wpn_bb_0": "geometry.ia.warship.wpn_bb_0",
+        "wpn_hc_0": "geometry.ia.warship.wpn_hc_0",
+        "wpn_rc_0": "geometry.ia.warship.wpn_rc_0",
+        "wpn_ts_0": "geometry.ia.warship.wpn_ts_0"
+      },
+      "animations": {
+        "main": "animation.ia.warship.main",
+        "fx_damage": "animation.ia.warship.fx_damage",
+        "fx_bubbles": "animation.ia.warship.fx_bubbles",
+        "fx_boost": "animation.ia.warship.fx_boost",
+        "fx_engine": "animation.ia.warship.fx_engine",
+        "fx_trails": "animation.ia.warship.fx_trails"
+      },
+      "particle_effects": {
+        "smoke": "ia:smoke",
+        "flame": "ia:flame",
+        "trail": "ia:trail",
+        "bubble": "ia:bubble",
+        "splash": "ia:splash",
+        "firework": "ia:firework",
+        "damage": "ia:damage_smoke"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.k = math.clamp(q.delta_time * 15, 0, 1);",
+          "v.rx = math.lerprotate(v.rx ?? q.property('ia:rx'), q.property('ia:rx'), v.k);",
+          "v.rz = math.lerprotate(v.rz ?? q.property('ia:rz'), q.property('ia:rz'), v.k);",
+          "v.ix = math.lerp(v.ix ?? 0, q.property('ia:ix'), v.k);",
+          "v.iy = math.lerp(v.iy ?? 0, q.property('ia:iy'), v.k);",
+          "v.iz = math.lerp(v.iz ?? 0, q.property('ia:iz'), v.k);",
+          "v.power = q.property('ia:engine');",
+          "v.eng_rot = math.mod((v.eng_rot ?? 0) + math.min(q.delta_time, 0.25) * 20 * q.property('ia:prop'), 36);",
+          "v.time = math.mod(q.time_stamp, 24000) / 20;",
+          "v.a0y = math.lerprotate(v.a0y ?? q.property('ia:aim0y'), q.property('ia:aim0y'), v.k);",
+          "v.a0p = math.lerp(v.a0p ?? q.property('ia:aim0p'), q.property('ia:aim0p'), v.k);",
+          "v.spin0 = q.property('ia:spin0');",
+          "v.d0x = -math.sin(v.a0y) * math.cos(v.a0p);",
+          "v.d0y = -math.sin(v.a0p);",
+          "v.d0z = math.cos(v.a0y) * math.cos(v.a0p);",
+          "v.a1y = math.lerprotate(v.a1y ?? q.property('ia:aim1y'), q.property('ia:aim1y'), v.k);",
+          "v.a1p = math.lerp(v.a1p ?? q.property('ia:aim1p'), q.property('ia:aim1p'), v.k);",
+          "v.spin1 = q.property('ia:spin1');",
+          "v.d1x = -math.sin(v.a1y) * math.cos(v.a1p);",
+          "v.d1y = -math.sin(v.a1p);",
+          "v.d1z = math.cos(v.a1y) * math.cos(v.a1p);",
+          "v.w0_rc_0_nx = (0.0 * v.d0x + 0.0 * v.d0y + -1.0 * v.d0z);",
+          "v.w0_rc_0_ny = (-1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_rc_0_nz = (0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_rc_0_yaw = -math.atan2(v.w0_rc_0_nx, v.w0_rc_0_nz);",
+          "v.w0_rc_0_pitch = -math.atan2(v.w0_rc_0_ny, math.sqrt(v.w0_rc_0_nx * v.w0_rc_0_nx + v.w0_rc_0_nz * v.w0_rc_0_nz));",
+          "v.w0_rc_1_nx = (0.0 * v.d0x + 0.0 * v.d0y + 1.0 * v.d0z);",
+          "v.w0_rc_1_ny = (1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_rc_1_nz = (-0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_rc_1_yaw = -math.atan2(v.w0_rc_1_nx, v.w0_rc_1_nz);",
+          "v.w0_rc_1_pitch = -math.atan2(v.w0_rc_1_ny, math.sqrt(v.w0_rc_1_nx * v.w0_rc_1_nx + v.w0_rc_1_nz * v.w0_rc_1_nz));",
+          "v.w0_rc_2_nx = (0.0 * v.d0x + 0.0 * v.d0y + -1.0 * v.d0z);",
+          "v.w0_rc_2_ny = (-1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_rc_2_nz = (0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_rc_2_yaw = -math.atan2(v.w0_rc_2_nx, v.w0_rc_2_nz);",
+          "v.w0_rc_2_pitch = -math.atan2(v.w0_rc_2_ny, math.sqrt(v.w0_rc_2_nx * v.w0_rc_2_nx + v.w0_rc_2_nz * v.w0_rc_2_nz));",
+          "v.w0_rc_3_nx = (0.0 * v.d0x + 0.0 * v.d0y + 1.0 * v.d0z);",
+          "v.w0_rc_3_ny = (1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_rc_3_nz = (-0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_rc_3_yaw = -math.atan2(v.w0_rc_3_nx, v.w0_rc_3_nz);",
+          "v.w0_rc_3_pitch = -math.atan2(v.w0_rc_3_ny, math.sqrt(v.w0_rc_3_nx * v.w0_rc_3_nx + v.w0_rc_3_nz * v.w0_rc_3_nz));",
+          "v.w0_ts_0_nx = (0.0 * v.d0x + 0.0 * v.d0y + -1.0 * v.d0z);",
+          "v.w0_ts_0_ny = (-1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_ts_0_nz = (0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_ts_0_yaw = -math.atan2(v.w0_ts_0_nx, v.w0_ts_0_nz);",
+          "v.w0_ts_0_pitch = -math.atan2(v.w0_ts_0_ny, math.sqrt(v.w0_ts_0_nx * v.w0_ts_0_nx + v.w0_ts_0_nz * v.w0_ts_0_nz));",
+          "v.w0_ts_1_nx = (0.0 * v.d0x + 0.0 * v.d0y + 1.0 * v.d0z);",
+          "v.w0_ts_1_ny = (1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_ts_1_nz = (-0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_ts_1_yaw = -math.atan2(v.w0_ts_1_nx, v.w0_ts_1_nz);",
+          "v.w0_ts_1_pitch = -math.atan2(v.w0_ts_1_ny, math.sqrt(v.w0_ts_1_nx * v.w0_ts_1_nx + v.w0_ts_1_nz * v.w0_ts_1_nz));",
+          "v.w0_ts_2_nx = (0.0 * v.d0x + 0.0 * v.d0y + -1.0 * v.d0z);",
+          "v.w0_ts_2_ny = (-1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_ts_2_nz = (0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_ts_2_yaw = -math.atan2(v.w0_ts_2_nx, v.w0_ts_2_nz);",
+          "v.w0_ts_2_pitch = -math.atan2(v.w0_ts_2_ny, math.sqrt(v.w0_ts_2_nx * v.w0_ts_2_nx + v.w0_ts_2_nz * v.w0_ts_2_nz));",
+          "v.w0_ts_3_nx = (0.0 * v.d0x + 0.0 * v.d0y + 1.0 * v.d0z);",
+          "v.w0_ts_3_ny = (1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_ts_3_nz = (-0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_ts_3_yaw = -math.atan2(v.w0_ts_3_nx, v.w0_ts_3_nz);",
+          "v.w0_ts_3_pitch = -math.atan2(v.w0_ts_3_ny, math.sqrt(v.w0_ts_3_nx * v.w0_ts_3_nx + v.w0_ts_3_nz * v.w0_ts_3_nz));",
+          "v.w1_rc_0_nx = (1.0 * v.d1x + 0.0 * v.d1y + -0.0 * v.d1z);",
+          "v.w1_rc_0_ny = (0.0 * v.d1x + 0.0 * v.d1y + 1.0 * v.d1z);",
+          "v.w1_rc_0_nz = (0.0 * v.d1x + -1.0 * v.d1y + 0.0 * v.d1z);",
+          "v.w1_rc_0_yaw = -math.atan2(v.w1_rc_0_nx, v.w1_rc_0_nz);",
+          "v.w1_rc_0_pitch = -math.atan2(v.w1_rc_0_ny, math.sqrt(v.w1_rc_0_nx * v.w1_rc_0_nx + v.w1_rc_0_nz * v.w1_rc_0_nz));",
+          "v.w1_rc_1_nx = (1.0 * v.d1x + 0.0 * v.d1y + -0.0 * v.d1z);",
+          "v.w1_rc_1_ny = (0.0 * v.d1x + 0.0 * v.d1y + 1.0 * v.d1z);",
+          "v.w1_rc_1_nz = (0.0 * v.d1x + -1.0 * v.d1y + 0.0 * v.d1z);",
+          "v.w1_rc_1_yaw = -math.atan2(v.w1_rc_1_nx, v.w1_rc_1_nz);",
+          "v.w1_rc_1_pitch = -math.atan2(v.w1_rc_1_ny, math.sqrt(v.w1_rc_1_nx * v.w1_rc_1_nx + v.w1_rc_1_nz * v.w1_rc_1_nz));",
+          "v.w1_ts_0_nx = (1.0 * v.d1x + 0.0 * v.d1y + -0.0 * v.d1z);",
+          "v.w1_ts_0_ny = (0.0 * v.d1x + 0.0 * v.d1y + 1.0 * v.d1z);",
+          "v.w1_ts_0_nz = (0.0 * v.d1x + -1.0 * v.d1y + 0.0 * v.d1z);",
+          "v.w1_ts_0_yaw = -math.atan2(v.w1_ts_0_nx, v.w1_ts_0_nz);",
+          "v.w1_ts_0_pitch = -math.atan2(v.w1_ts_0_ny, math.sqrt(v.w1_ts_0_nx * v.w1_ts_0_nx + v.w1_ts_0_nz * v.w1_ts_0_nz));",
+          "v.w1_ts_1_nx = (1.0 * v.d1x + 0.0 * v.d1y + -0.0 * v.d1z);",
+          "v.w1_ts_1_ny = (0.0 * v.d1x + 0.0 * v.d1y + 1.0 * v.d1z);",
+          "v.w1_ts_1_nz = (0.0 * v.d1x + -1.0 * v.d1y + 0.0 * v.d1z);",
+          "v.w1_ts_1_yaw = -math.atan2(v.w1_ts_1_nx, v.w1_ts_1_nz);",
+          "v.w1_ts_1_pitch = -math.atan2(v.w1_ts_1_ny, math.sqrt(v.w1_ts_1_nx * v.w1_ts_1_nx + v.w1_ts_1_nz * v.w1_ts_1_nz));",
+          "v.turret_yaw = math.lerp(v.turret_yaw ?? 0, q.property('ia:tyaw'), v.k);",
+          "v.turret_pitch = math.lerp(v.turret_pitch ?? 0, q.property('ia:tpitch'), v.k);",
+          "v.turret_cd = q.property('ia:tcd');",
+          "v.chest = math.max(0, q.property('ia:vy'));",
+          "v.armed = q.property('ia:wpn0') > 0 || q.property('ia:wpn1') > 0;",
+          "v.t20 = q.life_time * 20;",
+          "v.balloon_roll = v.armed ? 0 : (math.cos((v.t20 * 0.01) * 57.29578) + math.cos((v.t20 * 0.01) * 74.484513) + math.cos((v.t20 * 0.01) * 96.829867) + math.cos((v.t20 * 0.01) * 125.878828) + math.cos((v.t20 * 0.01) * 163.642476)) * 0.2 + v.rz * 0.5;",
+          "v.balloon_pitch = v.armed ? 0 : (math.cos((77 + v.t20 * 0.02) * 57.29578) + math.cos((77 + v.t20 * 0.02) * 74.484513) + math.cos((77 + v.t20 * 0.02) * 96.829867) + math.cos((77 + v.t20 * 0.02) * 125.878828) + math.cos((77 + v.t20 * 0.02) * 163.642476)) * 0.2;"
+        ],
+        "animate": [
+          "main",
+          {
+            "fx_damage": "q.property('ia:health') < 1"
+          },
+          {
+            "fx_bubbles": "q.is_in_water"
+          },
+          {
+            "fx_boost": "q.property('ia:boost') > 0"
+          },
+          {
+            "fx_engine": "q.property('ia:engine') > 0.01"
+          },
+          {
+            "fx_trails": "q.property('ia:trails') && q.property('ia:speed') > 0.01"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ia.warship.colored_1",
+        "controller.render.ia.warship.main_0",
+        "controller.render.ia.warship.sails_0",
+        "controller.render.ia.warship.uncolored_0",
+        "controller.render.ia.warship.wpn_bb_0",
+        "controller.render.ia.warship.wpn_hc_0",
+        "controller.render.ia.warship.wpn_rc_0",
+        "controller.render.ia.warship.wpn_ts_0"
+      ],
+      "enable_attachables": false
+    }
+  }
+}

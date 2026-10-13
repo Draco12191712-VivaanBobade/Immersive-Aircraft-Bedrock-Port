@@ -1,0 +1,79 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:cargo_airship",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "banner": "textures/entity/banner/banner_base",
+        "tex1": "textures/ia/entity/airship_color",
+        "tex0": "textures/ia/entity/cargo_airship"
+      },
+      "geometry": {
+        "banner_0": "geometry.ia.cargo_airship.banner_0",
+        "colored_1": "geometry.ia.cargo_airship.colored_1",
+        "main_0": "geometry.ia.cargo_airship.main_0",
+        "sails_0": "geometry.ia.cargo_airship.sails_0",
+        "uncolored_0": "geometry.ia.cargo_airship.uncolored_0"
+      },
+      "animations": {
+        "main": "animation.ia.cargo_airship.main",
+        "fx_damage": "animation.ia.cargo_airship.fx_damage",
+        "fx_bubbles": "animation.ia.cargo_airship.fx_bubbles",
+        "fx_boost": "animation.ia.cargo_airship.fx_boost",
+        "fx_engine": "animation.ia.cargo_airship.fx_engine",
+        "fx_trails": "animation.ia.cargo_airship.fx_trails"
+      },
+      "particle_effects": {
+        "smoke": "ia:smoke",
+        "flame": "ia:flame",
+        "trail": "ia:trail",
+        "bubble": "ia:bubble",
+        "splash": "ia:splash",
+        "firework": "ia:firework",
+        "damage": "ia:damage_smoke"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.k = math.clamp(q.delta_time * 15, 0, 1);",
+          "v.rx = math.lerprotate(v.rx ?? q.property('ia:rx'), q.property('ia:rx'), v.k);",
+          "v.rz = math.lerprotate(v.rz ?? q.property('ia:rz'), q.property('ia:rz'), v.k);",
+          "v.ix = math.lerp(v.ix ?? 0, q.property('ia:ix'), v.k);",
+          "v.iy = math.lerp(v.iy ?? 0, q.property('ia:iy'), v.k);",
+          "v.iz = math.lerp(v.iz ?? 0, q.property('ia:iz'), v.k);",
+          "v.power = q.property('ia:engine');",
+          "v.eng_rot = math.mod((v.eng_rot ?? 0) + math.min(q.delta_time, 0.25) * 20 * q.property('ia:prop'), 36);",
+          "v.time = math.mod(q.time_stamp, 24000) / 20;"
+        ],
+        "animate": [
+          "main",
+          {
+            "fx_damage": "q.property('ia:health') < 1"
+          },
+          {
+            "fx_bubbles": "q.is_in_water"
+          },
+          {
+            "fx_boost": "q.property('ia:boost') > 0"
+          },
+          {
+            "fx_engine": "q.property('ia:engine') > 0.01"
+          },
+          {
+            "fx_trails": "q.property('ia:trails') && q.property('ia:speed') > 0.01"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ia.cargo_airship.banner_0",
+        "controller.render.ia.cargo_airship.colored_1",
+        "controller.render.ia.cargo_airship.main_0",
+        "controller.render.ia.cargo_airship.sails_0",
+        "controller.render.ia.cargo_airship.uncolored_0"
+      ],
+      "enable_attachables": false
+    }
+  }
+}

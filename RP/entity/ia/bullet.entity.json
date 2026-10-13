@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:bullet",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/ia/entity/bullet"
+      },
+      "geometry": {
+        "default": "geometry.ia.empty"
+      },
+      "particle_effects": {
+        "bullet": "ia:bullet"
+      },
+      "animations": {
+        "fx": "animation.ia.bullet.fx"
+      },
+      "scripts": {
+        "animate": [
+          "fx"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ia.empty"
+      ]
+    }
+  }
+}

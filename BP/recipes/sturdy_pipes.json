@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:sturdy_pipes"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  C",
+      "ICI",
+      "C  "
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:sturdy_pipes",
+      "count": 1
+    }
+  }
+}
