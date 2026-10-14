@@ -1419,62 +1419,62 @@ var WPI = {
   "ia:bomb_bay": { mount: "DROP", id: 4 },
 };
 var CFD = {
-  "speedMultiplier": 1.6,
-  "liftAssist": 1.8,
-  "enableDropsForNonPlayer": true,
-  "enableCrashExplosion": true,
-  "enableCrashBlockDestruction": false,
-  "enableCrashFire": false,
-  "crashExplosionRadius": 2.0,
-  "crashDamage": 2.0,
-  "preventKillThroughCrash": true,
-  "damagePerHealthPoint": 30,
-  "useThirdPersonByDefault": true,
-  "enableTrails": true,
-  "fuelConsumption": 1.0,
-  "windClearWeather": 1.0,
-  "windRainWeather": 3.0,
-  "windThunderWeather": 3.0,
-  "repairSpeed": 0.025,
-  "repairExhaustion": 0.5,
-  "collisionDamage": true,
-  "collisionDamageMultiplier": 40.0,
-  "burnFuelInCreative": false,
-  "acceptVanillaFuel": true,
-  "showHotbarEngineGauge": true,
-  "weaponsAreDestructive": false,
-  "dropAircraft": true,
-  "dropInventory": true,
-  "dropUpgrades": false,
-  "regenerateHealthEveryNTicks": 0,
-  "requireShiftForRepair": false,
-  "defaultCanEnter": true,
-  "rotaryCannonDamage": 5.0,
-  "heavyCrossBowVelocity": 3.0,
-  "fuelList": {
-    "minecraft:blaze_powder": 1200
+  speedMultiplier: 1.6,
+  liftAssist: 1.8,
+  enableDropsForNonPlayer: true,
+  enableCrashExplosion: true,
+  enableCrashBlockDestruction: false,
+  enableCrashFire: false,
+  crashExplosionRadius: 2.0,
+  crashDamage: 2.0,
+  preventKillThroughCrash: true,
+  damagePerHealthPoint: 30,
+  useThirdPersonByDefault: true,
+  enableTrails: true,
+  fuelConsumption: 1.0,
+  windClearWeather: 1.0,
+  windRainWeather: 3.0,
+  windThunderWeather: 3.0,
+  repairSpeed: 0.025,
+  repairExhaustion: 0.5,
+  collisionDamage: true,
+  collisionDamageMultiplier: 40.0,
+  burnFuelInCreative: false,
+  acceptVanillaFuel: true,
+  showHotbarEngineGauge: true,
+  weaponsAreDestructive: false,
+  dropAircraft: true,
+  dropInventory: true,
+  dropUpgrades: false,
+  regenerateHealthEveryNTicks: 0,
+  requireShiftForRepair: false,
+  defaultCanEnter: true,
+  rotaryCannonDamage: 5.0,
+  heavyCrossBowVelocity: 3.0,
+  fuelList: {
+    "minecraft:blaze_powder": 1200,
   },
-  "validDimensions": {
+  validDimensions: {
     "minecraft:overworld": true,
     "minecraft:nether": true,
-    "minecraft:the_end": true
+    "minecraft:the_end": true,
   },
-  "gunpowderAmmunition": {
-    "minecraft:gunpowder": 100
+  gunpowderAmmunition: {
+    "minecraft:gunpowder": 100,
   },
-  "arrowAmmunition": {
-    "minecraft:arrow": 100
+  arrowAmmunition: {
+    "minecraft:arrow": 100,
   },
-  "bombBayAmmunition": {
-    "minecraft:tnt": 100
+  bombBayAmmunition: {
+    "minecraft:tnt": 100,
   },
-  "bombBayEntity": {
-    "minecraft:egg": "minecraft:chicken"
+  bombBayEntity: {
+    "minecraft:egg": "minecraft:chicken",
   },
-  "canEnter": {
+  canEnter: {
     "minecraft:player": false,
-    "#water_animals": false
-  }
+    "#water_animals": false,
+  },
 };
 var M = new Map(),
   L = new Set(),
@@ -2231,7 +2231,13 @@ function uct(e, s, rs) {
     s.vy += d.y * t2;
     s.vz += d.z * t2;
     var fsp = Math.max(0, dt(vl(s), d));
-    if (og && s.tg > 0.4 && p2 > 0.3 && fsp > 0.17 && ((s.lu || 0) > 0 || fsp > 0.3)) {
+    if (
+      og &&
+      s.tg > 0.4 &&
+      p2 > 0.3 &&
+      fsp > 0.17 &&
+      ((s.lu || 0) > 0 || fsp > 0.3)
+    ) {
       s.pit = Math.max(s.pit - 3, -14);
       s.vy = Math.max(s.vy, 0.07 + (fsp - 0.17) * 0.2);
       s.tko = 14;
@@ -4350,7 +4356,11 @@ function frb(dm, p, wd, ht) {
   var h = wd / 2;
   for (var x = Math.floor(p.x - h + 1e-3); x <= Math.floor(p.x + h - 1e-3); x++)
     for (var y = Math.floor(p.y + 1e-3); y <= Math.floor(p.y + ht - 1e-3); y++)
-      for (var z = Math.floor(p.z - h + 1e-3); z <= Math.floor(p.z + h - 1e-3); z++) {
+      for (
+        var z = Math.floor(p.z - h + 1e-3);
+        z <= Math.floor(p.z + h - 1e-3);
+        z++
+      ) {
         var b = dm.getBlock(v3(x, y, z));
         if (b && !b.isAir && !b.isLiquid && !pas(b.typeId)) return b;
       }
