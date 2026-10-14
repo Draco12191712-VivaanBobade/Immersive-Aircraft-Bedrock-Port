@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "gyroscope_hud",
     "metalness_emissive_roughness_subsurface": "gyroscope_hud_mers",
-    "heightmap": "gyroscope_hud_heightmap"
+    "normal": "gyroscope_hud_normal"
   }
 }

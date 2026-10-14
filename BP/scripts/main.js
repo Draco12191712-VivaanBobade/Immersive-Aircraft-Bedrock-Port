@@ -1419,47 +1419,62 @@ var WPI = {
   "ia:bomb_bay": { mount: "DROP", id: 4 },
 };
 var CFD = {
-  enableDropsForNonPlayer: true,
-  enableCrashExplosion: true,
-  enableCrashBlockDestruction: false,
-  enableCrashFire: false,
-  crashExplosionRadius: 2.0,
-  crashDamage: 2.0,
-  preventKillThroughCrash: true,
-  damagePerHealthPoint: 30,
-  useThirdPersonByDefault: true,
-  enableTrails: true,
-  fuelConsumption: 1.0,
-  windClearWeather: 1.0,
-  windRainWeather: 3.0,
-  windThunderWeather: 3.0,
-  repairSpeed: 0.025,
-  repairExhaustion: 0.5,
-  collisionDamage: true,
-  collisionDamageMultiplier: 40.0,
-  burnFuelInCreative: false,
-  acceptVanillaFuel: true,
-  showHotbarEngineGauge: true,
-  weaponsAreDestructive: false,
-  dropAircraft: true,
-  dropInventory: true,
-  dropUpgrades: false,
-  regenerateHealthEveryNTicks: 0,
-  requireShiftForRepair: false,
-  defaultCanEnter: true,
-  rotaryCannonDamage: 5.0,
-  heavyCrossBowVelocity: 3.0,
-  fuelList: { "minecraft:blaze_powder": 1200 },
-  validDimensions: {
+  "speedMultiplier": 1.6,
+  "liftAssist": 1.8,
+  "enableDropsForNonPlayer": true,
+  "enableCrashExplosion": true,
+  "enableCrashBlockDestruction": false,
+  "enableCrashFire": false,
+  "crashExplosionRadius": 2.0,
+  "crashDamage": 2.0,
+  "preventKillThroughCrash": true,
+  "damagePerHealthPoint": 30,
+  "useThirdPersonByDefault": true,
+  "enableTrails": true,
+  "fuelConsumption": 1.0,
+  "windClearWeather": 1.0,
+  "windRainWeather": 3.0,
+  "windThunderWeather": 3.0,
+  "repairSpeed": 0.025,
+  "repairExhaustion": 0.5,
+  "collisionDamage": true,
+  "collisionDamageMultiplier": 40.0,
+  "burnFuelInCreative": false,
+  "acceptVanillaFuel": true,
+  "showHotbarEngineGauge": true,
+  "weaponsAreDestructive": false,
+  "dropAircraft": true,
+  "dropInventory": true,
+  "dropUpgrades": false,
+  "regenerateHealthEveryNTicks": 0,
+  "requireShiftForRepair": false,
+  "defaultCanEnter": true,
+  "rotaryCannonDamage": 5.0,
+  "heavyCrossBowVelocity": 3.0,
+  "fuelList": {
+    "minecraft:blaze_powder": 1200
+  },
+  "validDimensions": {
     "minecraft:overworld": true,
     "minecraft:nether": true,
-    "minecraft:the_end": true,
+    "minecraft:the_end": true
   },
-  gunpowderAmmunition: { "minecraft:gunpowder": 100 },
-  arrowAmmunition: { "minecraft:arrow": 100 },
-  bombBayAmmunition: { "minecraft:tnt": 100 },
-  bombBayEntity: { "minecraft:egg": "minecraft:chicken" },
-  canEnter: { "minecraft:player": false, "#water_animals": false },
+  "gunpowderAmmunition": {
+    "minecraft:gunpowder": 100
+  },
+  "arrowAmmunition": {
+    "minecraft:arrow": 100
+  },
+  "bombBayAmmunition": {
+    "minecraft:tnt": 100
+  },
+  "bombBayEntity": {
+    "minecraft:egg": "minecraft:chicken"
+  },
+  "canEnter": {
+    "minecraft:player": false,
+    "#water_animals": false
+  }
 };
 var M = new Map(),
   L = new Set(),
@@ -1593,6 +1608,8 @@ var CB = [
   "defaultCanEnter",
 ];
 var CN = [
+  "speedMultiplier",
+  "liftAssist",
   "crashExplosionRadius",
   "crashDamage",
   "damagePerHealthPoint",
@@ -1617,6 +1634,8 @@ var CJ = [
   "canEnter",
 ];
 var OPT = [
+  "speedMultiplier",
+  "liftAssist",
   "useThirdPersonByDefault",
   "enableTrails",
   "fuelConsumption",
@@ -1794,7 +1813,7 @@ function pst(p) {
       cam: false,
       sc: false,
       mu: 0,
-      mf: !!dp(p, "ia:mf", false),
+      mf: !!dp(p, "ia:mf", true),
       lp: -1,
     };
     PP[p.id] = q;
@@ -1917,7 +1936,11 @@ function upg(e, s) {
   }
 }
 function P(s, k) {
-  return (s.d.props[k] || 0) * s.u[k];
+  var v = (s.d.props[k] || 0) * s.u[k];
+  if (k == "engineSpeed") v *= gc().speedMultiplier || 1;
+  else if (k == "verticalSpeed") v *= Math.sqrt(gc().speedMultiplier || 1);
+  else if (k == "lift" && s.d.cls == "airplane") v *= gc().liftAssist || 1;
+  return v;
 }
 function PA(s, k) {
   return (s.d.props[k] || 0) + s.u[k] - 1;
@@ -2203,10 +2226,20 @@ function uct(e, s, rs) {
     }
     if (og) t2 *= 0.75;
     if (og && s.tg < 1)
-      t2 = (P(s, "pushSpeed") / (1 + ln(vl(s)) * 5)) * s.pz.s * (1 - p2);
+      t2 = (P(s, "pushSpeed") / (1 + ln(vl(s)) * 5)) * (s.tx || 0) * (1 - p2);
     s.vx += d.x * t2;
     s.vy += d.y * t2;
     s.vz += d.z * t2;
+    var fsp = Math.max(0, dt(vl(s), d));
+    if (og && s.tg > 0.4 && p2 > 0.3 && fsp > 0.17 && ((s.lu || 0) > 0 || fsp > 0.3)) {
+      s.pit = Math.max(s.pit - 3, -14);
+      s.vy = Math.max(s.vy, 0.07 + (fsp - 0.17) * 0.2);
+      s.tko = 14;
+    }
+    if (s.tko > 0) {
+      s.tko--;
+      if (!og) s.vy = Math.max(s.vy, 0.025);
+    }
     return;
   }
   ub(e, s);
@@ -2622,7 +2655,7 @@ function tbu() {
         includePassableBlocks: false,
       });
       if (bh) {
-        var bd = ln(ad(ad(bh.block.location, bh.faceLocation), sc(p, -1)));
+        var bd = ln(ad(hlp(bh.block, bh.faceLocation), sc(p, -1)));
         if (bd <= L2 && bd < hd) {
           hd = bd;
           hit = "b";
@@ -3216,12 +3249,13 @@ function usn(cn, s, skip) {
   }
   return sn;
 }
-function cani(e, s, it) {
+function cani(e, s, it, nf) {
   var cn = inv(e);
   if (!cn || !it) return false;
   var sn = usn(cn, s, -1);
   for (var ty in s.d.slots) {
     if (ty == "inventory") continue;
+    if (nf && (ty == "boiler" || ty == "booster")) continue;
     if (!okk(ty, it, s, sn)) continue;
     for (var p2 of s.d.slots[ty]) {
       var o = cn.getItem(p2);
@@ -3449,40 +3483,39 @@ function dsm(e, s, p) {
       p.teleport(v3(t.x, Math.floor(t.y), t.z));
   });
 }
+function lki(p) {
+  var x = p.getRotation().x;
+  return cl((-x - 12) / 28, 0, 1) - cl((x - 12) / 28, 0, 1);
+}
+function apt(e, s, p) {
+  var sp = P(s, "pitchSpeed");
+  return cl((p.getRotation().x - s.pit - s.pz.s * sp * 8) / 20, -1, 1);
+}
 function tpl(e, s, rs) {
-  for (var p of rs) {
-    if (!isP(p)) continue;
-    var ii = p.inputInfo,
-      jp = ii.getButtonState(InputButton.Jump) == ButtonState.Pressed,
-      sn = ii.getButtonState(InputButton.Sneak) == ButtonState.Pressed,
-      q = pst(p);
-    if (sn && !jp && e.isOnGround && ln(vl(s)) < 0.01)
-      say(p, { translate: "ia.mount.onboard" });
-    var cb = jp && sn;
-    if (cb && !q.cb) {
-      if (!e.isOnGround && s.tc - s.lte >= 20) {
-        s.lte = s.tc;
-        say(p, { translate: "immersive_aircraft.tried_dismount" });
-      } else dsm(e, s, p);
-    }
-    q.cb = cb;
-  }
   var r2 = rdr(e),
     pi = r2[0];
   if (!isP(pi)) {
     s.mx = 0;
     s.my = 0;
     s.mz = 0;
+    s.tx = 0;
+    s.lu = 0;
     return;
   }
-  var i2 = pi.inputInfo,
-    m2 = i2.getMovementVector(),
-    j2 = i2.getButtonState(InputButton.Jump) == ButtonState.Pressed,
-    s2 = i2.getButtonState(InputButton.Sneak) == ButtonState.Pressed,
-    q2 = pst(pi);
-  s.mx = myw(e, s, pi, q2, cl(m2.x, -1, 1));
-  s.my = (j2 ? 1 : 0) - (s2 ? 1 : 0);
-  s.mz = mpt(e, s, pi, q2, cl(m2.y, -1, 1));
+  var m2 = pi.inputInfo.getMovementVector(),
+    q2 = pst(pi),
+    fx = cl(m2.x, -1, 1),
+    fy = cl(m2.y, -1, 1);
+  s.mx = myw(e, s, pi, q2, fx);
+  if (s.d.cls == "airplane") {
+    s.my = fy;
+    s.tx = Math.max(0, fy);
+    s.mz = apt(e, s, pi);
+    s.lu = cl((-pi.getRotation().x - 2) / 18, 0, 1);
+  } else {
+    s.my = lki(pi);
+    s.mz = fy;
+  }
 }
 
 function tk(e, s) {
@@ -3499,12 +3532,14 @@ function tk(e, s) {
     var ax = l.x - s.pl.x,
       ay = l.y - s.pl.y,
       az = l.z - s.pl.z,
-      hx =
-        Math.abs(ax - s.lm.x) > 1e-3 && Math.abs(ax) < Math.abs(s.lm.x) - 1e-3,
-      hz =
-        Math.abs(az - s.lm.z) > 1e-3 && Math.abs(az) < Math.abs(s.lm.z) - 1e-3,
+      hx = Math.abs(s.lm.x) > 0.015 && Math.abs(ax) < Math.abs(s.lm.x) * 0.5,
+      hz = Math.abs(s.lm.z) > 0.015 && Math.abs(az) < Math.abs(s.lm.z) * 0.5,
       vc =
         Math.abs(ay - s.lm.y) > 1e-3 && Math.abs(ay) < Math.abs(s.lm.y) - 1e-3;
+    if ((hx || hz) && ((s.hop || 0) > 0 || (og && stp(e, s, l)))) {
+      hx = false;
+      hz = false;
+    }
     if (hx || hz || vc) {
       var er = Math.sqrt(
           (ax - s.lm.x) * (ax - s.lm.x) +
@@ -3525,6 +3560,10 @@ function tk(e, s) {
     }
   }
   if (!e.isValid) return;
+  if (s.hop > 0) {
+    s.hop--;
+    if (l.y < s.hpy) s.vy = Math.max(s.vy, 0.18);
+  }
   s.prol = s.rol;
   if (og) s.rol *= 0.9;
   else s.rol = -s.px.s * P(s, "rollFactor") * (1 - s.iwl);
@@ -3759,7 +3798,7 @@ function ptk(p) {
     if (q.rid != r.id) {
       q.rid = r.id;
       q.at = 0;
-      p.inputPermissions.setPermissionCategory(IPC.Dismount, false);
+      p.inputPermissions.setPermissionCategory(IPC.Dismount, true);
       if (pcm(p)) {
         p.camera.setCamera("minecraft:third_person");
         q.cam = true;
@@ -4236,14 +4275,31 @@ function plc(p, pos, it) {
   var k = it.typeId.slice(3),
     d = AC[k],
     dm = p.dimension;
-  if (!fre(dm, pos, d.size[0], d.size[1])) {
-    say(p, {
-      rawtext: [
-        { text: "§c" },
-        { translate: "immersive_aircraft.tooltip.no_space" },
-      ],
-    });
-    return;
+  var bl = frb(dm, pos, d.size[0], d.size[1]);
+  if (bl) {
+    var up = v3(pos.x, pos.y + 1, pos.z);
+    if (!frb(dm, up, d.size[0], d.size[1])) pos = up;
+    else {
+      say(p, {
+        rawtext: [
+          { text: "§c" },
+          { translate: "immersive_aircraft.tooltip.no_space" },
+          {
+            text:
+              " §7(" +
+              bl.typeId.replace("minecraft:", "") +
+              " @ " +
+              bl.location.x +
+              " " +
+              bl.location.y +
+              " " +
+              bl.location.z +
+              ")",
+          },
+        ],
+      });
+      return;
+    }
   }
   var e = dm.spawnEntity(it.typeId, pos),
     yw = p.getRotation().y;
@@ -4268,6 +4324,56 @@ function plc(p, pos, it) {
       } else pc.setItem(sl);
     }
   }
+}
+function stp(e, s, l) {
+  var hv = Math.sqrt(s.lm.x * s.lm.x + s.lm.z * s.lm.z);
+  if (hv < 0.02) return false;
+  var dx = s.lm.x / hv,
+    dz = s.lm.z / hv,
+    r = s.d.size[0] / 2 + 0.35,
+    dm = e.dimension,
+    by = Math.floor(l.y + 0.01),
+    fx = l.x + dx * r,
+    fz = l.z + dz * r,
+    b0 = dm.getBlock(v3(fx, by, fz)),
+    b1 = dm.getBlock(v3(fx, by + 1, fz)),
+    b2 = dm.getBlock(v3(fx, by + 2, fz));
+  if (!b0 || b0.isAir || b0.isLiquid || pas(b0.typeId)) return false;
+  if (!b1 || !(b1.isAir || b1.isLiquid || pas(b1.typeId))) return false;
+  if (b2 && !(b2.isAir || b2.isLiquid || pas(b2.typeId))) return false;
+  s.vy = Math.max(s.vy, 0.32);
+  s.hop = 10;
+  s.hpy = by + 1.05;
+  return true;
+}
+function frb(dm, p, wd, ht) {
+  var h = wd / 2;
+  for (var x = Math.floor(p.x - h + 1e-3); x <= Math.floor(p.x + h - 1e-3); x++)
+    for (var y = Math.floor(p.y + 1e-3); y <= Math.floor(p.y + ht - 1e-3); y++)
+      for (var z = Math.floor(p.z - h + 1e-3); z <= Math.floor(p.z + h - 1e-3); z++) {
+        var b = dm.getBlock(v3(x, y, z));
+        if (b && !b.isAir && !b.isLiquid && !pas(b.typeId)) return b;
+      }
+  return null;
+}
+var FO = {
+  Up: [0, 1, 0],
+  Down: [0, -1, 0],
+  North: [0, 0, -1],
+  South: [0, 0, 1],
+  West: [-1, 0, 0],
+  East: [1, 0, 0],
+};
+function hlp(b, f) {
+  var l = b.location;
+  if (Math.abs(f.x) <= 1.01 && Math.abs(f.y) <= 1.01 && Math.abs(f.z) <= 1.01)
+    return v3(l.x + f.x, l.y + f.y, l.z + f.z);
+  return v3(f.x, f.y, f.z);
+}
+function ppl(b, fc) {
+  var o = FO[fc] || FO.Up,
+    l = b.location;
+  return v3(l.x + o[0] + 0.5, l.y + o[1], l.z + o[2] + 0.5);
 }
 function fre(dm, p, wd, ht) {
   var h = wd / 2;
@@ -4298,7 +4404,7 @@ function plr(p, it) {
     });
     return;
   }
-  plc(p, ad(h.block.location, h.faceLocation), it);
+  plc(p, ppl(h.block, h.face), it);
 }
 function vdm(e) {
   var v = gc().validDimensions || {},
@@ -4373,7 +4479,7 @@ w.beforeEvents.playerInteractWithBlock.subscribe(function (ev) {
   var q = pst(p);
   if (q.lp == T) return;
   q.lp = T;
-  var pos = ad(ev.block.location, ev.faceLocation),
+  var pos = ppl(ev.block, ev.blockFace),
     c2 = it.clone();
   sy.run(function () {
     plc(p, pos, c2);
@@ -4389,20 +4495,22 @@ w.beforeEvents.playerInteractWithEntity.subscribe(function (ev) {
     me = rs.some(function (x) {
       return x.id == p.id;
     });
-  if (s.hp >= 1 && p.isSneaking && !me) {
+  if (me) return;
+  var it = ev.itemStack;
+  if (it && cani(e, s, it, !p.isSneaking)) {
+    ev.cancel = true;
+    sy.run(function () {
+      if (e.isValid) ins(e, s, p);
+    });
+    return;
+  }
+  if (s.hp >= 1 && p.isSneaking) {
     if (rs.length) {
       ev.cancel = true;
       var x = rs[0];
       sy.run(function () {
         var rr = e.getComponent("minecraft:rideable");
         if (rr) rr.ejectRider(x);
-      });
-      return;
-    }
-    if (ev.itemStack && cani(e, s, ev.itemStack)) {
-      ev.cancel = true;
-      sy.run(function () {
-        ins(e, s, p);
       });
     }
     return;

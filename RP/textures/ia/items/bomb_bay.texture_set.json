@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "bomb_bay",
     "metalness_emissive_roughness_subsurface": "bomb_bay_mers",
-    "heightmap": "bomb_bay_heightmap"
+    "normal": "bomb_bay_normal"
   }
 }

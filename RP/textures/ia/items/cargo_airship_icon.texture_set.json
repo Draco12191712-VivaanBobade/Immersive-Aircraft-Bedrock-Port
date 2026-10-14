@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "cargo_airship_icon",
     "metalness_emissive_roughness_subsurface": "cargo_airship_icon_mers",
-    "heightmap": "cargo_airship_icon_heightmap"
+    "normal": "cargo_airship_icon_normal"
   }
 }

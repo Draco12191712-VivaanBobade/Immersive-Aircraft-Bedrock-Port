@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "telescope",
     "metalness_emissive_roughness_subsurface": "telescope_mers",
-    "heightmap": "telescope_heightmap"
+    "normal": "telescope_normal"
   }
 }

@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "quadrocopter",
     "metalness_emissive_roughness_subsurface": "quadrocopter_mers",
-    "heightmap": "quadrocopter_heightmap"
+    "normal": "quadrocopter_normal"
   }
 }

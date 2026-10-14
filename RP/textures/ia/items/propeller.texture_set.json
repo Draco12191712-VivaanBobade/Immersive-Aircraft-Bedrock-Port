@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "propeller",
     "metalness_emissive_roughness_subsurface": "propeller_mers",
-    "heightmap": "propeller_heightmap"
+    "normal": "propeller_normal"
   }
 }

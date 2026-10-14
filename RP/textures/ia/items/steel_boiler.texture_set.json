@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "steel_boiler",
     "metalness_emissive_roughness_subsurface": "steel_boiler_mers",
-    "heightmap": "steel_boiler_heightmap"
+    "normal": "steel_boiler_normal"
   }
 }

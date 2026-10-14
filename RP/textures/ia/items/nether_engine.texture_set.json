@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "nether_engine",
     "metalness_emissive_roughness_subsurface": "nether_engine_mers",
-    "heightmap": "nether_engine_heightmap"
+    "normal": "nether_engine_normal"
   }
 }

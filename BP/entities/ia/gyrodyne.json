@@ -9,8 +9,8 @@
         "ia:rx": {
           "type": "float",
           "range": [
-            -720,
-            720
+            -720.0,
+            720.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -18,8 +18,8 @@
         "ia:rz": {
           "type": "float",
           "range": [
-            -720,
-            720
+            -720.0,
+            720.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -27,8 +27,8 @@
         "ia:ix": {
           "type": "float",
           "range": [
-            -1,
-            1
+            -1.0,
+            1.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -36,8 +36,8 @@
         "ia:iy": {
           "type": "float",
           "range": [
-            -1,
-            1
+            -1.0,
+            1.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -45,8 +45,8 @@
         "ia:iz": {
           "type": "float",
           "range": [
-            -1,
-            1
+            -1.0,
+            1.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -54,8 +54,8 @@
         "ia:engine": {
           "type": "float",
           "range": [
-            0,
-            1
+            0.0,
+            1.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -63,8 +63,8 @@
         "ia:prop": {
           "type": "float",
           "range": [
-            0,
-            4
+            0.0,
+            4.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -72,8 +72,8 @@
         "ia:spin": {
           "type": "float",
           "range": [
-            0,
-            16
+            0.0,
+            16.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -81,8 +81,8 @@
         "ia:health": {
           "type": "float",
           "range": [
-            0,
-            1
+            0.0,
+            1.0
           ],
           "default": 1.0,
           "client_sync": true
@@ -90,8 +90,8 @@
         "ia:speed": {
           "type": "float",
           "range": [
-            0,
-            16
+            0.0,
+            16.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -99,8 +99,8 @@
         "ia:vy": {
           "type": "float",
           "range": [
-            -16,
-            16
+            -16.0,
+            16.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -108,8 +108,8 @@
         "ia:fluid": {
           "type": "float",
           "range": [
-            0,
-            8
+            0.0,
+            8.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -171,8 +171,8 @@
         "ia:aim0y": {
           "type": "float",
           "range": [
-            -720,
-            720
+            -720.0,
+            720.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -180,8 +180,8 @@
         "ia:aim0p": {
           "type": "float",
           "range": [
-            -180,
-            180
+            -180.0,
+            180.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -189,8 +189,8 @@
         "ia:aim1y": {
           "type": "float",
           "range": [
-            -720,
-            720
+            -720.0,
+            720.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -198,8 +198,8 @@
         "ia:aim1p": {
           "type": "float",
           "range": [
-            -180,
-            180
+            -180.0,
+            180.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -207,8 +207,8 @@
         "ia:spin0": {
           "type": "float",
           "range": [
-            -100000,
-            100000
+            -100000.0,
+            100000.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -216,8 +216,8 @@
         "ia:spin1": {
           "type": "float",
           "range": [
-            -100000,
-            100000
+            -100000.0,
+            100000.0
           ],
           "default": 0.0,
           "client_sync": true
@@ -355,36 +355,27 @@
       "minecraft:damage_sensor": {
         "triggers": [
           {
-            "on_damage": {
-              "filters": {
-                "any_of": [
-                  {
-                    "test": "has_damage",
-                    "value": "fall"
-                  },
-                  {
-                    "test": "has_damage",
-                    "value": "suffocation"
-                  },
-                  {
-                    "test": "has_damage",
-                    "value": "drowning"
-                  },
-                  {
-                    "test": "has_damage",
-                    "value": "fly_into_wall"
-                  },
-                  {
-                    "test": "has_damage",
-                    "value": "starve"
-                  },
-                  {
-                    "test": "has_damage",
-                    "value": "freezing"
-                  }
-                ]
-              }
-            },
+            "cause": "fall",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "drowning",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "fly_into_wall",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "starve",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "freezing",
             "deals_damage": "no"
           }
         ]
@@ -441,7 +432,7 @@
         ]
       },
       "minecraft:inventory": {
-        "container_type": "inventory",
+        "container_type": "container",
         "inventory_size": 22,
         "can_be_siphoned_from": false,
         "private": true,

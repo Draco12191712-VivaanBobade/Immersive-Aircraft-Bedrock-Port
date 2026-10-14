@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "eco_engine",
     "metalness_emissive_roughness_subsurface": "eco_engine_mers",
-    "heightmap": "eco_engine_heightmap"
+    "normal": "eco_engine_normal"
   }
 }

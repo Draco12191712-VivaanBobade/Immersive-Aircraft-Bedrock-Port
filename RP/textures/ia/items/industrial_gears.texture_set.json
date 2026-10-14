@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "industrial_gears",
     "metalness_emissive_roughness_subsurface": "industrial_gears_mers",
-    "heightmap": "industrial_gears_heightmap"
+    "normal": "industrial_gears_normal"
   }
 }

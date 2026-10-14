@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "biplane",
     "metalness_emissive_roughness_subsurface": "biplane_mers",
-    "heightmap": "biplane_heightmap"
+    "normal": "biplane_normal"
   }
 }

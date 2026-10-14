@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "warship",
     "metalness_emissive_roughness_subsurface": "warship_mers",
-    "heightmap": "warship_heightmap"
+    "normal": "warship_normal"
   }
 }

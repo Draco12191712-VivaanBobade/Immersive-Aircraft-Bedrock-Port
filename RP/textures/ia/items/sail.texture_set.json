@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "sail",
     "metalness_emissive_roughness_subsurface": "sail_mers",
-    "heightmap": "sail_heightmap"
+    "normal": "sail_normal"
   }
 }

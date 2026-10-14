@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "bullet",
     "metalness_emissive_roughness_subsurface": "bullet_mers",
-    "heightmap": "bullet_heightmap"
+    "normal": "bullet_normal"
   }
 }

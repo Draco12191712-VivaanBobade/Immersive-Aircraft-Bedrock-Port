@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "gyrodyne",
     "metalness_emissive_roughness_subsurface": "gyrodyne_mers",
-    "heightmap": "gyrodyne_heightmap"
+    "normal": "gyrodyne_normal"
   }
 }

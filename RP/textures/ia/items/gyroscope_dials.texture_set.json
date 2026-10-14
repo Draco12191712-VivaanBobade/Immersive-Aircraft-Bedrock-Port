@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "gyroscope_dials",
     "metalness_emissive_roughness_subsurface": "gyroscope_dials_mers",
-    "heightmap": "gyroscope_dials_heightmap"
+    "normal": "gyroscope_dials_normal"
   }
 }

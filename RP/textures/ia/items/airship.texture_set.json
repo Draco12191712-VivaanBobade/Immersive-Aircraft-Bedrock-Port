@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "airship",
     "metalness_emissive_roughness_subsurface": "airship_mers",
-    "heightmap": "airship_heightmap"
+    "normal": "airship_normal"
   }
 }

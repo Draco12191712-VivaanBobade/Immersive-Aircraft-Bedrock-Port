@@ -3,6 +3,6 @@
   "minecraft:texture_set": {
     "color": "trail",
     "metalness_emissive_roughness_subsurface": "trail_mers",
-    "heightmap": "trail_heightmap"
+    "normal": "trail_normal"
   }
 }
