@@ -229,6 +229,36 @@
         }
       }
     },
+    "component_groups": {
+      "ia:rideable": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "controlling_seat": 0,
+          "crouching_skip_interact": true,
+          "pull_in_entities": false,
+          "passenger_max_width": 1.75,
+          "interact_text": "action.interact.ia.board",
+          "family_types": [
+            "player",
+            "mob"
+          ],
+          "seats": [
+            {
+              "position": [
+                0.0,
+                0.075,
+                -0.6
+              ],
+              "min_rider_count": 0,
+              "max_rider_count": 1,
+              "lock_rider_rotation": 105,
+              "third_person_camera_radius": 7.0,
+              "camera_relax_distance_smoothing": 6.0
+            }
+          ]
+        }
+      }
+    },
     "components": {
       "minecraft:type_family": {
         "family": [
@@ -395,7 +425,7 @@
       "minecraft:persistent": {},
       "minecraft:nameable": {
         "always_show": false,
-        "allow_name_tag_renaming": true
+        "allow_name_tag_renaming": false
       },
       "minecraft:body_rotation_always_follows_head": {},
       "minecraft:breathable": {
@@ -441,30 +471,6 @@
           "use_motion_prediction_hints": true
         }
       },
-      "minecraft:rideable": {
-        "seat_count": 1,
-        "controlling_seat": 0,
-        "crouching_skip_interact": true,
-        "pull_in_entities": false,
-        "passenger_max_width": 1.75,
-        "interact_text": "action.interact.ia.board",
-        "family_types": [
-          "player",
-          "mob"
-        ],
-        "seats": [
-          {
-            "position": [
-              0.0,
-              0.075,
-              -0.6
-            ],
-            "min_rider_count": 0,
-            "max_rider_count": 1,
-            "lock_rider_rotation": 105
-          }
-        ]
-      },
       "minecraft:inventory": {
         "container_type": "container",
         "inventory_size": 24,
@@ -473,6 +479,28 @@
         "restrict_to_owner": false
       }
     },
-    "events": {}
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "ia:rideable"
+          ]
+        }
+      },
+      "ia:board_on": {
+        "add": {
+          "component_groups": [
+            "ia:rideable"
+          ]
+        }
+      },
+      "ia:board_off": {
+        "remove": {
+          "component_groups": [
+            "ia:rideable"
+          ]
+        }
+      }
+    }
   }
 }

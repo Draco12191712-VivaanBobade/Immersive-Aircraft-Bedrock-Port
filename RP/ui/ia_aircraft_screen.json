@@ -2271,7 +2271,7 @@
                       "anchor_to": "top_left",
                       "type": "grid",
                       "size": [
-                        972,
+                        1566,
                         18
                       ],
                       "offset": [
@@ -2280,7 +2280,7 @@
                       ],
                       "layer": 1,
                       "grid_dimensions": [
-                        54,
+                        87,
                         1
                       ],
                       "collection_name": "container_items",
@@ -3532,6 +3532,765 @@
                               }
                             ]
                           }
+                        },
+                        {
+                          "s54": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              54,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -733,
+                                    71
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s55": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              55,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1071,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s56": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              56,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1089,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s57": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              57,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1107,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s58": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              58,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1125,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s59": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              59,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1125,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s60": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              60,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1143,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s61": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              61,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1161,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s62": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              62,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1179,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s63": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              63,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1179,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s64": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              64,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1197,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s65": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              65,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1215,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s66": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              66,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1233,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s67": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              67,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1233,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s68": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              68,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1251,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s69": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              69,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1269,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s70": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              70,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1287,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s71": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              71,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1093,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s72": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              72,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1111,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s73": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              73,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1129,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s74": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              74,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1147,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s75": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              75,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1147,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s76": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              76,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1165,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s77": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              77,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1183,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s78": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              78,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1201,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s79": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              79,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1201,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s80": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              80,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1219,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s81": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              81,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1237,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s82": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              82,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1255,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s83": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              83,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1255,
+                                    105
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s84": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              84,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1273,
+                                    123
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s85": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              85,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1291,
+                                    141
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s86": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              86,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1309,
+                                    159
+                                  ]
+                                }
+                              }
+                            ]
+                          }
                         }
                       ]
                     }
@@ -3649,7 +4408,7 @@
                       "type": "image",
                       "texture": "textures/ui/ia/warship_gui",
                       "size": [
-                        280,
+                        316,
                         212
                       ],
                       "offset": [
@@ -3686,7 +4445,7 @@
                       "anchor_to": "top_left",
                       "type": "grid",
                       "size": [
-                        972,
+                        1422,
                         18
                       ],
                       "offset": [
@@ -3695,7 +4454,7 @@
                       ],
                       "layer": 1,
                       "grid_dimensions": [
-                        54,
+                        79,
                         1
                       ],
                       "collection_name": "container_items",
@@ -4946,6 +5705,581 @@
                                   "offset": [
                                     -769,
                                     133
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s54": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              54,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -787,
+                                    151
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s55": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              55,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -805,
+                                    169
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s56": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              56,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -823,
+                                    187
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s57": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              57,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -823,
+                                    7
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s58": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              58,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -841,
+                                    25
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s59": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              59,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -859,
+                                    43
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s60": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              60,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -877,
+                                    61
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s61": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              61,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -895,
+                                    79
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s62": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              62,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -913,
+                                    97
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s63": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              63,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -931,
+                                    115
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s64": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              64,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -949,
+                                    133
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s65": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              65,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -967,
+                                    151
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s66": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              66,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -985,
+                                    169
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s67": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              67,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1003,
+                                    187
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s68": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              68,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1003,
+                                    7
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s69": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              69,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1021,
+                                    25
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s70": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              70,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1039,
+                                    43
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s71": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              71,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1057,
+                                    61
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s72": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              72,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1075,
+                                    79
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s73": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              73,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1093,
+                                    97
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s74": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              74,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1111,
+                                    115
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s75": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              75,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1129,
+                                    133
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s76": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              76,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1147,
+                                    151
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s77": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              77,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1165,
+                                    169
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "s78": {
+                            "type": "panel",
+                            "size": [
+                              18,
+                              18
+                            ],
+                            "grid_position": [
+                              78,
+                              0
+                            ],
+                            "controls": [
+                              {
+                                "item@ia_ui.item": {
+                                  "offset": [
+                                    -1183,
+                                    187
                                   ]
                                 }
                               }

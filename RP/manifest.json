@@ -1,5 +1,5 @@
 {
-  "format_version": 2,
+  "format_version": 3,
   "metadata": {
     "authors": [
       "Draco12191712 (Vivaan Bobade)",
@@ -11,38 +11,22 @@
   },
   "header": {
     "name": "§6§lImmersive Aircraft§r §9[RP]§r",
-    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3",
-    "min_engine_version": [
-      1,
-      26,
-      0
-    ],
+    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.1.0 \"Clear Skies\"",
+    "min_engine_version": "1.26.0",
     "uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
-    "version": [
-      1,
-      0,
-      2
-    ]
+    "version": "1.1.0"
   },
   "modules": [
     {
       "type": "resources",
       "uuid": "a3f7b9c1-2e4d-4c8a-9f6b-5d1e3a7c0b94",
-      "version": [
-        1,
-        0,
-        2
-      ]
+      "version": "1.1.0"
     }
   ],
   "dependencies": [
     {
       "uuid": "8f4c2b1e-6d3a-4e7f-9b2c-1a5d7e3f9c40",
-      "version": [
-        1,
-        0,
-        2
-      ]
+      "version": "1.1.0"
     }
   ],
   "capabilities": [

@@ -1,5 +1,5 @@
 {
-  "format_version": 2,
+  "format_version": 3,
   "metadata": {
     "authors": [
       "Draco12191712 (Vivaan Bobade)",
@@ -11,49 +11,29 @@
   },
   "header": {
     "name": "§6§lImmersive Aircraft§r §c[BP]§r",
-    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3",
-    "min_engine_version": [
-      1,
-      26,
-      0
-    ],
+    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.1.0 \"Clear Skies\"",
+    "min_engine_version": "1.26.0",
     "uuid": "8f4c2b1e-6d3a-4e7f-9b2c-1a5d7e3f9c40",
-    "version": [
-      1,
-      0,
-      2
-    ]
+    "version": "1.1.0"
   },
   "modules": [
     {
       "type": "data",
       "uuid": "2b7e9d14-5c8a-4f3e-a1d6-9e0b4c7f2a85",
-      "version": [
-        1,
-        0,
-        2
-      ]
+      "version": "1.1.0"
     },
     {
       "type": "script",
       "language": "javascript",
       "uuid": "c6a1f3e8-9b2d-4d7c-8e5f-3a4b6c9d1e27",
       "entry": "scripts/main.js",
-      "version": [
-        1,
-        0,
-        2
-      ]
+      "version": "1.1.0"
     }
   ],
   "dependencies": [
     {
       "uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
-      "version": [
-        1,
-        0,
-        2
-      ]
+      "version": "1.1.0"
     },
     {
       "module_name": "@minecraft/server",
@@ -62,6 +42,265 @@
     {
       "module_name": "@minecraft/server-ui",
       "version": "2.2.0"
+    }
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "ia.settings.flight"
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.speedMultiplier",
+      "name": "ia:speedMultiplier",
+      "min": 0.5,
+      "max": 3.0,
+      "step": 0.1,
+      "default": 1.6
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.liftAssist",
+      "name": "ia:liftAssist",
+      "min": 1.0,
+      "max": 3.0,
+      "step": 0.1,
+      "default": 1.8
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.fuelConsumption",
+      "name": "ia:fuelConsumption",
+      "min": 0.0,
+      "max": 5.0,
+      "step": 0.25,
+      "default": 1.0
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.burnFuelInCreative",
+      "name": "ia:burnFuelInCreative",
+      "default": false
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.acceptVanillaFuel",
+      "name": "ia:acceptVanillaFuel",
+      "default": true
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.windClearWeather",
+      "name": "ia:windClearWeather",
+      "min": 0.0,
+      "max": 5.0,
+      "step": 0.25,
+      "default": 1.0
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.windRainWeather",
+      "name": "ia:windRainWeather",
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.25,
+      "default": 3.0
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.windThunderWeather",
+      "name": "ia:windThunderWeather",
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.25,
+      "default": 3.0
+    },
+    {
+      "type": "label",
+      "text": "ia.settings.damage"
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.collisionDamage",
+      "name": "ia:collisionDamage",
+      "default": true
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.collisionDamageMultiplier",
+      "name": "ia:collisionDamageMultiplier",
+      "min": 0.0,
+      "max": 100.0,
+      "step": 5.0,
+      "default": 40.0
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.damagePerHealthPoint",
+      "name": "ia:damagePerHealthPoint",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "default": 30
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.enableCrashExplosion",
+      "name": "ia:enableCrashExplosion",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.enableCrashBlockDestruction",
+      "name": "ia:enableCrashBlockDestruction",
+      "default": false
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.enableCrashFire",
+      "name": "ia:enableCrashFire",
+      "default": false
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.crashExplosionRadius",
+      "name": "ia:crashExplosionRadius",
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.5,
+      "default": 2.0
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.crashDamage",
+      "name": "ia:crashDamage",
+      "min": 0.0,
+      "max": 20.0,
+      "step": 0.5,
+      "default": 2.0
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.preventKillThroughCrash",
+      "name": "ia:preventKillThroughCrash",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.weaponsAreDestructive",
+      "name": "ia:weaponsAreDestructive",
+      "default": false
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.rotaryCannonDamage",
+      "name": "ia:rotaryCannonDamage",
+      "min": 0.0,
+      "max": 20.0,
+      "step": 0.5,
+      "default": 5.0
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.heavyCrossBowVelocity",
+      "name": "ia:heavyCrossBowVelocity",
+      "min": 0.5,
+      "max": 6.0,
+      "step": 0.25,
+      "default": 3.0
+    },
+    {
+      "type": "label",
+      "text": "ia.settings.repair"
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.repairSpeed",
+      "name": "ia:repairSpeed",
+      "min": 0.0,
+      "max": 0.2,
+      "step": 0.005,
+      "default": 0.025
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.repairExhaustion",
+      "name": "ia:repairExhaustion",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.requireShiftForRepair",
+      "name": "ia:requireShiftForRepair",
+      "default": false
+    },
+    {
+      "type": "slider",
+      "text": "option.immersive_aircraft.regenerateHealthEveryNTicks",
+      "name": "ia:regenerateHealthEveryNTicks",
+      "min": 0,
+      "max": 1200,
+      "step": 20,
+      "default": 0
+    },
+    {
+      "type": "label",
+      "text": "ia.settings.items"
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.dropAircraft",
+      "name": "ia:dropAircraft",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.dropInventory",
+      "name": "ia:dropInventory",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.dropUpgrades",
+      "name": "ia:dropUpgrades",
+      "default": false
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.enableDropsForNonPlayer",
+      "name": "ia:enableDropsForNonPlayer",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "ia.settings.players"
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.useThirdPersonByDefault",
+      "name": "ia:useThirdPersonByDefault",
+      "default": false
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.enableTrails",
+      "name": "ia:enableTrails",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.showHotbarEngineGauge",
+      "name": "ia:showHotbarEngineGauge",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "text": "option.immersive_aircraft.defaultCanEnter",
+      "name": "ia:defaultCanEnter",
+      "default": true
     }
   ]
 }
