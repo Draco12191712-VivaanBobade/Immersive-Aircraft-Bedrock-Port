@@ -157,22 +157,22 @@
           {
             "effect": "trail",
             "locator": "trail_0_a",
-            "pre_effect_script": "v.tx = -3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+            "pre_effect_script": "v.tx = -3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - q.property('ia:ix') * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
           },
           {
             "effect": "trail",
             "locator": "trail_0_b",
-            "pre_effect_script": "v.tx = -3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+            "pre_effect_script": "v.tx = -3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - q.property('ia:ix') * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
           },
           {
             "effect": "trail",
             "locator": "trail_1_a",
-            "pre_effect_script": "v.tx = 3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+            "pre_effect_script": "v.tx = 3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - q.property('ia:ix') * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
           },
           {
             "effect": "trail",
             "locator": "trail_1_b",
-            "pre_effect_script": "v.tx = 3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - v.ix * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
+            "pre_effect_script": "v.tx = 3.75; v.alpha = math.clamp(math.sqrt(q.property('ia:speed')) * (0.5 - q.property('ia:ix') * v.tx * 0.025) - 0.25, 0, 1); v.gray = 1.0; v.life = 2.0; v.size = 0.15;"
           }
         ]
       }

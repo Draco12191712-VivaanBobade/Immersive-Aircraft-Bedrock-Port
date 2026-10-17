@@ -329,12 +329,12 @@
           {
             "effect": "trail",
             "locator": "trail_0_a",
-            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(v.power * q.property('ia:speed'), 0, 1); v.gray = 1.0; v.life = 1.0; v.size = 0.5;"
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:engine') * q.property('ia:speed'), 0, 1); v.gray = 1.0; v.life = 1.0; v.size = 0.5;"
           },
           {
             "effect": "trail",
             "locator": "trail_0_b",
-            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(v.power * q.property('ia:speed'), 0, 1); v.gray = 1.0; v.life = 1.0; v.size = 0.5;"
+            "pre_effect_script": "v.tx = 0.0; v.alpha = math.clamp(q.property('ia:engine') * q.property('ia:speed'), 0, 1); v.gray = 1.0; v.life = 1.0; v.size = 0.5;"
           }
         ]
       }
