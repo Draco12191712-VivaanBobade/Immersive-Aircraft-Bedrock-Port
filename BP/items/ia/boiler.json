@@ -17,7 +17,7 @@
       "minecraft:display_name": {
         "value": "item.ia:boiler"
       },
-      "minecraft:max_stack_size": 8
+      "minecraft:max_stack_size": 64
     }
   }
 }
