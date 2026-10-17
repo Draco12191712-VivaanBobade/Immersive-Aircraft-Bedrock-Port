@@ -19,2663 +19,1788 @@ var w = mc.world,
   ModalFormData = mui.ModalFormData,
   MessageFormData = mui.MessageFormData;
 var VER = {
-  "v": "1.2.0",
-  "n": "Flight Camera Update"
+  v: "1.2.0",
+  n: "Flight Camera Update",
 };
 var UIT = {
-  "biplane": "\u00a7i\u00a7a\u00a70\u00a7rBiplane",
-  "gyrodyne": "\u00a7i\u00a7a\u00a71\u00a7rGyrodyne",
-  "airship": "\u00a7i\u00a7a\u00a72\u00a7rAirship",
-  "cargo_airship": "\u00a7i\u00a7a\u00a73\u00a7rCargo Airship",
-  "warship": "\u00a7i\u00a7a\u00a74\u00a7rWarship",
-  "quadrocopter": "\u00a7i\u00a7a\u00a75\u00a7rQuadrocopter",
-  "bamboo_hopper": "\u00a7i\u00a7a\u00a76\u00a7rBamboo Hopper"
+  biplane: "\u00a7i\u00a7a\u00a70\u00a7rBiplane",
+  gyrodyne: "\u00a7i\u00a7a\u00a71\u00a7rGyrodyne",
+  airship: "\u00a7i\u00a7a\u00a72\u00a7rAirship",
+  cargo_airship: "\u00a7i\u00a7a\u00a73\u00a7rCargo Airship",
+  warship: "\u00a7i\u00a7a\u00a74\u00a7rWarship",
+  quadrocopter: "\u00a7i\u00a7a\u00a75\u00a7rQuadrocopter",
+  bamboo_hopper: "\u00a7i\u00a7a\u00a76\u00a7rBamboo Hopper",
 };
 var AC = {
-  "biplane": {
-    "cls": "airplane",
-    "size": [
-      1.75,
-      0.85
-    ],
-    "zoom": 3,
-    "explode": true,
-    "sound": "propeller",
-    "start": "engine_start",
-    "reaction": 20,
-    "gui": "engine",
-    "adapt": true,
-    "interp": 10,
-    "fuelType": "fuel",
-    "underwater": false,
-    "dismountRot": 90,
-    "props": {
-      "engineSpeed": 0.0275,
-      "verticalSpeed": 0.0,
-      "yawSpeed": 5.0,
-      "pitchSpeed": 4.0,
-      "pushSpeed": 0.03,
-      "brakeFactor": 0.98,
-      "acceleration": 1.0,
-      "durability": 1.0,
-      "fireResistance": 0.0,
-      "fuel": 1.25,
-      "friction": 0.001,
-      "glideFactor": 0.05,
-      "lift": 0.15,
-      "rollFactor": 45.0,
-      "groundPitch": 4.0,
-      "stabilizer": 0.0,
-      "wind": 0.025,
-      "mass": 1.0,
-      "hud": -1.0,
-      "dials": -1.0,
-      "groundFriction": 0.85,
-      "waterFriction": 0.9,
-      "lavaFriction": 0.7,
-      "rotationDecay": 0.97,
-      "horizontalDecay": 0.995,
-      "verticalDecay": 0.995
+  biplane: {
+    cls: "airplane",
+    size: [1.75, 0.85],
+    zoom: 3,
+    explode: true,
+    sound: "propeller",
+    start: "engine_start",
+    reaction: 20,
+    gui: "engine",
+    adapt: true,
+    interp: 10,
+    fuelType: "fuel",
+    underwater: false,
+    dismountRot: 90,
+    props: {
+      engineSpeed: 0.0275,
+      verticalSpeed: 0.0,
+      yawSpeed: 5.0,
+      pitchSpeed: 4.0,
+      pushSpeed: 0.03,
+      brakeFactor: 0.98,
+      acceleration: 1.0,
+      durability: 1.0,
+      fireResistance: 0.0,
+      fuel: 1.25,
+      friction: 0.001,
+      glideFactor: 0.05,
+      lift: 0.15,
+      rollFactor: 45.0,
+      groundPitch: 4.0,
+      stabilizer: 0.0,
+      wind: 0.025,
+      mass: 1.0,
+      hud: -1.0,
+      dials: -1.0,
+      groundFriction: 0.85,
+      waterFriction: 0.9,
+      lavaFriction: 0.7,
+      rotationDecay: 0.97,
+      horizontalDecay: 0.995,
+      verticalDecay: 0.995,
     },
-    "slots": {
-      "booster": [
-        0
-      ],
-      "weapon": [
-        1
-      ],
-      "banner": [
-        2
-      ],
-      "upgrade": [
-        3,
-        4,
-        5,
-        6
-      ],
-      "boiler": [
-        7
-      ],
-      "inventory": [
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23
-      ]
+    slots: {
+      booster: [0],
+      weapon: [1],
+      banner: [2],
+      upgrade: [3, 4, 5, 6],
+      boiler: [7],
+      inventory: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
     },
-    "invSize": 24,
-    "visibleSize": 24,
-    "holdSize": 0,
-    "mounts": [
+    invSize: 24,
+    visibleSize: 24,
+    holdSize: 0,
+    mounts: [
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": 0,
-            "y": 0.9,
-            "z": -1.1875,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": true,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 0,
+            y: 0.9,
+            z: -1.1875,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: true,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": -1.0,
-            "y": 0.3375,
-            "z": 1.125,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -1.0,
+            y: 0.3375,
+            z: 1.125,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 1.0,
-            "y": 0.3375,
-            "z": 1.125,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 1.0,
+            y: 0.3375,
+            z: 1.125,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": -1.25,
-            "y": 0.3,
-            "z": 1.125,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -1.25,
+            y: 0.3,
+            z: 1.125,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 1.25,
-            "y": 0.3,
-            "z": 1.125,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
-        ]
-      }
+            x: 1.25,
+            y: 0.3,
+            z: 1.125,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
+        ],
+      },
     ],
-    "passengers": [
+    passengers: [
       [
         {
-          "x": 0.0,
-          "y": 0.375,
-          "z": -0.6
-        }
-      ]
+          x: 0.0,
+          y: 0.375,
+          z: -0.6,
+        },
+      ],
     ],
-    "boxes": [
+    boxes: [
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": 0.75,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: 0.75,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": 1.5,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: 1.5,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": 2.25,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: 2.25,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": 3.0,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: 3.0,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": 0.0,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: 0.0,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": -0.75,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: -0.75,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": -1.5,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: -1.5,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": -2.25,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: -2.25,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 1.0,
-        "height": 0.7,
-        "x": -3.0,
-        "y": 0.65,
-        "z": 1.125
+        width: 1.0,
+        height: 0.7,
+        x: -3.0,
+        y: 0.65,
+        z: 1.125,
       },
       {
-        "width": 0.8,
-        "height": 0.6,
-        "x": 0.0,
-        "y": 0.65,
-        "z": -1.0
+        width: 0.8,
+        height: 0.6,
+        x: 0.0,
+        y: 0.65,
+        z: -1.0,
       },
       {
-        "width": 0.8,
-        "height": 0.6,
-        "x": 0.0,
-        "y": 0.65,
-        "z": -1.5
+        width: 0.8,
+        height: 0.6,
+        x: 0.0,
+        y: 0.65,
+        z: -1.5,
       },
       {
-        "width": 0.6,
-        "height": 0.5,
-        "x": 0.0,
-        "y": 0.65,
-        "z": -2.0
+        width: 0.6,
+        height: 0.5,
+        x: 0.0,
+        y: 0.65,
+        z: -2.0,
       },
       {
-        "width": 0.6,
-        "height": 0.5,
-        "x": 0.0,
-        "y": 0.65,
-        "z": -2.5
+        width: 0.6,
+        height: 0.5,
+        x: 0.0,
+        y: 0.65,
+        z: -2.5,
       },
       {
-        "width": 1.2,
-        "height": 0.2,
-        "x": 0.0,
-        "y": 0.7,
-        "z": -2.6
-      }
+        width: 1.2,
+        height: 0.2,
+        x: 0.0,
+        y: 0.7,
+        z: -2.6,
+      },
     ],
-    "trails": [
+    trails: [
       {
-        "x": -3.75,
-        "y": 0.25,
-        "z": 0.6,
-        "size": 0.15,
-        "rotate": 0.0,
-        "gray": 1.0,
-        "length": 40
+        x: -3.75,
+        y: 0.25,
+        z: 0.6,
+        size: 0.15,
+        rotate: 0.0,
+        gray: 1.0,
+        length: 40,
       },
       {
-        "x": 3.75,
-        "y": 0.25,
-        "z": 0.6,
-        "size": 0.15,
-        "rotate": 0.0,
-        "gray": 1.0,
-        "length": 40
-      }
+        x: 3.75,
+        y: 0.25,
+        z: 0.6,
+        size: 0.15,
+        rotate: 0.0,
+        gray: 1.0,
+        length: 40,
+      },
     ],
-    "dyeable": false
+    dyeable: false,
   },
-  "gyrodyne": {
-    "cls": "gyrodyne",
-    "size": [
-      1.3,
-      0.6
-    ],
-    "zoom": 2,
-    "explode": false,
-    "sound": "woosh",
-    "start": "woosh",
-    "reaction": 20,
-    "gui": "none",
-    "adapt": true,
-    "interp": 10,
-    "fuelType": "fat",
-    "underwater": false,
-    "dismountRot": 90,
-    "props": {
-      "engineSpeed": 0.3,
-      "verticalSpeed": 0.04,
-      "yawSpeed": 5.0,
-      "pitchSpeed": 5.0,
-      "pushSpeed": 0.3,
-      "brakeFactor": 0.95,
-      "acceleration": 1.0,
-      "durability": 1.0,
-      "fireResistance": 0.0,
-      "fuel": 1.0,
-      "friction": 0.015,
-      "glideFactor": 0.0,
-      "lift": 0.1,
-      "rollFactor": 30.0,
-      "groundPitch": 0.0,
-      "stabilizer": 0.3,
-      "wind": 0.05,
-      "mass": 4.0,
-      "hud": -1.0,
-      "dials": -1.0,
-      "groundFriction": 0.8,
-      "waterFriction": 0.9,
-      "lavaFriction": 0.7,
-      "rotationDecay": 0.97,
-      "horizontalDecay": 0.925,
-      "verticalDecay": 0.9
+  gyrodyne: {
+    cls: "gyrodyne",
+    size: [1.3, 0.6],
+    zoom: 2,
+    explode: false,
+    sound: "woosh",
+    start: "woosh",
+    reaction: 20,
+    gui: "none",
+    adapt: true,
+    interp: 10,
+    fuelType: "fat",
+    underwater: false,
+    dismountRot: 90,
+    props: {
+      engineSpeed: 0.3,
+      verticalSpeed: 0.04,
+      yawSpeed: 5.0,
+      pitchSpeed: 5.0,
+      pushSpeed: 0.3,
+      brakeFactor: 0.95,
+      acceleration: 1.0,
+      durability: 1.0,
+      fireResistance: 0.0,
+      fuel: 1.0,
+      friction: 0.015,
+      glideFactor: 0.0,
+      lift: 0.1,
+      rollFactor: 30.0,
+      groundPitch: 0.0,
+      stabilizer: 0.3,
+      wind: 0.05,
+      mass: 4.0,
+      hud: -1.0,
+      dials: -1.0,
+      groundFriction: 0.8,
+      waterFriction: 0.9,
+      lavaFriction: 0.7,
+      rotationDecay: 0.97,
+      horizontalDecay: 0.925,
+      verticalDecay: 0.9,
     },
-    "slots": {
-      "weapon": [
-        0
+    slots: {
+      weapon: [0],
+      upgrade: [1, 2, 3],
+      inventory: [
+        4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
       ],
-      "upgrade": [
-        1,
-        2,
-        3
-      ],
-      "inventory": [
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
-      ]
     },
-    "invSize": 22,
-    "visibleSize": 22,
-    "holdSize": 0,
-    "mounts": [
+    invSize: 22,
+    visibleSize: 22,
+    holdSize: 0,
+    mounts: [
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": 0,
-            "y": 0.075,
-            "z": -1.0,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 0,
+            y: 0.075,
+            z: -1.0,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": 0,
-            "y": 0.2,
-            "z": 1.375,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 0,
+            y: 0.2,
+            z: 1.375,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": -1.0,
-            "y": 0.23125,
-            "z": 0.0625,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -1.0,
+            y: 0.23125,
+            z: 0.0625,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 1.0,
-            "y": 0.23125,
-            "z": 0.0625,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
-        ]
-      }
+            x: 1.0,
+            y: 0.23125,
+            z: 0.0625,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
+        ],
+      },
     ],
-    "passengers": [
+    passengers: [
       [
         {
-          "x": 0.0,
-          "y": 0.125,
-          "z": 0.275
-        }
+          x: 0.0,
+          y: 0.125,
+          z: 0.275,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.125,
-          "z": 0.3
+          x: 0.0,
+          y: 0.125,
+          z: 0.3,
         },
         {
-          "x": 0.0,
-          "y": 0.125,
-          "z": -0.6
-        }
-      ]
+          x: 0.0,
+          y: 0.125,
+          z: -0.6,
+        },
+      ],
     ],
-    "boxes": [
+    boxes: [
       {
-        "width": 1.0,
-        "height": 0.1,
-        "x": 1.0,
-        "y": 0.25,
-        "z": 0.125
+        width: 1.0,
+        height: 0.1,
+        x: 1.0,
+        y: 0.25,
+        z: 0.125,
       },
       {
-        "width": 1.0,
-        "height": 0.1,
-        "x": 1.85,
-        "y": 0.25,
-        "z": 0.125
+        width: 1.0,
+        height: 0.1,
+        x: 1.85,
+        y: 0.25,
+        z: 0.125,
       },
       {
-        "width": 1.0,
-        "height": 0.1,
-        "x": 0.0,
-        "y": 0.25,
-        "z": 0.125
+        width: 1.0,
+        height: 0.1,
+        x: 0.0,
+        y: 0.25,
+        z: 0.125,
       },
       {
-        "width": 1.0,
-        "height": 0.1,
-        "x": -1.0,
-        "y": 0.25,
-        "z": 0.125
+        width: 1.0,
+        height: 0.1,
+        x: -1.0,
+        y: 0.25,
+        z: 0.125,
       },
       {
-        "width": 1.0,
-        "height": 0.1,
-        "x": -1.85,
-        "y": 0.25,
-        "z": 0.125
+        width: 1.0,
+        height: 0.1,
+        x: -1.85,
+        y: 0.25,
+        z: 0.125,
       },
       {
-        "width": 0.8,
-        "height": 0.4,
-        "x": 0.0,
-        "y": 0.2,
-        "z": 1.1
+        width: 0.8,
+        height: 0.4,
+        x: 0.0,
+        y: 0.2,
+        z: 1.1,
       },
       {
-        "width": 0.4,
-        "height": 0.3,
-        "x": 0.0,
-        "y": 0.15,
-        "z": 1.6
+        width: 0.4,
+        height: 0.3,
+        x: 0.0,
+        y: 0.15,
+        z: 1.6,
       },
       {
-        "width": 0.4,
-        "height": 0.3,
-        "x": 0.0,
-        "y": 0.15,
-        "z": 2.1
-      }
+        width: 0.4,
+        height: 0.3,
+        x: 0.0,
+        y: 0.15,
+        z: 2.1,
+      },
     ],
-    "trails": [],
-    "dyeable": false
+    trails: [],
+    dyeable: false,
   },
-  "airship": {
-    "cls": "airship",
-    "size": [
-      1.5,
-      3.0
-    ],
-    "zoom": 5,
-    "explode": true,
-    "sound": "propeller_small",
-    "start": "engine_start",
-    "reaction": 50,
-    "gui": "engine",
-    "adapt": true,
-    "interp": 10,
-    "fuelType": "fuel",
-    "underwater": false,
-    "dismountRot": 90,
-    "props": {
-      "engineSpeed": 0.02,
-      "verticalSpeed": 0.025,
-      "yawSpeed": 5.0,
-      "pitchSpeed": 0.0,
-      "pushSpeed": 0.0,
-      "brakeFactor": 0.95,
-      "acceleration": 1.0,
-      "durability": 1.0,
-      "fireResistance": 0.0,
-      "fuel": 1.0,
-      "friction": 0.015,
-      "glideFactor": 0.0,
-      "lift": 0.1,
-      "rollFactor": 5.0,
-      "groundPitch": 0.0,
-      "stabilizer": 0.1,
-      "wind": 0.05,
-      "mass": 3.0,
-      "hud": -1.0,
-      "dials": -1.0,
-      "groundFriction": 0.5,
-      "waterFriction": 0.9,
-      "lavaFriction": 0.7,
-      "rotationDecay": 0.97,
-      "horizontalDecay": 0.97,
-      "verticalDecay": 0.925
+  airship: {
+    cls: "airship",
+    size: [1.5, 3.0],
+    zoom: 5,
+    explode: true,
+    sound: "propeller_small",
+    start: "engine_start",
+    reaction: 50,
+    gui: "engine",
+    adapt: true,
+    interp: 10,
+    fuelType: "fuel",
+    underwater: false,
+    dismountRot: 90,
+    props: {
+      engineSpeed: 0.02,
+      verticalSpeed: 0.025,
+      yawSpeed: 5.0,
+      pitchSpeed: 0.0,
+      pushSpeed: 0.0,
+      brakeFactor: 0.95,
+      acceleration: 1.0,
+      durability: 1.0,
+      fireResistance: 0.0,
+      fuel: 1.0,
+      friction: 0.015,
+      glideFactor: 0.0,
+      lift: 0.1,
+      rollFactor: 5.0,
+      groundPitch: 0.0,
+      stabilizer: 0.1,
+      wind: 0.05,
+      mass: 3.0,
+      hud: -1.0,
+      dials: -1.0,
+      groundFriction: 0.5,
+      waterFriction: 0.9,
+      lavaFriction: 0.7,
+      rotationDecay: 0.97,
+      horizontalDecay: 0.97,
+      verticalDecay: 0.925,
     },
-    "slots": {
-      "weapon": [
-        0
-      ],
-      "upgrade": [
-        1,
-        2,
-        3
-      ],
-      "banner": [
-        4
-      ],
-      "dye": [
-        5
-      ],
-      "boiler": [
-        6
-      ],
-      "inventory": [
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22
-      ]
+    slots: {
+      weapon: [0],
+      upgrade: [1, 2, 3],
+      banner: [4],
+      dye: [5],
+      boiler: [6],
+      inventory: [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
     },
-    "invSize": 23,
-    "visibleSize": 23,
-    "holdSize": 0,
-    "mounts": [
+    invSize: 23,
+    visibleSize: 23,
+    holdSize: 0,
+    mounts: [
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": 0,
-            "y": 0.3875,
-            "z": 1.001,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 0,
+            y: 0.3875,
+            z: 1.001,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": -0.5,
-            "y": 0.375,
-            "z": 0.0,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -0.5,
+            y: 0.375,
+            z: 0.0,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 90,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, 0.0],
+              [1.0, 0.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 0.5,
-            "y": 0.375,
-            "z": 0.0,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": -90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -1.0,
-                0.0,
-                -0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 0.5,
+            y: 0.375,
+            z: 0.0,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: -90,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, 0.0],
+              [-1.0, 0.0, -0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": -0.5,
-            "y": 0.375,
-            "z": 0.0,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": -90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -1.0,
-                0.0,
-                -0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -0.5,
+            y: 0.375,
+            z: 0.0,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: -90,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, 0.0],
+              [-1.0, 0.0, -0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 0.5,
-            "y": 0.375,
-            "z": 0.0,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
-        ]
-      }
+            x: 0.5,
+            y: 0.375,
+            z: 0.0,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 90,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, 0.0],
+              [1.0, 0.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
+        ],
+      },
     ],
-    "passengers": [
+    passengers: [
       [
         {
-          "x": 0.0,
-          "y": 0.125,
-          "z": 0.0
-        }
+          x: 0.0,
+          y: 0.125,
+          z: 0.0,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.125,
-          "z": 0.3
+          x: 0.0,
+          y: 0.125,
+          z: 0.3,
         },
         {
-          "x": 0.0,
-          "y": 0.125,
-          "z": -0.3
-        }
-      ]
+          x: 0.0,
+          y: 0.125,
+          z: -0.3,
+        },
+      ],
     ],
-    "boxes": [],
-    "trails": [
+    boxes: [],
+    trails: [
       {
-        "x": 0.0,
-        "y": 0.4,
-        "z": -1.2,
-        "size": 0.15,
-        "rotate": 50.0,
-        "gray": 0.5,
-        "length": 15
-      }
+        x: 0.0,
+        y: 0.4,
+        z: -1.2,
+        size: 0.15,
+        rotate: 50.0,
+        gray: 0.5,
+        length: 15,
+      },
     ],
-    "dyeable": true
+    dyeable: true,
   },
-  "cargo_airship": {
-    "cls": "airship",
-    "size": [
-      1.75,
-      3.0
-    ],
-    "zoom": 5,
-    "explode": true,
-    "sound": "propeller_small",
-    "start": "engine_start",
-    "reaction": 50,
-    "gui": "engine",
-    "adapt": true,
-    "interp": 10,
-    "fuelType": "fuel",
-    "underwater": false,
-    "dismountRot": 90,
-    "props": {
-      "engineSpeed": 0.0175,
-      "verticalSpeed": 0.02,
-      "yawSpeed": 5.0,
-      "pitchSpeed": 0.0,
-      "pushSpeed": 0.0,
-      "brakeFactor": 0.95,
-      "acceleration": 1.0,
-      "durability": 1.0,
-      "fireResistance": 0.0,
-      "fuel": 1.25,
-      "friction": 0.015,
-      "glideFactor": 0.0,
-      "lift": 0.1,
-      "rollFactor": 5.0,
-      "groundPitch": 0.0,
-      "stabilizer": 0.1,
-      "wind": 0.05,
-      "mass": 8.0,
-      "hud": -1.0,
-      "dials": -1.0,
-      "groundFriction": 0.95,
-      "waterFriction": 0.9,
-      "lavaFriction": 0.7,
-      "rotationDecay": 0.97,
-      "horizontalDecay": 0.97,
-      "verticalDecay": 0.97
+  cargo_airship: {
+    cls: "airship",
+    size: [1.75, 3.0],
+    zoom: 5,
+    explode: true,
+    sound: "propeller_small",
+    start: "engine_start",
+    reaction: 50,
+    gui: "engine",
+    adapt: true,
+    interp: 10,
+    fuelType: "fuel",
+    underwater: false,
+    dismountRot: 90,
+    props: {
+      engineSpeed: 0.0175,
+      verticalSpeed: 0.02,
+      yawSpeed: 5.0,
+      pitchSpeed: 0.0,
+      pushSpeed: 0.0,
+      brakeFactor: 0.95,
+      acceleration: 1.0,
+      durability: 1.0,
+      fireResistance: 0.0,
+      fuel: 1.25,
+      friction: 0.015,
+      glideFactor: 0.0,
+      lift: 0.1,
+      rollFactor: 5.0,
+      groundPitch: 0.0,
+      stabilizer: 0.1,
+      wind: 0.05,
+      mass: 8.0,
+      hud: -1.0,
+      dials: -1.0,
+      groundFriction: 0.95,
+      waterFriction: 0.9,
+      lavaFriction: 0.7,
+      rotationDecay: 0.97,
+      horizontalDecay: 0.97,
+      verticalDecay: 0.97,
     },
-    "slots": {
-      "upgrade": [
-        0,
-        1,
-        2,
-        3
+    slots: {
+      upgrade: [0, 1, 2, 3],
+      banner: [4],
+      dye: [5],
+      boiler: [6],
+      inventory: [
+        7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43,
+        44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
+        62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
+        80, 81, 82, 83, 84, 85, 86,
       ],
-      "banner": [
-        4
-      ],
-      "dye": [
-        5
-      ],
-      "boiler": [
-        6
-      ],
-      "inventory": [
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86
-      ]
     },
-    "invSize": 87,
-    "visibleSize": 87,
-    "holdSize": 0,
-    "mounts": [],
-    "passengers": [
+    invSize: 87,
+    visibleSize: 87,
+    holdSize: 0,
+    mounts: [],
+    passengers: [
       [
         {
-          "x": 0.0,
-          "y": 0.1875,
-          "z": 0.0
-        }
+          x: 0.0,
+          y: 0.1875,
+          z: 0.0,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.1875,
-          "z": 0.3
+          x: 0.0,
+          y: 0.1875,
+          z: 0.3,
         },
         {
-          "x": 0.0,
-          "y": 0.1875,
-          "z": -0.3
-        }
-      ]
+          x: 0.0,
+          y: 0.1875,
+          z: -0.3,
+        },
+      ],
     ],
-    "boxes": [],
-    "trails": [
+    boxes: [],
+    trails: [
       {
-        "x": 0.0,
-        "y": 0.45,
-        "z": -1.2,
-        "size": 0.15,
-        "rotate": 50.0,
-        "gray": 0.5,
-        "length": 15
+        x: 0.0,
+        y: 0.45,
+        z: -1.2,
+        size: 0.15,
+        rotate: 50.0,
+        gray: 0.5,
+        length: 15,
       },
       {
-        "x": 1.15625,
-        "y": 2.65,
-        "z": -1.2,
-        "size": 0.125,
-        "rotate": 65.0,
-        "gray": 0.5,
-        "length": 10
+        x: 1.15625,
+        y: 2.65,
+        z: -1.2,
+        size: 0.125,
+        rotate: 65.0,
+        gray: 0.5,
+        length: 10,
       },
       {
-        "x": -1.15625,
-        "y": 2.65,
-        "z": -1.2,
-        "size": 0.125,
-        "rotate": 65.0,
-        "gray": 0.5,
-        "length": 10
-      }
+        x: -1.15625,
+        y: 2.65,
+        z: -1.2,
+        size: 0.125,
+        rotate: 65.0,
+        gray: 0.5,
+        length: 10,
+      },
     ],
-    "dyeable": true
+    dyeable: true,
   },
-  "warship": {
-    "cls": "warship",
-    "size": [
-      5.0,
-      6.5
-    ],
-    "zoom": 5,
-    "explode": true,
-    "sound": "warship",
-    "start": "engine_start_warship",
-    "reaction": 100,
-    "gui": "engine",
-    "adapt": true,
-    "interp": 10,
-    "fuelType": "fuel",
-    "underwater": false,
-    "dismountRot": 90,
-    "props": {
-      "engineSpeed": 0.035,
-      "verticalSpeed": 0.025,
-      "yawSpeed": 2.5,
-      "pitchSpeed": 0.0,
-      "pushSpeed": 0.0,
-      "brakeFactor": 0.95,
-      "acceleration": 1.0,
-      "durability": 3.0,
-      "fireResistance": 0.0,
-      "fuel": 0.8,
-      "friction": 0.015,
-      "glideFactor": 0.0,
-      "lift": 0.1,
-      "rollFactor": 3.0,
-      "groundPitch": 0.0,
-      "stabilizer": 0.1,
-      "wind": 0.01,
-      "mass": 10.0,
-      "hud": -1.0,
-      "dials": -1.0,
-      "groundFriction": 0.5,
-      "waterFriction": 0.9,
-      "lavaFriction": 0.7,
-      "rotationDecay": 0.97,
-      "horizontalDecay": 0.97,
-      "verticalDecay": 0.925
+  warship: {
+    cls: "warship",
+    size: [5.0, 6.5],
+    zoom: 5,
+    explode: true,
+    sound: "warship",
+    start: "engine_start_warship",
+    reaction: 100,
+    gui: "engine",
+    adapt: true,
+    interp: 10,
+    fuelType: "fuel",
+    underwater: false,
+    dismountRot: 90,
+    props: {
+      engineSpeed: 0.035,
+      verticalSpeed: 0.025,
+      yawSpeed: 2.5,
+      pitchSpeed: 0.0,
+      pushSpeed: 0.0,
+      brakeFactor: 0.95,
+      acceleration: 1.0,
+      durability: 3.0,
+      fireResistance: 0.0,
+      fuel: 0.8,
+      friction: 0.015,
+      glideFactor: 0.0,
+      lift: 0.1,
+      rollFactor: 3.0,
+      groundPitch: 0.0,
+      stabilizer: 0.1,
+      wind: 0.01,
+      mass: 10.0,
+      hud: -1.0,
+      dials: -1.0,
+      groundFriction: 0.5,
+      waterFriction: 0.9,
+      lavaFriction: 0.7,
+      rotationDecay: 0.97,
+      horizontalDecay: 0.97,
+      verticalDecay: 0.925,
     },
-    "slots": {
-      "upgrade": [
-        0,
-        1,
-        2,
-        5,
-        6,
-        7
+    slots: {
+      upgrade: [0, 1, 2, 5, 6, 7],
+      weapon: [3, 8],
+      dye: [4],
+      booster: [9],
+      boiler: [10, 11, 12],
+      inventory: [
+        13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+        31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+        49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66,
+        67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78,
       ],
-      "weapon": [
-        3,
-        8
-      ],
-      "dye": [
-        4
-      ],
-      "booster": [
-        9
-      ],
-      "boiler": [
-        10,
-        11,
-        12
-      ],
-      "inventory": [
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78
-      ]
     },
-    "invSize": 79,
-    "visibleSize": 79,
-    "holdSize": 0,
-    "mounts": [
+    invSize: 79,
+    visibleSize: 79,
+    holdSize: 0,
+    mounts: [
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": -3.875,
-            "y": 4.625,
-            "z": 1.825,
-            "yaw": 90,
-            "pitch": -90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                1.0
-              ],
-              [
-                -1.0,
-                -0.0,
-                0.0
-              ]
-            ]
+            x: -3.875,
+            y: 4.625,
+            z: 1.825,
+            yaw: 90,
+            pitch: -90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, 0.0],
+              [0.0, 0.0, 1.0],
+              [-1.0, -0.0, 0.0],
+            ],
           },
           {
-            "x": 3.875,
-            "y": 4.625,
-            "z": 1.825,
-            "yaw": -90,
-            "pitch": -90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                -0.0
-              ],
-              [
-                0.0,
-                0.0,
-                1.0
-              ],
-              [
-                1.0,
-                -0.0,
-                0.0
-              ]
-            ]
+            x: 3.875,
+            y: 4.625,
+            z: 1.825,
+            yaw: -90,
+            pitch: -90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, -0.0],
+              [0.0, 0.0, 1.0],
+              [1.0, -0.0, 0.0],
+            ],
           },
           {
-            "x": -3.875,
-            "y": 4.625,
-            "z": -1.825,
-            "yaw": 90,
-            "pitch": -90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                1.0
-              ],
-              [
-                -1.0,
-                -0.0,
-                0.0
-              ]
-            ]
+            x: -3.875,
+            y: 4.625,
+            z: -1.825,
+            yaw: 90,
+            pitch: -90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, 0.0],
+              [0.0, 0.0, 1.0],
+              [-1.0, -0.0, 0.0],
+            ],
           },
           {
-            "x": 3.875,
-            "y": 4.625,
-            "z": -1.825,
-            "yaw": -90,
-            "pitch": -90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                -0.0
-              ],
-              [
-                0.0,
-                0.0,
-                1.0
-              ],
-              [
-                1.0,
-                -0.0,
-                0.0
-              ]
-            ]
-          }
+            x: 3.875,
+            y: 4.625,
+            z: -1.825,
+            yaw: -90,
+            pitch: -90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, -0.0],
+              [0.0, 0.0, 1.0],
+              [1.0, -0.0, 0.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": -3.875,
-            "y": 4.625,
-            "z": 1.825,
-            "yaw": 0.0,
-            "pitch": 0,
-            "roll": 90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -3.875,
+            y: 4.625,
+            z: 1.825,
+            yaw: 0.0,
+            pitch: 0,
+            roll: 90,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, 0.0],
+              [1.0, 0.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 3.875,
-            "y": 4.625,
-            "z": 1.825,
-            "yaw": 0.0,
-            "pitch": 0,
-            "roll": -90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -1.0,
-                0.0,
-                -0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: 3.875,
+            y: 4.625,
+            z: 1.825,
+            yaw: 0.0,
+            pitch: 0,
+            roll: -90,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, 0.0],
+              [-1.0, 0.0, -0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": -3.875,
-            "y": 4.625,
-            "z": -1.825,
-            "yaw": 0.0,
-            "pitch": 0,
-            "roll": 90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -3.875,
+            y: 4.625,
+            z: -1.825,
+            yaw: 0.0,
+            pitch: 0,
+            roll: 90,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, 0.0],
+              [1.0, 0.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 3.875,
-            "y": 4.625,
-            "z": -1.825,
-            "yaw": 0.0,
-            "pitch": 0,
-            "roll": -90,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -1.0,
-                0.0,
-                -0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 3.875,
+            y: 4.625,
+            z: -1.825,
+            yaw: 0.0,
+            pitch: 0,
+            roll: -90,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, 0.0],
+              [-1.0, 0.0, -0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": -3.875,
-            "y": 4.625,
-            "z": 1.825,
-            "yaw": 90,
-            "pitch": 90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                -1.0
-              ],
-              [
-                -1.0,
-                0.0,
-                0.0
-              ]
-            ]
+            x: -3.875,
+            y: 4.625,
+            z: 1.825,
+            yaw: 90,
+            pitch: 90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, 0.0],
+              [0.0, 0.0, -1.0],
+              [-1.0, 0.0, 0.0],
+            ],
           },
           {
-            "x": 3.875,
-            "y": 4.625,
-            "z": 1.825,
-            "yaw": -90,
-            "pitch": 90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                -0.0
-              ],
-              [
-                0.0,
-                0.0,
-                -1.0
-              ],
-              [
-                1.0,
-                0.0,
-                0.0
-              ]
-            ]
+            x: 3.875,
+            y: 4.625,
+            z: 1.825,
+            yaw: -90,
+            pitch: 90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, -0.0],
+              [0.0, 0.0, -1.0],
+              [1.0, 0.0, 0.0],
+            ],
           },
           {
-            "x": -3.875,
-            "y": 4.625,
-            "z": -1.825,
-            "yaw": 90,
-            "pitch": 90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                -1.0
-              ],
-              [
-                -1.0,
-                0.0,
-                0.0
-              ]
-            ]
+            x: -3.875,
+            y: 4.625,
+            z: -1.825,
+            yaw: 90,
+            pitch: 90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, 1.0, 0.0],
+              [0.0, 0.0, -1.0],
+              [-1.0, 0.0, 0.0],
+            ],
           },
           {
-            "x": 3.875,
-            "y": 4.625,
-            "z": -1.825,
-            "yaw": -90,
-            "pitch": 90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                0.0,
-                -1.0,
-                -0.0
-              ],
-              [
-                0.0,
-                0.0,
-                -1.0
-              ],
-              [
-                1.0,
-                0.0,
-                0.0
-              ]
-            ]
-          }
-        ]
+            x: 3.875,
+            y: 4.625,
+            z: -1.825,
+            yaw: -90,
+            pitch: 90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [0.0, -1.0, -0.0],
+              [0.0, 0.0, -1.0],
+              [1.0, 0.0, 0.0],
+            ],
+          },
+        ],
       },
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": -2.375,
-            "y": 4.625,
-            "z": 4.625,
-            "yaw": 0,
-            "pitch": 90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                -1.0
-              ],
-              [
-                -0.0,
-                1.0,
-                0.0
-              ]
-            ]
+            x: -2.375,
+            y: 4.625,
+            z: 4.625,
+            yaw: 0,
+            pitch: 90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 0.0, -1.0],
+              [-0.0, 1.0, 0.0],
+            ],
           },
           {
-            "x": 2.375,
-            "y": 4.625,
-            "z": 4.625,
-            "yaw": 0,
-            "pitch": 90,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                -1.0
-              ],
-              [
-                -0.0,
-                1.0,
-                0.0
-              ]
-            ]
-          }
+            x: 2.375,
+            y: 4.625,
+            z: 4.625,
+            yaw: 0,
+            pitch: 90,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 0.0, -1.0],
+              [-0.0, 1.0, 0.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": -2.375,
-            "y": 4.875,
-            "z": 4.375,
-            "yaw": 0,
-            "pitch": 0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -2.375,
+            y: 4.875,
+            z: 4.375,
+            yaw: 0,
+            pitch: 0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 2.375,
-            "y": 4.875,
-            "z": 4.375,
-            "yaw": 0,
-            "pitch": 0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 2.375,
+            y: 4.875,
+            z: 4.375,
+            yaw: 0,
+            pitch: 0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": -2.375,
-            "y": 4.25,
-            "z": 4.25,
-            "yaw": 0,
-            "pitch": 0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -2.375,
+            y: 4.25,
+            z: 4.25,
+            yaw: 0,
+            pitch: 0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 2.375,
-            "y": 4.25,
-            "z": 4.25,
-            "yaw": 0,
-            "pitch": 0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
-        ]
-      }
+            x: 2.375,
+            y: 4.25,
+            z: 4.25,
+            yaw: 0,
+            pitch: 0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
+        ],
+      },
     ],
-    "passengers": [
+    passengers: [
       [
         {
-          "x": 0.0,
-          "y": 0.8125,
-          "z": 0.6
-        }
+          x: 0.0,
+          y: 0.8125,
+          z: 0.6,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.8125,
-          "z": 0.6
+          x: 0.0,
+          y: 0.8125,
+          z: 0.6,
         },
         {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        }
+          x: 0.0,
+          y: 0.0,
+          z: 0.0,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.8125,
-          "z": 0.6
+          x: 0.0,
+          y: 0.8125,
+          z: 0.6,
         },
         {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
+          x: 0.0,
+          y: 0.0,
+          z: 0.0,
         },
         {
-          "x": 0.0,
-          "y": 0.8125,
-          "z": -0.3
-        }
+          x: 0.0,
+          y: 0.8125,
+          z: -0.3,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.8125,
-          "z": 0.6
+          x: 0.0,
+          y: 0.8125,
+          z: 0.6,
         },
         {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
+          x: 0.0,
+          y: 0.0,
+          z: 0.0,
         },
         {
-          "x": 0.3,
-          "y": 0.8125,
-          "z": -0.25
+          x: 0.3,
+          y: 0.8125,
+          z: -0.25,
         },
         {
-          "x": -0.3,
-          "y": 0.8125,
-          "z": -0.35
-        }
-      ]
+          x: -0.3,
+          y: 0.8125,
+          z: -0.35,
+        },
+      ],
     ],
-    "boxes": [],
-    "trails": [
+    boxes: [],
+    trails: [
       {
-        "x": 0.0,
-        "y": 1.4,
-        "z": -2.5,
-        "size": 0.25,
-        "rotate": 40.0,
-        "gray": 0.25,
-        "length": 15
+        x: 0.0,
+        y: 1.4,
+        z: -2.5,
+        size: 0.25,
+        rotate: 40.0,
+        gray: 0.25,
+        length: 15,
       },
       {
-        "x": 2.5,
-        "y": 4.6,
-        "z": -5.5,
-        "size": 0.25,
-        "rotate": 40.0,
-        "gray": 0.25,
-        "length": 14
+        x: 2.5,
+        y: 4.6,
+        z: -5.5,
+        size: 0.25,
+        rotate: 40.0,
+        gray: 0.25,
+        length: 14,
       },
       {
-        "x": 0.0,
-        "y": 4.6,
-        "z": -5.5,
-        "size": 0.25,
-        "rotate": 40.0,
-        "gray": 0.25,
-        "length": 16
+        x: 0.0,
+        y: 4.6,
+        z: -5.5,
+        size: 0.25,
+        rotate: 40.0,
+        gray: 0.25,
+        length: 16,
       },
       {
-        "x": -2.5,
-        "y": 4.6,
-        "z": -5.5,
-        "size": 0.25,
-        "rotate": 40.0,
-        "gray": 0.25,
-        "length": 14
-      }
+        x: -2.5,
+        y: 4.6,
+        z: -5.5,
+        size: 0.25,
+        rotate: 40.0,
+        gray: 0.25,
+        length: 14,
+      },
     ],
-    "dyeable": true
+    dyeable: true,
   },
-  "quadrocopter": {
-    "cls": "quadrocopter",
-    "size": [
-      1.5,
-      0.5
-    ],
-    "zoom": 0,
-    "explode": true,
-    "sound": "propeller_tiny",
-    "start": "engine_start",
-    "reaction": 20,
-    "gui": "engine",
-    "adapt": false,
-    "interp": 5,
-    "fuelType": "fuel",
-    "underwater": false,
-    "dismountRot": 90,
-    "props": {
-      "engineSpeed": 0.0325,
-      "verticalSpeed": 0.0325,
-      "yawSpeed": 0.15,
-      "pitchSpeed": 1.5,
-      "pushSpeed": 0.0,
-      "brakeFactor": 0.95,
-      "acceleration": 1.0,
-      "durability": 1.0,
-      "fireResistance": 0.0,
-      "fuel": 0.5,
-      "friction": 0.015,
-      "glideFactor": 0.0,
-      "lift": 0.1,
-      "rollFactor": 15.0,
-      "groundPitch": 0.0,
-      "stabilizer": 0.1,
-      "wind": 0.0125,
-      "mass": 1.0,
-      "hud": -1.0,
-      "dials": -1.0,
-      "groundFriction": 0.25,
-      "waterFriction": 0.9,
-      "lavaFriction": 0.7,
-      "rotationDecay": 0.97,
-      "horizontalDecay": 0.9,
-      "verticalDecay": 0.8
+  quadrocopter: {
+    cls: "quadrocopter",
+    size: [1.5, 0.5],
+    zoom: 0,
+    explode: true,
+    sound: "propeller_tiny",
+    start: "engine_start",
+    reaction: 20,
+    gui: "engine",
+    adapt: false,
+    interp: 5,
+    fuelType: "fuel",
+    underwater: false,
+    dismountRot: 90,
+    props: {
+      engineSpeed: 0.0325,
+      verticalSpeed: 0.0325,
+      yawSpeed: 0.15,
+      pitchSpeed: 1.5,
+      pushSpeed: 0.0,
+      brakeFactor: 0.95,
+      acceleration: 1.0,
+      durability: 1.0,
+      fireResistance: 0.0,
+      fuel: 0.5,
+      friction: 0.015,
+      glideFactor: 0.0,
+      lift: 0.1,
+      rollFactor: 15.0,
+      groundPitch: 0.0,
+      stabilizer: 0.1,
+      wind: 0.0125,
+      mass: 1.0,
+      hud: -1.0,
+      dials: -1.0,
+      groundFriction: 0.25,
+      waterFriction: 0.9,
+      lavaFriction: 0.7,
+      rotationDecay: 0.97,
+      horizontalDecay: 0.9,
+      verticalDecay: 0.8,
     },
-    "slots": {
-      "boiler": [
-        0
-      ],
-      "weapon": [
-        1
-      ],
-      "upgrade": [
-        2
-      ],
-      "inventory": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
+    slots: {
+      boiler: [0],
+      weapon: [1],
+      upgrade: [2],
+      inventory: [3, 4, 5, 6, 7, 8],
     },
-    "invSize": 9,
-    "visibleSize": 9,
-    "holdSize": 0,
-    "mounts": [
+    invSize: 9,
+    visibleSize: 9,
+    holdSize: 0,
+    mounts: [
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": 0,
-            "y": 0.875,
-            "z": -0.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": true,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 0,
+            y: 0.875,
+            z: -0.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: true,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": 0,
-            "y": 0.375,
-            "z": 1.0,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 0,
+            y: 0.375,
+            z: 1.0,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": 0,
-            "y": 0.375,
-            "z": 0,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
-        ]
-      }
+            x: 0,
+            y: 0.375,
+            z: 0,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
+        ],
+      },
     ],
-    "passengers": [
+    passengers: [
       [
         {
-          "x": 0.0,
-          "y": 0.5,
-          "z": -0.1
-        }
-      ]
+          x: 0.0,
+          y: 0.5,
+          z: -0.1,
+        },
+      ],
     ],
-    "boxes": [],
-    "trails": [],
-    "dyeable": false
+    boxes: [],
+    trails: [],
+    dyeable: false,
   },
-  "bamboo_hopper": {
-    "cls": "airplane",
-    "size": [
-      3.0,
-      1.5
-    ],
-    "zoom": 6,
-    "explode": true,
-    "sound": "propeller_bamboo_hopper",
-    "start": "engine_start_bamboo_hopper",
-    "reaction": 20,
-    "gui": "engine",
-    "adapt": true,
-    "interp": 10,
-    "fuelType": "fuel",
-    "underwater": true,
-    "dismountRot": 0,
-    "props": {
-      "engineSpeed": 0.025,
-      "verticalSpeed": 0.0,
-      "yawSpeed": 3.5,
-      "pitchSpeed": 3.5,
-      "pushSpeed": 0.02,
-      "brakeFactor": 0.96,
-      "acceleration": 0.8,
-      "durability": 1.0,
-      "fireResistance": 0.0,
-      "fuel": 1.5,
-      "friction": 0.001,
-      "glideFactor": 0.075,
-      "lift": 0.18,
-      "rollFactor": 30.0,
-      "groundPitch": 1.0,
-      "stabilizer": 0.0,
-      "wind": 0.04,
-      "mass": 2.0,
-      "hud": -1.0,
-      "dials": -1.0,
-      "groundFriction": 0.85,
-      "waterFriction": 0.9,
-      "lavaFriction": 0.7,
-      "rotationDecay": 0.97,
-      "horizontalDecay": 0.99,
-      "verticalDecay": 0.985
+  bamboo_hopper: {
+    cls: "airplane",
+    size: [3.0, 1.5],
+    zoom: 6,
+    explode: true,
+    sound: "propeller_bamboo_hopper",
+    start: "engine_start_bamboo_hopper",
+    reaction: 20,
+    gui: "engine",
+    adapt: true,
+    interp: 10,
+    fuelType: "fuel",
+    underwater: true,
+    dismountRot: 0,
+    props: {
+      engineSpeed: 0.025,
+      verticalSpeed: 0.0,
+      yawSpeed: 3.5,
+      pitchSpeed: 3.5,
+      pushSpeed: 0.02,
+      brakeFactor: 0.96,
+      acceleration: 0.8,
+      durability: 1.0,
+      fireResistance: 0.0,
+      fuel: 1.5,
+      friction: 0.001,
+      glideFactor: 0.075,
+      lift: 0.18,
+      rollFactor: 30.0,
+      groundPitch: 1.0,
+      stabilizer: 0.0,
+      wind: 0.04,
+      mass: 2.0,
+      hud: -1.0,
+      dials: -1.0,
+      groundFriction: 0.85,
+      waterFriction: 0.9,
+      lavaFriction: 0.7,
+      rotationDecay: 0.97,
+      horizontalDecay: 0.99,
+      verticalDecay: 0.985,
     },
-    "slots": {
-      "boiler": [
-        0
-      ],
-      "booster": [
-        1
-      ],
-      "weapon": [
-        2,
-        3
-      ],
-      "upgrade": [
-        4,
-        5,
-        6,
-        7
-      ],
-      "inventory": [
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23
-      ]
+    slots: {
+      boiler: [0],
+      booster: [1],
+      weapon: [2, 3],
+      upgrade: [4, 5, 6, 7],
+      inventory: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
     },
-    "invSize": 24,
-    "visibleSize": 24,
-    "holdSize": 0,
-    "mounts": [
+    invSize: 24,
+    visibleSize: 24,
+    holdSize: 0,
+    mounts: [
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": 3.4375,
-            "y": 2.0625,
-            "z": 0.75,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: 3.4375,
+            y: 2.0625,
+            z: 0.75,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": -3.4375,
-            "y": 2.0625,
-            "z": 0.75,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: -3.4375,
+            y: 2.0625,
+            z: 0.75,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": -2.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 180.0,
-            "blocking": false,
-            "matrix": [
-              [
-                -1.0,
-                -0.0,
-                0.0
-              ],
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -2.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 180.0,
+            blocking: false,
+            matrix: [
+              [-1.0, -0.0, 0.0],
+              [0.0, -1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 2.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 180.0,
-            "blocking": false,
-            "matrix": [
-              [
-                -1.0,
-                -0.0,
-                0.0
-              ],
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 2.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 180.0,
+            blocking: false,
+            matrix: [
+              [-1.0, -0.0, 0.0],
+              [0.0, -1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": -2.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -2.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 2.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
-        ]
+            x: 2.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
+        ],
       },
       {
-        "ROTATING": [
+        ROTATING: [
           {
-            "x": 3.4375,
-            "y": 1.9375,
-            "z": -1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: 3.4375,
+            y: 1.9375,
+            z: -1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": -3.4375,
-            "y": 1.9375,
-            "z": -1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: -3.4375,
+            y: 1.9375,
+            z: -1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "FRONT": [
+        FRONT: [
           {
-            "x": -5.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 180.0,
-            "blocking": false,
-            "matrix": [
-              [
-                -1.0,
-                -0.0,
-                0.0
-              ],
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -5.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 180.0,
+            blocking: false,
+            matrix: [
+              [-1.0, -0.0, 0.0],
+              [0.0, -1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 5.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 180.0,
-            "blocking": false,
-            "matrix": [
-              [
-                -1.0,
-                -0.0,
-                0.0
-              ],
-              [
-                0.0,
-                -1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
+            x: 5.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 180.0,
+            blocking: false,
+            matrix: [
+              [-1.0, -0.0, 0.0],
+              [0.0, -1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
         ],
-        "DROP": [
+        DROP: [
           {
-            "x": -5.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
+            x: -5.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
           },
           {
-            "x": 5.0,
-            "y": 1.5,
-            "z": 1.5,
-            "yaw": 0.0,
-            "pitch": 0.0,
-            "roll": 0.0,
-            "blocking": false,
-            "matrix": [
-              [
-                1.0,
-                0.0,
-                0.0
-              ],
-              [
-                0.0,
-                1.0,
-                0.0
-              ],
-              [
-                -0.0,
-                0.0,
-                1.0
-              ]
-            ]
-          }
-        ]
-      }
+            x: 5.0,
+            y: 1.5,
+            z: 1.5,
+            yaw: 0.0,
+            pitch: 0.0,
+            roll: 0.0,
+            blocking: false,
+            matrix: [
+              [1.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0],
+              [-0.0, 0.0, 1.0],
+            ],
+          },
+        ],
+      },
     ],
-    "passengers": [
+    passengers: [
       [
         {
-          "x": 0.0,
-          "y": 0.625,
-          "z": 0.9375
-        }
+          x: 0.0,
+          y: 0.625,
+          z: 0.9375,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.625,
-          "z": 0.9375
+          x: 0.0,
+          y: 0.625,
+          z: 0.9375,
         },
         {
-          "x": 0.4375,
-          "y": 0.625,
-          "z": -0.25
-        }
+          x: 0.4375,
+          y: 0.625,
+          z: -0.25,
+        },
       ],
       [
         {
-          "x": 0.0,
-          "y": 0.625,
-          "z": 0.9375
+          x: 0.0,
+          y: 0.625,
+          z: 0.9375,
         },
         {
-          "x": 0.4375,
-          "y": 0.625,
-          "z": -0.25
+          x: 0.4375,
+          y: 0.625,
+          z: -0.25,
         },
         {
-          "x": -0.4375,
-          "y": 0.625,
-          "z": -0.25
-        }
-      ]
+          x: -0.4375,
+          y: 0.625,
+          z: -0.25,
+        },
+      ],
     ],
-    "boxes": [
+    boxes: [
       {
-        "width": 1.1,
-        "height": 1.0,
-        "x": 0.0,
-        "y": 0.0,
-        "z": 2.0
+        width: 1.1,
+        height: 1.0,
+        x: 0.0,
+        y: 0.0,
+        z: 2.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": 1.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: 1.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": 2.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: 2.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": 3.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: 3.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": 4.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: 4.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": 5.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: 5.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": 6.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: 6.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": -1.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: -1.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": -2.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: -2.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": -3.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: -3.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": -4.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: -4.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": -5.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: -5.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 1.1,
-        "height": 0.375,
-        "x": -6.0,
-        "y": 1.65,
-        "z": 1.0
+        width: 1.1,
+        height: 0.375,
+        x: -6.0,
+        y: 1.65,
+        z: 1.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": -3.5,
-        "y": 1.65,
-        "z": 0.0
+        width: 0.8,
+        height: 0.8,
+        x: -3.5,
+        y: 1.65,
+        z: 0.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": -3.5,
-        "y": 1.65,
-        "z": -1.0
+        width: 0.8,
+        height: 0.8,
+        x: -3.5,
+        y: 1.65,
+        z: -1.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": -3.5,
-        "y": 1.65,
-        "z": -2.0
+        width: 0.8,
+        height: 0.8,
+        x: -3.5,
+        y: 1.65,
+        z: -2.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": -3.5,
-        "y": 1.65,
-        "z": -3.0
+        width: 0.8,
+        height: 0.8,
+        x: -3.5,
+        y: 1.65,
+        z: -3.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": -3.5,
-        "y": 1.65,
-        "z": -4.0
+        width: 0.8,
+        height: 0.8,
+        x: -3.5,
+        y: 1.65,
+        z: -4.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": -3.5,
-        "y": 1.65,
-        "z": -5.0
+        width: 0.8,
+        height: 0.8,
+        x: -3.5,
+        y: 1.65,
+        z: -5.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": -3.5,
-        "y": 1.65,
-        "z": -6.0
+        width: 0.8,
+        height: 0.8,
+        x: -3.5,
+        y: 1.65,
+        z: -6.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": 3.5,
-        "y": 1.65,
-        "z": 0.0
+        width: 0.8,
+        height: 0.8,
+        x: 3.5,
+        y: 1.65,
+        z: 0.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": 3.5,
-        "y": 1.65,
-        "z": -1.0
+        width: 0.8,
+        height: 0.8,
+        x: 3.5,
+        y: 1.65,
+        z: -1.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": 3.5,
-        "y": 1.65,
-        "z": -2.0
+        width: 0.8,
+        height: 0.8,
+        x: 3.5,
+        y: 1.65,
+        z: -2.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": 3.5,
-        "y": 1.65,
-        "z": -3.0
+        width: 0.8,
+        height: 0.8,
+        x: 3.5,
+        y: 1.65,
+        z: -3.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": 3.5,
-        "y": 1.65,
-        "z": -4.0
+        width: 0.8,
+        height: 0.8,
+        x: 3.5,
+        y: 1.65,
+        z: -4.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": 3.5,
-        "y": 1.65,
-        "z": -5.0
+        width: 0.8,
+        height: 0.8,
+        x: 3.5,
+        y: 1.65,
+        z: -5.0,
       },
       {
-        "width": 0.8,
-        "height": 0.8,
-        "x": 3.5,
-        "y": 1.65,
-        "z": -6.0
-      }
+        width: 0.8,
+        height: 0.8,
+        x: 3.5,
+        y: 1.65,
+        z: -6.0,
+      },
     ],
-    "trails": [
+    trails: [
       {
-        "x": 0.0,
-        "y": 0.75,
-        "z": -2.25,
-        "size": 0.5,
-        "gray": 1.0,
-        "length": 20,
-        "rotate": 48.0
-      }
+        x: 0.0,
+        y: 0.75,
+        z: -2.25,
+        size: 0.5,
+        gray: 1.0,
+        length: 20,
+        rotate: 48.0,
+      },
     ],
-    "dyeable": false
-  }
+    dyeable: false,
+  },
 };
 var UPG = {
   "ia:eco_engine": { engineSpeed: -0.2, fuel: -0.75 },
@@ -2725,65 +1850,65 @@ var WPI = {
   "ia:bomb_bay": { mount: "DROP", id: 4 },
 };
 var CFD = {
-  "speedMultiplier": 1.6,
-  "liftAssist": 1.8,
-  "lookSteering": true,
-  "flightCameraEffects": true,
-  "flightFov": 70,
-  "enableDropsForNonPlayer": true,
-  "enableCrashExplosion": true,
-  "enableCrashBlockDestruction": false,
-  "enableCrashFire": false,
-  "crashExplosionRadius": 2.0,
-  "crashDamage": 2.0,
-  "preventKillThroughCrash": true,
-  "damagePerHealthPoint": 30,
-  "useThirdPersonByDefault": false,
-  "enableTrails": true,
-  "fuelConsumption": 1.0,
-  "windClearWeather": 1.0,
-  "windRainWeather": 3.0,
-  "windThunderWeather": 3.0,
-  "repairSpeed": 0.025,
-  "repairExhaustion": 0.5,
-  "collisionDamage": true,
-  "collisionDamageMultiplier": 40.0,
-  "burnFuelInCreative": false,
-  "acceptVanillaFuel": true,
-  "showHotbarEngineGauge": true,
-  "weaponsAreDestructive": false,
-  "dropAircraft": true,
-  "dropInventory": true,
-  "dropUpgrades": false,
-  "regenerateHealthEveryNTicks": 0,
-  "requireShiftForRepair": false,
-  "defaultCanEnter": true,
-  "rotaryCannonDamage": 5.0,
-  "heavyCrossBowVelocity": 3.0,
-  "fuelList": {
-    "minecraft:blaze_powder": 1200
+  speedMultiplier: 1.6,
+  liftAssist: 1.8,
+  lookSteering: true,
+  flightCameraEffects: true,
+  flightFov: 70,
+  enableDropsForNonPlayer: true,
+  enableCrashExplosion: true,
+  enableCrashBlockDestruction: false,
+  enableCrashFire: false,
+  crashExplosionRadius: 2.0,
+  crashDamage: 2.0,
+  preventKillThroughCrash: true,
+  damagePerHealthPoint: 30,
+  useThirdPersonByDefault: false,
+  enableTrails: true,
+  fuelConsumption: 1.0,
+  windClearWeather: 1.0,
+  windRainWeather: 3.0,
+  windThunderWeather: 3.0,
+  repairSpeed: 0.025,
+  repairExhaustion: 0.5,
+  collisionDamage: true,
+  collisionDamageMultiplier: 40.0,
+  burnFuelInCreative: false,
+  acceptVanillaFuel: true,
+  showHotbarEngineGauge: true,
+  weaponsAreDestructive: false,
+  dropAircraft: true,
+  dropInventory: true,
+  dropUpgrades: false,
+  regenerateHealthEveryNTicks: 0,
+  requireShiftForRepair: false,
+  defaultCanEnter: true,
+  rotaryCannonDamage: 5.0,
+  heavyCrossBowVelocity: 3.0,
+  fuelList: {
+    "minecraft:blaze_powder": 1200,
   },
-  "validDimensions": {
+  validDimensions: {
     "minecraft:overworld": true,
     "minecraft:nether": true,
-    "minecraft:the_end": true
+    "minecraft:the_end": true,
   },
-  "gunpowderAmmunition": {
-    "minecraft:gunpowder": 100
+  gunpowderAmmunition: {
+    "minecraft:gunpowder": 100,
   },
-  "arrowAmmunition": {
-    "minecraft:arrow": 100
+  arrowAmmunition: {
+    "minecraft:arrow": 100,
   },
-  "bombBayAmmunition": {
-    "minecraft:tnt": 100
+  bombBayAmmunition: {
+    "minecraft:tnt": 100,
   },
-  "bombBayEntity": {
-    "minecraft:egg": "minecraft:chicken"
+  bombBayEntity: {
+    "minecraft:egg": "minecraft:chicken",
   },
-  "canEnter": {
+  canEnter: {
     "minecraft:player": false,
-    "#water_animals": false
-  }
+    "#water_animals": false,
+  },
 };
 var M = new Map(),
   L = new Set(),
@@ -2984,7 +2109,11 @@ function gps() {
     ps = {};
   }
   for (var k in ps)
-    if (k.indexOf("ia:") == 0 && CFD[k.slice(3)] !== undefined && typeof ps[k] == typeof CFD[k.slice(3)])
+    if (
+      k.indexOf("ia:") == 0 &&
+      CFD[k.slice(3)] !== undefined &&
+      typeof ps[k] == typeof CFD[k.slice(3)]
+    )
       o[k.slice(3)] = ps[k];
   return Object.assign({}, CFD, o);
 }
@@ -2993,7 +2122,7 @@ function gov() {
   if (typeof x == "string") {
     try {
       return JSON.parse(x);
-    } catch (e) { }
+    } catch (e) {}
   }
   return {};
 }
@@ -4102,10 +3231,7 @@ function ttn() {
       continue;
     }
     e.setProperty("ia:fuse", Math.round(cl(t.f, -10, 200)));
-    spt(e.dimension, 
-      "minecraft:basic_smoke_particle",
-      v3(l.x, l.y + 0.5, l.z),
-    );
+    spt(e.dimension, "minecraft:basic_smoke_particle", v3(l.x, l.y + 0.5, l.z));
     t.pl = l;
     var cv = e.getVelocity();
     e.applyImpulse(v3(t.vx - cv.x, t.vy - cv.y, t.vz - cv.z));
@@ -4200,7 +3326,8 @@ function rep(e, s, p) {
   });
   for (var b of abx(e, s))
     for (var i = 0; i < 5; i++)
-      spt(e.dimension, 
+      spt(
+        e.dimension,
         "ia:repair",
         v3(
           b.c.x + b.w * (Math.random() - 0.5) * 1.5,
@@ -4411,7 +3538,13 @@ function ust(e, s, it) {
         else if (lg >= 54 && lg < 54 + oh) lg = t0 + lg - 54;
       }
       if (cn && lg < cn.size && !cn.getItem(lg)) s2.moveItem(i, lg, cn);
-      else if (h && cn && lg >= cn.size && lg - cn.size < h.size && !h.getItem(lg - cn.size))
+      else if (
+        h &&
+        cn &&
+        lg >= cn.size &&
+        lg - cn.size < h.size &&
+        !h.getItem(lg - cn.size)
+      )
         s2.moveItem(i, lg - cn.size, h);
       else {
         dm.spawnItem(y, e.location);
@@ -4547,7 +3680,7 @@ function bnc(it) {
   }
   c =
     { silver: "light_gray", lightBlue: "light_blue", lightblue: "light_blue" }[
-    c
+      c
     ] || c;
   return DC[c] !== undefined ? DC[c] : DC.white;
 }
@@ -5003,10 +4136,10 @@ function tk(e, s) {
     }
     if (hx || hz || vc) {
       var er = Math.sqrt(
-        (ax - s.lm.x) * (ax - s.lm.x) +
-        (ay - s.lm.y) * (ay - s.lm.y) +
-        (az - s.lm.z) * (az - s.lm.z),
-      ),
+          (ax - s.lm.x) * (ax - s.lm.x) +
+            (ay - s.lm.y) * (ay - s.lm.y) +
+            (az - s.lm.z) * (az - s.lm.z),
+        ),
         mp = ln(s.lm);
       if (er <= mp + 1e-6) {
         var co = er - (vc ? Math.abs(s.lg) : 0) - 0.05;
@@ -5191,7 +4324,7 @@ function hud(e, s, p) {
         Math.round(hg / 45) % 8
       ];
     var ar =
-      vs < -10 ? "▼▼" : vs < -1 ? "▼" : vs > 10 ? "▲▲" : vs > 1 ? "▲" : "-",
+        vs < -10 ? "▼▼" : vs < -1 ? "▼" : vs > 10 ? "▲▲" : vs > 1 ? "▲" : "-",
       wn = "";
     if (s.mw > 0) wn += (T % 8 < 4 ? "§c" : "§6") + "[WARNING]";
     for (var k in s.cu)
@@ -5304,7 +4437,10 @@ function ptk(p) {
       maxDistance: 12,
     })) {
       var s1 = gs(e);
-      if (ln(ad(e.location, sc(p.location, -1))) <= s1.d.size[0] + 4 && !rdr(e).length)
+      if (
+        ln(ad(e.location, sc(p.location, -1))) <= s1.d.size[0] + 4 &&
+        !rdr(e).length
+      )
         s1.pk = T + 10;
     }
   }
@@ -5358,7 +4494,10 @@ function fov(p, q, e, s) {
   if (Math.abs(v - (q.fov || 0)) >= 1) {
     q.fov = v;
     try {
-      p.camera.setFov({ fov: v, easeOptions: { easeTime: 0.4, easeType: "OutSine" } });
+      p.camera.setFov({
+        fov: v,
+        easeOptions: { easeTime: 0.4, easeType: "OutSine" },
+      });
     } catch (x) {}
   }
   if (T % 20 == 0 && (f > 0.55 || WX[e.dimension.id] == WeatherType.Thunder))
@@ -5576,8 +4715,7 @@ function pan(p, t) {
     if (x == "m") slm(p, e);
     else if (x == "ej") {
       var rr2 = e.getComponent("minecraft:rideable");
-      if (rr2)
-        for (var mo of rdr(e)) if (!isP(mo)) rr2.ejectRider(mo);
+      if (rr2) for (var mo of rdr(e)) if (!isP(mo)) rr2.ejectRider(mo);
       s.nob = T + 200;
       say(p, { translate: "ia.panel.ejected" });
     } else if (x == "fx") {
@@ -5672,13 +4810,13 @@ function slm(p, e) {
     }
     if (x[0] == "all") {
       var cs = [
-        [
-          cn,
-          (s.d.slots.inventory || []).filter(function (i) {
-            return i < cn.size;
-          }),
+          [
+            cn,
+            (s.d.slots.inventory || []).filter(function (i) {
+              return i < cn.size;
+            }),
+          ],
         ],
-      ],
         h = hcn(e, s);
       if (h) {
         var hs = [];
@@ -5729,11 +4867,11 @@ function ctl(p) {
 function lbl(k) {
   return OPT.indexOf(k) >= 0
     ? {
-      rawtext: [
-        { translate: "option.immersive_aircraft." + k },
-        { text: " §7(" + k + ")" },
-      ],
-    }
+        rawtext: [
+          { translate: "option.immersive_aircraft." + k },
+          { text: " §7(" + k + ")" },
+        ],
+      }
     : k;
 }
 function cfg(p) {
@@ -5780,7 +4918,12 @@ function dvm(p) {
   var f = new ActionFormData(),
     a = ["cf", "rs", "pn", "ga", "gu", "x"];
   f.title({ translate: "ia.dev.title" });
-  f.body({ rawtext: [{ translate: "ia.dev.body" }, { text: "\n§7v" + VER.v + " " + VER.n }] });
+  f.body({
+    rawtext: [
+      { translate: "ia.dev.body" },
+      { text: "\n§7v" + VER.v + " " + VER.n },
+    ],
+  });
   f.button({ translate: "ia.dev.config" });
   f.button({ translate: "ia.dev.reset" });
   f.button({ translate: "ia.dev.panel" });
@@ -5801,8 +4944,8 @@ function dvm(p) {
       var ids =
         x == "ga"
           ? Object.keys(AC).map(function (k) {
-            return "ia:" + k;
-          })
+              return "ia:" + k;
+            })
           : Object.keys(UPG).concat(Object.keys(WPI));
       for (var id of ids) {
         var lf = pc.addItem(new IS(id, 1));
@@ -6185,10 +5328,10 @@ w.beforeEvents.entityHurt.subscribe(function (ev) {
   )
     return;
   var src = {
-    cause: cs,
-    damagingEntity: ds.damagingEntity,
-    damagingProjectile: ds.damagingProjectile,
-  },
+      cause: cs,
+      damagingEntity: ds.damagingEntity,
+      damagingProjectile: ds.damagingProjectile,
+    },
     a = ev.damage;
   sy.run(function () {
     if (e.isValid) hrt(e, gs(e), a, src);
@@ -6280,7 +5423,7 @@ sy.runInterval(function () {
   T++;
   if (T == 2) {
     sob();
-    console.warn("[Immersive Aircraft] v" + VER.v + " " + VER.n + " running");
+    console.warn("");
   }
   if (T % 40 == 0) cc = null;
   if (T % 20 == 1) scn();
