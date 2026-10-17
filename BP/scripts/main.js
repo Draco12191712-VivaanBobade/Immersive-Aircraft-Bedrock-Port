@@ -1,6 +1,36 @@
-import "@minecraft/server";
-import "@minecraft/server-ui";
-var VER = { v: "1.1.0", n: "Clear Skies" };
+import * as mc from "@minecraft/server";
+import * as mui from "@minecraft/server-ui";
+var w = mc.world,
+  sy = mc.system,
+  IS = mc.ItemStack,
+  EDC = mc.EntityDamageCause,
+  InputButton = mc.InputButton,
+  ButtonState = mc.ButtonState,
+  IPC = mc.InputPermissionCategory,
+  GameMode = mc.GameMode,
+  CommandPermissionLevel = mc.CommandPermissionLevel,
+  CustomCommandStatus = mc.CustomCommandStatus,
+  StructureSaveMode = mc.StructureSaveMode,
+  EquipmentSlot = mc.EquipmentSlot,
+  MolangVariableMap = mc.MolangVariableMap,
+  EntitySwingSource = mc.EntitySwingSource,
+  WeatherType = mc.WeatherType,
+  ActionFormData = mui.ActionFormData,
+  ModalFormData = mui.ModalFormData,
+  MessageFormData = mui.MessageFormData;
+var VER = {
+  "v": "1.2.0",
+  "n": "Flight Camera Update"
+};
+var UIT = {
+  "biplane": "\u00a7i\u00a7a\u00a70\u00a7rBiplane",
+  "gyrodyne": "\u00a7i\u00a7a\u00a71\u00a7rGyrodyne",
+  "airship": "\u00a7i\u00a7a\u00a72\u00a7rAirship",
+  "cargo_airship": "\u00a7i\u00a7a\u00a73\u00a7rCargo Airship",
+  "warship": "\u00a7i\u00a7a\u00a74\u00a7rWarship",
+  "quadrocopter": "\u00a7i\u00a7a\u00a75\u00a7rQuadrocopter",
+  "bamboo_hopper": "\u00a7i\u00a7a\u00a76\u00a7rBamboo Hopper"
+};
 var AC = {
   "biplane": {
     "cls": "airplane",
@@ -2697,6 +2727,9 @@ var WPI = {
 var CFD = {
   "speedMultiplier": 1.6,
   "liftAssist": 1.8,
+  "lookSteering": true,
+  "flightCameraEffects": true,
+  "flightFov": 70,
   "enableDropsForNonPlayer": true,
   "enableCrashExplosion": true,
   "enableCrashBlockDestruction": false,
@@ -2882,10 +2915,13 @@ var CB = [
   "dropUpgrades",
   "requireShiftForRepair",
   "defaultCanEnter",
+  "lookSteering",
+  "flightCameraEffects",
 ];
 var CN = [
   "speedMultiplier",
   "liftAssist",
+  "flightFov",
   "crashExplosionRadius",
   "crashDamage",
   "damagePerHealthPoint",
@@ -3077,6 +3113,33 @@ function inv(e) {
   var c = e.getComponent("minecraft:inventory");
   return c ? c.container : undefined;
 }
+function gbl(dm, p) {
+  var r = dm.heightRange;
+  if (p.y < r.min || p.y >= r.max) return undefined;
+  try {
+    return dm.getBlock(p);
+  } catch (x) {
+    return undefined;
+  }
+}
+function spt(dm, id, p, m) {
+  try {
+    dm.spawnParticle(id, p, m);
+  } catch (x) {}
+}
+function cex(dm, l, r, o) {
+  try {
+    dm.createExplosion(l, r, o);
+  } catch (x) {}
+}
+function rdo(p) {
+  try {
+    var c = p.getComponent("minecraft:riding");
+    return c ? c.entityRidingOn : undefined;
+  } catch (x) {
+    return undefined;
+  }
+}
 function rdr(e) {
   var r = e.getComponent("minecraft:rideable");
   return r ? r.getRiders() : [];
@@ -3102,12 +3165,19 @@ function pst(p) {
       cam: false,
       sc: false,
       mu: 0,
-      mf: !!dp(p, "ia:mf", true),
+      mf: p.getDynamicProperty("ia:mf"),
       lp: -1,
     };
     PP[p.id] = q;
   }
   return q;
+}
+function lst(q) {
+  return q.mf === undefined ? gc().lookSteering !== false : !!q.mf;
+}
+function pfx(p) {
+  var v = p.getDynamicProperty("ia:fx");
+  return v === undefined ? gc().flightCameraEffects !== false : !!v;
 }
 function say(p, m) {
   p.onScreenDisplay.setActionBar(m);
@@ -3326,7 +3396,7 @@ function psp(e, s) {
   return p;
 }
 function ilv(e) {
-  var b = e.dimension.getBlock(e.location);
+  var b = gbl(e.dimension, e.location);
   return !!b && b.typeId.indexOf("lava") >= 0;
 }
 function lfe(s, dir, f) {
@@ -3705,24 +3775,20 @@ function wpu(e, s) {
     var W = s.wp[k2];
     for (var q of W.ls) {
       if (W.t == "hc" || W.t == "bb") q.cd -= 0.05;
-      if (W.t == "ts") {
-        q.lft--;
-        if (q.lft == 0) {
-          var pi = rdr(e)[0];
-          if (pi)
-            pi.dimension.playSound("item.spyglass.stop_using", pi.location);
-        }
-      }
+      if (W.t == "ts" && q.on && !gun(rdr(e), W.off)) q.on = false;
     }
   }
 }
 function gun(rs, o) {
   return rs.length ? rs[Math.max(0, rs.length - 1 - o)] : undefined;
 }
-function scp(s) {
+function scp(e, s, p) {
+  var rs = rdr(e);
   for (var k in s.wp) {
-    var W = s.wp[k];
-    if (W.t == "ts") for (var q of W.ls) if (q.lft > 0) return true;
+    var W = s.wp[k],
+      g = gun(rs, W.off);
+    if (W.t == "ts" && g && g.id == p.id)
+      for (var q of W.ls) if (q.on) return true;
   }
   return false;
 }
@@ -3773,7 +3839,7 @@ function sht(d, vel, inc) {
 function mzl(e, pos, v) {
   var m = new MolangVariableMap();
   m.setVector3("variable.dir", v);
-  e.dimension.spawnParticle("ia:muzzle", pos, m);
+  spt(e.dimension, "ia:muzzle", pos, m);
 }
 function frc(e, s, mt, d) {
   var pos = wps(e, s, mt, v3(0, 0.825, -0.375), 1, d),
@@ -3854,8 +3920,15 @@ function cfi(e, s, W, q, ix, p) {
       if (spa(e, s, q, gc().bombBayAmmunition, 20)) fbb(e, s, q, d2, mt);
     }
   } else if (W.t == "ts") {
-    if (q.lft <= 0) p.dimension.playSound("item.spyglass.use", p.location);
-    q.lft = 2;
+    var pq = pst(p);
+    if (q.sw !== pq.sw) {
+      q.sw = pq.sw;
+      q.on = !q.on;
+      p.dimension.playSound(
+        q.on ? "item.spyglass.use" : "item.spyglass.stop_using",
+        p.location,
+      );
+    }
   }
 }
 function trm(s) {
@@ -3936,19 +4009,24 @@ function tbu() {
           x.typeId == "ia:stash"
         )
           continue;
-        var rr = x.getComponent("minecraft:riding");
-        if (rr && rr.entityRidingOn && rr.entityRidingOn.id == b.ve) continue;
+        var ro = rdo(x);
+        if (ro && ro.id == b.ve) continue;
         if (h.distance <= L2 && h.distance < hd) {
           hd = h.distance;
           hit = x;
         }
         break;
       }
-      var bh = dm.getBlockFromRay(p, n, {
-        maxDistance: Math.max(1, Math.ceil(L2)),
-        includeLiquidBlocks: false,
-        includePassableBlocks: false,
-      });
+      var bh;
+      try {
+        bh = dm.getBlockFromRay(p, n, {
+          maxDistance: Math.max(1, Math.ceil(L2)),
+          includeLiquidBlocks: false,
+          includePassableBlocks: false,
+        });
+      } catch (x) {
+        bh = undefined;
+      }
       if (bh) {
         var bd = ln(ad(hlp(bh.block, bh.faceLocation), sc(p, -1)));
         if (bd <= L2 && bd < hd) {
@@ -4017,14 +4095,14 @@ function ttn() {
       var dm = e.dimension;
       e.remove();
       TN.splice(i, 1);
-      dm.createExplosion(v3(l.x, l.y + 0.0234, l.z), 4, {
+      cex(dm, v3(l.x, l.y + 0.0234, l.z), 4, {
         breaksBlocks: !!gc().weaponsAreDestructive,
         causesFire: false,
       });
       continue;
     }
     e.setProperty("ia:fuse", Math.round(cl(t.f, -10, 200)));
-    e.dimension.spawnParticle(
+    spt(e.dimension, 
       "minecraft:basic_smoke_particle",
       v3(l.x, l.y + 0.5, l.z),
     );
@@ -4051,7 +4129,7 @@ function cen(id) {
   return ok || !!gc().defaultCanEnter;
 }
 function aen(e, s, rs) {
-  if (isP(rs[0])) return;
+  if (isP(rs[0]) || (s.nob || 0) > T) return;
   var rr = e.getComponent("minecraft:rideable");
   if (!rr) return;
   var bb = e.getAABB(),
@@ -4122,7 +4200,7 @@ function rep(e, s, p) {
   });
   for (var b of abx(e, s))
     for (var i = 0; i < 5; i++)
-      e.dimension.spawnParticle(
+      spt(e.dimension, 
         "ia:repair",
         v3(
           b.c.x + b.w * (Math.random() - 0.5) * 1.5,
@@ -4168,7 +4246,7 @@ function apd(e, s, a, fo) {
     var l = e.location,
       dm = e.dimension;
     if (fo && s.d.explode && c.enableCrashExplosion)
-      dm.createExplosion(l, c.crashExplosionRadius, {
+      cex(dm, l, c.crashExplosionRadius, {
         causesFire: !!c.enableCrashFire,
         breaksBlocks:
           !!c.enableCrashBlockDestruction && w.gameRules.mobGriefing,
@@ -4395,15 +4473,20 @@ function mig(e, s) {
   return true;
 }
 function pkt(e, s) {
-  if (T % 20 == 0 && e.nameTag) {
+  if (T % 20 == 0 && e.nameTag && e.nameTag.indexOf("§i§a") != 0) {
     e.setDynamicProperty("ia:name", e.nameTag);
     e.nameTag = "";
   }
   if (!s.mg && T % 20 == 0) s.mg = mig(e, s);
-  var rr = e.getComponent("minecraft:rideable");
-  if (s.pk > T) {
+  var rr = e.getComponent("minecraft:rideable"),
+    tg = UIT[s.k] || "";
+  if (s.pk > T || (s.co || 0) > 0) {
     if (rr && !rr.getRiders().length) e.triggerEvent("ia:board_off");
-  } else if (!rr && T % 5 == 0) e.triggerEvent("ia:board_on");
+    if (tg && e.nameTag != tg) e.nameTag = tg;
+  } else {
+    if (!rr && T % 5 == 0) e.triggerEvent("ia:board_on");
+    if (tg && e.nameTag == tg) e.nameTag = "";
+  }
 }
 function hcn(e, s) {
   if (!hsz(e, s)) return undefined;
@@ -4704,9 +4787,9 @@ function flh(e) {
   for (var x = x0; x < x1; x++)
     for (var y = y0; y < y1; y++)
       for (var z = z0; z < z1; z++) {
-        var b = dm.getBlock(v3(x, y, z));
+        var b = gbl(dm, v3(x, y, z));
         if (!b || !(b.isLiquid || b.isWaterlogged)) continue;
-        var ab = dm.getBlock(v3(x, y + 1, z)),
+        var ab = gbl(dm, v3(x, y + 1, z)),
           sf = y + (ab && (ab.isLiquid || ab.isWaterlogged) ? 1 : 0.8889);
         if (sf >= mn) h = Math.max(h, sf - mn);
       }
@@ -4798,14 +4881,14 @@ function syn(e, s, rs) {
 }
 
 function myw(e, s, p, q, m) {
-  if (q.mf && s.d.adapt && m == 0) {
+  if (lst(q) && s.d.adapt && m == 0) {
     var sp = P(s, "yawSpeed");
     return cl((-wr(p.getRotation().y - s.yaw) - s.px.s * sp * 8) / 20, -1, 1);
   }
   return m;
 }
 function mpt(e, s, p, q, m) {
-  if (q.mf && s.d.adapt && s.d.cls == "airplane" && !e.isOnGround && m == 0) {
+  if (lst(q) && s.d.adapt && s.d.cls == "airplane" && !e.isOnGround && m == 0) {
     var sp = P(s, "pitchSpeed");
     return cl((p.getRotation().x - s.pit - s.pz.s * sp * 8) / 20, -1, 1);
   }
@@ -4834,9 +4917,9 @@ function dsm(e, s, p) {
     dm = e.dimension;
   sy.run(function () {
     if (!p.isValid) return;
-    var b0 = dm.getBlock(t),
-      b1 = dm.getBlock(v3(t.x, t.y + 1, t.z)),
-      bl = dm.getBlock(v3(t.x, t.y - 1, t.z));
+    var b0 = gbl(dm, t),
+      b1 = gbl(dm, v3(t.x, t.y + 1, t.z)),
+      bl = gbl(dm, v3(t.x, t.y - 1, t.z));
     if (
       b0 &&
       b1 &&
@@ -4848,6 +4931,10 @@ function dsm(e, s, p) {
     )
       p.teleport(v3(t.x, Math.floor(t.y), t.z));
   });
+}
+function lkd(p) {
+  var x = p.getRotation().x;
+  return cl((-x - 30) / 25, 0, 1) - cl((x - 30) / 25, 0, 1);
 }
 function lki(p) {
   var x = p.getRotation().x;
@@ -4873,13 +4960,21 @@ function tpl(e, s, rs) {
     fx = cl(m2.x, -1, 1),
     fy = cl(m2.y, -1, 1);
   s.mx = myw(e, s, pi, q2, fx);
+  var lk = lst(q2);
   if (s.d.cls == "airplane") {
     s.my = fy;
     s.tx = Math.max(0, fy);
-    s.mz = apt(e, s, pi);
-    s.lu = cl((-pi.getRotation().x - 2) / 18, 0, 1);
+    if (lk) {
+      s.mz = apt(e, s, pi);
+      s.lu = cl((-pi.getRotation().x - 2) / 18, 0, 1);
+    } else {
+      var sp2 = P(s, "pitchSpeed"),
+        tg = e.isOnGround ? 0 : -fy * 12;
+      s.mz = cl((tg - s.pit - s.pz.s * sp2 * 8) / 20, -1, 1);
+      s.lu = Math.max(0, fy);
+    }
   } else {
-    s.my = lki(pi);
+    s.my = lk ? lki(pi) : lkd(pi);
     s.mz = fy;
   }
 }
@@ -5157,8 +5252,7 @@ function hud(e, s, p) {
 }
 function ptk(p) {
   var q = pst(p),
-    rc = p.getComponent("minecraft:riding"),
-    r = rc ? rc.entityRidingOn : undefined;
+    r = rdo(p);
   if (r && isA(r)) {
     var s = gs(r);
     if (q.rid != r.id) {
@@ -5179,18 +5273,28 @@ function ptk(p) {
       });
     }
     q.at++;
-    var z = scp(s);
+    var z = scp(r, s, p);
     if (z && !q.sc) {
       q.sc = true;
+      q.fov = 0;
       p.camera.setCamera("minecraft:first_person");
       p.camera.setFov({ fov: 30 });
     } else if (!z && q.sc) {
       q.sc = false;
       p.camera.clear();
       p.runCommand("camera @s fov_clear");
+      p.runCommand("title @s clear");
       if (q.cam) p.camera.setCamera("minecraft:third_person");
     }
-    if (q.fu > T && q.at > 20 && !hnd(p)) fir(r, s, p);
+    if (z && T % 20 == 0)
+      p.onScreenDisplay.setTitle(SCOPE, {
+        fadeInDuration: 0,
+        stayDuration: 30,
+        fadeOutDuration: 0,
+      });
+    if (!z && T % 3 == 0) fov(p, q, r, s);
+    if (q.fu > T && q.at > 20) fir(r, s, p);
+    if (T % 2 == 0) rtl(p, q, s);
     var r0 = rdr(r)[0];
     if (r0 && r0.id == p.id && T % 2 == 0 && q.mu < T) hud(r, s, p);
   } else if (!r && p.isSneaking && T % 2 == 0) {
@@ -5206,8 +5310,11 @@ function ptk(p) {
   }
   if (!(r && isA(r)) && q.rid) {
     q.rid = null;
+    q.tp = q.tr = undefined;
     p.inputPermissions.setPermissionCategory(IPC.Dismount, true);
-    if (q.sc) p.runCommand("camera @s fov_clear");
+    if (q.sc) p.runCommand("title @s clear");
+    if (q.sc || q.fov) p.runCommand("camera @s fov_clear");
+    q.fov = 0;
     if (q.cam || q.sc) {
       p.camera.clear();
       q.cam = false;
@@ -5216,6 +5323,53 @@ function ptk(p) {
   }
 }
 
+var SCOPE = "§s§c§o§p§e§r";
+function atg(n) {
+  return n < 0 ? "m" + -n : "p" + n;
+}
+function rtl(p, q, s) {
+  var a = Math.round(cl(wr(s.pc["ia:rx"] || 0), -180, 180) / 3) * 3,
+    b = Math.round(cl(s.pc["ia:rz"] || 0, -90, 90) / 2) * 2,
+    o = { blendOutTime: 0.15, stopExpression: "!q.is_riding" };
+  try {
+    if (a !== q.tp || T % 40 == 0) {
+      q.tp = a;
+      o.controller = "ia_tilt_pitch";
+      p.playAnimation("animation.ia.rider.pitch_" + atg(a), o);
+    }
+    if (b !== q.tr || T % 40 == 0) {
+      q.tr = b;
+      o.controller = "ia_tilt_roll";
+      p.playAnimation("animation.ia.rider.roll_" + atg(b), o);
+    }
+  } catch (x) {}
+}
+function fov(p, q, e, s) {
+  if (!pfx(p)) {
+    if (q.fov) {
+      q.fov = 0;
+      p.runCommand("camera @s fov_clear");
+    }
+    return;
+  }
+  var c = gc(),
+    f = cl((ln(vl(s)) * 20 - 4) / 20, 0, 1),
+    v = Math.round(cl(c.flightFov + 22 * f + (s.bo > 0 ? 6 : 0), 30, 110));
+  if (Math.abs(v - (q.fov || 0)) >= 1) {
+    q.fov = v;
+    try {
+      p.camera.setFov({ fov: v, easeOptions: { easeTime: 0.4, easeType: "OutSine" } });
+    } catch (x) {}
+  }
+  if (T % 20 == 0 && (f > 0.55 || WX[e.dimension.id] == WeatherType.Thunder))
+    try {
+      p.camera.addShake({
+        intensity: Math.min(0.25, 0.04 + Math.max(0, f - 0.55) * 0.3),
+        duration: 1.05,
+        type: "Rotational",
+      });
+    } catch (x) {}
+}
 function shw(f, p, cb) {
   f.show(p).then(function (r) {
     if (r.canceled && r.cancelationReason == "UserBusy") {
@@ -5228,8 +5382,8 @@ function shw(f, p, cb) {
   });
 }
 function nar(p) {
-  var rc = p.getComponent("minecraft:riding");
-  if (rc && isA(rc.entityRidingOn)) return rc.entityRidingOn;
+  var r0 = rdo(p);
+  if (isA(r0)) return r0;
   var b = null,
     bd = 1e9;
   for (var e of p.dimension.getEntities({
@@ -5376,9 +5530,18 @@ function pan(p, t) {
         { text: "\n" },
       );
   }
+  bd.push({ text: "\n§7" }, { translate: "ia.panel.inventory_hint" });
   f.body({ rawtext: bd });
   f.button({ translate: "ia.panel.manage" });
   a.push("m");
+  if (
+    rs.some(function (x) {
+      return !isP(x);
+    })
+  ) {
+    f.button({ translate: "ia.panel.eject" });
+    a.push("ej");
+  }
   if (hsz(e, s)) {
     f.button({ translate: "ia.panel.cargo_bank", with: [String(s.bank + 1)] });
     a.push("bk");
@@ -5391,8 +5554,10 @@ function pan(p, t) {
     f.button({ translate: "ia.panel.dismount" });
     a.push("dm");
   }
-  f.button({ translate: q.mf ? "ia.panel.mouse_on" : "ia.panel.mouse_off" });
+  f.button({ translate: lst(q) ? "ia.panel.mouse_on" : "ia.panel.mouse_off" });
   a.push("mf");
+  f.button({ translate: pfx(p) ? "ia.panel.fx_on" : "ia.panel.fx_off" });
+  a.push("fx");
   f.button({
     translate: pcm(p) ? "ia.panel.camera_on" : "ia.panel.camera_off",
   });
@@ -5409,7 +5574,21 @@ function pan(p, t) {
     if (r.canceled || r.selection === undefined || !e.isValid) return;
     var x = a[r.selection];
     if (x == "m") slm(p, e);
-    else if (x == "bk") {
+    else if (x == "ej") {
+      var rr2 = e.getComponent("minecraft:rideable");
+      if (rr2)
+        for (var mo of rdr(e)) if (!isP(mo)) rr2.ejectRider(mo);
+      s.nob = T + 200;
+      say(p, { translate: "ia.panel.ejected" });
+    } else if (x == "fx") {
+      var nf = !pfx(p);
+      p.setDynamicProperty("ia:fx", nf);
+      if (!nf && q.fov) {
+        q.fov = 0;
+        p.runCommand("camera @s fov_clear");
+      }
+      say(p, { translate: nf ? "ia.panel.fx_on" : "ia.panel.fx_off" });
+    } else if (x == "bk") {
       bks(e, s);
       say(p, {
         translate: "ia.panel.cargo_bank_now",
@@ -5422,7 +5601,7 @@ function pan(p, t) {
       }
     } else if (x == "dm") dsm(e, s, p);
     else if (x == "mf") {
-      q.mf = !q.mf;
+      q.mf = !lst(q);
       p.setDynamicProperty("ia:mf", q.mf);
       say(p, { translate: q.mf ? "ia.panel.mouse_on" : "ia.panel.mouse_off" });
     } else if (x == "cm") {
@@ -5758,9 +5937,9 @@ function stp(e, s, l) {
     by = Math.floor(l.y + 0.01),
     fx = l.x + dx * r,
     fz = l.z + dz * r,
-    b0 = dm.getBlock(v3(fx, by, fz)),
-    b1 = dm.getBlock(v3(fx, by + 1, fz)),
-    b2 = dm.getBlock(v3(fx, by + 2, fz));
+    b0 = gbl(dm, v3(fx, by, fz)),
+    b1 = gbl(dm, v3(fx, by + 1, fz)),
+    b2 = gbl(dm, v3(fx, by + 2, fz));
   if (!b0 || b0.isAir || b0.isLiquid || pas(b0.typeId)) return false;
   if (!b1 || !(b1.isAir || b1.isLiquid || pas(b1.typeId))) return false;
   if (b2 && !(b2.isAir || b2.isLiquid || pas(b2.typeId))) return false;
@@ -5778,7 +5957,7 @@ function frb(dm, p, wd, ht) {
         z <= Math.floor(p.z + h - 1e-3);
         z++
       ) {
-        var b = dm.getBlock(v3(x, y, z));
+        var b = gbl(dm, v3(x, y, z));
         if (b && !b.isAir && !b.isLiquid && !pas(b.typeId)) return b;
       }
   return null;
@@ -5811,7 +5990,7 @@ function fre(dm, p, wd, ht) {
         z <= Math.floor(p.z + h - 1e-3);
         z++
       ) {
-        var b = dm.getBlock(v3(x, y, z));
+        var b = gbl(dm, v3(x, y, z));
         if (b && !b.isAir && !b.isLiquid && !pas(b.typeId)) return false;
       }
   return true;
@@ -5882,8 +6061,7 @@ w.beforeEvents.itemUse.subscribe(function (ev) {
     return;
   }
   if (it.typeId == "minecraft:firework_rocket") {
-    var rc = p.getComponent("minecraft:riding"),
-      r = rc ? rc.entityRidingOn : undefined;
+    var r = rdo(p);
     if (r && isA(r)) {
       ev.cancel = true;
       sy.run(function () {
@@ -5897,9 +6075,20 @@ w.beforeEvents.itemUse.subscribe(function (ev) {
     }
   }
 });
+function wus(p) {
+  var q = pst(p);
+  if (T - (q.uw || -99) > 8) q.sw = T;
+  q.fu = T + 6;
+  q.uw = T;
+}
 w.beforeEvents.playerInteractWithBlock.subscribe(function (ev) {
   var it = ev.itemStack,
     p = ev.player;
+  if (!it && isA(rdo(p))) {
+    ev.cancel = true;
+    wus(p);
+    return;
+  }
   if (!it || !it.typeId.startsWith("ia:") || !AC[it.typeId.slice(3)]) return;
   ev.cancel = true;
   if (!ev.isFirstEvent) return;
@@ -5922,7 +6111,11 @@ w.beforeEvents.playerInteractWithEntity.subscribe(function (ev) {
     me = rs.some(function (x) {
       return x.id == p.id;
     });
-  if (me) return;
+  if (me) {
+    ev.cancel = true;
+    wus(p);
+    return;
+  }
   var it = ev.itemStack;
   if (it && cani(e, s, it, !p.isSneaking)) {
     ev.cancel = true;
@@ -5963,6 +6156,17 @@ w.beforeEvents.entityHurt.subscribe(function (ev) {
   var ds = ev.damageSource,
     cs = ds.cause,
     hp = ds.damagingEntity;
+  if (
+    isP(hp) &&
+    rdr(e).some(function (x) {
+      return x.id == hp.id;
+    })
+  ) {
+    sy.run(function () {
+      if (hp.isValid) wus(hp);
+    });
+    return;
+  }
   if (isP(hp) && hp.isSneaking) {
     var q = pst(hp);
     if (q.lp == T) return;
@@ -5991,23 +6195,35 @@ w.beforeEvents.entityHurt.subscribe(function (ev) {
   });
 });
 w.afterEvents.playerSwingStart.subscribe(function (ev) {
-  var p = ev.player,
-    rc = p.getComponent("minecraft:riding");
-  if (!rc || !isA(rc.entityRidingOn)) return;
+  var p = ev.player;
+  if (!isA(rdo(p))) return;
   var sw = ev.swingSource;
   if (
     sw == EntitySwingSource.UseItem ||
-    sw == EntitySwingSource.Interact ||
-    sw == EntitySwingSource.Build ||
     sw == EntitySwingSource.DropItem ||
     sw == EntitySwingSource.ThrowItem
   )
     return;
-  pst(p).fu = T + 6;
+  wus(p);
+});
+w.afterEvents.entityHitBlock.subscribe(function (ev) {
+  var p = ev.damagingEntity;
+  if (isP(p) && isA(rdo(p))) wus(p);
+});
+w.afterEvents.entityHitEntity.subscribe(function (ev) {
+  var p = ev.damagingEntity;
+  if (isP(p) && isA(rdo(p))) wus(p);
 });
 w.afterEvents.entityContainerClosed.subscribe(function (ev) {
   var e = ev.entity;
-  if (isA(e)) vld(e, gs(e));
+  if (!isA(e)) return;
+  var s = gs(e);
+  s.co = Math.max(0, (s.co || 0) - 1);
+  vld(e, s);
+});
+w.afterEvents.entityContainerOpened.subscribe(function (ev) {
+  var e = ev.entity;
+  if (isA(e)) gs(e).co = (gs(e).co || 0) + 1;
 });
 w.afterEvents.entitySpawn.subscribe(function (ev) {
   if (isA(ev.entity)) L.add(ev.entity.id);

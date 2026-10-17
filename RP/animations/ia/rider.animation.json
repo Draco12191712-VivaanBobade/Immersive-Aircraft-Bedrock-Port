@@ -1,0 +1,2549 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.rider.pitch_m180": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -180",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m177": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -177",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m174": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -174",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m171": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -171",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m168": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -168",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m165": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -165",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m162": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -162",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m159": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -159",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m156": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -156",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m153": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -153",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m150": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -150",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m147": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -147",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m144": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -144",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m141": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -141",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m138": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -138",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m135": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -135",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m132": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -132",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m129": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -129",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m126": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -126",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m123": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -123",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m120": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -120",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m117": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -117",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m114": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -114",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m111": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -111",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m108": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -108",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m105": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -105",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m102": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -102",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m99": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -99",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m96": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -96",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m93": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -93",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m90": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -90",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m87": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -87",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m84": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -84",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m81": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -81",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m78": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -78",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m75": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -75",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m72": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -72",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m69": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -69",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m66": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -66",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m63": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -63",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m60": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -60",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m57": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -57",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m54": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -54",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m51": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -51",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m48": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -48",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m45": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -45",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m42": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -42",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m39": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -39",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m36": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -36",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m33": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -33",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m30": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -30",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m27": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -27",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m24": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -24",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m21": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -21",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m18": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -18",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m15": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -15",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m12": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -12",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m9": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -9",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m6": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -6",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_m3": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -3",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p0": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 0",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p3": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 3",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p6": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 6",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p9": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 9",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p12": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 12",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p15": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 15",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p18": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 18",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p21": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 21",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p24": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 24",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p27": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 27",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p30": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 30",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p33": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 33",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p36": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 36",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p39": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 39",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p42": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 42",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p45": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 45",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p48": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 48",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p51": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 51",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p54": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 54",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p57": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 57",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p60": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 60",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p63": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 63",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p66": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 66",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p69": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 69",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p72": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 72",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p75": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 75",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p78": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 78",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p81": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 81",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p84": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 84",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p87": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 87",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p90": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 90",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p93": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 93",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p96": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 96",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p99": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 99",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p102": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 102",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p105": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 105",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p108": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 108",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p111": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 111",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p114": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 114",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p117": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 117",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p120": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 120",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p123": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 123",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p126": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 126",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p129": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 129",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p132": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 132",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p135": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 135",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p138": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 138",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p141": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 141",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p144": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 144",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p147": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 147",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p150": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 150",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p153": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 153",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p156": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 156",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p159": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 159",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p162": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 162",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p165": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 165",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p168": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 168",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p171": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 171",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p174": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 174",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p177": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 177",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.pitch_p180": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "q.is_in_ui ? 0 : 180",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m90": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 90"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m88": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 88"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m86": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 86"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m84": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 84"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m82": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 82"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m80": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 80"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m78": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 78"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m76": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 76"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m74": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 74"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m72": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 72"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m70": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 70"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m68": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 68"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m66": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 66"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m64": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 64"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m62": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 62"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m60": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 60"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m58": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 58"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m56": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 56"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m54": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 54"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m52": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 52"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m50": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 50"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m48": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 48"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m46": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 46"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m44": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 44"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m42": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 42"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m40": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 40"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m38": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 38"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m36": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 36"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m34": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 34"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m32": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 32"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m30": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 30"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m28": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 28"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m26": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 26"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m24": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 24"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m22": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 22"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m20": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 20"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m18": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 18"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m16": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 16"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m14": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 14"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m12": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 12"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m10": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 10"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m8": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 8"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m6": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 6"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m4": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 4"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_m2": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 2"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p0": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : 0"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p2": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -2"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p4": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -4"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p6": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -6"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p8": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -8"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p10": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -10"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p12": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -12"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p14": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -14"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p16": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -16"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p18": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -18"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p20": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -20"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p22": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -22"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p24": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -24"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p26": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -26"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p28": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -28"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p30": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -30"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p32": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -32"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p34": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -34"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p36": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -36"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p38": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -38"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p40": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -40"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p42": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -42"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p44": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -44"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p46": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -46"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p48": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -48"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p50": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -50"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p52": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -52"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p54": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -54"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p56": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -56"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p58": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -58"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p60": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -60"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p62": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -62"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p64": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -64"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p66": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -66"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p68": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -68"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p70": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -70"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p72": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -72"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p74": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -74"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p76": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -76"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p78": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -78"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p80": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -80"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p82": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -82"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p84": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -84"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p86": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -86"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p88": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -88"
+          ]
+        }
+      }
+    },
+    "animation.ia.rider.roll_p90": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            0,
+            0,
+            "q.is_in_ui ? 0 : -90"
+          ]
+        }
+      }
+    }
+  }
+}
