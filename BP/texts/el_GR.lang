@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=Ενεργοποίηση της �
 option.immersive_aircraft.enableCrashFire=Ενεργοποίηση πύρινης έκρηξης τρακαρίσματος.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=Φανταχτερά ίχνη ατμού.
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=Ρυθμός καύσης καυσίμου.
 option.immersive_aircraft.general=Γενικές επιλογές
 option.immersive_aircraft.healthBarRow=Μετατόπιση της γραμμής υγείας των οχημάτων.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=Να μην σκοτώνεται ο παίκτης σε περίπτωση τρακαρίσματος.
 option.immersive_aircraft.regenerateHealthEveryNTicks=Να αναγεννούν τα αεροσκάφη αυτόματα την ζωή τους κάθε φορά, σαν τη συμπεριφορά του βασικού παιχνιδιού.
 option.immersive_aircraft.renderDistance=Εμβέλεια απόδοσης σε κύβους.

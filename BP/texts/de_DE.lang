@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=Aktiviere die Explosion.
 option.immersive_aircraft.enableCrashFire=Aktiviere die feurige Explosion.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=Hübsche Kondensstreifen.
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=Kraftstoffverbrennungsgeschwindigkeit.
 option.immersive_aircraft.general=Allgemeine Optionen
 option.immersive_aircraft.healthBarRow=Versetze die Gesundheitsleiste von Fahrzeugen.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=Der Spieler wird bei einem Absturz nicht getötet.
 option.immersive_aircraft.regenerateHealthEveryNTicks=Regeneriert die Gesundheit automatisch jeden Tick, um das Vanilla-Verhalten zu simulieren.
 option.immersive_aircraft.renderDistance=Renderabstand in Blöcken.

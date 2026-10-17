@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=Explosie inschakelen.
 option.immersive_aircraft.enableCrashFire=Vurige explosie mogelijk maken.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=Sierlijke stoom sporen
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=Brandstofverbruik.
 option.immersive_aircraft.general=Algemene opties
 option.immersive_aircraft.healthBarRow=Compenseer de gezondheidsbalk van voertuigen.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=Doodt de speler niet bij een crash.
 option.immersive_aircraft.regenerateHealthEveryNTicks=Regenereert automatisch gezondheid elke bepaalde tik, waardoor vanillegedrag wordt gesimuleerd.
 option.immersive_aircraft.renderDistance=Render afstand in blokken.

@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=Povolit výbuch.
 option.immersive_aircraft.enableCrashFire=Povolit ohnivý výbuch.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=Módní parní stezky.
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=Rychlost spalování paliva.
 option.immersive_aircraft.general=Obecné možnosti
 option.immersive_aircraft.healthBarRow=Posunutí ukazatele stavu vozidel.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=Při havárii hráč nebude zabit.
 option.immersive_aircraft.regenerateHealthEveryNTicks=Automaticky regeneruje zdraví každé dané tiknutí, čímž simuluje chování vanilky.
 option.immersive_aircraft.renderDistance=Vzdálenost vykreslování v blocích.

@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=Robbanás engedélyezése.
 option.immersive_aircraft.enableCrashFire=Tüzes robbanás lehetővé tétele.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=Fancy gőzpályák.
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=Üzemanyag-égési sebesség.
 option.immersive_aircraft.general=Általános lehetőségek
 option.immersive_aircraft.healthBarRow=Ellensúlyozza a járművek egészségsávját.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=Nem öli meg a játékost összeomláskor.
 option.immersive_aircraft.regenerateHealthEveryNTicks=Automatikusan regenerálja az egészséget minden adott ticknél, szimulálva a vanília viselkedést.
 option.immersive_aircraft.renderDistance=Renderelési távolság blokkokban.

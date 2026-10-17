@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=Ota räjähdys käyttöön.
 option.immersive_aircraft.enableCrashFire=Mahdollistaa tulisen räjähdyksen.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=Hienoja höyrypolkuja.
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=Polttoaineen palamisnopeus.
 option.immersive_aircraft.general=Yleiset vaihtoehdot
 option.immersive_aircraft.healthBarRow=Poistaa ajoneuvojen terveyspalkin.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=Ei tapa pelaajaa kaatumisen yhteydessä.
 option.immersive_aircraft.regenerateHealthEveryNTicks=Uudistaa automaattisesti terveyttä joka tikillä, mikä simuloi vaniljakäyttäytymistä.
 option.immersive_aircraft.renderDistance=Renderöintietäisyys lohkoina.

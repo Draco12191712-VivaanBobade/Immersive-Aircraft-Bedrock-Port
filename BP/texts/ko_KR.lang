@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=폭발을 활성화합니다.
 option.immersive_aircraft.enableCrashFire=화염 폭발을 활성화합니다.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=멋진 증기 트레일.
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=연료 연소율.
 option.immersive_aircraft.general=일반 옵션
 option.immersive_aircraft.healthBarRow=전차의 체력 바를 상쇄합니다.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=충돌 시 플레이어를 죽이지 않습니다.
 option.immersive_aircraft.regenerateHealthEveryNTicks=주어진 틱마다 자동으로 체력을 재생성하여 바닐라 동작을 시뮬레이션합니다.
 option.immersive_aircraft.renderDistance=거리를 블록 단위로 렌더링합니다.

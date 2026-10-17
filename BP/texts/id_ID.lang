@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=Aktifkan ledakan.
 option.immersive_aircraft.enableCrashFire=Mengaktifkan ledakan yang berapi-api.
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=Jalur uap yang mewah.
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=Laju pembakaran bahan bakar.
 option.immersive_aircraft.general=Opsi Umum
 option.immersive_aircraft.healthBarRow=Mengimbangi bar kesehatan kendaraan.
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=Tidak akan membunuh pemain saat jatuh.
 option.immersive_aircraft.regenerateHealthEveryNTicks=Secara otomatis meregenerasi kesehatan setiap centang yang diberikan, mensimulasikan perilaku vanilla.
 option.immersive_aircraft.renderDistance=Merender jarak dalam blok.

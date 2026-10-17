@@ -20,11 +20,14 @@ option.immersive_aircraft.enableCrashExplosion=坠机时爆炸。
 option.immersive_aircraft.enableCrashFire=坠机爆炸时生成火焰。
 option.immersive_aircraft.enableDropsForNonPlayer=Drop the aircraft when it is not destroyed by a player.
 option.immersive_aircraft.enableTrails=华丽飞机尾流。
+option.immersive_aircraft.flightCameraEffects=Flight camera: speed FOV and turbulence.
+option.immersive_aircraft.flightFov=Flight camera base FOV.
 option.immersive_aircraft.fuelConsumption=燃料燃烧率。
 option.immersive_aircraft.general=通用设置
 option.immersive_aircraft.healthBarRow=载具生命值条竖直偏移量。
 option.immersive_aircraft.heavyCrossBowVelocity=Heavy crossbow bolt speed.
 option.immersive_aircraft.liftAssist=Plane lift assist (Bedrock)
+option.immersive_aircraft.lookSteering=Steer by looking (off = stick only, free look).
 option.immersive_aircraft.preventKillThroughCrash=坠机时不会杀死玩家。
 option.immersive_aircraft.regenerateHealthEveryNTicks=模拟原版行为，每隔一定时间自动恢复健康。
 option.immersive_aircraft.renderDistance=渲染距离（单位：方块）。
