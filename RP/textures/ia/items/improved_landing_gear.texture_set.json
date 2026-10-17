@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "improved_landing_gear",
-    "metalness_emissive_roughness_subsurface": "improved_landing_gear_mers",
+    "metalness_emissive_roughness": "improved_landing_gear_mers",
     "normal": "improved_landing_gear_normal"
   }
 }

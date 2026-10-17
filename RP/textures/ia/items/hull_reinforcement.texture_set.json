@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "hull_reinforcement",
-    "metalness_emissive_roughness_subsurface": "hull_reinforcement_mers",
+    "metalness_emissive_roughness": "hull_reinforcement_mers",
     "normal": "hull_reinforcement_normal"
   }
 }

@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "sail",
-    "metalness_emissive_roughness_subsurface": "sail_mers",
+    "metalness_emissive_roughness": "sail_mers",
     "normal": "sail_normal"
   }
 }

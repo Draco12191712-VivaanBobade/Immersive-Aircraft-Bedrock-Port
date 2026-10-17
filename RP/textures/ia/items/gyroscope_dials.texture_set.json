@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "gyroscope_dials",
-    "metalness_emissive_roughness_subsurface": "gyroscope_dials_mers",
+    "metalness_emissive_roughness": "gyroscope_dials_mers",
     "normal": "gyroscope_dials_normal"
   }
 }

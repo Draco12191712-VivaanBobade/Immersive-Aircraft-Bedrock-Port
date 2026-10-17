@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "warship_color",
-    "metalness_emissive_roughness_subsurface": "warship_color_mers",
+    "metalness_emissive_roughness": "warship_color_mers",
     "normal": "warship_color_normal"
   }
 }

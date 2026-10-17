@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "airship",
-    "metalness_emissive_roughness_subsurface": "airship_mers",
+    "metalness_emissive_roughness": "airship_mers",
     "normal": "airship_normal"
   }
 }

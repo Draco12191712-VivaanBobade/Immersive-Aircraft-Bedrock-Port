@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "gyrodyne",
-    "metalness_emissive_roughness_subsurface": "gyrodyne_mers",
+    "metalness_emissive_roughness": "gyrodyne_mers",
     "normal": "gyrodyne_normal"
   }
 }

@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "quadrocopter",
-    "metalness_emissive_roughness_subsurface": "quadrocopter_mers",
+    "metalness_emissive_roughness": "quadrocopter_mers",
     "normal": "quadrocopter_normal"
   }
 }

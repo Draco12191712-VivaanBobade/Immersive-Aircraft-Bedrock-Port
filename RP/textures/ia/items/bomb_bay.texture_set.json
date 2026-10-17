@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "bomb_bay",
-    "metalness_emissive_roughness_subsurface": "bomb_bay_mers",
+    "metalness_emissive_roughness": "bomb_bay_mers",
     "normal": "bomb_bay_normal"
   }
 }

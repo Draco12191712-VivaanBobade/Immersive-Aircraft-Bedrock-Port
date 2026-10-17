@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "biplane",
-    "metalness_emissive_roughness_subsurface": "biplane_mers",
+    "metalness_emissive_roughness": "biplane_mers",
     "normal": "biplane_normal"
   }
 }

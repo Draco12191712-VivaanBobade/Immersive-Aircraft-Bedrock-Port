@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "cargo_airship_dyed",
-    "metalness_emissive_roughness_subsurface": "cargo_airship_dyed_mers",
+    "metalness_emissive_roughness": "cargo_airship_dyed_mers",
     "normal": "cargo_airship_dyed_normal"
   }
 }

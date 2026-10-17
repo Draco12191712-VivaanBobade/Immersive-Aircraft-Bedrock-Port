@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "telescope",
-    "metalness_emissive_roughness_subsurface": "telescope_mers",
+    "metalness_emissive_roughness": "telescope_mers",
     "normal": "telescope_normal"
   }
 }

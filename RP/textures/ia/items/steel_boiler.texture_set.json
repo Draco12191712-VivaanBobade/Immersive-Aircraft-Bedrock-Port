@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "steel_boiler",
-    "metalness_emissive_roughness_subsurface": "steel_boiler_mers",
+    "metalness_emissive_roughness": "steel_boiler_mers",
     "normal": "steel_boiler_normal"
   }
 }

@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "sturdy_pipes",
-    "metalness_emissive_roughness_subsurface": "sturdy_pipes_mers",
+    "metalness_emissive_roughness": "sturdy_pipes_mers",
     "normal": "sturdy_pipes_normal"
   }
 }

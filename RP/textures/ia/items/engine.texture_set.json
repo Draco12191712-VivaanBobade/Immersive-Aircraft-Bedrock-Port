@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "engine",
-    "metalness_emissive_roughness_subsurface": "engine_mers",
+    "metalness_emissive_roughness": "engine_mers",
     "normal": "engine_normal"
   }
 }

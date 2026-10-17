@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "gyroscope_hud",
-    "metalness_emissive_roughness_subsurface": "gyroscope_hud_mers",
+    "metalness_emissive_roughness": "gyroscope_hud_mers",
     "normal": "gyroscope_hud_normal"
   }
 }

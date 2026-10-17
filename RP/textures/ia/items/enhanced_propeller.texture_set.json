@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "enhanced_propeller",
-    "metalness_emissive_roughness_subsurface": "enhanced_propeller_mers",
+    "metalness_emissive_roughness": "enhanced_propeller_mers",
     "normal": "enhanced_propeller_normal"
   }
 }

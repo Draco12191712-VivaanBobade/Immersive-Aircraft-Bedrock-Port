@@ -2,7 +2,7 @@
   "format_version": "1.21.30",
   "minecraft:texture_set": {
     "color": "bamboo_hopper",
-    "metalness_emissive_roughness_subsurface": "bamboo_hopper_mers",
+    "metalness_emissive_roughness": "bamboo_hopper_mers",
     "normal": "bamboo_hopper_normal"
   }
 }
