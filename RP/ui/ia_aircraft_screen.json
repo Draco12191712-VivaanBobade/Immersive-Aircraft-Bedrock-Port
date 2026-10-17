@@ -145,9 +145,8 @@
                         8,
                         6
                       ],
-                      "text": "$container_title",
-                      "localize": "$localize_title",
-                      "enable_profanity_filter": true
+                      "text": "entity.ia:biplane.name",
+                      "localize": true
                     }
                   },
                   {
@@ -871,9 +870,8 @@
                         8,
                         6
                       ],
-                      "text": "$container_title",
-                      "localize": "$localize_title",
-                      "enable_profanity_filter": true
+                      "text": "entity.ia:gyrodyne.name",
+                      "localize": true
                     }
                   },
                   {
@@ -1548,9 +1546,8 @@
                         8,
                         6
                       ],
-                      "text": "$container_title",
-                      "localize": "$localize_title",
-                      "enable_profanity_filter": true
+                      "text": "entity.ia:airship.name",
+                      "localize": true
                     }
                   },
                   {
@@ -2250,9 +2247,8 @@
                         8,
                         6
                       ],
-                      "text": "$container_title",
-                      "localize": "$localize_title",
-                      "enable_profanity_filter": true
+                      "text": "entity.ia:cargo_airship.name",
+                      "localize": true
                     }
                   },
                   {
@@ -4424,9 +4420,8 @@
                         8,
                         6
                       ],
-                      "text": "$container_title",
-                      "localize": "$localize_title",
-                      "enable_profanity_filter": true
+                      "text": "entity.ia:warship.name",
+                      "localize": true
                     }
                   },
                   {
@@ -6418,9 +6413,8 @@
                         8,
                         6
                       ],
-                      "text": "$container_title",
-                      "localize": "$localize_title",
-                      "enable_profanity_filter": true
+                      "text": "entity.ia:quadrocopter.name",
+                      "localize": true
                     }
                   },
                   {
@@ -6794,9 +6788,8 @@
                         8,
                         6
                       ],
-                      "text": "$container_title",
-                      "localize": "$localize_title",
-                      "enable_profanity_filter": true
+                      "text": "entity.ia:bamboo_hopper.name",
+                      "localize": true
                     }
                   },
                   {
@@ -7459,162 +7452,152 @@
   },
   "small_router": {
     "type": "panel",
-    "$ia_kind|default": "none",
-    "variables": [
-      {
-        "requires": "(($container_title = 'Avião Biplano') or ($container_title = 'Biplan') or ($container_title = 'Biplane') or ($container_title = 'Biplano') or ($container_title = 'Doppeldecker') or ($container_title = 'Dvojplošník') or ($container_title = 'Dvouplošník') or ($container_title = 'Dwupłatowiec') or ($container_title = 'Kaksitaso') or ($container_title = 'Kétfedelű repülőgép') or ($container_title = 'Tweedekker') or ($container_title = 'entity.ia:biplane.name') or ($container_title = 'Çift Kanatlı') or ($container_title = 'Διπλάνο') or ($container_title = 'Биплан') or ($container_title = 'Біплан') or ($container_title = 'Двуплощник') or ($container_title = '双翼机') or ($container_title = '複葉機') or ($container_title = '雙翼飛機') or ($container_title = '복엽기'))",
-        "$ia_kind": "biplane"
-      },
-      {
-        "requires": "(($container_title = 'Flugschrauber') or ($container_title = 'Girodino') or ($container_title = 'Gyrodyne') or ($container_title = 'Gyroptère') or ($container_title = 'Hybride rotor vliegtuig') or ($container_title = 'Trampkopter') or ($container_title = 'Tråkopter') or ($container_title = 'Trædekopter') or ($container_title = 'Wirolot') or ($container_title = 'entity.ia:gyrodyne.name') or ($container_title = 'Δυναμόπλανο') or ($container_title = 'Винтокрыл') or ($container_title = 'Гвинтокрил') or ($container_title = 'ジャイロダイン') or ($container_title = '固定旋翼机') or ($container_title = '直升機') or ($container_title = '자이로다인'))",
-        "$ia_kind": "gyrodyne"
-      },
-      {
-        "requires": "(($container_title = 'Aeronave') or ($container_title = 'Airship') or ($container_title = 'Dirigeable') or ($container_title = 'Dirigibile') or ($container_title = 'Dirigible') or ($container_title = 'Dirigível') or ($container_title = 'Hava Gemisi') or ($container_title = 'Ilmalaiva') or ($container_title = 'Kapal Udara') or ($container_title = 'Luchtschip') or ($container_title = 'Luftschiff') or ($container_title = 'Luftskepp') or ($container_title = 'Luftskib') or ($container_title = 'Luftskip') or ($container_title = 'Léghajó') or ($container_title = 'Sterowiec') or ($container_title = 'Vzducholoď') or ($container_title = 'entity.ia:airship.name') or ($container_title = 'Αερόπλοιο') or ($container_title = 'Дирижабль') or ($container_title = 'Дирижабъл') or ($container_title = '飛艇') or ($container_title = '飛行船') or ($container_title = '飞艇') or ($container_title = '비행선'))",
-        "$ia_kind": "airship"
-      },
-      {
-        "requires": "(($container_title = 'Aeróstato de carga') or ($container_title = 'Cargo Airship') or ($container_title = 'Dirigeable cargo') or ($container_title = 'Dirigibile da carico') or ($container_title = 'Dirigible de carga') or ($container_title = 'Frachtluftschiff') or ($container_title = 'Kapal Udara Kargo') or ($container_title = 'Kargo Hava Gemisi') or ($container_title = 'Lasteluftskip') or ($container_title = 'Luftskepp för last') or ($container_title = 'Luftskib til fragt') or ($container_title = 'Nákladná vzducholoď') or ($container_title = 'Nákladní vzducholoď') or ($container_title = 'Rahtilentolaiva') or ($container_title = 'Sterowiec towarowy') or ($container_title = 'Teherszállító léghajó') or ($container_title = 'Vracht Luchtschip') or ($container_title = 'entity.ia:cargo_airship.name') or ($container_title = 'Αερόπλοιο με φορτίο') or ($container_title = 'Вантажний дирижабль') or ($container_title = 'Грузовой дирижабль') or ($container_title = 'Товарен дирижабъл') or ($container_title = '貨物飛行船') or ($container_title = '貨運飛艇') or ($container_title = '货运飞船') or ($container_title = '화물 비행선'))",
-        "$ia_kind": "cargo_airship"
-      },
-      {
-        "requires": "(($container_title = 'Buque de guerra') or ($container_title = 'Dirigeable de guerre') or ($container_title = 'Hadihajó') or ($container_title = 'Kapal perang') or ($container_title = 'Kriegsschiff') or ($container_title = 'Krigsfartyg') or ($container_title = 'Krigsskib') or ($container_title = 'Krigsskip') or ($container_title = 'Nave da guerra') or ($container_title = 'Navio de guerra') or ($container_title = 'Navire de guerre') or ($container_title = 'Okręt Wojenny') or ($container_title = 'Oorlogsschip') or ($container_title = 'Savaş Gemisi') or ($container_title = 'Sota-alus') or ($container_title = 'Vojnová loď') or ($container_title = 'Válečná loď') or ($container_title = 'Warship') or ($container_title = 'entity.ia:warship.name') or ($container_title = 'Πολεμικό πλοίο') or ($container_title = 'Военен кораб') or ($container_title = 'Военный дирижабль') or ($container_title = 'Військовий корабель') or ($container_title = '战斗飞艇') or ($container_title = '戰鬥飛艇') or ($container_title = '飛行艦') or ($container_title = '워쉽'))",
-        "$ia_kind": "warship"
-      },
-      {
-        "requires": "(($container_title = 'Czterośmigłowiec') or ($container_title = 'Kvadrokopter') or ($container_title = 'Kvadrokoptéra') or ($container_title = 'Quadcopter') or ($container_title = 'Quadricóptero') or ($container_title = 'Quadrocopter') or ($container_title = 'Quadrocottero') or ($container_title = 'Quadrocóptero') or ($container_title = 'Quadrokopter') or ($container_title = 'entity.ia:quadrocopter.name') or ($container_title = 'Τετρακόπτερο') or ($container_title = 'Квадрокоптер') or ($container_title = 'クワッドローター') or ($container_title = '四軸飛行器') or ($container_title = '四轴飞行器') or ($container_title = '쿼드로콥터'))",
-        "$ia_kind": "quadrocopter"
-      },
-      {
-        "requires": "(($container_title = 'Bamboe Trechter') or ($container_title = 'Bamboo Hopper') or ($container_title = 'Bamboo hopper') or ($container_title = 'Bambu Hazne') or ($container_title = 'Bambu Hopperi') or ($container_title = 'Bambu tratt') or ($container_title = 'Bambus Hopper') or ($container_title = 'Bambus-Trichter') or ($container_title = 'Bambusová násypka') or ($container_title = 'Bambusový náboj') or ($container_title = 'Bambusowy Wodnopłat') or ($container_title = 'Bambusz hopper') or ($container_title = 'Entonnoir de bambou') or ($container_title = 'Funil de Bambu') or ($container_title = 'Gerbong Bambu') or ($container_title = 'Hopper de bambú') or ($container_title = 'Hopper en bambou') or ($container_title = 'Tolva de bambú') or ($container_title = 'Tramoggia Di Bambù') or ($container_title = 'entity.ia:bamboo_hopper.name') or ($container_title = 'Αεροπλάνο από Μπαμπού') or ($container_title = 'Бамбуков бункер') or ($container_title = 'Бамбуковий хоппер') or ($container_title = 'Бамбуковый кукурузник') or ($container_title = '竹ホッパー') or ($container_title = '竹制浮筒飞机') or ($container_title = '竹跳板') or ($container_title = '대나무 호퍼'))",
-        "$ia_kind": "bamboo_hopper"
-      }
-    ],
     "controls": [
       {
         "vanilla_desktop@chest.small_chest_panel": {
-          "ignored": "((not $desktop_screen) or (not ($ia_kind = 'none')))"
+          "ignored": "((not $desktop_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
         }
       },
       {
         "vanilla_pocket@pocket_containers.small_chest_panel": {
-          "ignored": "((not $pocket_screen) or (not ($ia_kind = 'none')))"
+          "ignored": "((not $pocket_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
         }
       },
       {
         "biplane@ia_ui.biplane_panel": {
-          "ignored": "(not ($ia_kind = 'biplane'))"
+          "ignored": "(not ($container_title = '§i§a§0§rBiplane'))"
         }
       },
       {
         "gyrodyne@ia_ui.gyrodyne_panel": {
-          "ignored": "(not ($ia_kind = 'gyrodyne'))"
+          "ignored": "(not ($container_title = '§i§a§1§rGyrodyne'))"
         }
       },
       {
         "airship@ia_ui.airship_panel": {
-          "ignored": "(not ($ia_kind = 'airship'))"
+          "ignored": "(not ($container_title = '§i§a§2§rAirship'))"
         }
       },
       {
         "cargo_airship@ia_ui.cargo_airship_panel": {
-          "ignored": "(not ($ia_kind = 'cargo_airship'))"
+          "ignored": "(not ($container_title = '§i§a§3§rCargo Airship'))"
         }
       },
       {
         "warship@ia_ui.warship_panel": {
-          "ignored": "(not ($ia_kind = 'warship'))"
+          "ignored": "(not ($container_title = '§i§a§4§rWarship'))"
         }
       },
       {
         "quadrocopter@ia_ui.quadrocopter_panel": {
-          "ignored": "(not ($ia_kind = 'quadrocopter'))"
+          "ignored": "(not ($container_title = '§i§a§5§rQuadrocopter'))"
         }
       },
       {
         "bamboo_hopper@ia_ui.bamboo_hopper_panel": {
-          "ignored": "(not ($ia_kind = 'bamboo_hopper'))"
+          "ignored": "(not ($container_title = '§i§a§6§rBamboo Hopper'))"
         }
       }
     ]
   },
   "large_router": {
     "type": "panel",
-    "$ia_kind|default": "none",
-    "variables": [
-      {
-        "requires": "(($container_title = 'Avião Biplano') or ($container_title = 'Biplan') or ($container_title = 'Biplane') or ($container_title = 'Biplano') or ($container_title = 'Doppeldecker') or ($container_title = 'Dvojplošník') or ($container_title = 'Dvouplošník') or ($container_title = 'Dwupłatowiec') or ($container_title = 'Kaksitaso') or ($container_title = 'Kétfedelű repülőgép') or ($container_title = 'Tweedekker') or ($container_title = 'entity.ia:biplane.name') or ($container_title = 'Çift Kanatlı') or ($container_title = 'Διπλάνο') or ($container_title = 'Биплан') or ($container_title = 'Біплан') or ($container_title = 'Двуплощник') or ($container_title = '双翼机') or ($container_title = '複葉機') or ($container_title = '雙翼飛機') or ($container_title = '복엽기'))",
-        "$ia_kind": "biplane"
-      },
-      {
-        "requires": "(($container_title = 'Flugschrauber') or ($container_title = 'Girodino') or ($container_title = 'Gyrodyne') or ($container_title = 'Gyroptère') or ($container_title = 'Hybride rotor vliegtuig') or ($container_title = 'Trampkopter') or ($container_title = 'Tråkopter') or ($container_title = 'Trædekopter') or ($container_title = 'Wirolot') or ($container_title = 'entity.ia:gyrodyne.name') or ($container_title = 'Δυναμόπλανο') or ($container_title = 'Винтокрыл') or ($container_title = 'Гвинтокрил') or ($container_title = 'ジャイロダイン') or ($container_title = '固定旋翼机') or ($container_title = '直升機') or ($container_title = '자이로다인'))",
-        "$ia_kind": "gyrodyne"
-      },
-      {
-        "requires": "(($container_title = 'Aeronave') or ($container_title = 'Airship') or ($container_title = 'Dirigeable') or ($container_title = 'Dirigibile') or ($container_title = 'Dirigible') or ($container_title = 'Dirigível') or ($container_title = 'Hava Gemisi') or ($container_title = 'Ilmalaiva') or ($container_title = 'Kapal Udara') or ($container_title = 'Luchtschip') or ($container_title = 'Luftschiff') or ($container_title = 'Luftskepp') or ($container_title = 'Luftskib') or ($container_title = 'Luftskip') or ($container_title = 'Léghajó') or ($container_title = 'Sterowiec') or ($container_title = 'Vzducholoď') or ($container_title = 'entity.ia:airship.name') or ($container_title = 'Αερόπλοιο') or ($container_title = 'Дирижабль') or ($container_title = 'Дирижабъл') or ($container_title = '飛艇') or ($container_title = '飛行船') or ($container_title = '飞艇') or ($container_title = '비행선'))",
-        "$ia_kind": "airship"
-      },
-      {
-        "requires": "(($container_title = 'Aeróstato de carga') or ($container_title = 'Cargo Airship') or ($container_title = 'Dirigeable cargo') or ($container_title = 'Dirigibile da carico') or ($container_title = 'Dirigible de carga') or ($container_title = 'Frachtluftschiff') or ($container_title = 'Kapal Udara Kargo') or ($container_title = 'Kargo Hava Gemisi') or ($container_title = 'Lasteluftskip') or ($container_title = 'Luftskepp för last') or ($container_title = 'Luftskib til fragt') or ($container_title = 'Nákladná vzducholoď') or ($container_title = 'Nákladní vzducholoď') or ($container_title = 'Rahtilentolaiva') or ($container_title = 'Sterowiec towarowy') or ($container_title = 'Teherszállító léghajó') or ($container_title = 'Vracht Luchtschip') or ($container_title = 'entity.ia:cargo_airship.name') or ($container_title = 'Αερόπλοιο με φορτίο') or ($container_title = 'Вантажний дирижабль') or ($container_title = 'Грузовой дирижабль') or ($container_title = 'Товарен дирижабъл') or ($container_title = '貨物飛行船') or ($container_title = '貨運飛艇') or ($container_title = '货运飞船') or ($container_title = '화물 비행선'))",
-        "$ia_kind": "cargo_airship"
-      },
-      {
-        "requires": "(($container_title = 'Buque de guerra') or ($container_title = 'Dirigeable de guerre') or ($container_title = 'Hadihajó') or ($container_title = 'Kapal perang') or ($container_title = 'Kriegsschiff') or ($container_title = 'Krigsfartyg') or ($container_title = 'Krigsskib') or ($container_title = 'Krigsskip') or ($container_title = 'Nave da guerra') or ($container_title = 'Navio de guerra') or ($container_title = 'Navire de guerre') or ($container_title = 'Okręt Wojenny') or ($container_title = 'Oorlogsschip') or ($container_title = 'Savaş Gemisi') or ($container_title = 'Sota-alus') or ($container_title = 'Vojnová loď') or ($container_title = 'Válečná loď') or ($container_title = 'Warship') or ($container_title = 'entity.ia:warship.name') or ($container_title = 'Πολεμικό πλοίο') or ($container_title = 'Военен кораб') or ($container_title = 'Военный дирижабль') or ($container_title = 'Військовий корабель') or ($container_title = '战斗飞艇') or ($container_title = '戰鬥飛艇') or ($container_title = '飛行艦') or ($container_title = '워쉽'))",
-        "$ia_kind": "warship"
-      },
-      {
-        "requires": "(($container_title = 'Czterośmigłowiec') or ($container_title = 'Kvadrokopter') or ($container_title = 'Kvadrokoptéra') or ($container_title = 'Quadcopter') or ($container_title = 'Quadricóptero') or ($container_title = 'Quadrocopter') or ($container_title = 'Quadrocottero') or ($container_title = 'Quadrocóptero') or ($container_title = 'Quadrokopter') or ($container_title = 'entity.ia:quadrocopter.name') or ($container_title = 'Τετρακόπτερο') or ($container_title = 'Квадрокоптер') or ($container_title = 'クワッドローター') or ($container_title = '四軸飛行器') or ($container_title = '四轴飞行器') or ($container_title = '쿼드로콥터'))",
-        "$ia_kind": "quadrocopter"
-      },
-      {
-        "requires": "(($container_title = 'Bamboe Trechter') or ($container_title = 'Bamboo Hopper') or ($container_title = 'Bamboo hopper') or ($container_title = 'Bambu Hazne') or ($container_title = 'Bambu Hopperi') or ($container_title = 'Bambu tratt') or ($container_title = 'Bambus Hopper') or ($container_title = 'Bambus-Trichter') or ($container_title = 'Bambusová násypka') or ($container_title = 'Bambusový náboj') or ($container_title = 'Bambusowy Wodnopłat') or ($container_title = 'Bambusz hopper') or ($container_title = 'Entonnoir de bambou') or ($container_title = 'Funil de Bambu') or ($container_title = 'Gerbong Bambu') or ($container_title = 'Hopper de bambú') or ($container_title = 'Hopper en bambou') or ($container_title = 'Tolva de bambú') or ($container_title = 'Tramoggia Di Bambù') or ($container_title = 'entity.ia:bamboo_hopper.name') or ($container_title = 'Αεροπλάνο από Μπαμπού') or ($container_title = 'Бамбуков бункер') or ($container_title = 'Бамбуковий хоппер') or ($container_title = 'Бамбуковый кукурузник') or ($container_title = '竹ホッパー') or ($container_title = '竹制浮筒飞机') or ($container_title = '竹跳板') or ($container_title = '대나무 호퍼'))",
-        "$ia_kind": "bamboo_hopper"
-      }
-    ],
     "controls": [
       {
         "vanilla_desktop@chest.large_chest_panel": {
-          "ignored": "((not $desktop_screen) or (not ($ia_kind = 'none')))"
+          "ignored": "((not $desktop_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
         }
       },
       {
         "vanilla_pocket@pocket_containers.large_chest_panel": {
-          "ignored": "((not $pocket_screen) or (not ($ia_kind = 'none')))"
+          "ignored": "((not $pocket_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
         }
       },
       {
         "biplane@ia_ui.biplane_panel": {
-          "ignored": "(not ($ia_kind = 'biplane'))"
+          "ignored": "(not ($container_title = '§i§a§0§rBiplane'))"
         }
       },
       {
         "gyrodyne@ia_ui.gyrodyne_panel": {
-          "ignored": "(not ($ia_kind = 'gyrodyne'))"
+          "ignored": "(not ($container_title = '§i§a§1§rGyrodyne'))"
         }
       },
       {
         "airship@ia_ui.airship_panel": {
-          "ignored": "(not ($ia_kind = 'airship'))"
+          "ignored": "(not ($container_title = '§i§a§2§rAirship'))"
         }
       },
       {
         "cargo_airship@ia_ui.cargo_airship_panel": {
-          "ignored": "(not ($ia_kind = 'cargo_airship'))"
+          "ignored": "(not ($container_title = '§i§a§3§rCargo Airship'))"
         }
       },
       {
         "warship@ia_ui.warship_panel": {
-          "ignored": "(not ($ia_kind = 'warship'))"
+          "ignored": "(not ($container_title = '§i§a§4§rWarship'))"
         }
       },
       {
         "quadrocopter@ia_ui.quadrocopter_panel": {
-          "ignored": "(not ($ia_kind = 'quadrocopter'))"
+          "ignored": "(not ($container_title = '§i§a§5§rQuadrocopter'))"
         }
       },
       {
         "bamboo_hopper@ia_ui.bamboo_hopper_panel": {
-          "ignored": "(not ($ia_kind = 'bamboo_hopper'))"
+          "ignored": "(not ($container_title = '§i§a§6§rBamboo Hopper'))"
+        }
+      }
+    ]
+  },
+  "scope_overlay": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 0,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hud_title_text_string = '§s§c§o§p§e§r')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "left": {
+          "type": "image",
+          "texture": "textures/ui/ia/black",
+          "size": [
+            "fill",
+            "100%"
+          ]
+        }
+      },
+      {
+        "scope": {
+          "type": "image",
+          "texture": "textures/ui/spyglass_scope",
+          "size": [
+            "100%y",
+            "100%"
+          ]
+        }
+      },
+      {
+        "right": {
+          "type": "image",
+          "texture": "textures/ui/ia/black",
+          "size": [
+            "fill",
+            "100%"
+          ]
         }
       }
     ]

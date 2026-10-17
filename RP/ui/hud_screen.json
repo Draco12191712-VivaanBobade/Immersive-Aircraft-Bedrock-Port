@@ -1,0 +1,29 @@
+{
+  "namespace": "hud",
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "ia_scope@ia_ui.scope_overlay": {}
+          }
+        ]
+      }
+    ]
+  },
+  "hud_title_text": {
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = '§s§c§o§p§e§r'))",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}
