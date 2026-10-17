@@ -109,19 +109,19 @@
           "*": false
         },
         {
-          "w0_rc_0": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+          "w0_rc_0": "q.property('ia:wpn0') == 1 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_rc_0_base": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+          "w0_rc_0_base": "q.property('ia:wpn0') == 1 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_rc_0_yaw": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+          "w0_rc_0_yaw": "q.property('ia:wpn0') == 1 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_rc_0_pitch": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+          "w0_rc_0_pitch": "q.property('ia:wpn0') == 1 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_rc_0_roll": "q.property('ia:wpn0') == 1 && q.distance_from_camera > 2.5"
+          "w0_rc_0_roll": "q.property('ia:wpn0') == 1 && !(q.has_rider && q.distance_from_camera < 1.95)"
         }
       ]
     },
@@ -146,19 +146,19 @@
           "*": false
         },
         {
-          "w0_ts_0": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+          "w0_ts_0": "q.property('ia:wpn0') == 3 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_ts_0_base": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+          "w0_ts_0_base": "q.property('ia:wpn0') == 3 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_ts_0_yaw": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+          "w0_ts_0_yaw": "q.property('ia:wpn0') == 3 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_ts_0_pitch": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+          "w0_ts_0_pitch": "q.property('ia:wpn0') == 3 && !(q.has_rider && q.distance_from_camera < 1.95)"
         },
         {
-          "w0_ts_0_roll": "q.property('ia:wpn0') == 3 && q.distance_from_camera > 2.5"
+          "w0_ts_0_roll": "q.property('ia:wpn0') == 3 && !(q.has_rider && q.distance_from_camera < 1.95)"
         }
       ]
     }
