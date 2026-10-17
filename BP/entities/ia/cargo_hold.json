@@ -19,7 +19,8 @@
       },
       "minecraft:physics": {
         "has_gravity": false,
-        "has_collision": false
+        "has_collision": false,
+        "push_towards_closest_space": false
       },
       "minecraft:persistent": {},
       "minecraft:damage_sensor": {

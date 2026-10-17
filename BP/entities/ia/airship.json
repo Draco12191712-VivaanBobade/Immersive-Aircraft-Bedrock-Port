@@ -314,7 +314,8 @@
       },
       "minecraft:physics": {
         "has_gravity": false,
-        "has_collision": true
+        "has_collision": true,
+        "push_towards_closest_space": true
       },
       "minecraft:is_collidable": {},
       "minecraft:knockback_resistance": {
