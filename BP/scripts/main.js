@@ -1,25 +1,5 @@
-import {
-  world as w,
-  system as sy,
-  ItemStack as IS,
-  EntityDamageCause as EDC,
-  InputButton,
-  ButtonState,
-  InputPermissionCategory as IPC,
-  GameMode,
-  CommandPermissionLevel,
-  CustomCommandStatus,
-  StructureSaveMode,
-  EquipmentSlot,
-  MolangVariableMap,
-  EntitySwingSource,
-  WeatherType,
-} from "@minecraft/server";
-import {
-  ActionFormData,
-  ModalFormData,
-  MessageFormData,
-} from "@minecraft/server-ui";
+import "@minecraft/server";
+import "@minecraft/server-ui";
 var VER = { v: "1.1.0", n: "Clear Skies" };
 var AC = {
   "biplane": {
@@ -2977,7 +2957,7 @@ function gov() {
   if (typeof x == "string") {
     try {
       return JSON.parse(x);
-    } catch (e) {}
+    } catch (e) { }
   }
   return {};
 }
@@ -4484,7 +4464,7 @@ function bnc(it) {
   }
   c =
     { silver: "light_gray", lightBlue: "light_blue", lightblue: "light_blue" }[
-      c
+    c
     ] || c;
   return DC[c] !== undefined ? DC[c] : DC.white;
 }
@@ -4928,10 +4908,10 @@ function tk(e, s) {
     }
     if (hx || hz || vc) {
       var er = Math.sqrt(
-          (ax - s.lm.x) * (ax - s.lm.x) +
-            (ay - s.lm.y) * (ay - s.lm.y) +
-            (az - s.lm.z) * (az - s.lm.z),
-        ),
+        (ax - s.lm.x) * (ax - s.lm.x) +
+        (ay - s.lm.y) * (ay - s.lm.y) +
+        (az - s.lm.z) * (az - s.lm.z),
+      ),
         mp = ln(s.lm);
       if (er <= mp + 1e-6) {
         var co = er - (vc ? Math.abs(s.lg) : 0) - 0.05;
@@ -5116,7 +5096,7 @@ function hud(e, s, p) {
         Math.round(hg / 45) % 8
       ];
     var ar =
-        vs < -10 ? "▼▼" : vs < -1 ? "▼" : vs > 10 ? "▲▲" : vs > 1 ? "▲" : "-",
+      vs < -10 ? "▼▼" : vs < -1 ? "▼" : vs > 10 ? "▲▲" : vs > 1 ? "▲" : "-",
       wn = "";
     if (s.mw > 0) wn += (T % 8 < 4 ? "§c" : "§6") + "[WARNING]";
     for (var k in s.cu)
@@ -5513,13 +5493,13 @@ function slm(p, e) {
     }
     if (x[0] == "all") {
       var cs = [
-          [
-            cn,
-            (s.d.slots.inventory || []).filter(function (i) {
-              return i < cn.size;
-            }),
-          ],
+        [
+          cn,
+          (s.d.slots.inventory || []).filter(function (i) {
+            return i < cn.size;
+          }),
         ],
+      ],
         h = hcn(e, s);
       if (h) {
         var hs = [];
@@ -5570,11 +5550,11 @@ function ctl(p) {
 function lbl(k) {
   return OPT.indexOf(k) >= 0
     ? {
-        rawtext: [
-          { translate: "option.immersive_aircraft." + k },
-          { text: " §7(" + k + ")" },
-        ],
-      }
+      rawtext: [
+        { translate: "option.immersive_aircraft." + k },
+        { text: " §7(" + k + ")" },
+      ],
+    }
     : k;
 }
 function cfg(p) {
@@ -5642,8 +5622,8 @@ function dvm(p) {
       var ids =
         x == "ga"
           ? Object.keys(AC).map(function (k) {
-              return "ia:" + k;
-            })
+            return "ia:" + k;
+          })
           : Object.keys(UPG).concat(Object.keys(WPI));
       for (var id of ids) {
         var lf = pc.addItem(new IS(id, 1));
@@ -6001,10 +5981,10 @@ w.beforeEvents.entityHurt.subscribe(function (ev) {
   )
     return;
   var src = {
-      cause: cs,
-      damagingEntity: ds.damagingEntity,
-      damagingProjectile: ds.damagingProjectile,
-    },
+    cause: cs,
+    damagingEntity: ds.damagingEntity,
+    damagingProjectile: ds.damagingProjectile,
+  },
     a = ev.damage;
   sy.run(function () {
     if (e.isValid) hrt(e, gs(e), a, src);
