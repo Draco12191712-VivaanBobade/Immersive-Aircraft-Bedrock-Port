@@ -2,6 +2,9 @@
   "resource_pack_name": "immersive_aircraft",
   "texture_name": "atlas.items",
   "texture_data": {
+    "ia_ui_key": {
+      "textures": "textures/ia/items/ui_key"
+    },
     "ia_hull": {
       "textures": "textures/ia/items/hull"
     },
