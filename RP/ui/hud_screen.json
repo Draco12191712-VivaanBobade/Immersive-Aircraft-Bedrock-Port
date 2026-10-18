@@ -21,7 +21,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(not (#hud_title_text_string = '§s§c§o§p§e§r'))",
+        "source_property_name": "(not ((#hud_title_text_string = '§s§c§o§p§e§r') or (#hud_title_text_string = '§n§o§s§c§r')))",
         "target_property_name": "#visible"
       }
     ]
