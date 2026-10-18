@@ -7450,103 +7450,1021 @@
       }
     ]
   },
-  "small_router": {
+  "biplane_gate": {
     "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#ia_key = 31001)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "visible": false,
     "controls": [
       {
-        "vanilla_desktop@chest.small_chest_panel": {
-          "ignored": "((not $desktop_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
-        }
-      },
+        "panel@ia_ui.biplane_panel": {}
+      }
+    ]
+  },
+  "biplane_host": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
       {
-        "vanilla_pocket@pocket_containers.small_chest_panel": {
-          "ignored": "((not $pocket_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
-        }
-      },
-      {
-        "biplane@ia_ui.biplane_panel": {
-          "ignored": "(not ($container_title = '§i§a§0§rBiplane'))"
-        }
-      },
-      {
-        "gyrodyne@ia_ui.gyrodyne_panel": {
-          "ignored": "(not ($container_title = '§i§a§1§rGyrodyne'))"
-        }
-      },
-      {
-        "airship@ia_ui.airship_panel": {
-          "ignored": "(not ($container_title = '§i§a§2§rAirship'))"
-        }
-      },
-      {
-        "cargo_airship@ia_ui.cargo_airship_panel": {
-          "ignored": "(not ($container_title = '§i§a§3§rCargo Airship'))"
-        }
-      },
-      {
-        "warship@ia_ui.warship_panel": {
-          "ignored": "(not ($container_title = '§i§a§4§rWarship'))"
-        }
-      },
-      {
-        "quadrocopter@ia_ui.quadrocopter_panel": {
-          "ignored": "(not ($container_title = '§i§a§5§rQuadrocopter'))"
-        }
-      },
-      {
-        "bamboo_hopper@ia_ui.bamboo_hopper_panel": {
-          "ignored": "(not ($container_title = '§i§a§6§rBamboo Hopper'))"
+        "gate@ia_ui.biplane_gate": {
+          "collection_index": 24
         }
       }
     ]
   },
-  "large_router": {
+  "gyrodyne_gate": {
     "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#ia_key = 31002)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "visible": false,
     "controls": [
       {
-        "vanilla_desktop@chest.large_chest_panel": {
-          "ignored": "((not $desktop_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
+        "panel@ia_ui.gyrodyne_panel": {}
+      }
+    ]
+  },
+  "gyrodyne_host": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.gyrodyne_gate": {
+          "collection_index": 22
         }
+      }
+    ]
+  },
+  "airship_gate": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
       },
       {
-        "vanilla_pocket@pocket_containers.large_chest_panel": {
-          "ignored": "((not $pocket_screen) or (($container_title = '§i§a§0§rBiplane') or ($container_title = '§i§a§1§rGyrodyne') or ($container_title = '§i§a§2§rAirship') or ($container_title = '§i§a§3§rCargo Airship') or ($container_title = '§i§a§4§rWarship') or ($container_title = '§i§a§5§rQuadrocopter') or ($container_title = '§i§a§6§rBamboo Hopper')))"
-        }
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
       },
       {
-        "biplane@ia_ui.biplane_panel": {
-          "ignored": "(not ($container_title = '§i§a§0§rBiplane'))"
+        "binding_type": "view",
+        "source_property_name": "(#ia_key = 31003)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "visible": false,
+    "controls": [
+      {
+        "panel@ia_ui.airship_panel": {}
+      }
+    ]
+  },
+  "airship_host": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.airship_gate": {
+          "collection_index": 23
         }
+      }
+    ]
+  },
+  "cargo_airship_gate": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
       },
       {
-        "gyrodyne@ia_ui.gyrodyne_panel": {
-          "ignored": "(not ($container_title = '§i§a§1§rGyrodyne'))"
-        }
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
       },
       {
-        "airship@ia_ui.airship_panel": {
-          "ignored": "(not ($container_title = '§i§a§2§rAirship'))"
+        "binding_type": "view",
+        "source_property_name": "(#ia_key = 31004)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "visible": false,
+    "controls": [
+      {
+        "panel@ia_ui.cargo_airship_panel": {}
+      }
+    ]
+  },
+  "cargo_airship_host": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.cargo_airship_gate": {
+          "collection_index": 87
         }
+      }
+    ]
+  },
+  "warship_gate": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
       },
       {
-        "cargo_airship@ia_ui.cargo_airship_panel": {
-          "ignored": "(not ($container_title = '§i§a§3§rCargo Airship'))"
-        }
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
       },
       {
-        "warship@ia_ui.warship_panel": {
-          "ignored": "(not ($container_title = '§i§a§4§rWarship'))"
+        "binding_type": "view",
+        "source_property_name": "(#ia_key = 31005)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "visible": false,
+    "controls": [
+      {
+        "panel@ia_ui.warship_panel": {}
+      }
+    ]
+  },
+  "warship_host": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.warship_gate": {
+          "collection_index": 79
         }
+      }
+    ]
+  },
+  "quadrocopter_gate": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
       },
       {
-        "quadrocopter@ia_ui.quadrocopter_panel": {
-          "ignored": "(not ($container_title = '§i§a§5§rQuadrocopter'))"
-        }
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
       },
       {
-        "bamboo_hopper@ia_ui.bamboo_hopper_panel": {
-          "ignored": "(not ($container_title = '§i§a§6§rBamboo Hopper'))"
+        "binding_type": "view",
+        "source_property_name": "(#ia_key = 31006)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "visible": false,
+    "controls": [
+      {
+        "panel@ia_ui.quadrocopter_panel": {}
+      }
+    ]
+  },
+  "quadrocopter_host": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.quadrocopter_gate": {
+          "collection_index": 9
         }
+      }
+    ]
+  },
+  "bamboo_hopper_gate": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#ia_key = 31007)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "visible": false,
+    "controls": [
+      {
+        "panel@ia_ui.bamboo_hopper_panel": {}
+      }
+    ]
+  },
+  "bamboo_hopper_host": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.bamboo_hopper_gate": {
+          "collection_index": 24
+        }
+      }
+    ]
+  },
+  "vanilla_desktop_gate_0": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31001))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_desktop_host_1": {}
+      }
+    ]
+  },
+  "vanilla_desktop_host_0": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_desktop_gate_0": {
+          "collection_index": 24
+        }
+      }
+    ]
+  },
+  "vanilla_desktop_gate_1": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31002))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_desktop_host_2": {}
+      }
+    ]
+  },
+  "vanilla_desktop_host_1": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_desktop_gate_1": {
+          "collection_index": 22
+        }
+      }
+    ]
+  },
+  "vanilla_desktop_gate_2": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31003))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_desktop_host_3": {}
+      }
+    ]
+  },
+  "vanilla_desktop_host_2": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_desktop_gate_2": {
+          "collection_index": 23
+        }
+      }
+    ]
+  },
+  "vanilla_desktop_gate_3": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31004))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_desktop_host_4": {}
+      }
+    ]
+  },
+  "vanilla_desktop_host_3": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_desktop_gate_3": {
+          "collection_index": 87
+        }
+      }
+    ]
+  },
+  "vanilla_desktop_gate_4": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31005))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_desktop_host_5": {}
+      }
+    ]
+  },
+  "vanilla_desktop_host_4": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_desktop_gate_4": {
+          "collection_index": 79
+        }
+      }
+    ]
+  },
+  "vanilla_desktop_gate_5": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31006))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_desktop_host_6": {}
+      }
+    ]
+  },
+  "vanilla_desktop_host_5": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_desktop_gate_5": {
+          "collection_index": 9
+        }
+      }
+    ]
+  },
+  "vanilla_desktop_gate_6": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31007))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "vanilla@chest.small_chest_panel": {}
+      }
+    ]
+  },
+  "vanilla_desktop_host_6": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_desktop_gate_6": {
+          "collection_index": 24
+        }
+      }
+    ]
+  },
+  "small_router": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "vanilla@ia_ui.vanilla_desktop_host_0": {}
+      },
+      {
+        "biplane@ia_ui.biplane_host": {}
+      },
+      {
+        "gyrodyne@ia_ui.gyrodyne_host": {}
+      },
+      {
+        "airship@ia_ui.airship_host": {}
+      },
+      {
+        "cargo_airship@ia_ui.cargo_airship_host": {}
+      },
+      {
+        "warship@ia_ui.warship_host": {}
+      },
+      {
+        "quadrocopter@ia_ui.quadrocopter_host": {}
+      },
+      {
+        "bamboo_hopper@ia_ui.bamboo_hopper_host": {}
+      }
+    ]
+  },
+  "vanilla_pocket_gate_0": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31001))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_pocket_host_1": {}
+      }
+    ]
+  },
+  "vanilla_pocket_host_0": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_pocket_gate_0": {
+          "collection_index": 24
+        }
+      }
+    ]
+  },
+  "vanilla_pocket_gate_1": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31002))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_pocket_host_2": {}
+      }
+    ]
+  },
+  "vanilla_pocket_host_1": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_pocket_gate_1": {
+          "collection_index": 22
+        }
+      }
+    ]
+  },
+  "vanilla_pocket_gate_2": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31003))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_pocket_host_3": {}
+      }
+    ]
+  },
+  "vanilla_pocket_host_2": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_pocket_gate_2": {
+          "collection_index": 23
+        }
+      }
+    ]
+  },
+  "vanilla_pocket_gate_3": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31004))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_pocket_host_4": {}
+      }
+    ]
+  },
+  "vanilla_pocket_host_3": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_pocket_gate_3": {
+          "collection_index": 87
+        }
+      }
+    ]
+  },
+  "vanilla_pocket_gate_4": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31005))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_pocket_host_5": {}
+      }
+    ]
+  },
+  "vanilla_pocket_host_4": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_pocket_gate_4": {
+          "collection_index": 79
+        }
+      }
+    ]
+  },
+  "vanilla_pocket_gate_5": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31006))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "next@ia_ui.vanilla_pocket_host_6": {}
+      }
+    ]
+  },
+  "vanilla_pocket_host_5": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_pocket_gate_5": {
+          "collection_index": 9
+        }
+      }
+    ]
+  },
+  "vanilla_pocket_gate_6": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#ia_key",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#ia_key = 31007))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "vanilla@pocket_containers.small_chest_panel": {}
+      }
+    ]
+  },
+  "vanilla_pocket_host_6": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "gate@ia_ui.vanilla_pocket_gate_6": {
+          "collection_index": 24
+        }
+      }
+    ]
+  },
+  "small_router_pocket": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "vanilla@ia_ui.vanilla_pocket_host_0": {}
+      },
+      {
+        "biplane@ia_ui.biplane_host": {}
+      },
+      {
+        "gyrodyne@ia_ui.gyrodyne_host": {}
+      },
+      {
+        "airship@ia_ui.airship_host": {}
+      },
+      {
+        "cargo_airship@ia_ui.cargo_airship_host": {}
+      },
+      {
+        "warship@ia_ui.warship_host": {}
+      },
+      {
+        "quadrocopter@ia_ui.quadrocopter_host": {}
+      },
+      {
+        "bamboo_hopper@ia_ui.bamboo_hopper_host": {}
       }
     ]
   },
