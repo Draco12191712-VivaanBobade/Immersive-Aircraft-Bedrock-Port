@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FTF",
+    "IBI"
+  ],
+  "key": {
+    "F": "minecraft:firework_rocket",
+    "T": "minecraft:tnt",
+    "I": "minecraft:iron_ingot",
+    "B": "minecraft:iron_block"
+  },
+  "result": {
+    "id": "immersive_aircraft:heavy_rocket_pod"
+  }
+}

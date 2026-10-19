@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HIH"
+  ],
+  "key": {
+    "H": "immersive_aircraft:hull_reinforcement",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "immersive_aircraft:reinforced_airframe"
+  }
+}

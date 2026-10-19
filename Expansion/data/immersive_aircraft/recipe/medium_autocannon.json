@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "GDG"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "D": "minecraft:dispenser",
+    "G": "immersive_aircraft:industrial_gears"
+  },
+  "result": {
+    "id": "immersive_aircraft:medium_autocannon"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RGR"
+  ],
+  "key": {
+    "R": "minecraft:redstone",
+    "G": "immersive_aircraft:industrial_gears"
+  },
+  "result": {
+    "id": "immersive_aircraft:rapid_reload"
+  }
+}

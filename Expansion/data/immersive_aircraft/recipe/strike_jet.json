@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RCR",
+    "NHN",
+    "HIH"
+  ],
+  "key": {
+    "R": "immersive_aircraft:hull_reinforcement",
+    "C": "immersive_aircraft:rotary_cannon",
+    "N": "immersive_aircraft:nether_engine",
+    "H": "immersive_aircraft:hull",
+    "I": "minecraft:iron_block"
+  },
+  "result": {
+    "id": "immersive_aircraft:strike_jet"
+  }
+}

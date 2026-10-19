@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ITP"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "T": "minecraft:tnt",
+    "P": "immersive_aircraft:propeller"
+  },
+  "result": {
+    "id": "immersive_aircraft:torpedo"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "GDG"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "B": "minecraft:copper_block",
+    "D": "minecraft:dispenser",
+    "G": "immersive_aircraft:industrial_gears"
+  },
+  "result": {
+    "id": "immersive_aircraft:heavy_autocannon"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GTG"
+  ],
+  "key": {
+    "G": "minecraft:gunpowder",
+    "T": "minecraft:tnt"
+  },
+  "result": {
+    "id": "immersive_aircraft:high_explosive_rounds"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BGB"
+  ],
+  "key": {
+    "B": "minecraft:blaze_powder",
+    "G": "minecraft:gunpowder"
+  },
+  "result": {
+    "id": "immersive_aircraft:incendiary_rounds"
+  }
+}

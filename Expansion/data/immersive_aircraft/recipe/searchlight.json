@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GLG"
+  ],
+  "key": {
+    "G": "minecraft:glass",
+    "L": "minecraft:redstone_lamp"
+  },
+  "result": {
+    "id": "immersive_aircraft:searchlight"
+  }
+}

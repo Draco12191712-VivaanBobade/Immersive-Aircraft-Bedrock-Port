@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BHB"
+  ],
+  "key": {
+    "B": "minecraft:iron_block",
+    "H": "immersive_aircraft:hull_reinforcement"
+  },
+  "result": {
+    "id": "immersive_aircraft:armor_plating"
+  }
+}

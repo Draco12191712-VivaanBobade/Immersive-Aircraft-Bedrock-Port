@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RCR",
+    "IGI"
+  ],
+  "key": {
+    "R": "minecraft:redstone",
+    "C": "minecraft:comparator",
+    "I": "minecraft:iron_ingot",
+    "G": "immersive_aircraft:gyroscope"
+  },
+  "result": {
+    "id": "immersive_aircraft:autopilot"
+  }
+}

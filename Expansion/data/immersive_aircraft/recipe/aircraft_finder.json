@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P",
+    "C"
+  ],
+  "key": {
+    "P": "minecraft:compass",
+    "C": "minecraft:copper_ingot"
+  },
+  "result": {
+    "id": "immersive_aircraft:aircraft_finder"
+  }
+}

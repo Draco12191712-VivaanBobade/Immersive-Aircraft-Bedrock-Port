@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "  D"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "D": "minecraft:dispenser"
+  },
+  "result": {
+    "id": "immersive_aircraft:light_cannon"
+  }
+}

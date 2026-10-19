@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FIF",
+    " I "
+  ],
+  "key": {
+    "F": "minecraft:firework_rocket",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "immersive_aircraft:light_rocket_pod"
+  }
+}

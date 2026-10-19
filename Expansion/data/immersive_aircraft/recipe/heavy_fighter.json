@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EHE",
+    "PCP",
+    "HHH"
+  ],
+  "key": {
+    "E": "immersive_aircraft:engine",
+    "H": "immersive_aircraft:hull",
+    "P": "immersive_aircraft:propeller",
+    "C": "immersive_aircraft:rotary_cannon"
+  },
+  "result": {
+    "id": "immersive_aircraft:heavy_fighter"
+  }
+}

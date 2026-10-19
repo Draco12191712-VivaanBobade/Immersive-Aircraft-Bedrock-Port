@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ITI",
+    "IBI"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "T": "minecraft:tnt",
+    "B": "minecraft:barrel"
+  },
+  "result": {
+    "id": "immersive_aircraft:depth_charge"
+  }
+}

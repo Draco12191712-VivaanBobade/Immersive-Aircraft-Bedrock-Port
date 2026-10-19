@@ -1,0 +1,533 @@
+{
+  "items": {
+    "aircraft_finder": {
+      "category": "tools",
+      "stack": 1
+    },
+    "autopilot": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "light_machine_gun": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "medium_machine_gun": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "heavy_machine_gun": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "light_autocannon": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "medium_autocannon": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "heavy_autocannon": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "light_cannon": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "medium_cannon": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "heavy_cannon": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "light_rocket_pod": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "medium_rocket_pod": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "heavy_rocket_pod": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "heavy_bomb": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "cluster_bomb": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "guided_bomb": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "torpedo": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "depth_charge": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "heat_seeking_missile": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "radar_guided_missile": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "flare_dispenser": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "smoke_dispenser": {
+      "category": "weapons",
+      "stack": 1
+    },
+    "armor_piercing_rounds": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "high_explosive_rounds": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "extended_range_barrels": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "rapid_reload": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "precision_sights": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "incendiary_rounds": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "high_capacity_magazines": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "bomb_bay_module": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "gunner_control_stations": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "supercharger": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "armor_plating": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "afterburner_module": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "reinforced_airframe": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "external_cargo_hooks": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "parachute_system": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "searchlight": {
+      "category": "upgrades",
+      "stack": 64
+    },
+    "iron_striker": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "steel_bomber": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "metal_jet": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "iron_freighter": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "swift_scout": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "torpedo_plane": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "jet_bomber": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "strike_jet": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "dive_bomber": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "heavy_fighter": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "cannon_attacker": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "lightning_fighter": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "flanker_jet": {
+      "category": "aircraft",
+      "stack": 1
+    },
+    "fulcrum_jet": {
+      "category": "aircraft",
+      "stack": 1
+    }
+  },
+  "weapons": {
+    "autopilot": {
+      "mount": "NONE",
+      "code": "ap",
+      "model": null
+    },
+    "light_machine_gun": {
+      "mount": "ROTATING",
+      "code": "mgl",
+      "model": "machine_gun",
+      "scale": 0.8,
+      "kind": "gun",
+      "rate": 12,
+      "dmg": 2.5,
+      "spd": 4.5,
+      "inc": 1.6,
+      "ammo": {
+        "minecraft:gunpowder": 24
+      }
+    },
+    "medium_machine_gun": {
+      "mount": "ROTATING",
+      "code": "mgm",
+      "model": "machine_gun",
+      "scale": 1.0,
+      "kind": "gun",
+      "rate": 9,
+      "dmg": 4,
+      "spd": 4.5,
+      "inc": 1.3,
+      "ammo": {
+        "minecraft:gunpowder": 18
+      }
+    },
+    "heavy_machine_gun": {
+      "mount": "ROTATING",
+      "code": "mgh",
+      "model": "machine_gun",
+      "scale": 1.25,
+      "kind": "gun",
+      "rate": 6,
+      "dmg": 6.5,
+      "spd": 4.8,
+      "inc": 1.0,
+      "ammo": {
+        "minecraft:gunpowder": 12
+      }
+    },
+    "light_autocannon": {
+      "mount": "ROTATING",
+      "code": "acl",
+      "model": "autocannon",
+      "scale": 0.8,
+      "kind": "gun",
+      "rate": 4,
+      "dmg": 9,
+      "spd": 4.2,
+      "inc": 0.9,
+      "big": true,
+      "ammo": {
+        "minecraft:iron_nugget": 3
+      }
+    },
+    "medium_autocannon": {
+      "mount": "ROTATING",
+      "code": "acm",
+      "model": "autocannon",
+      "scale": 1.0,
+      "kind": "gun",
+      "rate": 3,
+      "dmg": 13,
+      "spd": 4.2,
+      "inc": 0.8,
+      "big": true,
+      "ammo": {
+        "minecraft:iron_nugget": 2
+      }
+    },
+    "heavy_autocannon": {
+      "mount": "ROTATING",
+      "code": "ach",
+      "model": "autocannon",
+      "scale": 1.25,
+      "kind": "gun",
+      "rate": 2,
+      "dmg": 18,
+      "spd": 4.4,
+      "inc": 0.7,
+      "big": true,
+      "ammo": {
+        "minecraft:iron_nugget": 1
+      }
+    },
+    "light_cannon": {
+      "mount": "FRONT",
+      "code": "cnl",
+      "model": "cannon",
+      "scale": 0.8,
+      "kind": "shell",
+      "rate": 1.0,
+      "dmg": 14,
+      "spd": 3.4,
+      "inc": 0.4,
+      "grav": 0.012,
+      "exp": 1.2,
+      "brk": true,
+      "ammo": {
+        "minecraft:iron_ingot": 3
+      }
+    },
+    "medium_cannon": {
+      "mount": "FRONT",
+      "code": "cnm",
+      "model": "cannon",
+      "scale": 1.0,
+      "kind": "shell",
+      "rate": 0.7,
+      "dmg": 22,
+      "spd": 3.4,
+      "inc": 0.3,
+      "grav": 0.012,
+      "exp": 2.2,
+      "brk": true,
+      "ammo": {
+        "minecraft:iron_ingot": 2
+      }
+    },
+    "heavy_cannon": {
+      "mount": "FRONT",
+      "code": "cnh",
+      "model": "cannon",
+      "scale": 1.25,
+      "kind": "shell",
+      "rate": 0.4,
+      "dmg": 34,
+      "spd": 3.6,
+      "inc": 0.2,
+      "grav": 0.012,
+      "exp": 3.5,
+      "brk": true,
+      "ammo": {
+        "minecraft:iron_ingot": 1
+      }
+    },
+    "light_rocket_pod": {
+      "mount": "FRONT",
+      "code": "rpl",
+      "model": "rocket_pod",
+      "scale": 0.8,
+      "kind": "rocket",
+      "rate": 3,
+      "dmg": 6,
+      "spd": 1.6,
+      "inc": 1.2,
+      "exp": 1.2,
+      "brk": false,
+      "ammo": {
+        "minecraft:firework_rocket": 4
+      }
+    },
+    "medium_rocket_pod": {
+      "mount": "FRONT",
+      "code": "rpm",
+      "model": "rocket_pod",
+      "scale": 1.0,
+      "kind": "rocket",
+      "rate": 2,
+      "dmg": 9,
+      "spd": 1.6,
+      "inc": 1.0,
+      "exp": 1.8,
+      "brk": false,
+      "ammo": {
+        "minecraft:firework_rocket": 3
+      }
+    },
+    "heavy_rocket_pod": {
+      "mount": "FRONT",
+      "code": "rph",
+      "model": "rocket_pod",
+      "scale": 1.25,
+      "kind": "rocket",
+      "rate": 1.2,
+      "dmg": 14,
+      "spd": 1.6,
+      "inc": 0.8,
+      "exp": 3.0,
+      "brk": true,
+      "ammo": {
+        "minecraft:firework_rocket": 1
+      }
+    },
+    "heavy_bomb": {
+      "mount": "DROP",
+      "code": "bmh",
+      "model": "bomb_rack",
+      "scale": 1.25,
+      "kind": "bomb",
+      "rate": 0.5,
+      "dmg": 30,
+      "exp": 4.5,
+      "brk": true,
+      "ammo": {
+        "minecraft:tnt": 1
+      }
+    },
+    "cluster_bomb": {
+      "mount": "DROP",
+      "code": "bmc",
+      "model": "bomb_rack",
+      "scale": 1.0,
+      "kind": "cluster",
+      "rate": 0.5,
+      "dmg": 8,
+      "exp": 1.6,
+      "brk": false,
+      "n": 7,
+      "ammo": {
+        "minecraft:tnt": 1
+      }
+    },
+    "guided_bomb": {
+      "mount": "DROP",
+      "code": "bmg",
+      "model": "bomb_rack",
+      "scale": 0.9,
+      "kind": "guided",
+      "rate": 0.4,
+      "dmg": 26,
+      "exp": 3.5,
+      "brk": true,
+      "ammo": {
+        "minecraft:tnt": 1
+      }
+    },
+    "torpedo": {
+      "mount": "DROP",
+      "code": "tpd",
+      "model": "torpedo",
+      "scale": 1.0,
+      "kind": "torpedo",
+      "rate": 0.3,
+      "dmg": 36,
+      "spd": 1.1,
+      "exp": 3.0,
+      "brk": false,
+      "ammo": {
+        "minecraft:tnt": 1
+      }
+    },
+    "depth_charge": {
+      "mount": "DROP",
+      "code": "dch",
+      "model": "torpedo",
+      "scale": 0.7,
+      "kind": "depth",
+      "rate": 0.5,
+      "dmg": 30,
+      "exp": 4.0,
+      "brk": false,
+      "ammo": {
+        "minecraft:tnt": 1
+      }
+    },
+    "heat_seeking_missile": {
+      "mount": "FRONT",
+      "code": "msh",
+      "model": "missile_rail",
+      "scale": 1.0,
+      "kind": "heat",
+      "rate": 0.5,
+      "dmg": 20,
+      "spd": 2.6,
+      "exp": 2.5,
+      "brk": false,
+      "ammo": {
+        "minecraft:firework_rocket": 1
+      }
+    },
+    "radar_guided_missile": {
+      "mount": "FRONT",
+      "code": "msr",
+      "model": "missile_rail",
+      "scale": 1.1,
+      "kind": "radar",
+      "rate": 0.4,
+      "dmg": 24,
+      "spd": 2.8,
+      "exp": 2.5,
+      "brk": false,
+      "ammo": {
+        "minecraft:firework_rocket": 1
+      }
+    },
+    "flare_dispenser": {
+      "mount": "DROP",
+      "code": "flr",
+      "model": "dispenser",
+      "scale": 1.0,
+      "kind": "flare",
+      "rate": 2,
+      "ammo": {
+        "minecraft:fire_charge": 4
+      }
+    },
+    "smoke_dispenser": {
+      "mount": "DROP",
+      "code": "smk",
+      "model": "dispenser",
+      "scale": 0.9,
+      "kind": "smoke",
+      "rate": 1,
+      "ammo": {
+        "minecraft:coal": 4
+      }
+    }
+  }
+}

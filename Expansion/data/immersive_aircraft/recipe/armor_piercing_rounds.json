@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IDI"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "D": "minecraft:diamond"
+  },
+  "result": {
+    "id": "immersive_aircraft:armor_piercing_rounds"
+  }
+}

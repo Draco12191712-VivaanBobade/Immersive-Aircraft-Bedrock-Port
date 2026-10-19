@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EHE",
+    "PBP",
+    "HHH"
+  ],
+  "key": {
+    "E": "immersive_aircraft:engine",
+    "H": "immersive_aircraft:hull",
+    "P": "immersive_aircraft:propeller",
+    "B": "immersive_aircraft:bomb_bay"
+  },
+  "result": {
+    "id": "immersive_aircraft:steel_bomber"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "HEP",
+    "HGH"
+  ],
+  "key": {
+    "S": "immersive_aircraft:sail",
+    "H": "immersive_aircraft:hull",
+    "E": "immersive_aircraft:engine",
+    "P": "immersive_aircraft:propeller",
+    "G": "immersive_aircraft:improved_landing_gear"
+  },
+  "result": {
+    "id": "immersive_aircraft:swift_scout"
+  }
+}

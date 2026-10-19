@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NHN",
+    "IDI",
+    "HHH"
+  ],
+  "key": {
+    "N": "immersive_aircraft:nether_engine",
+    "H": "immersive_aircraft:hull",
+    "I": "minecraft:iron_block",
+    "D": "immersive_aircraft:gyroscope_dials"
+  },
+  "result": {
+    "id": "immersive_aircraft:fulcrum_jet"
+  }
+}

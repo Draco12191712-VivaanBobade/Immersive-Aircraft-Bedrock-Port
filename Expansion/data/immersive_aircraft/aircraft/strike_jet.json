@@ -1,0 +1,362 @@
+{
+  "properties": {
+    "engineSpeed": 0.035,
+    "yawSpeed": 3.6,
+    "pitchSpeed": 3.4,
+    "pushSpeed": 0.025,
+    "brakeFactor": 0.96,
+    "acceleration": 0.65,
+    "durability": 2.5,
+    "fuel": 1.8,
+    "friction": 0.0012,
+    "horizontalDecay": 0.995,
+    "verticalDecay": 0.995,
+    "groundFriction": 0.85,
+    "glideFactor": 0.04,
+    "lift": 0.15,
+    "rollFactor": 38,
+    "groundPitch": 0,
+    "wind": 0.015,
+    "mass": 3.0
+  },
+  "inventorySlots": [
+    {
+      "type": "boiler",
+      "x": 17,
+      "y": 40
+    },
+    {
+      "type": "booster",
+      "x": 17,
+      "y": 66
+    },
+    {
+      "type": "weapon",
+      "x": 72,
+      "y": 24
+    },
+    {
+      "type": "weapon",
+      "x": 94,
+      "y": 24
+    },
+    {
+      "type": "weapon",
+      "x": 116,
+      "y": 24
+    },
+    {
+      "type": "upgrade",
+      "x": 72,
+      "y": 46
+    },
+    {
+      "type": "upgrade",
+      "x": 94,
+      "y": 46
+    },
+    {
+      "type": "upgrade",
+      "x": 116,
+      "y": 46
+    },
+    {
+      "type": "upgrade",
+      "x": 138,
+      "y": 46
+    },
+    {
+      "type": "inventory",
+      "x": 186,
+      "y": 18,
+      "cols": 3,
+      "rows": 4,
+      "boxed": true
+    }
+  ],
+  "weaponMounts": [
+    {
+      "ROTATING": [
+        {
+          "x": 0,
+          "y": 1.95,
+          "z": 0.0
+        }
+      ],
+      "FRONT": [
+        {
+          "x": -1.6,
+          "y": 0.9,
+          "z": 0.7,
+          "roll": 180.0
+        },
+        {
+          "x": 1.6,
+          "y": 0.9,
+          "z": 0.7,
+          "roll": 180.0
+        }
+      ],
+      "DROP": [
+        {
+          "x": -1.6,
+          "y": 0.85,
+          "z": 0.6
+        },
+        {
+          "x": 1.6,
+          "y": 0.85,
+          "z": 0.6
+        }
+      ]
+    },
+    {
+      "ROTATING": [
+        {
+          "x": 0,
+          "y": 1.95,
+          "z": -1.3
+        }
+      ],
+      "FRONT": [
+        {
+          "x": -2.8,
+          "y": 0.95,
+          "z": 0.5,
+          "roll": 180.0
+        },
+        {
+          "x": 2.8,
+          "y": 0.95,
+          "z": 0.5,
+          "roll": 180.0
+        }
+      ],
+      "DROP": [
+        {
+          "x": -2.8,
+          "y": 0.9,
+          "z": 0.4
+        },
+        {
+          "x": 2.8,
+          "y": 0.9,
+          "z": 0.4
+        }
+      ]
+    },
+    {
+      "ROTATING": [
+        {
+          "x": 0,
+          "y": 1.95,
+          "z": 2.0
+        }
+      ],
+      "FRONT": [
+        {
+          "x": 0,
+          "y": 1.7,
+          "z": 2.6
+        }
+      ],
+      "DROP": [
+        {
+          "x": 0,
+          "y": 0.85,
+          "z": 1.6
+        }
+      ]
+    }
+  ],
+  "passengerPositions": [
+    [
+      {
+        "x": 0,
+        "y": 1.1,
+        "z": 1.75
+      }
+    ]
+  ],
+  "boundingBoxes": [
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": -3.89
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": -3.07
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": -2.25
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": -1.43
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": -0.61
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": 0.21
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": 1.03
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": 1.85
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": 2.67
+    },
+    {
+      "width": 1.0,
+      "height": 1.0,
+      "x": 0.0,
+      "y": 1.3,
+      "z": 3.49
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": 0.9,
+      "y": 1.3,
+      "z": 0.6
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": -0.9,
+      "y": 1.3,
+      "z": 0.6
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": 1.8,
+      "y": 1.3,
+      "z": 0.6
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": -1.8,
+      "y": 1.3,
+      "z": 0.6
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": 2.7,
+      "y": 1.3,
+      "z": 0.6
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": -2.7,
+      "y": 1.3,
+      "z": 0.6
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": 3.6,
+      "y": 1.3,
+      "z": 0.6
+    },
+    {
+      "width": 0.9,
+      "height": 0.5,
+      "x": -3.6,
+      "y": 1.3,
+      "z": 0.6
+    }
+  ],
+  "trails": [
+    {
+      "x": -4.4,
+      "y": 1.2,
+      "z": 0.2,
+      "size": 0.12,
+      "rotate": 0.0,
+      "gray": 1.0,
+      "length": 40
+    },
+    {
+      "x": 4.4,
+      "y": 1.2,
+      "z": 0.2,
+      "size": 0.12,
+      "rotate": 0.0,
+      "gray": 1.0,
+      "length": 40
+    }
+  ],
+  "port": {
+    "cls": "airplane",
+    "size": [
+      2.2,
+      2.0
+    ],
+    "zoom": 6,
+    "explode": true,
+    "sound": "woosh",
+    "start": "engine_start",
+    "reaction": 20,
+    "gui": "engine",
+    "adapt": true,
+    "interp": 10,
+    "fuel": "fuel",
+    "underwater": false,
+    "dismount_rot": 90,
+    "order": 17,
+    "jet": true,
+    "sound_pitch": 1.4,
+    "exhausts": [
+      [
+        0.85,
+        2.2,
+        -2.95
+      ],
+      [
+        -0.85,
+        2.2,
+        -2.95
+      ]
+    ]
+  }
+}

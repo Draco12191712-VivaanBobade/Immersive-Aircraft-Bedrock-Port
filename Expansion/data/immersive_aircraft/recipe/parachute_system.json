@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WSW",
+    " W "
+  ],
+  "key": {
+    "W": "minecraft:white_wool",
+    "S": "minecraft:string"
+  },
+  "result": {
+    "id": "immersive_aircraft:parachute_system"
+  }
+}

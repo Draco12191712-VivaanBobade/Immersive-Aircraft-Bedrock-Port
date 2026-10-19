@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CLC",
+    " H "
+  ],
+  "key": {
+    "C": "minecraft:chain",
+    "L": "minecraft:lead",
+    "H": "minecraft:tripwire_hook"
+  },
+  "result": {
+    "id": "immersive_aircraft:external_cargo_hooks"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NHN",
+    "HBH",
+    "HIH"
+  ],
+  "key": {
+    "N": "immersive_aircraft:nether_engine",
+    "H": "immersive_aircraft:hull",
+    "B": "immersive_aircraft:bomb_bay",
+    "I": "minecraft:iron_block"
+  },
+  "result": {
+    "id": "immersive_aircraft:jet_bomber"
+  }
+}

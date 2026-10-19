@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "PEH",
+    "SSS"
+  ],
+  "key": {
+    "S": "immersive_aircraft:sail",
+    "P": "immersive_aircraft:propeller",
+    "E": "immersive_aircraft:engine",
+    "H": "immersive_aircraft:hull"
+  },
+  "result": {
+    "id": "immersive_aircraft:torpedo_plane"
+  }
+}

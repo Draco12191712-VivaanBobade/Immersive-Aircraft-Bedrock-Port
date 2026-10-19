@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PGP",
+    "IEI"
+  ],
+  "key": {
+    "P": "minecraft:piston",
+    "G": "immersive_aircraft:industrial_gears",
+    "I": "minecraft:iron_ingot",
+    "E": "immersive_aircraft:engine"
+  },
+  "result": {
+    "id": "immersive_aircraft:supercharger"
+  }
+}

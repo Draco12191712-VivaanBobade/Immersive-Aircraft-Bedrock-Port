@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GSG"
+  ],
+  "key": {
+    "G": "minecraft:glass_pane",
+    "S": "minecraft:spyglass"
+  },
+  "result": {
+    "id": "immersive_aircraft:precision_sights"
+  }
+}

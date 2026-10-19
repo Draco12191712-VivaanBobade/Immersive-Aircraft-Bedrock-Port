@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FBF",
+    "IRI"
+  ],
+  "key": {
+    "F": "minecraft:firework_rocket",
+    "B": "minecraft:blaze_rod",
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "immersive_aircraft:heat_seeking_missile"
+  }
+}

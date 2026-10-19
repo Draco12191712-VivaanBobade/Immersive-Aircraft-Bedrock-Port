@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCI",
+    " DG"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "I": "minecraft:iron_ingot",
+    "D": "minecraft:dispenser",
+    "G": "immersive_aircraft:industrial_gears"
+  },
+  "result": {
+    "id": "immersive_aircraft:light_autocannon"
+  }
+}

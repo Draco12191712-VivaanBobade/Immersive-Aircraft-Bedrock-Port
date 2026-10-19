@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FCF",
+    "IRI"
+  ],
+  "key": {
+    "F": "minecraft:firework_rocket",
+    "C": "minecraft:compass",
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "immersive_aircraft:radar_guided_missile"
+  }
+}

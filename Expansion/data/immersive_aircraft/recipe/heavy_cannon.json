@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBI",
+    "GD "
+  ],
+  "key": {
+    "B": "minecraft:iron_block",
+    "I": "minecraft:iron_ingot",
+    "G": "immersive_aircraft:industrial_gears",
+    "D": "minecraft:dispenser"
+  },
+  "result": {
+    "id": "immersive_aircraft:heavy_cannon"
+  }
+}

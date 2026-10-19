@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ICI",
+    "IDI"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "C": "minecraft:campfire",
+    "D": "minecraft:dispenser"
+  },
+  "result": {
+    "id": "immersive_aircraft:smoke_dispenser"
+  }
+}

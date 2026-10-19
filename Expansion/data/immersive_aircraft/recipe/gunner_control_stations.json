@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "R R",
+    "IHI"
+  ],
+  "key": {
+    "R": "immersive_aircraft:rotary_cannon",
+    "I": "minecraft:iron_ingot",
+    "H": "immersive_aircraft:hull"
+  },
+  "result": {
+    "id": "immersive_aircraft:gunner_control_stations"
+  }
+}

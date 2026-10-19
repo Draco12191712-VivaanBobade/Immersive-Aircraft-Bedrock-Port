@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "S": "immersive_aircraft:sturdy_pipes"
+  },
+  "result": {
+    "id": "immersive_aircraft:extended_range_barrels"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NHN",
+    "IGI",
+    "HHH"
+  ],
+  "key": {
+    "N": "immersive_aircraft:nether_engine",
+    "H": "immersive_aircraft:hull",
+    "I": "minecraft:iron_block",
+    "G": "immersive_aircraft:gyroscope_hud"
+  },
+  "result": {
+    "id": "immersive_aircraft:flanker_jet"
+  }
+}
