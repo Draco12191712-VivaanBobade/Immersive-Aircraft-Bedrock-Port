@@ -1,327 +1,335 @@
 {
-  "format_version": 3,
-  "metadata": {
-    "authors": [
-      "Draco12191712 (Vivaan Bobade)",
-      "Conczin (original Immersive Aircraft)"
-    ],
-    "license": "GPL-3.0",
-    "url": "https://github.com/Luke100000/ImmersiveAircraft",
-    "product_type": "addon"
-  },
-  "header": {
-    "name": "§6§lImmersive Aircraft§r §c[BP]§r",
-    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.2.0 \"Flight Camera Update\"",
-    "min_engine_version": "1.26.0",
-    "uuid": "8f4c2b1e-6d3a-4e7f-9b2c-1a5d7e3f9c40",
-    "version": "1.2.0"
-  },
-  "modules": [
-    {
-      "type": "data",
-      "uuid": "2b7e9d14-5c8a-4f3e-a1d6-9e0b4c7f2a85",
-      "version": "1.2.0"
-    },
-    {
-      "type": "script",
-      "language": "javascript",
-      "uuid": "c6a1f3e8-9b2d-4d7c-8e5f-3a4b6c9d1e27",
-      "entry": "scripts/main.js",
-      "version": "1.2.0"
-    }
-  ],
-  "dependencies": [
-    {
-      "uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
-      "version": "1.2.0"
-    },
-    {
-      "module_name": "@minecraft/server",
-      "version": "2.10.0"
-    },
-    {
-      "module_name": "@minecraft/server-ui",
-      "version": "2.2.0"
-    }
-  ],
-  "settings": [
-    {
-      "type": "label",
-      "text": "ia.settings.flight"
-    },
-    {
-      "type": "slider",
-      "text": "Speed multiplier",
-      "name": "ia:speedMultiplier",
-      "min": 0.5,
-      "max": 3.0,
-      "step": 0.1,
-      "default": 1.6
-    },
-    {
-      "type": "slider",
-      "text": "Plane lift assist",
-      "name": "ia:liftAssist",
-      "min": 1.0,
-      "max": 3.0,
-      "step": 0.1,
-      "default": 1.8
-    },
-    {
-      "type": "slider",
-      "text": "Fuel consumption",
-      "name": "ia:fuelConsumption",
-      "min": 0.0,
-      "max": 5.0,
-      "step": 0.25,
-      "default": 1.0
-    },
-    {
-      "type": "toggle",
-      "text": "Burn fuel in Creative",
-      "name": "ia:burnFuelInCreative",
-      "default": false
-    },
-    {
-      "type": "toggle",
-      "text": "Accept vanilla fuel (coal, wood...)",
-      "name": "ia:acceptVanillaFuel",
-      "default": true
-    },
-    {
-      "type": "slider",
-      "text": "Wind in clear weather",
-      "name": "ia:windClearWeather",
-      "min": 0.0,
-      "max": 5.0,
-      "step": 0.25,
-      "default": 1.0
-    },
-    {
-      "type": "slider",
-      "text": "Wind in rain",
-      "name": "ia:windRainWeather",
-      "min": 0.0,
-      "max": 10.0,
-      "step": 0.25,
-      "default": 3.0
-    },
-    {
-      "type": "slider",
-      "text": "Wind in thunderstorms",
-      "name": "ia:windThunderWeather",
-      "min": 0.0,
-      "max": 10.0,
-      "step": 0.25,
-      "default": 3.0
-    },
-    {
-      "type": "label",
-      "text": "ia.settings.damage"
-    },
-    {
-      "type": "toggle",
-      "text": "Collision damage",
-      "name": "ia:collisionDamage",
-      "default": true
-    },
-    {
-      "type": "slider",
-      "text": "Collision damage multiplier",
-      "name": "ia:collisionDamageMultiplier",
-      "min": 0.0,
-      "max": 100.0,
-      "step": 5.0,
-      "default": 40.0
-    },
-    {
-      "type": "slider",
-      "text": "Aircraft durability",
-      "name": "ia:damagePerHealthPoint",
-      "min": 1,
-      "max": 100,
-      "step": 1,
-      "default": 30
-    },
-    {
-      "type": "toggle",
-      "text": "Explode on crash",
-      "name": "ia:enableCrashExplosion",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "text": "Crash explosions break blocks",
-      "name": "ia:enableCrashBlockDestruction",
-      "default": false
-    },
-    {
-      "type": "toggle",
-      "text": "Crash explosions start fires",
-      "name": "ia:enableCrashFire",
-      "default": false
-    },
-    {
-      "type": "slider",
-      "text": "Crash explosion size",
-      "name": "ia:crashExplosionRadius",
-      "min": 0.0,
-      "max": 10.0,
-      "step": 0.5,
-      "default": 2.0
-    },
-    {
-      "type": "slider",
-      "text": "Crash damage to the pilot",
-      "name": "ia:crashDamage",
-      "min": 0.0,
-      "max": 20.0,
-      "step": 0.5,
-      "default": 2.0
-    },
-    {
-      "type": "toggle",
-      "text": "Crashes never kill the pilot",
-      "name": "ia:preventKillThroughCrash",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "text": "Weapons break blocks",
-      "name": "ia:weaponsAreDestructive",
-      "default": false
-    },
-    {
-      "type": "slider",
-      "text": "Rotary cannon damage",
-      "name": "ia:rotaryCannonDamage",
-      "min": 0.0,
-      "max": 20.0,
-      "step": 0.5,
-      "default": 5.0
-    },
-    {
-      "type": "slider",
-      "text": "Heavy crossbow bolt speed",
-      "name": "ia:heavyCrossBowVelocity",
-      "min": 0.5,
-      "max": 6.0,
-      "step": 0.25,
-      "default": 3.0
-    },
-    {
-      "type": "label",
-      "text": "ia.settings.repair"
-    },
-    {
-      "type": "slider",
-      "text": "Repair per click",
-      "name": "ia:repairSpeed",
-      "min": 0.0,
-      "max": 0.2,
-      "step": 0.005,
-      "default": 0.025
-    },
-    {
-      "type": "slider",
-      "text": "Hunger per repair click",
-      "name": "ia:repairExhaustion",
-      "min": 0.0,
-      "max": 2.0,
-      "step": 0.1,
-      "default": 0.5
-    },
-    {
-      "type": "toggle",
-      "text": "Only repair while sneaking",
-      "name": "ia:requireShiftForRepair",
-      "default": false
-    },
-    {
-      "type": "slider",
-      "text": "Auto-repair every N ticks (0 = off)",
-      "name": "ia:regenerateHealthEveryNTicks",
-      "min": 0,
-      "max": 1200,
-      "step": 20,
-      "default": 0
-    },
-    {
-      "type": "label",
-      "text": "ia.settings.items"
-    },
-    {
-      "type": "toggle",
-      "text": "Drop the aircraft item when broken",
-      "name": "ia:dropAircraft",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "text": "Drop cargo when broken",
-      "name": "ia:dropInventory",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "text": "Drop upgrades when broken",
-      "name": "ia:dropUpgrades",
-      "default": false
-    },
-    {
-      "type": "toggle",
-      "text": "Drop items when not broken by a player",
-      "name": "ia:enableDropsForNonPlayer",
-      "default": true
-    },
-    {
-      "type": "label",
-      "text": "ia.settings.players"
-    },
-    {
-      "type": "toggle",
-      "text": "Steer by looking (off = stick only, free look)",
-      "name": "ia:lookSteering",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "text": "Flight camera: speed FOV and turbulence",
-      "name": "ia:flightCameraEffects",
-      "default": true
-    },
-    {
-      "type": "slider",
-      "text": "Flight camera base FOV",
-      "name": "ia:flightFov",
-      "min": 30,
-      "max": 110,
-      "step": 1,
-      "default": 70
-    },
-    {
-      "type": "toggle",
-      "text": "Lock third person while flying",
-      "name": "ia:useThirdPersonByDefault",
-      "default": false
-    },
-    {
-      "type": "toggle",
-      "text": "Steam trails",
-      "name": "ia:enableTrails",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "text": "Engine gauge above the hotbar",
-      "name": "ia:showHotbarEngineGauge",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "text": "Mobs can board aircraft",
-      "name": "ia:defaultCanEnter",
-      "default": true
-    }
-  ]
+	"format_version": 3,
+	"metadata": {
+		"authors": [
+			"Draco12191712 (Vivaan Bobade)",
+			"Conczin (original Immersive Aircraft)"
+		],
+		"license": "GPL-3.0",
+		"url": "https://github.com/Luke100000/ImmersiveAircraft",
+		"product_type": "addon",
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "§6§lImmersive Aircraft§r §c[BP]§r",
+		"description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.2.0 \"Flight Camera Update\"",
+		"min_engine_version": "1.26.0",
+		"uuid": "8f4c2b1e-6d3a-4e7f-9b2c-1a5d7e3f9c40",
+		"version": "1.2.0"
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "2b7e9d14-5c8a-4f3e-a1d6-9e0b4c7f2a85",
+			"version": "1.2.0"
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "c6a1f3e8-9b2d-4d7c-8e5f-3a4b6c9d1e27",
+			"entry": "scripts/main.js",
+			"version": "1.2.0"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
+			"version": "1.2.0"
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.10.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.2.0"
+		}
+	],
+	"settings": [
+		{
+			"type": "label",
+			"text": "ia.settings.flight"
+		},
+		{
+			"type": "slider",
+			"text": "Speed multiplier",
+			"name": "ia:speedMultiplier",
+			"min": 0.5,
+			"max": 3,
+			"step": 0.1,
+			"default": 1.6
+		},
+		{
+			"type": "slider",
+			"text": "Plane lift assist",
+			"name": "ia:liftAssist",
+			"min": 1,
+			"max": 3,
+			"step": 0.1,
+			"default": 1.8
+		},
+		{
+			"type": "slider",
+			"text": "Fuel consumption",
+			"name": "ia:fuelConsumption",
+			"min": 0,
+			"max": 5,
+			"step": 0.25,
+			"default": 1
+		},
+		{
+			"type": "toggle",
+			"text": "Burn fuel in Creative",
+			"name": "ia:burnFuelInCreative",
+			"default": false
+		},
+		{
+			"type": "toggle",
+			"text": "Accept vanilla fuel (coal, wood...)",
+			"name": "ia:acceptVanillaFuel",
+			"default": true
+		},
+		{
+			"type": "slider",
+			"text": "Wind in clear weather",
+			"name": "ia:windClearWeather",
+			"min": 0,
+			"max": 5,
+			"step": 0.25,
+			"default": 1
+		},
+		{
+			"type": "slider",
+			"text": "Wind in rain",
+			"name": "ia:windRainWeather",
+			"min": 0,
+			"max": 10,
+			"step": 0.25,
+			"default": 3
+		},
+		{
+			"type": "slider",
+			"text": "Wind in thunderstorms",
+			"name": "ia:windThunderWeather",
+			"min": 0,
+			"max": 10,
+			"step": 0.25,
+			"default": 3
+		},
+		{
+			"type": "label",
+			"text": "ia.settings.damage"
+		},
+		{
+			"type": "toggle",
+			"text": "Collision damage",
+			"name": "ia:collisionDamage",
+			"default": true
+		},
+		{
+			"type": "slider",
+			"text": "Collision damage multiplier",
+			"name": "ia:collisionDamageMultiplier",
+			"min": 0,
+			"max": 100,
+			"step": 5,
+			"default": 40
+		},
+		{
+			"type": "slider",
+			"text": "Aircraft durability",
+			"name": "ia:damagePerHealthPoint",
+			"min": 1,
+			"max": 100,
+			"step": 1,
+			"default": 30
+		},
+		{
+			"type": "toggle",
+			"text": "Explode on crash",
+			"name": "ia:enableCrashExplosion",
+			"default": true
+		},
+		{
+			"type": "toggle",
+			"text": "Crash explosions break blocks",
+			"name": "ia:enableCrashBlockDestruction",
+			"default": false
+		},
+		{
+			"type": "toggle",
+			"text": "Crash explosions start fires",
+			"name": "ia:enableCrashFire",
+			"default": false
+		},
+		{
+			"type": "slider",
+			"text": "Crash explosion size",
+			"name": "ia:crashExplosionRadius",
+			"min": 0,
+			"max": 10,
+			"step": 0.5,
+			"default": 2
+		},
+		{
+			"type": "slider",
+			"text": "Crash damage to the pilot",
+			"name": "ia:crashDamage",
+			"min": 0,
+			"max": 20,
+			"step": 0.5,
+			"default": 2
+		},
+		{
+			"type": "toggle",
+			"text": "Crashes never kill the pilot",
+			"name": "ia:preventKillThroughCrash",
+			"default": true
+		},
+		{
+			"type": "toggle",
+			"text": "Weapons break blocks",
+			"name": "ia:weaponsAreDestructive",
+			"default": false
+		},
+		{
+			"type": "slider",
+			"text": "Rotary cannon damage",
+			"name": "ia:rotaryCannonDamage",
+			"min": 0,
+			"max": 20,
+			"step": 0.5,
+			"default": 5
+		},
+		{
+			"type": "slider",
+			"text": "Heavy crossbow bolt speed",
+			"name": "ia:heavyCrossBowVelocity",
+			"min": 0.5,
+			"max": 6,
+			"step": 0.25,
+			"default": 3
+		},
+		{
+			"type": "label",
+			"text": "ia.settings.repair"
+		},
+		{
+			"type": "slider",
+			"text": "Repair per click",
+			"name": "ia:repairSpeed",
+			"min": 0,
+			"max": 0.2,
+			"step": 0.005,
+			"default": 0.025
+		},
+		{
+			"type": "slider",
+			"text": "Hunger per repair click",
+			"name": "ia:repairExhaustion",
+			"min": 0,
+			"max": 2,
+			"step": 0.1,
+			"default": 0.5
+		},
+		{
+			"type": "toggle",
+			"text": "Only repair while sneaking",
+			"name": "ia:requireShiftForRepair",
+			"default": false
+		},
+		{
+			"type": "slider",
+			"text": "Auto-repair every N ticks (0 = off)",
+			"name": "ia:regenerateHealthEveryNTicks",
+			"min": 0,
+			"max": 1200,
+			"step": 20,
+			"default": 0
+		},
+		{
+			"type": "label",
+			"text": "ia.settings.items"
+		},
+		{
+			"type": "toggle",
+			"text": "Drop the aircraft item when broken",
+			"name": "ia:dropAircraft",
+			"default": true
+		},
+		{
+			"type": "toggle",
+			"text": "Drop cargo when broken",
+			"name": "ia:dropInventory",
+			"default": true
+		},
+		{
+			"type": "toggle",
+			"text": "Drop upgrades when broken",
+			"name": "ia:dropUpgrades",
+			"default": false
+		},
+		{
+			"type": "toggle",
+			"text": "Drop items when not broken by a player",
+			"name": "ia:enableDropsForNonPlayer",
+			"default": true
+		},
+		{
+			"type": "label",
+			"text": "ia.settings.players"
+		},
+		{
+			"type": "toggle",
+			"text": "Steer by looking (off = stick only, free look)",
+			"name": "ia:lookSteering",
+			"default": true
+		},
+		{
+			"type": "toggle",
+			"text": "Flight camera: speed FOV and turbulence",
+			"name": "ia:flightCameraEffects",
+			"default": true
+		},
+		{
+			"type": "slider",
+			"text": "Flight camera base FOV",
+			"name": "ia:flightFov",
+			"min": 30,
+			"max": 110,
+			"step": 1,
+			"default": 70
+		},
+		{
+			"type": "toggle",
+			"text": "Lock third person while flying",
+			"name": "ia:useThirdPersonByDefault",
+			"default": false
+		},
+		{
+			"type": "toggle",
+			"text": "Steam trails",
+			"name": "ia:enableTrails",
+			"default": true
+		},
+		{
+			"type": "toggle",
+			"text": "Engine gauge above the hotbar",
+			"name": "ia:showHotbarEngineGauge",
+			"default": true
+		},
+		{
+			"type": "toggle",
+			"text": "Mobs can board aircraft",
+			"name": "ia:defaultCanEnter",
+			"default": true
+		}
+	]
 }
