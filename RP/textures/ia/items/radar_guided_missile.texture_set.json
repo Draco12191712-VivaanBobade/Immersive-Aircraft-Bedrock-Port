@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "radar_guided_missile",
+    "metalness_emissive_roughness": "radar_guided_missile_mers",
+    "normal": "radar_guided_missile_normal"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:armor_plating"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "BHB"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:iron_block"
+      },
+      "H": {
+        "item": "ia:hull_reinforcement"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:armor_plating",
+      "count": 1
+    }
+  }
+}

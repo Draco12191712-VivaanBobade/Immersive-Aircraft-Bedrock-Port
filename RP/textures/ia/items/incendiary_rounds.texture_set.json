@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "incendiary_rounds",
+    "metalness_emissive_roughness": "incendiary_rounds_mers",
+    "normal": "incendiary_rounds_normal"
+  }
+}

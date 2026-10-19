@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:depth_charge"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ITI",
+      "IBI"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "T": {
+        "item": "minecraft:tnt"
+      },
+      "B": {
+        "item": "minecraft:barrel"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:depth_charge",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:supercharger"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PGP",
+      "IEI"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:piston"
+      },
+      "G": {
+        "item": "ia:industrial_gears"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "E": {
+        "item": "ia:engine"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:supercharger",
+      "count": 1
+    }
+  }
+}

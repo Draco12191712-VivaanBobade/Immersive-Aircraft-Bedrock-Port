@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:heavy_cannon"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "BBI",
+      "GD "
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:iron_block"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "G": {
+        "item": "ia:industrial_gears"
+      },
+      "D": {
+        "item": "minecraft:dispenser"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:heavy_cannon",
+      "count": 1
+    }
+  }
+}

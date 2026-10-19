@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:external_cargo_hooks"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CLC",
+      " H "
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:chain"
+      },
+      "L": {
+        "item": "minecraft:lead"
+      },
+      "H": {
+        "item": "minecraft:tripwire_hook"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:external_cargo_hooks",
+      "count": 1
+    }
+  }
+}

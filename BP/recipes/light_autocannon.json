@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:light_autocannon"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CCI",
+      " DG"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "D": {
+        "item": "minecraft:dispenser"
+      },
+      "G": {
+        "item": "ia:industrial_gears"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:light_autocannon",
+      "count": 1
+    }
+  }
+}

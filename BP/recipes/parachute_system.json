@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:parachute_system"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "WSW",
+      " W "
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:white_wool"
+      },
+      "S": {
+        "item": "minecraft:string"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:parachute_system",
+      "count": 1
+    }
+  }
+}

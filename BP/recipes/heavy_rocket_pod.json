@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:heavy_rocket_pod"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "FTF",
+      "IBI"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:firework_rocket"
+      },
+      "T": {
+        "item": "minecraft:tnt"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "B": {
+        "item": "minecraft:iron_block"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:heavy_rocket_pod",
+      "count": 1
+    }
+  }
+}

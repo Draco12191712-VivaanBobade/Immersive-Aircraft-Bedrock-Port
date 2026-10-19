@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "heavy_autocannon",
+    "metalness_emissive_roughness": "heavy_autocannon_mers",
+    "normal": "heavy_autocannon_normal"
+  }
+}

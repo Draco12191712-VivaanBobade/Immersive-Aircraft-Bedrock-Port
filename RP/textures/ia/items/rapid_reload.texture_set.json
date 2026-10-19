@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "rapid_reload",
+    "metalness_emissive_roughness": "rapid_reload_mers",
+    "normal": "rapid_reload_normal"
+  }
+}

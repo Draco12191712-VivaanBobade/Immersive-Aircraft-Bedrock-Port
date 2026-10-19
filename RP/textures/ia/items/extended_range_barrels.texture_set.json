@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "extended_range_barrels",
+    "metalness_emissive_roughness": "extended_range_barrels_mers",
+    "normal": "extended_range_barrels_normal"
+  }
+}

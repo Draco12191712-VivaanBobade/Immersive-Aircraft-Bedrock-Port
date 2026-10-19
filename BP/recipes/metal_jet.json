@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:metal_jet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "NHN",
+      "HSH",
+      "HIH"
+    ],
+    "key": {
+      "N": {
+        "item": "ia:nether_engine"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "S": {
+        "item": "ia:sturdy_pipes"
+      },
+      "I": {
+        "item": "minecraft:iron_block"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:metal_jet",
+      "count": 1
+    }
+  }
+}

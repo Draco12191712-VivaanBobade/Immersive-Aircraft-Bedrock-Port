@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:incendiary_rounds"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "BGB"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:blaze_powder"
+      },
+      "G": {
+        "item": "minecraft:gunpowder"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:incendiary_rounds",
+      "count": 1
+    }
+  }
+}

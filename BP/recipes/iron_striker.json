@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:iron_striker"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RER",
+      "HPH",
+      "HRH"
+    ],
+    "key": {
+      "R": {
+        "item": "ia:hull_reinforcement"
+      },
+      "E": {
+        "item": "ia:engine"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "P": {
+        "item": "ia:propeller"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:iron_striker",
+      "count": 1
+    }
+  }
+}

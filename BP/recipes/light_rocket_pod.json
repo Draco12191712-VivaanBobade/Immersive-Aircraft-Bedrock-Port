@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:light_rocket_pod"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "FIF",
+      " I "
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:firework_rocket"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:light_rocket_pod",
+      "count": 1
+    }
+  }
+}

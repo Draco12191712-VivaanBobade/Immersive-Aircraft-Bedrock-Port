@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:torpedo_plane"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SSS",
+      "PEH",
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "ia:sail"
+      },
+      "P": {
+        "item": "ia:propeller"
+      },
+      "E": {
+        "item": "ia:engine"
+      },
+      "H": {
+        "item": "ia:hull"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:torpedo_plane",
+      "count": 1
+    }
+  }
+}

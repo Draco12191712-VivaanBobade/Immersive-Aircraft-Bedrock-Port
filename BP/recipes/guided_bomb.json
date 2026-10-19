@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:guided_bomb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ITI",
+      "CTC"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "T": {
+        "item": "minecraft:tnt"
+      },
+      "C": {
+        "item": "minecraft:comparator"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:guided_bomb",
+      "count": 1
+    }
+  }
+}

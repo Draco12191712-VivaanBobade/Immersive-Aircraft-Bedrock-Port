@@ -94,6 +94,165 @@
     },
     "ia_improved_landing_gear": {
       "textures": "textures/ia/items/improved_landing_gear"
+    },
+    "ia_aircraft_finder": {
+      "textures": "textures/ia/items/aircraft_finder"
+    },
+    "ia_autopilot": {
+      "textures": "textures/ia/items/autopilot"
+    },
+    "ia_light_machine_gun": {
+      "textures": "textures/ia/items/light_machine_gun"
+    },
+    "ia_medium_machine_gun": {
+      "textures": "textures/ia/items/medium_machine_gun"
+    },
+    "ia_heavy_machine_gun": {
+      "textures": "textures/ia/items/heavy_machine_gun"
+    },
+    "ia_light_autocannon": {
+      "textures": "textures/ia/items/light_autocannon"
+    },
+    "ia_medium_autocannon": {
+      "textures": "textures/ia/items/medium_autocannon"
+    },
+    "ia_heavy_autocannon": {
+      "textures": "textures/ia/items/heavy_autocannon"
+    },
+    "ia_light_cannon": {
+      "textures": "textures/ia/items/light_cannon"
+    },
+    "ia_medium_cannon": {
+      "textures": "textures/ia/items/medium_cannon"
+    },
+    "ia_heavy_cannon": {
+      "textures": "textures/ia/items/heavy_cannon"
+    },
+    "ia_light_rocket_pod": {
+      "textures": "textures/ia/items/light_rocket_pod"
+    },
+    "ia_medium_rocket_pod": {
+      "textures": "textures/ia/items/medium_rocket_pod"
+    },
+    "ia_heavy_rocket_pod": {
+      "textures": "textures/ia/items/heavy_rocket_pod"
+    },
+    "ia_heavy_bomb": {
+      "textures": "textures/ia/items/heavy_bomb"
+    },
+    "ia_cluster_bomb": {
+      "textures": "textures/ia/items/cluster_bomb"
+    },
+    "ia_guided_bomb": {
+      "textures": "textures/ia/items/guided_bomb"
+    },
+    "ia_torpedo": {
+      "textures": "textures/ia/items/torpedo"
+    },
+    "ia_depth_charge": {
+      "textures": "textures/ia/items/depth_charge"
+    },
+    "ia_heat_seeking_missile": {
+      "textures": "textures/ia/items/heat_seeking_missile"
+    },
+    "ia_radar_guided_missile": {
+      "textures": "textures/ia/items/radar_guided_missile"
+    },
+    "ia_flare_dispenser": {
+      "textures": "textures/ia/items/flare_dispenser"
+    },
+    "ia_smoke_dispenser": {
+      "textures": "textures/ia/items/smoke_dispenser"
+    },
+    "ia_armor_piercing_rounds": {
+      "textures": "textures/ia/items/armor_piercing_rounds"
+    },
+    "ia_high_explosive_rounds": {
+      "textures": "textures/ia/items/high_explosive_rounds"
+    },
+    "ia_extended_range_barrels": {
+      "textures": "textures/ia/items/extended_range_barrels"
+    },
+    "ia_rapid_reload": {
+      "textures": "textures/ia/items/rapid_reload"
+    },
+    "ia_precision_sights": {
+      "textures": "textures/ia/items/precision_sights"
+    },
+    "ia_incendiary_rounds": {
+      "textures": "textures/ia/items/incendiary_rounds"
+    },
+    "ia_high_capacity_magazines": {
+      "textures": "textures/ia/items/high_capacity_magazines"
+    },
+    "ia_bomb_bay_module": {
+      "textures": "textures/ia/items/bomb_bay_module"
+    },
+    "ia_gunner_control_stations": {
+      "textures": "textures/ia/items/gunner_control_stations"
+    },
+    "ia_supercharger": {
+      "textures": "textures/ia/items/supercharger"
+    },
+    "ia_armor_plating": {
+      "textures": "textures/ia/items/armor_plating"
+    },
+    "ia_afterburner_module": {
+      "textures": "textures/ia/items/afterburner_module"
+    },
+    "ia_reinforced_airframe": {
+      "textures": "textures/ia/items/reinforced_airframe"
+    },
+    "ia_external_cargo_hooks": {
+      "textures": "textures/ia/items/external_cargo_hooks"
+    },
+    "ia_parachute_system": {
+      "textures": "textures/ia/items/parachute_system"
+    },
+    "ia_searchlight": {
+      "textures": "textures/ia/items/searchlight"
+    },
+    "ia_iron_striker": {
+      "textures": "textures/ia/items/iron_striker"
+    },
+    "ia_steel_bomber": {
+      "textures": "textures/ia/items/steel_bomber"
+    },
+    "ia_metal_jet": {
+      "textures": "textures/ia/items/metal_jet"
+    },
+    "ia_iron_freighter": {
+      "textures": "textures/ia/items/iron_freighter"
+    },
+    "ia_swift_scout": {
+      "textures": "textures/ia/items/swift_scout"
+    },
+    "ia_torpedo_plane": {
+      "textures": "textures/ia/items/torpedo_plane"
+    },
+    "ia_jet_bomber": {
+      "textures": "textures/ia/items/jet_bomber"
+    },
+    "ia_strike_jet": {
+      "textures": "textures/ia/items/strike_jet"
+    },
+    "ia_dive_bomber": {
+      "textures": "textures/ia/items/dive_bomber"
+    },
+    "ia_heavy_fighter": {
+      "textures": "textures/ia/items/heavy_fighter"
+    },
+    "ia_cannon_attacker": {
+      "textures": "textures/ia/items/cannon_attacker"
+    },
+    "ia_lightning_fighter": {
+      "textures": "textures/ia/items/lightning_fighter"
+    },
+    "ia_flanker_jet": {
+      "textures": "textures/ia/items/flanker_jet"
+    },
+    "ia_fulcrum_jet": {
+      "textures": "textures/ia/items/fulcrum_jet"
     }
   }
 }

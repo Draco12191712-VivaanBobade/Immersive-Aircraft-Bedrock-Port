@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "cannon_attacker",
+    "metalness_emissive_roughness": "cannon_attacker_mers",
+    "normal": "cannon_attacker_normal"
+  }
+}

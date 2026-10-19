@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:searchlight"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "GLG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glass"
+      },
+      "L": {
+        "item": "minecraft:redstone_lamp"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:searchlight",
+      "count": 1
+    }
+  }
+}

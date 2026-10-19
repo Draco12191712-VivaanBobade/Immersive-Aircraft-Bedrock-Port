@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:cluster_bomb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "TTT",
+      "IGI"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:tnt"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "G": {
+        "item": "ia:industrial_gears"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:cluster_bomb",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:fulcrum_jet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "NHN",
+      "IDI",
+      "HHH"
+    ],
+    "key": {
+      "N": {
+        "item": "ia:nether_engine"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "I": {
+        "item": "minecraft:iron_block"
+      },
+      "D": {
+        "item": "ia:gyroscope_dials"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:fulcrum_jet",
+      "count": 1
+    }
+  }
+}

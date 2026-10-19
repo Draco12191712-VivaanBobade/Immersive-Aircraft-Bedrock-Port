@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:precision_sights"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "GSG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glass_pane"
+      },
+      "S": {
+        "item": "minecraft:spyglass"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:precision_sights",
+      "count": 1
+    }
+  }
+}

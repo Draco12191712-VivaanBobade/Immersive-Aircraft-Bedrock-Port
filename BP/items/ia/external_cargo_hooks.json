@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ia:external_cargo_hooks",
+      "menu_category": {
+        "category": "items",
+        "group": "ia:itemGroup.name.immersive_aircraft"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "ia_external_cargo_hooks"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.ia:external_cargo_hooks"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:tags": {
+        "tags": [
+          "immersive_aircraft:upgrades"
+        ]
+      }
+    }
+  }
+}

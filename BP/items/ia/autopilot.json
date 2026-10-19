@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ia:autopilot",
+      "menu_category": {
+        "category": "equipment",
+        "group": "ia:itemGroup.name.immersive_aircraft"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "ia_autopilot"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.ia:autopilot"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:tags": {
+        "tags": [
+          "immersive_aircraft:weapons"
+        ]
+      }
+    }
+  }
+}

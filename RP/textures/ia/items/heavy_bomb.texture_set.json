@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "heavy_bomb",
+    "metalness_emissive_roughness": "heavy_bomb_mers",
+    "normal": "heavy_bomb_normal"
+  }
+}

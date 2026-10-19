@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:steel_bomber"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "EHE",
+      "PBP",
+      "HHH"
+    ],
+    "key": {
+      "E": {
+        "item": "ia:engine"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "P": {
+        "item": "ia:propeller"
+      },
+      "B": {
+        "item": "ia:bomb_bay"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:steel_bomber",
+      "count": 1
+    }
+  }
+}

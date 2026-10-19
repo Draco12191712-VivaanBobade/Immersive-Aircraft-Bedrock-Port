@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:heat_seeking_missile"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "FBF",
+      "IRI"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:firework_rocket"
+      },
+      "B": {
+        "item": "minecraft:blaze_rod"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:heat_seeking_missile",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "gunner_control_stations",
+    "metalness_emissive_roughness": "gunner_control_stations_mers",
+    "normal": "gunner_control_stations_normal"
+  }
+}

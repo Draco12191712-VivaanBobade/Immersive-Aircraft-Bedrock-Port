@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:radar_guided_missile"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "FCF",
+      "IRI"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:firework_rocket"
+      },
+      "C": {
+        "item": "minecraft:compass"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:radar_guided_missile",
+      "count": 1
+    }
+  }
+}

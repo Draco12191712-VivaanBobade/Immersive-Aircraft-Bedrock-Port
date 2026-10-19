@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "external_cargo_hooks",
+    "metalness_emissive_roughness": "external_cargo_hooks_mers",
+    "normal": "external_cargo_hooks_normal"
+  }
+}

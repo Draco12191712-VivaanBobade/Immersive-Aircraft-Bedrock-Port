@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ia:smoke_dispenser",
+      "menu_category": {
+        "category": "equipment",
+        "group": "ia:itemGroup.name.immersive_aircraft"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "ia_smoke_dispenser"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "item.ia:smoke_dispenser"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:tags": {
+        "tags": [
+          "immersive_aircraft:weapons"
+        ]
+      }
+    }
+  }
+}

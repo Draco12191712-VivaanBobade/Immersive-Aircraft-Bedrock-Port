@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:smoke_dispenser"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ICI",
+      "IDI"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "C": {
+        "item": "minecraft:campfire"
+      },
+      "D": {
+        "item": "minecraft:dispenser"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:smoke_dispenser",
+      "count": 1
+    }
+  }
+}

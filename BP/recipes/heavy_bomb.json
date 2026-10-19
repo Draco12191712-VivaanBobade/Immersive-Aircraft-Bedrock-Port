@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:heavy_bomb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ITI",
+      "TTT",
+      " I "
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "T": {
+        "item": "minecraft:tnt"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:heavy_bomb",
+      "count": 1
+    }
+  }
+}

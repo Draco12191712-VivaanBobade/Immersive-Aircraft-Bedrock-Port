@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "precision_sights",
+    "metalness_emissive_roughness": "precision_sights_mers",
+    "normal": "precision_sights_normal"
+  }
+}

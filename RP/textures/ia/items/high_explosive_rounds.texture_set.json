@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "high_explosive_rounds",
+    "metalness_emissive_roughness": "high_explosive_rounds_mers",
+    "normal": "high_explosive_rounds_normal"
+  }
+}

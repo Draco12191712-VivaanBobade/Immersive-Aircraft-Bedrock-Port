@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:extended_range_barrels"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ISI"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "S": {
+        "item": "ia:sturdy_pipes"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:extended_range_barrels",
+      "count": 1
+    }
+  }
+}

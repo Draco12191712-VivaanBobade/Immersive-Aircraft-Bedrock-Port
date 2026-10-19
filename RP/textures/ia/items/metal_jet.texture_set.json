@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "metal_jet",
+    "metalness_emissive_roughness": "metal_jet_mers",
+    "normal": "metal_jet_normal"
+  }
+}

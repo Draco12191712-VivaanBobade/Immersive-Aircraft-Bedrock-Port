@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "high_capacity_magazines",
+    "metalness_emissive_roughness": "high_capacity_magazines_mers",
+    "normal": "high_capacity_magazines_normal"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "heat_seeking_missile",
+    "metalness_emissive_roughness": "heat_seeking_missile_mers",
+    "normal": "heat_seeking_missile_normal"
+  }
+}

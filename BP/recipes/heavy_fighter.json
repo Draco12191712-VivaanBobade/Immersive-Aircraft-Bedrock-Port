@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:heavy_fighter"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "EHE",
+      "PCP",
+      "HHH"
+    ],
+    "key": {
+      "E": {
+        "item": "ia:engine"
+      },
+      "H": {
+        "item": "ia:hull"
+      },
+      "P": {
+        "item": "ia:propeller"
+      },
+      "C": {
+        "item": "ia:rotary_cannon"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:heavy_fighter",
+      "count": 1
+    }
+  }
+}

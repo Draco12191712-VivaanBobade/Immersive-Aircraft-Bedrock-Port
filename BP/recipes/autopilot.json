@@ -1,0 +1,38 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ia:autopilot"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RCR",
+      "IGI"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "C": {
+        "item": "minecraft:comparator"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "G": {
+        "item": "ia:gyroscope"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "ia:autopilot",
+      "count": 1
+    }
+  }
+}
