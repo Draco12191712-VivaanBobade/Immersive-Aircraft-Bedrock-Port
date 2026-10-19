@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:ordnance",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/ia/entity/ordnance"
+      },
+      "geometry": {
+        "default": "geometry.ia.ordnance"
+      },
+      "animations": {
+        "pitch": "animation.ia.ordnance.pitch",
+        "trail": "animation.ia.ordnance.trail",
+        "glow": "animation.ia.ordnance.glow"
+      },
+      "particle_effects": {
+        "smoke": "ia:smoke",
+        "flame": "ia:flame"
+      },
+      "scripts": {
+        "animate": [
+          "pitch",
+          {
+            "trail": "q.property('ia:kind') <= 1"
+          },
+          {
+            "glow": "q.property('ia:kind') == 7"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ia.ordnance"
+      ]
+    }
+  }
+}

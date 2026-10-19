@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "bomb_rack",
+    "metalness_emissive_roughness": "bomb_rack_mers",
+    "normal": "bomb_rack_normal"
+  }
+}

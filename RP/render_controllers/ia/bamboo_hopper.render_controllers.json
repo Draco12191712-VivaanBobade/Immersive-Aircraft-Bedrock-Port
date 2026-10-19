@@ -24,6 +24,100 @@
         "a": "(1 - q.property('ia:health')) * 0.5"
       }
     },
+    "controller.render.ia.bamboo_hopper.wpn_autocannon_0": {
+      "geometry": "Geometry.wpn_autocannon_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_autocannon"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_autocannon_0": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_0_base": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_0_base_2": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_0_yaw": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_0_pitch": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_0_roll": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_1": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_1_base": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_1_base_2": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_1_yaw": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_1_pitch": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w0_autocannon_1_roll": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
+        },
+        {
+          "w1_autocannon_0": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_0_base": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_0_base_2": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_0_yaw": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_0_pitch": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_0_roll": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_1": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_1_base": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_1_base_2": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_1_yaw": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_1_pitch": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        },
+        {
+          "w1_autocannon_1_roll": "(q.property('ia:wpn1') == 9 || q.property('ia:wpn1') == 10 || q.property('ia:wpn1') == 11)"
+        }
+      ]
+    },
     "controller.render.ia.bamboo_hopper.wpn_bb_0": {
       "geometry": "Geometry.wpn_bb_0",
       "materials": [
@@ -70,6 +164,180 @@
         }
       ]
     },
+    "controller.render.ia.bamboo_hopper.wpn_bomb_rack_0": {
+      "geometry": "Geometry.wpn_bomb_rack_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_bomb_rack"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_bomb_rack_0": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w0_bomb_rack_0_base": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w0_bomb_rack_0_base_2": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w0_bomb_rack_1": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w0_bomb_rack_1_base": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w0_bomb_rack_1_base_2": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w1_bomb_rack_0": "(q.property('ia:wpn1') == 18 || q.property('ia:wpn1') == 19 || q.property('ia:wpn1') == 20)"
+        },
+        {
+          "w1_bomb_rack_0_base": "(q.property('ia:wpn1') == 18 || q.property('ia:wpn1') == 19 || q.property('ia:wpn1') == 20)"
+        },
+        {
+          "w1_bomb_rack_0_base_2": "(q.property('ia:wpn1') == 18 || q.property('ia:wpn1') == 19 || q.property('ia:wpn1') == 20)"
+        },
+        {
+          "w1_bomb_rack_1": "(q.property('ia:wpn1') == 18 || q.property('ia:wpn1') == 19 || q.property('ia:wpn1') == 20)"
+        },
+        {
+          "w1_bomb_rack_1_base": "(q.property('ia:wpn1') == 18 || q.property('ia:wpn1') == 19 || q.property('ia:wpn1') == 20)"
+        },
+        {
+          "w1_bomb_rack_1_base_2": "(q.property('ia:wpn1') == 18 || q.property('ia:wpn1') == 19 || q.property('ia:wpn1') == 20)"
+        }
+      ]
+    },
+    "controller.render.ia.bamboo_hopper.wpn_cannon_0": {
+      "geometry": "Geometry.wpn_cannon_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_cannon"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_cannon_0": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w0_cannon_0_base": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w0_cannon_0_base_2": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w0_cannon_1": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w0_cannon_1_base": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w0_cannon_1_base_2": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w1_cannon_0": "(q.property('ia:wpn1') == 12 || q.property('ia:wpn1') == 13 || q.property('ia:wpn1') == 14)"
+        },
+        {
+          "w1_cannon_0_base": "(q.property('ia:wpn1') == 12 || q.property('ia:wpn1') == 13 || q.property('ia:wpn1') == 14)"
+        },
+        {
+          "w1_cannon_0_base_2": "(q.property('ia:wpn1') == 12 || q.property('ia:wpn1') == 13 || q.property('ia:wpn1') == 14)"
+        },
+        {
+          "w1_cannon_1": "(q.property('ia:wpn1') == 12 || q.property('ia:wpn1') == 13 || q.property('ia:wpn1') == 14)"
+        },
+        {
+          "w1_cannon_1_base": "(q.property('ia:wpn1') == 12 || q.property('ia:wpn1') == 13 || q.property('ia:wpn1') == 14)"
+        },
+        {
+          "w1_cannon_1_base_2": "(q.property('ia:wpn1') == 12 || q.property('ia:wpn1') == 13 || q.property('ia:wpn1') == 14)"
+        }
+      ]
+    },
+    "controller.render.ia.bamboo_hopper.wpn_dispenser_0": {
+      "geometry": "Geometry.wpn_dispenser_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_dispenser"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_dispenser_0": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w0_dispenser_0_base": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w0_dispenser_0_base_2": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w0_dispenser_1": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w0_dispenser_1_base": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w0_dispenser_1_base_2": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w1_dispenser_0": "(q.property('ia:wpn1') == 25 || q.property('ia:wpn1') == 26)"
+        },
+        {
+          "w1_dispenser_0_base": "(q.property('ia:wpn1') == 25 || q.property('ia:wpn1') == 26)"
+        },
+        {
+          "w1_dispenser_0_base_2": "(q.property('ia:wpn1') == 25 || q.property('ia:wpn1') == 26)"
+        },
+        {
+          "w1_dispenser_1": "(q.property('ia:wpn1') == 25 || q.property('ia:wpn1') == 26)"
+        },
+        {
+          "w1_dispenser_1_base": "(q.property('ia:wpn1') == 25 || q.property('ia:wpn1') == 26)"
+        },
+        {
+          "w1_dispenser_1_base_2": "(q.property('ia:wpn1') == 25 || q.property('ia:wpn1') == 26)"
+        }
+      ]
+    },
     "controller.render.ia.bamboo_hopper.wpn_hc_0": {
       "geometry": "Geometry.wpn_hc_0",
       "materials": [
@@ -113,6 +381,158 @@
         },
         {
           "w1_hc_1_base": "q.property('ia:wpn1') == 2"
+        }
+      ]
+    },
+    "controller.render.ia.bamboo_hopper.wpn_machine_gun_0": {
+      "geometry": "Geometry.wpn_machine_gun_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_machine_gun"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_machine_gun_0": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_0_base": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_0_base_2": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_0_yaw": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_0_pitch": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_0_roll": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_1": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_1_base": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_1_base_2": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_1_yaw": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_1_pitch": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w0_machine_gun_1_roll": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
+        },
+        {
+          "w1_machine_gun_0": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_0_base": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_0_base_2": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_0_yaw": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_0_pitch": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_0_roll": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_1": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_1_base": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_1_base_2": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_1_yaw": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_1_pitch": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        },
+        {
+          "w1_machine_gun_1_roll": "(q.property('ia:wpn1') == 6 || q.property('ia:wpn1') == 7 || q.property('ia:wpn1') == 8)"
+        }
+      ]
+    },
+    "controller.render.ia.bamboo_hopper.wpn_missile_rail_0": {
+      "geometry": "Geometry.wpn_missile_rail_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_missile_rail"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_missile_rail_0": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w0_missile_rail_0_base": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w0_missile_rail_0_base_2": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w0_missile_rail_1": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w0_missile_rail_1_base": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w0_missile_rail_1_base_2": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w1_missile_rail_0": "(q.property('ia:wpn1') == 23 || q.property('ia:wpn1') == 24)"
+        },
+        {
+          "w1_missile_rail_0_base": "(q.property('ia:wpn1') == 23 || q.property('ia:wpn1') == 24)"
+        },
+        {
+          "w1_missile_rail_0_base_2": "(q.property('ia:wpn1') == 23 || q.property('ia:wpn1') == 24)"
+        },
+        {
+          "w1_missile_rail_1": "(q.property('ia:wpn1') == 23 || q.property('ia:wpn1') == 24)"
+        },
+        {
+          "w1_missile_rail_1_base": "(q.property('ia:wpn1') == 23 || q.property('ia:wpn1') == 24)"
+        },
+        {
+          "w1_missile_rail_1_base_2": "(q.property('ia:wpn1') == 23 || q.property('ia:wpn1') == 24)"
         }
       ]
     },
@@ -195,6 +615,122 @@
         },
         {
           "w1_rc_1_roll": "q.property('ia:wpn1') == 1"
+        }
+      ]
+    },
+    "controller.render.ia.bamboo_hopper.wpn_rocket_pod_0": {
+      "geometry": "Geometry.wpn_rocket_pod_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_rocket_pod"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_rocket_pod_0": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w0_rocket_pod_0_base": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w0_rocket_pod_0_base_2": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w0_rocket_pod_1": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w0_rocket_pod_1_base": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w0_rocket_pod_1_base_2": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w1_rocket_pod_0": "(q.property('ia:wpn1') == 15 || q.property('ia:wpn1') == 16 || q.property('ia:wpn1') == 17)"
+        },
+        {
+          "w1_rocket_pod_0_base": "(q.property('ia:wpn1') == 15 || q.property('ia:wpn1') == 16 || q.property('ia:wpn1') == 17)"
+        },
+        {
+          "w1_rocket_pod_0_base_2": "(q.property('ia:wpn1') == 15 || q.property('ia:wpn1') == 16 || q.property('ia:wpn1') == 17)"
+        },
+        {
+          "w1_rocket_pod_1": "(q.property('ia:wpn1') == 15 || q.property('ia:wpn1') == 16 || q.property('ia:wpn1') == 17)"
+        },
+        {
+          "w1_rocket_pod_1_base": "(q.property('ia:wpn1') == 15 || q.property('ia:wpn1') == 16 || q.property('ia:wpn1') == 17)"
+        },
+        {
+          "w1_rocket_pod_1_base_2": "(q.property('ia:wpn1') == 15 || q.property('ia:wpn1') == 16 || q.property('ia:wpn1') == 17)"
+        }
+      ]
+    },
+    "controller.render.ia.bamboo_hopper.wpn_tpd_0": {
+      "geometry": "Geometry.wpn_tpd_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_tpd"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_tpd_0": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w0_tpd_0_base": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w0_tpd_0_base_2": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w0_tpd_1": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w0_tpd_1_base": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w0_tpd_1_base_2": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w1_tpd_0": "(q.property('ia:wpn1') == 21 || q.property('ia:wpn1') == 22)"
+        },
+        {
+          "w1_tpd_0_base": "(q.property('ia:wpn1') == 21 || q.property('ia:wpn1') == 22)"
+        },
+        {
+          "w1_tpd_0_base_2": "(q.property('ia:wpn1') == 21 || q.property('ia:wpn1') == 22)"
+        },
+        {
+          "w1_tpd_1": "(q.property('ia:wpn1') == 21 || q.property('ia:wpn1') == 22)"
+        },
+        {
+          "w1_tpd_1_base": "(q.property('ia:wpn1') == 21 || q.property('ia:wpn1') == 22)"
+        },
+        {
+          "w1_tpd_1_base_2": "(q.property('ia:wpn1') == 21 || q.property('ia:wpn1') == 22)"
         }
       ]
     },

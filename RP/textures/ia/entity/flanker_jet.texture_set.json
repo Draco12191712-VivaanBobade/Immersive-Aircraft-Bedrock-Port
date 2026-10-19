@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "flanker_jet",
+    "metalness_emissive_roughness": "flanker_jet_mers",
+    "normal": "flanker_jet_normal"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ia.ordnance": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "rocket": "q.property('ia:kind') == 0"
+        },
+        {
+          "missile": "q.property('ia:kind') == 1"
+        },
+        {
+          "bomb": "q.property('ia:kind') == 2"
+        },
+        {
+          "bomblet": "q.property('ia:kind') == 3"
+        },
+        {
+          "torpedo": "q.property('ia:kind') == 4"
+        },
+        {
+          "depth": "q.property('ia:kind') == 5"
+        },
+        {
+          "shell": "q.property('ia:kind') == 6"
+        },
+        {
+          "flare": "q.property('ia:kind') == 7"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "fulcrum_jet",
+    "metalness_emissive_roughness": "fulcrum_jet_mers",
+    "normal": "fulcrum_jet_normal"
+  }
+}

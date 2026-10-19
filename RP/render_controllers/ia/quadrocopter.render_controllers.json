@@ -32,6 +32,46 @@
         }
       ]
     },
+    "controller.render.ia.quadrocopter.wpn_autocannon_0": {
+      "geometry": "Geometry.wpn_autocannon_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_autocannon"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_autocannon_0": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_autocannon_0_base": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_autocannon_0_base_2": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_autocannon_0_yaw": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_autocannon_0_pitch": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_autocannon_0_roll": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        }
+      ]
+    },
     "controller.render.ia.quadrocopter.wpn_bb_0": {
       "geometry": "Geometry.wpn_bb_0",
       "materials": [
@@ -60,6 +100,99 @@
         }
       ]
     },
+    "controller.render.ia.quadrocopter.wpn_bomb_rack_0": {
+      "geometry": "Geometry.wpn_bomb_rack_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_bomb_rack"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_bomb_rack_0": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w0_bomb_rack_0_base": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        },
+        {
+          "w0_bomb_rack_0_base_2": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
+        }
+      ]
+    },
+    "controller.render.ia.quadrocopter.wpn_cannon_0": {
+      "geometry": "Geometry.wpn_cannon_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_cannon"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_cannon_0": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w0_cannon_0_base": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        },
+        {
+          "w0_cannon_0_base_2": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
+        }
+      ]
+    },
+    "controller.render.ia.quadrocopter.wpn_dispenser_0": {
+      "geometry": "Geometry.wpn_dispenser_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_dispenser"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_dispenser_0": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w0_dispenser_0_base": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        },
+        {
+          "w0_dispenser_0_base_2": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
+        }
+      ]
+    },
     "controller.render.ia.quadrocopter.wpn_hc_0": {
       "geometry": "Geometry.wpn_hc_0",
       "materials": [
@@ -85,6 +218,77 @@
         },
         {
           "w0_hc_0_base": "q.property('ia:wpn0') == 2"
+        }
+      ]
+    },
+    "controller.render.ia.quadrocopter.wpn_machine_gun_0": {
+      "geometry": "Geometry.wpn_machine_gun_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_machine_gun"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_machine_gun_0": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_machine_gun_0_base": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_machine_gun_0_base_2": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_machine_gun_0_yaw": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_machine_gun_0_pitch": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        },
+        {
+          "w0_machine_gun_0_roll": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8) && !(q.has_rider && q.distance_from_camera < 1.95)"
+        }
+      ]
+    },
+    "controller.render.ia.quadrocopter.wpn_missile_rail_0": {
+      "geometry": "Geometry.wpn_missile_rail_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_missile_rail"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_missile_rail_0": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w0_missile_rail_0_base": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
+        },
+        {
+          "w0_missile_rail_0_base_2": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
         }
       ]
     },
@@ -122,6 +326,68 @@
         },
         {
           "w0_rc_0_roll": "q.property('ia:wpn0') == 1 && !(q.has_rider && q.distance_from_camera < 1.95)"
+        }
+      ]
+    },
+    "controller.render.ia.quadrocopter.wpn_rocket_pod_0": {
+      "geometry": "Geometry.wpn_rocket_pod_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_rocket_pod"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_rocket_pod_0": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w0_rocket_pod_0_base": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        },
+        {
+          "w0_rocket_pod_0_base_2": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
+        }
+      ]
+    },
+    "controller.render.ia.quadrocopter.wpn_tpd_0": {
+      "geometry": "Geometry.wpn_tpd_0",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.wpn_tpd"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "w0_tpd_0": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w0_tpd_0_base": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
+        },
+        {
+          "w0_tpd_0_base_2": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
         }
       ]
     },

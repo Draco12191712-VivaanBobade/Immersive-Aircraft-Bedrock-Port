@@ -8,16 +8,32 @@
       },
       "textures": {
         "tex0": "textures/ia/entity/gyrodyne",
+        "wpn_autocannon": "textures/ia/entity/autocannon",
         "wpn_bb": "textures/ia/entity/bomb_bay",
+        "wpn_bomb_rack": "textures/ia/entity/bomb_rack",
+        "wpn_cannon": "textures/ia/entity/cannon",
+        "wpn_dispenser": "textures/ia/entity/dispenser",
         "wpn_hc": "textures/ia/entity/heavy_crossbow",
+        "wpn_machine_gun": "textures/ia/entity/machine_gun",
+        "wpn_missile_rail": "textures/ia/entity/missile_rail",
         "wpn_rc": "textures/ia/entity/rotary_cannon",
+        "wpn_rocket_pod": "textures/ia/entity/rocket_pod",
+        "wpn_tpd": "textures/ia/entity/torpedo",
         "wpn_ts": "textures/ia/entity/telescope"
       },
       "geometry": {
         "main_0": "geometry.ia.gyrodyne.main_0",
+        "wpn_autocannon_0": "geometry.ia.gyrodyne.wpn_autocannon_0",
         "wpn_bb_0": "geometry.ia.gyrodyne.wpn_bb_0",
+        "wpn_bomb_rack_0": "geometry.ia.gyrodyne.wpn_bomb_rack_0",
+        "wpn_cannon_0": "geometry.ia.gyrodyne.wpn_cannon_0",
+        "wpn_dispenser_0": "geometry.ia.gyrodyne.wpn_dispenser_0",
         "wpn_hc_0": "geometry.ia.gyrodyne.wpn_hc_0",
+        "wpn_machine_gun_0": "geometry.ia.gyrodyne.wpn_machine_gun_0",
+        "wpn_missile_rail_0": "geometry.ia.gyrodyne.wpn_missile_rail_0",
         "wpn_rc_0": "geometry.ia.gyrodyne.wpn_rc_0",
+        "wpn_rocket_pod_0": "geometry.ia.gyrodyne.wpn_rocket_pod_0",
+        "wpn_tpd_0": "geometry.ia.gyrodyne.wpn_tpd_0",
         "wpn_ts_0": "geometry.ia.gyrodyne.wpn_ts_0"
       },
       "animations": {
@@ -61,7 +77,17 @@
           "v.w0_ts_0_ny = (0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
           "v.w0_ts_0_nz = (0.0 * v.d0x + 0.0 * v.d0y + 1.0 * v.d0z);",
           "v.w0_ts_0_yaw = -math.atan2(v.w0_ts_0_nx, v.w0_ts_0_nz);",
-          "v.w0_ts_0_pitch = -math.atan2(v.w0_ts_0_ny, math.sqrt(v.w0_ts_0_nx * v.w0_ts_0_nx + v.w0_ts_0_nz * v.w0_ts_0_nz));"
+          "v.w0_ts_0_pitch = -math.atan2(v.w0_ts_0_ny, math.sqrt(v.w0_ts_0_nx * v.w0_ts_0_nx + v.w0_ts_0_nz * v.w0_ts_0_nz));",
+          "v.w0_machine_gun_0_nx = (1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_machine_gun_0_ny = (0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_machine_gun_0_nz = (0.0 * v.d0x + 0.0 * v.d0y + 1.0 * v.d0z);",
+          "v.w0_machine_gun_0_yaw = -math.atan2(v.w0_machine_gun_0_nx, v.w0_machine_gun_0_nz);",
+          "v.w0_machine_gun_0_pitch = -math.atan2(v.w0_machine_gun_0_ny, math.sqrt(v.w0_machine_gun_0_nx * v.w0_machine_gun_0_nx + v.w0_machine_gun_0_nz * v.w0_machine_gun_0_nz));",
+          "v.w0_autocannon_0_nx = (1.0 * v.d0x + 0.0 * v.d0y + -0.0 * v.d0z);",
+          "v.w0_autocannon_0_ny = (0.0 * v.d0x + 1.0 * v.d0y + 0.0 * v.d0z);",
+          "v.w0_autocannon_0_nz = (0.0 * v.d0x + 0.0 * v.d0y + 1.0 * v.d0z);",
+          "v.w0_autocannon_0_yaw = -math.atan2(v.w0_autocannon_0_nx, v.w0_autocannon_0_nz);",
+          "v.w0_autocannon_0_pitch = -math.atan2(v.w0_autocannon_0_ny, math.sqrt(v.w0_autocannon_0_nx * v.w0_autocannon_0_nx + v.w0_autocannon_0_nz * v.w0_autocannon_0_nz));"
         ],
         "animate": [
           "main",
@@ -78,9 +104,17 @@
       },
       "render_controllers": [
         "controller.render.ia.gyrodyne.main_0",
+        "controller.render.ia.gyrodyne.wpn_autocannon_0",
         "controller.render.ia.gyrodyne.wpn_bb_0",
+        "controller.render.ia.gyrodyne.wpn_bomb_rack_0",
+        "controller.render.ia.gyrodyne.wpn_cannon_0",
+        "controller.render.ia.gyrodyne.wpn_dispenser_0",
         "controller.render.ia.gyrodyne.wpn_hc_0",
+        "controller.render.ia.gyrodyne.wpn_machine_gun_0",
+        "controller.render.ia.gyrodyne.wpn_missile_rail_0",
         "controller.render.ia.gyrodyne.wpn_rc_0",
+        "controller.render.ia.gyrodyne.wpn_rocket_pod_0",
+        "controller.render.ia.gyrodyne.wpn_tpd_0",
         "controller.render.ia.gyrodyne.wpn_ts_0"
       ],
       "enable_attachables": false

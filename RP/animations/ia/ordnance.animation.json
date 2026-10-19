@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ia.ordnance.pitch": {
+      "loop": true,
+      "bones": {
+        "ia_pitch": {
+          "rotation": [
+            "q.property('ia:opitch')",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ia.ordnance.trail": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "smoke",
+            "pre_effect_script": "v.spin = 0; v.vx = 0; v.vz = 0; v.jitter = 0;"
+          }
+        ]
+      }
+    },
+    "animation.ia.ordnance.glow": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "flame",
+            "pre_effect_script": "v.spin = 10; v.vx = 0; v.vz = 0;"
+          }
+        ]
+      }
+    }
+  }
+}

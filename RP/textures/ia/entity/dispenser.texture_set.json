@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "dispenser",
+    "metalness_emissive_roughness": "dispenser_mers",
+    "normal": "dispenser_normal"
+  }
+}

@@ -150,20 +150,21 @@
           "default": -1,
           "client_sync": true
         },
+        "ia:trails": {
+          "type": "bool",
+          "default": true,
+          "client_sync": true
+        },
+        "ia:ab": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        },
         "ia:wpn0": {
           "type": "int",
           "range": [
             0,
-            4
-          ],
-          "default": 0,
-          "client_sync": true
-        },
-        "ia:wpn1": {
-          "type": "int",
-          "range": [
-            0,
-            4
+            26
           ],
           "default": 0,
           "client_sync": true
@@ -186,6 +187,24 @@
           "default": 0.0,
           "client_sync": true
         },
+        "ia:spin0": {
+          "type": "float",
+          "range": [
+            -100000.0,
+            100000.0
+          ],
+          "default": 0.0,
+          "client_sync": true
+        },
+        "ia:wpn1": {
+          "type": "int",
+          "range": [
+            0,
+            26
+          ],
+          "default": 0,
+          "client_sync": true
+        },
         "ia:aim1y": {
           "type": "float",
           "range": [
@@ -204,15 +223,6 @@
           "default": 0.0,
           "client_sync": true
         },
-        "ia:spin0": {
-          "type": "float",
-          "range": [
-            -100000.0,
-            100000.0
-          ],
-          "default": 0.0,
-          "client_sync": true
-        },
         "ia:spin1": {
           "type": "float",
           "range": [
@@ -220,11 +230,6 @@
             100000.0
           ],
           "default": 0.0,
-          "client_sync": true
-        },
-        "ia:trails": {
-          "type": "bool",
-          "default": true,
           "client_sync": true
         }
       }

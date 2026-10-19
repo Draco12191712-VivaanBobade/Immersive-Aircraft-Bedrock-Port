@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "iron_striker",
+    "metalness_emissive_roughness": "iron_striker_mers",
+    "normal": "iron_striker_normal"
+  }
+}

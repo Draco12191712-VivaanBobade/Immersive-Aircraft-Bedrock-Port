@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "jet_bomber",
+    "metalness_emissive_roughness": "jet_bomber_mers",
+    "normal": "jet_bomber_normal"
+  }
+}
