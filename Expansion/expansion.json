@@ -136,10 +136,6 @@
       "category": "upgrades",
       "stack": 64
     },
-    "afterburner_module": {
-      "category": "upgrades",
-      "stack": 64
-    },
     "reinforced_airframe": {
       "category": "upgrades",
       "stack": 64
@@ -155,62 +151,6 @@
     "searchlight": {
       "category": "upgrades",
       "stack": 64
-    },
-    "iron_striker": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "steel_bomber": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "metal_jet": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "iron_freighter": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "swift_scout": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "torpedo_plane": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "jet_bomber": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "strike_jet": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "dive_bomber": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "heavy_fighter": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "cannon_attacker": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "lightning_fighter": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "flanker_jet": {
-      "category": "aircraft",
-      "stack": 1
-    },
-    "fulcrum_jet": {
-      "category": "aircraft",
-      "stack": 1
     }
   },
   "weapons": {

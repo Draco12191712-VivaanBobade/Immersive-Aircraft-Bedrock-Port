@@ -197,9 +197,6 @@
     "ia_armor_plating": {
       "textures": "textures/ia/items/armor_plating"
     },
-    "ia_afterburner_module": {
-      "textures": "textures/ia/items/afterburner_module"
-    },
     "ia_reinforced_airframe": {
       "textures": "textures/ia/items/reinforced_airframe"
     },
@@ -211,48 +208,6 @@
     },
     "ia_searchlight": {
       "textures": "textures/ia/items/searchlight"
-    },
-    "ia_iron_striker": {
-      "textures": "textures/ia/items/iron_striker"
-    },
-    "ia_steel_bomber": {
-      "textures": "textures/ia/items/steel_bomber"
-    },
-    "ia_metal_jet": {
-      "textures": "textures/ia/items/metal_jet"
-    },
-    "ia_iron_freighter": {
-      "textures": "textures/ia/items/iron_freighter"
-    },
-    "ia_swift_scout": {
-      "textures": "textures/ia/items/swift_scout"
-    },
-    "ia_torpedo_plane": {
-      "textures": "textures/ia/items/torpedo_plane"
-    },
-    "ia_jet_bomber": {
-      "textures": "textures/ia/items/jet_bomber"
-    },
-    "ia_strike_jet": {
-      "textures": "textures/ia/items/strike_jet"
-    },
-    "ia_dive_bomber": {
-      "textures": "textures/ia/items/dive_bomber"
-    },
-    "ia_heavy_fighter": {
-      "textures": "textures/ia/items/heavy_fighter"
-    },
-    "ia_cannon_attacker": {
-      "textures": "textures/ia/items/cannon_attacker"
-    },
-    "ia_lightning_fighter": {
-      "textures": "textures/ia/items/lightning_fighter"
-    },
-    "ia_flanker_jet": {
-      "textures": "textures/ia/items/flanker_jet"
-    },
-    "ia_fulcrum_jet": {
-      "textures": "textures/ia/items/fulcrum_jet"
     }
   }
 }

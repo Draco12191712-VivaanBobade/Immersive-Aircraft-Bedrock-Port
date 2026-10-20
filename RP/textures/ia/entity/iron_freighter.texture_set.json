@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "iron_freighter",
-    "metalness_emissive_roughness": "iron_freighter_mers",
-    "normal": "iron_freighter_normal"
-  }
-}

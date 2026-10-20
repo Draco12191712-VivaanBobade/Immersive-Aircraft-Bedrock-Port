@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "torpedo_plane",
-    "metalness_emissive_roughness": "torpedo_plane_mers",
-    "normal": "torpedo_plane_normal"
-  }
-}
