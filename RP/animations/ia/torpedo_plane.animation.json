@@ -18,6 +18,13 @@
             "-v.rz"
           ]
         },
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.eng_rot * 100"
+          ]
+        },
         "elevator": {
           "rotation": [
             "-(-v.iz * 15)",
@@ -30,13 +37,6 @@
             0,
             "-(-v.ix * 18)",
             0.0
-          ]
-        },
-        "propeller": {
-          "rotation": [
-            0,
-            0,
-            "v.eng_rot * 100"
           ]
         },
         "w0_rc_0_yaw": {
@@ -430,22 +430,22 @@
           {
             "effect": "trail",
             "locator": "trail_0_a",
-            "pre_effect_script": "v.tx = -3.4; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
+            "pre_effect_script": "v.tx = -3.9; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
           },
           {
             "effect": "trail",
             "locator": "trail_0_b",
-            "pre_effect_script": "v.tx = -3.4; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
+            "pre_effect_script": "v.tx = -3.9; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
           },
           {
             "effect": "trail",
             "locator": "trail_1_a",
-            "pre_effect_script": "v.tx = 3.4; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
+            "pre_effect_script": "v.tx = 3.9; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
           },
           {
             "effect": "trail",
             "locator": "trail_1_b",
-            "pre_effect_script": "v.tx = 3.4; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
+            "pre_effect_script": "v.tx = 3.9; v.alpha = math.clamp(q.property('ia:speed') - 0.05, 0, 1); v.gray = 1.0; v.life = 1.75; v.size = 0.12;"
           }
         ]
       }
