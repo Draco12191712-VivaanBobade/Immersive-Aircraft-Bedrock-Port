@@ -6,6 +6,7 @@ var w = mc.world,
   EDC = mc.EntityDamageCause,
   InputButton = mc.InputButton,
   ButtonState = mc.ButtonState,
+  InputMode = mc.InputMode,
   IPC = mc.InputPermissionCategory,
   GameMode = mc.GameMode,
   CommandPermissionLevel = mc.CommandPermissionLevel,
@@ -4036,8 +4037,8 @@ var AC = {
     ],
     trails: [
       {
-        x: -3.4,
-        y: 2.6,
+        x: -3.9,
+        y: 2.65,
         z: 0.5,
         size: 0.12,
         rotate: 0.0,
@@ -4045,8 +4046,8 @@ var AC = {
         length: 35,
       },
       {
-        x: 3.4,
-        y: 2.6,
+        x: 3.9,
+        y: 2.65,
         z: 0.5,
         size: 0.12,
         rotate: 0.0,
@@ -10281,6 +10282,7 @@ function ptk(p) {
     }
     if (z && T % 20 == 0) sco2(p, SCOPE);
     if (!z && T % 3 == 0) fov(p, q, r, s);
+    if (jfi(p)) wus(p);
     if (q.fu > T && q.at > 20) fir(r, s, p);
     if (T % 2 == 0) rtl(p, q, s);
     var r0 = rdr(r)[0];
@@ -11459,6 +11461,17 @@ function nfi(it) {
     if (it.getComponent("minecraft:food")) return true;
   } catch (x) {}
   return NFU.test(id);
+}
+function jfi(p) {
+  try {
+    var ii = p.inputInfo;
+    return (
+      ii.lastInputModeUsed != InputMode.Touch &&
+      ii.getButtonState(InputButton.Jump) == ButtonState.Pressed
+    );
+  } catch (x) {
+    return false;
+  }
 }
 function wus(p, u) {
   var q = pst(p);
