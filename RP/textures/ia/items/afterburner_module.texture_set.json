@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "afterburner_module",
-    "metalness_emissive_roughness": "afterburner_module_mers",
-    "normal": "afterburner_module_normal"
-  }
-}

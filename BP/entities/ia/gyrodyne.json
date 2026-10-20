@@ -155,11 +155,6 @@
           "default": true,
           "client_sync": true
         },
-        "ia:ab": {
-          "type": "bool",
-          "default": false,
-          "client_sync": true
-        },
         "ia:wpn0": {
           "type": "int",
           "range": [
