@@ -212,6 +212,12 @@
       "default": true
     },
     {
+      "type": "toggle",
+      "text": "Auto-fire at monsters in your sights",
+      "name": "ia:autoFire",
+      "default": true
+    },
+    {
       "type": "slider",
       "text": "Rotary cannon damage",
       "name": "ia:rotaryCannonDamage",

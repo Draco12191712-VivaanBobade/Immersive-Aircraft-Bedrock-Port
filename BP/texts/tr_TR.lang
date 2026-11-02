@@ -5,6 +5,7 @@ ia.settings.players=§6§lPlayers
 ia.settings.repair=§6§lRepair
 option.immersive_aircraft.acceptVanillaFuel=Vanilya yakıtını kabul edin.
 option.immersive_aircraft.airshipCruise=Airship cruise throttle: the stick sets the speed and it stays there.
+option.immersive_aircraft.autoFire=Guns, cannons, rockets and missiles fire on their own at monsters in your sights. Bombs and dispensers still need a click.
 option.immersive_aircraft.burnFuelInCreative=Yaratıcı modda yakıt yakın.
 option.immersive_aircraft.collisionDamage=Çarpışma hasarı.
 option.immersive_aircraft.collisionDamageMultiplier=Collision damage multiplier.
