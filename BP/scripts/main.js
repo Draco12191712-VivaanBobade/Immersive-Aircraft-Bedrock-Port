@@ -2282,6 +2282,7 @@ var CFD = {
   wearPerMinute: 0.0,
   repairMaterials: false,
   heavyWeaponsBreakBlocks: true,
+  autoFire: true,
   fuelList: {
     "minecraft:blaze_powder": 1200,
   },
@@ -2502,6 +2503,7 @@ var OPT = [
   "wearPerMinute",
   "repairMaterials",
   "heavyWeaponsBreakBlocks",
+  "autoFire",
 ];
 
 function gps() {
@@ -3429,6 +3431,7 @@ function fbb(e, s, q, d, mt) {
   });
 }
 function cfi(e, s, W, q, ix, p) {
+  if (AF && !afw(W)) return;
   var mt = { pos: v3(q.m.x, q.m.y, q.m.z), mat: q.m.matrix };
   if (W.t == "rc") {
     var o = q.rl;
@@ -3459,6 +3462,37 @@ function cfi(e, s, W, q, ix, p) {
   } else if (WPI[W.id].kind) xfi(e, s, W, q, mt, p);
 }
 var BMB = { bomb: 1, cluster: 1, guided: 1, torpedo: 1, depth: 1 };
+var AF = null;
+function afw(W) {
+  var d = WPI[W.id];
+  if (!d || W.t == "ts" || W.t == "bb" || W.t == "ap" || BMB[d.kind] || d.kind == "flare" || d.kind == "smoke")
+    return false;
+  if (W.t == "rc") return AF.v;
+  return d.mount == "FRONT" ? AF.f : d.mount == "ROTATING" ? AF.v : false;
+}
+function afm(e, s, p) {
+  var o = { v: false, f: false },
+    h = p.getHeadLocation(),
+    d = p.getViewDirection(),
+    l0 = e.location,
+    fw = mv(rmx(s), v3(0, 0, 1));
+  for (var x of p.dimension.getEntities({ location: h, maxDistance: 56, families: ["monster"] })) {
+    if (!x.isValid || x.id == e.id || rdo(x) === e) continue;
+    var l = x.location,
+      dx = l.x - h.x,
+      dy = l.y + 0.9 - h.y,
+      dz = l.z - h.z,
+      dd = Math.sqrt(dx * dx + dy * dy + dz * dz);
+    if (dd > 2 && (dx * d.x + dy * d.y + dz * d.z) / dd > 0.985) o.v = true;
+    var fx = l.x - l0.x,
+      fy = l.y + 0.9 - l0.y,
+      fz = l.z - l0.z,
+      fd = Math.sqrt(fx * fx + fy * fy + fz * fz);
+    if (fd > 3 && (fx * fw.x + fy * fw.y + fz * fw.z) / fd > 0.97) o.f = true;
+    if (o.v && o.f) break;
+  }
+  return o;
+}
 var OK = {
   rocket: 0,
   missile: 1,
@@ -4350,11 +4384,7 @@ function stz(e, s, it) {
     return;
   }
   var hr = dm.heightRange,
-    bp = v3(
-      Math.floor(l.x),
-      cl(Math.floor(l.y), hr.min, hr.max - 1),
-      Math.floor(l.z),
-    ),
+    bp = v3(Math.floor(l.x), hr.max - 1, Math.floor(l.z)),
     st = dm.spawnEntity("ia:stash", v3(bp.x + 0.5, bp.y + 0.5, bp.z + 0.5)),
     s2 = inv(st);
   for (var f of fi) {
@@ -4382,7 +4412,7 @@ function stz(e, s, it) {
       var c3 = inv(st);
       for (var k = 0; k < c3.size; k++) {
         var y = c3.getItem(k);
-        if (y) dm.spawnItem(y, st.location);
+        if (y) dm.spawnItem(y, l);
       }
     }
     st.remove();
@@ -4395,7 +4425,10 @@ function ust(e, s, it) {
     l = e.location,
     bp = v3(Math.floor(l.x), Math.floor(l.y), Math.floor(l.z)),
     bk = it.getDynamicProperty("ia:bk") || 0,
-    fv = it.getDynamicProperty("ia:sv") || 1;
+    fv = it.getDynamicProperty("ia:sv") || 1,
+    bc = v3(bp.x + 0.5, bp.y + 0.5, bp.z + 0.5),
+    pre = new Set();
+  for (var x0 of dm.getEntities({ location: bc, maxDistance: 2 })) pre.add(x0.id);
   try {
     w.structureManager.place(id, dm, bp, {
       includeBlocks: false,
@@ -4406,9 +4439,18 @@ function ust(e, s, it) {
   }
   sy.runTimeout(function () {
     if (!e.isValid) return;
+    for (var x1 of dm.getEntities({ location: bc, maxDistance: 2 }))
+      if (
+        !pre.has(x1.id) &&
+        x1.id != e.id &&
+        x1.typeId != "ia:stash" &&
+        !isP(x1) &&
+        !(x1.typeId == "ia:cargo_hold" && x1.getDynamicProperty("ia:own") == e.id)
+      )
+        x1.remove();
     var st = dm.getEntities({
       type: "ia:stash",
-      location: v3(bp.x + 0.5, bp.y + 0.5, bp.z + 0.5),
+      location: bc,
       maxDistance: 2,
     })[0];
     if (!st) return;
@@ -5389,7 +5431,19 @@ function ptk(p) {
     if (z && T % 20 == 0) sco2(p, SCOPE);
     if (!z && T % 3 == 0) fov(p, q, r, s);
     if (jfi(p)) wus(p);
+    if (gc().autoFire && T % 2 == 0 && q.at > 20) {
+      var am = afm(r, s, p);
+      if (am.v || am.f) {
+        q.afu = T + 6;
+        q.afm = am;
+      }
+    }
     if (q.fu > T && q.at > 20) fir(r, s, p);
+    else if (q.afu > T) {
+      AF = q.afm;
+      fir(r, s, p);
+      AF = null;
+    }
     if (T % 2 == 0) rtl(p, q, s);
     var r0 = rdr(r)[0];
     if (r0 && r0.id == p.id && T % 2 == 0 && q.mu < T) hud(r, s, p);
