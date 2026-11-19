@@ -63,7 +63,7 @@
       "name": "ia:speedMultiplier",
       "min": 0.5,
       "max": 3.0,
-      "step": 0.1,
+      "step": 0.01,
       "default": 1.6
     },
     {
@@ -72,7 +72,7 @@
       "name": "ia:liftAssist",
       "min": 1.0,
       "max": 3.0,
-      "step": 0.1,
+      "step": 0.01,
       "default": 1.8
     },
     {
@@ -167,13 +167,13 @@
       "type": "toggle",
       "text": "Crash explosions break blocks",
       "name": "ia:enableCrashBlockDestruction",
-      "default": false
+      "default": true
     },
     {
       "type": "toggle",
       "text": "Crash explosions start fires",
       "name": "ia:enableCrashFire",
-      "default": false
+      "default": true
     },
     {
       "type": "slider",
@@ -197,13 +197,13 @@
       "type": "toggle",
       "text": "Crashes never kill the pilot",
       "name": "ia:preventKillThroughCrash",
-      "default": true
+      "default": false
     },
     {
       "type": "toggle",
       "text": "Weapons break blocks",
       "name": "ia:weaponsAreDestructive",
-      "default": false
+      "default": true
     },
     {
       "type": "toggle",
