@@ -112,9 +112,11 @@
               "common_panel@common.common_panel": {
                 "$dialog_background": "ia_ui.none",
                 "$close_button_offset": [
-                  0,
-                  -22
-                ]
+                  -2,
+                  2
+                ],
+                "$use_compact_close_button": true,
+                "$close_button_layer": 30
               }
             },
             {
@@ -837,9 +839,11 @@
               "common_panel@common.common_panel": {
                 "$dialog_background": "ia_ui.none",
                 "$close_button_offset": [
-                  0,
-                  -22
-                ]
+                  -2,
+                  2
+                ],
+                "$use_compact_close_button": true,
+                "$close_button_layer": 30
               }
             },
             {
@@ -1513,9 +1517,11 @@
               "common_panel@common.common_panel": {
                 "$dialog_background": "ia_ui.none",
                 "$close_button_offset": [
-                  0,
-                  -22
-                ]
+                  -2,
+                  2
+                ],
+                "$use_compact_close_button": true,
+                "$close_button_layer": 30
               }
             },
             {
@@ -2214,9 +2220,11 @@
               "common_panel@common.common_panel": {
                 "$dialog_background": "ia_ui.none",
                 "$close_button_offset": [
-                  0,
-                  -22
-                ]
+                  -2,
+                  2
+                ],
+                "$use_compact_close_button": true,
+                "$close_button_layer": 30
               }
             },
             {
@@ -4387,9 +4395,11 @@
               "common_panel@common.common_panel": {
                 "$dialog_background": "ia_ui.none",
                 "$close_button_offset": [
-                  0,
-                  -22
-                ]
+                  -2,
+                  2
+                ],
+                "$use_compact_close_button": true,
+                "$close_button_layer": 30
               }
             },
             {
@@ -6380,9 +6390,11 @@
               "common_panel@common.common_panel": {
                 "$dialog_background": "ia_ui.none",
                 "$close_button_offset": [
-                  0,
-                  -22
-                ]
+                  -2,
+                  2
+                ],
+                "$use_compact_close_button": true,
+                "$close_button_layer": 30
               }
             },
             {
@@ -6755,9 +6767,11 @@
               "common_panel@common.common_panel": {
                 "$dialog_background": "ia_ui.none",
                 "$close_button_offset": [
-                  0,
-                  -22
-                ]
+                  -2,
+                  2
+                ],
+                "$use_compact_close_button": true,
+                "$close_button_layer": 30
               }
             },
             {
