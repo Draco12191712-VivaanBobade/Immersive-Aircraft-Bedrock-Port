@@ -23,3 +23,5 @@ desktop.ini
 ~$*
 extras/
 Marketing/Trailer Video.mov
+
+# Incase you wanted to know, the extras folder holds uncompiled .bbmodel files, uncompressed audio, decompiled Java .class files, unedited textures pulled from the original mod for reference during porting, and proprietary files from the Bedrock Schematic Engine I created.
