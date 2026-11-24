@@ -1,7 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "warship_icon_vm",
-    "metalness_emissive_roughness": "warship_icon_mers"
-  }
-}

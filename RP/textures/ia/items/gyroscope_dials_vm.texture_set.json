@@ -1,7 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "gyroscope_dials_vm",
-    "metalness_emissive_roughness": "gyroscope_dials_mers"
-  }
-}
