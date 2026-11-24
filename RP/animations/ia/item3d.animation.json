@@ -1,0 +1,145 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ia.item3d.pose": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            "c.is_first_person ? -5.5 : 0.5",
+            "c.is_first_person ? -3.0 : -2.5",
+            "c.is_first_person ? -3.0 : 1.0"
+          ],
+          "rotation": [
+            "c.is_first_person ? 38.0 : 0.0",
+            "c.is_first_person ? -120.0 : 0.0",
+            "c.is_first_person ? -63.0 : 0.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.item3d.default": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.04",
+            "v.ia_wb * 0.35 + math.sin(q.life_time * 80) * 0.12",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 3",
+            "0",
+            "v.ia_sw * 0.8"
+          ]
+        }
+      }
+    },
+    "animation.ia.item3d.aircraft": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "0",
+            "math.sin(q.life_time * 120) * 0.35 + v.ia_wb * 0.3",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 2 - math.clamp(q.camera_rotation(0), -60, 60) * 0.2",
+            "v.ia_sw * 0.3",
+            "-v.ia_sw * 2.2"
+          ]
+        }
+      }
+    },
+    "animation.ia.item3d.spin": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.04",
+            "v.ia_wb * 0.35 + math.sin(q.life_time * 80) * 0.12",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 3",
+            "0",
+            "v.ia_sw * 0.8"
+          ]
+        },
+        "ia_spin": {
+          "rotation": [
+            "0",
+            "q.life_time * (140 + 900 * v.ia_mv)",
+            "0"
+          ]
+        }
+      }
+    },
+    "animation.ia.item3d.weapon": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.03",
+            "v.ia_wb * 0.25 - v.ia_sp * 0.8",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 2 + v.ia_sp * 18",
+            "0",
+            "v.ia_sw * 0.5"
+          ]
+        }
+      }
+    },
+    "animation.ia.item3d.rumble": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.04",
+            "v.ia_wb * 0.35 + math.sin(q.life_time * 80) * 0.12",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 3",
+            "0",
+            "v.ia_sw * 0.8"
+          ]
+        },
+        "ia_spin": {
+          "position": [
+            "math.sin(q.life_time * 3100) * 0.07",
+            "math.cos(q.life_time * 2700) * 0.07",
+            "0"
+          ]
+        }
+      }
+    },
+    "animation.ia.item3d.flutter": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.04",
+            "v.ia_wb * 0.35 + math.sin(q.life_time * 80) * 0.12",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 3",
+            "0",
+            "v.ia_sw * 0.8"
+          ]
+        },
+        "ia_spin": {
+          "scale": [
+            "1 + math.sin(q.life_time * 700) * 0.06 * (0.3 + v.ia_mv)",
+            "1",
+            "1"
+          ]
+        }
+      }
+    }
+  }
+}
