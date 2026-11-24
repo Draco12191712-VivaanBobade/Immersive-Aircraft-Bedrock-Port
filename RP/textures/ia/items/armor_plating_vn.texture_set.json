@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "armor_plating_vn",
+    "normal": "armor_plating_normal"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "smoke_dispenser_vm",
+    "metalness_emissive_roughness": "smoke_dispenser_mers"
+  }
+}

@@ -9,7 +9,13 @@
       "textures": {
         "banner": "textures/entity/banner/banner_base",
         "tex1": "textures/ia/entity/airship_color",
-        "tex0": "textures/ia/entity/cargo_airship"
+        "tex0": "textures/ia/entity/cargo_airship",
+        "tex1_vm": "textures/ia/entity/airship_color_vm",
+        "tex1_vn": "textures/ia/entity/airship_color_vn",
+        "tex1_v0": "textures/ia/entity/airship_color_v0",
+        "tex0_vm": "textures/ia/entity/cargo_airship_vm",
+        "tex0_vn": "textures/ia/entity/cargo_airship_vn",
+        "tex0_v0": "textures/ia/entity/cargo_airship_v0"
       },
       "geometry": {
         "banner_0": "geometry.ia.cargo_airship.banner_0",

@@ -61,7 +61,7 @@
         }
       ],
       "textures": [
-        "Texture.tex1"
+        "Array.ia_vv_tex1[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -103,7 +103,17 @@
         {
           "flag_2": "(q.property('ia:dye') >= 0) && (q.distance_from_camera < 32)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex1": [
+            "Texture.tex1",
+            "Texture.tex1_vm",
+            "Texture.tex1_vn",
+            "Texture.tex1_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.main_0": {
       "geometry": "Geometry.main_0",
@@ -113,7 +123,7 @@
         }
       ],
       "textures": [
-        "Texture.tex0"
+        "Array.ia_vv_tex0[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -152,7 +162,17 @@
         {
           "flag_2": "q.distance_from_camera < 32"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex0": [
+            "Texture.tex0",
+            "Texture.tex0_vm",
+            "Texture.tex0_vn",
+            "Texture.tex0_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.sails_0": {
       "geometry": "Geometry.sails_0",
@@ -162,7 +182,7 @@
         }
       ],
       "textures": [
-        "Texture.tex0"
+        "Array.ia_vv_tex0[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -201,7 +221,17 @@
         {
           "flag_2": "q.distance_from_camera < 32"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex0": [
+            "Texture.tex0",
+            "Texture.tex0_vm",
+            "Texture.tex0_vn",
+            "Texture.tex0_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.uncolored_0": {
       "geometry": "Geometry.uncolored_0",
@@ -211,7 +241,7 @@
         }
       ],
       "textures": [
-        "Texture.tex0"
+        "Array.ia_vv_tex0[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -247,7 +277,17 @@
         {
           "flag_2": "(q.property('ia:dye') < 0) && (q.distance_from_camera < 32)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex0": [
+            "Texture.tex0",
+            "Texture.tex0_vm",
+            "Texture.tex0_vn",
+            "Texture.tex0_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_autocannon_0": {
       "geometry": "Geometry.wpn_autocannon_0",
@@ -257,7 +297,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_autocannon"
+        "Array.ia_vv_wpn_autocannon[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -287,7 +327,17 @@
         {
           "w0_autocannon_0_roll": "(q.property('ia:wpn0') == 9 || q.property('ia:wpn0') == 10 || q.property('ia:wpn0') == 11)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_autocannon": [
+            "Texture.wpn_autocannon",
+            "Texture.wpn_autocannon_vm",
+            "Texture.wpn_autocannon_vn",
+            "Texture.wpn_autocannon_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_bb_0": {
       "geometry": "Geometry.wpn_bb_0",
@@ -297,7 +347,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_bb"
+        "Array.ia_vv_wpn_bb[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -321,7 +371,17 @@
         {
           "w0_bb_1_base": "q.property('ia:wpn0') == 4"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_bb": [
+            "Texture.wpn_bb",
+            "Texture.wpn_bb_vm",
+            "Texture.wpn_bb_vn",
+            "Texture.wpn_bb_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_bomb_rack_0": {
       "geometry": "Geometry.wpn_bomb_rack_0",
@@ -331,7 +391,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_bomb_rack"
+        "Array.ia_vv_wpn_bomb_rack[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -361,7 +421,17 @@
         {
           "w0_bomb_rack_1_base_2": "(q.property('ia:wpn0') == 18 || q.property('ia:wpn0') == 19 || q.property('ia:wpn0') == 20)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_bomb_rack": [
+            "Texture.wpn_bomb_rack",
+            "Texture.wpn_bomb_rack_vm",
+            "Texture.wpn_bomb_rack_vn",
+            "Texture.wpn_bomb_rack_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_cannon_0": {
       "geometry": "Geometry.wpn_cannon_0",
@@ -371,7 +441,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_cannon"
+        "Array.ia_vv_wpn_cannon[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -401,7 +471,17 @@
         {
           "w0_cannon_1_base_2": "(q.property('ia:wpn0') == 12 || q.property('ia:wpn0') == 13 || q.property('ia:wpn0') == 14)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_cannon": [
+            "Texture.wpn_cannon",
+            "Texture.wpn_cannon_vm",
+            "Texture.wpn_cannon_vn",
+            "Texture.wpn_cannon_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_dispenser_0": {
       "geometry": "Geometry.wpn_dispenser_0",
@@ -411,7 +491,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_dispenser"
+        "Array.ia_vv_wpn_dispenser[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -441,7 +521,17 @@
         {
           "w0_dispenser_1_base_2": "(q.property('ia:wpn0') == 25 || q.property('ia:wpn0') == 26)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_dispenser": [
+            "Texture.wpn_dispenser",
+            "Texture.wpn_dispenser_vm",
+            "Texture.wpn_dispenser_vn",
+            "Texture.wpn_dispenser_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_hc_0": {
       "geometry": "Geometry.wpn_hc_0",
@@ -451,7 +541,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_hc"
+        "Array.ia_vv_wpn_hc[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -475,7 +565,17 @@
         {
           "w0_hc_1_base": "q.property('ia:wpn0') == 2"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_hc": [
+            "Texture.wpn_hc",
+            "Texture.wpn_hc_vm",
+            "Texture.wpn_hc_vn",
+            "Texture.wpn_hc_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_machine_gun_0": {
       "geometry": "Geometry.wpn_machine_gun_0",
@@ -485,7 +585,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_machine_gun"
+        "Array.ia_vv_wpn_machine_gun[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -515,7 +615,17 @@
         {
           "w0_machine_gun_0_roll": "(q.property('ia:wpn0') == 6 || q.property('ia:wpn0') == 7 || q.property('ia:wpn0') == 8)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_machine_gun": [
+            "Texture.wpn_machine_gun",
+            "Texture.wpn_machine_gun_vm",
+            "Texture.wpn_machine_gun_vn",
+            "Texture.wpn_machine_gun_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_missile_rail_0": {
       "geometry": "Geometry.wpn_missile_rail_0",
@@ -525,7 +635,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_missile_rail"
+        "Array.ia_vv_wpn_missile_rail[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -555,7 +665,17 @@
         {
           "w0_missile_rail_1_base_2": "(q.property('ia:wpn0') == 23 || q.property('ia:wpn0') == 24)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_missile_rail": [
+            "Texture.wpn_missile_rail",
+            "Texture.wpn_missile_rail_vm",
+            "Texture.wpn_missile_rail_vn",
+            "Texture.wpn_missile_rail_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_rc_0": {
       "geometry": "Geometry.wpn_rc_0",
@@ -565,7 +685,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_rc"
+        "Array.ia_vv_wpn_rc[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -592,7 +712,17 @@
         {
           "w0_rc_0_roll": "q.property('ia:wpn0') == 1"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_rc": [
+            "Texture.wpn_rc",
+            "Texture.wpn_rc_vm",
+            "Texture.wpn_rc_vn",
+            "Texture.wpn_rc_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_rocket_pod_0": {
       "geometry": "Geometry.wpn_rocket_pod_0",
@@ -602,7 +732,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_rocket_pod"
+        "Array.ia_vv_wpn_rocket_pod[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -632,7 +762,17 @@
         {
           "w0_rocket_pod_1_base_2": "(q.property('ia:wpn0') == 15 || q.property('ia:wpn0') == 16 || q.property('ia:wpn0') == 17)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_rocket_pod": [
+            "Texture.wpn_rocket_pod",
+            "Texture.wpn_rocket_pod_vm",
+            "Texture.wpn_rocket_pod_vn",
+            "Texture.wpn_rocket_pod_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_tpd_0": {
       "geometry": "Geometry.wpn_tpd_0",
@@ -642,7 +782,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_tpd"
+        "Array.ia_vv_wpn_tpd[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -672,7 +812,17 @@
         {
           "w0_tpd_1_base_2": "(q.property('ia:wpn0') == 21 || q.property('ia:wpn0') == 22)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_tpd": [
+            "Texture.wpn_tpd",
+            "Texture.wpn_tpd_vm",
+            "Texture.wpn_tpd_vn",
+            "Texture.wpn_tpd_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.airship.wpn_ts_0": {
       "geometry": "Geometry.wpn_ts_0",
@@ -682,7 +832,7 @@
         }
       ],
       "textures": [
-        "Texture.wpn_ts"
+        "Array.ia_vv_wpn_ts[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -709,7 +859,17 @@
         {
           "w0_ts_0_roll": "q.property('ia:wpn0') == 3"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_wpn_ts": [
+            "Texture.wpn_ts",
+            "Texture.wpn_ts_vm",
+            "Texture.wpn_ts_vn",
+            "Texture.wpn_ts_v0"
+          ]
+        }
+      }
     }
   }
 }

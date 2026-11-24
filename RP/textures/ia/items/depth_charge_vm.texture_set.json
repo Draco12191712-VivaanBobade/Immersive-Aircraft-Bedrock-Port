@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "depth_charge_vm",
+    "metalness_emissive_roughness": "depth_charge_mers"
+  }
+}

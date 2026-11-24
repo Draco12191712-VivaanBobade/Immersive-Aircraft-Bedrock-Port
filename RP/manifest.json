@@ -33,5 +33,43 @@
   ],
   "capabilities": [
     "pbr"
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "Vibrant Visuals"
+    },
+    {
+      "type": "toggle",
+      "name": "ia:vv_mers",
+      "text": "Shiny metal (MERS maps)",
+      "default": true
+    },
+    {
+      "type": "dropdown",
+      "name": "ia:vv_surface",
+      "text": "Surface detail",
+      "options": [
+        {
+          "name": "normal",
+          "text": "Normal maps"
+        },
+        {
+          "name": "none",
+          "text": "None (flat)"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "label",
+      "text": "Items"
+    },
+    {
+      "type": "toggle",
+      "name": "ia:items_3d",
+      "text": "3D items in hand",
+      "default": false
+    }
   ]
 }

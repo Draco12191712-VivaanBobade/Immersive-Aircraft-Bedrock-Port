@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "eco_engine_vm",
+    "metalness_emissive_roughness": "eco_engine_mers"
+  }
+}

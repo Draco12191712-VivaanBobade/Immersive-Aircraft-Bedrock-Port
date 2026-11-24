@@ -7,7 +7,10 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/ia/entity/ordnance"
+        "default": "textures/ia/entity/ordnance",
+        "default_vm": "textures/ia/entity/ordnance_vm",
+        "default_vn": "textures/ia/entity/ordnance_vn",
+        "default_v0": "textures/ia/entity/ordnance_v0"
       },
       "geometry": {
         "default": "geometry.ia.ordnance"

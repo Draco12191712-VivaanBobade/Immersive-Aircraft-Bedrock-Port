@@ -7,7 +7,10 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/ia/entity/bullet"
+        "default": "textures/ia/entity/bullet",
+        "default_vm": "textures/ia/entity/bullet_vm",
+        "default_vn": "textures/ia/entity/bullet_vn",
+        "default_v0": "textures/ia/entity/bullet_v0"
       },
       "geometry": {
         "default": "geometry.ia.empty"

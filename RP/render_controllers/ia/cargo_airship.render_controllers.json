@@ -49,7 +49,7 @@
         }
       ],
       "textures": [
-        "Texture.tex1"
+        "Array.ia_vv_tex1[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -79,7 +79,17 @@
         {
           "flag": "(q.property('ia:dye') >= 0) && (q.distance_from_camera >= 32)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex1": [
+            "Texture.tex1",
+            "Texture.tex1_vm",
+            "Texture.tex1_vn",
+            "Texture.tex1_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.cargo_airship.main_0": {
       "geometry": "Geometry.main_0",
@@ -89,7 +99,7 @@
         }
       ],
       "textures": [
-        "Texture.tex0"
+        "Array.ia_vv_tex0[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -116,7 +126,17 @@
         {
           "flag": "q.distance_from_camera >= 32"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex0": [
+            "Texture.tex0",
+            "Texture.tex0_vm",
+            "Texture.tex0_vn",
+            "Texture.tex0_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.cargo_airship.sails_0": {
       "geometry": "Geometry.sails_0",
@@ -126,7 +146,7 @@
         }
       ],
       "textures": [
-        "Texture.tex0"
+        "Array.ia_vv_tex0[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -153,7 +173,17 @@
         {
           "flag": "q.distance_from_camera >= 32"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex0": [
+            "Texture.tex0",
+            "Texture.tex0_vm",
+            "Texture.tex0_vn",
+            "Texture.tex0_v0"
+          ]
+        }
+      }
     },
     "controller.render.ia.cargo_airship.uncolored_0": {
       "geometry": "Geometry.uncolored_0",
@@ -163,7 +193,7 @@
         }
       ],
       "textures": [
-        "Texture.tex0"
+        "Array.ia_vv_tex0[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
       ],
       "is_hurt_color": {
         "r": 0.0,
@@ -187,7 +217,17 @@
         {
           "flag": "(q.property('ia:dye') < 0) && (q.distance_from_camera >= 32)"
         }
-      ]
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_tex0": [
+            "Texture.tex0",
+            "Texture.tex0_vm",
+            "Texture.tex0_vn",
+            "Texture.tex0_v0"
+          ]
+        }
+      }
     }
   }
 }

@@ -9,8 +9,18 @@
         }
       ],
       "textures": [
-        "Texture.default"
-      ]
+        "Array.ia_vv_default[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_default": [
+            "Texture.default",
+            "Texture.default_vm",
+            "Texture.default_vn",
+            "Texture.default_v0"
+          ]
+        }
+      }
     }
   }
 }

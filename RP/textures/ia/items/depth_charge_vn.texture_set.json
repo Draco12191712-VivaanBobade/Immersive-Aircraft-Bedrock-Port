@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "depth_charge_vn",
+    "normal": "depth_charge_normal"
+  }
+}
