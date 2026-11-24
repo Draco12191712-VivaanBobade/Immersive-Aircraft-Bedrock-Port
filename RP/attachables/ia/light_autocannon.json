@@ -10,20 +10,22 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/ia/items/light_autocannon",
-        "vm": "textures/ia/items/light_autocannon_vm",
-        "vn": "textures/ia/items/light_autocannon_vn",
-        "v0": "textures/ia/items/light_autocannon_v0"
+        "default": "textures/ia/entity/autocannon",
+        "vm": "textures/ia/entity/autocannon_vm",
+        "vn": "textures/ia/entity/autocannon_vn",
+        "v0": "textures/ia/entity/autocannon_v0"
       },
       "geometry": {
-        "default": "geometry.ia.item3d.light_autocannon"
+        "weapon": "geometry.ia.mini.light_autocannon"
       },
       "animations": {
-        "pose": "animation.ia.item3d.pose",
-        "react": "animation.ia.item3d.weapon"
+        "pose": "animation.ia.mini.pose",
+        "size": "animation.ia.mini.size",
+        "react": "animation.ia.mini.weapon"
       },
       "scripts": {
         "pre_animation": [
+          "v.ia_k = 0.35417;",
           "v.ia_cy = q.camera_rotation(1);",
           "v.ia_d = math.clamp(math.mod(v.ia_cy - (v.ia_py ?? v.ia_cy) + 540, 360) - 180, -25, 25);",
           "v.ia_py = v.ia_cy;",
@@ -33,15 +35,17 @@
           "v.ia_pm = v.ia_dm;",
           "v.ia_mv = math.lerp(v.ia_mv ?? 0, math.clamp(v.ia_v / 4.3, 0, 1), 0.2);",
           "v.ia_wb = math.sin(v.ia_dm * 38.17) * v.ia_mv;",
-          "v.ia_sp = math.lerp(v.ia_sp ?? 0, v.ia_v > 5.0 ? 1 : 0, 0.1);"
+          "v.ia_sp = math.lerp(v.ia_sp ?? 0, v.ia_v > 5.0 ? 1 : 0, 0.1);",
+          "v.ia_spin = (v.ia_spin ?? 0) + q.delta_time * (3 + 12 * v.ia_mv);"
         ],
         "animate": [
           "pose",
+          "size",
           "react"
         ]
       },
       "render_controllers": [
-        "controller.render.ia.item3d"
+        "controller.render.ia.mini.weapon"
       ]
     }
   }

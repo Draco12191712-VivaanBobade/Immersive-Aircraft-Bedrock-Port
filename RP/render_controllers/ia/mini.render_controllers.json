@@ -1,0 +1,89 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.ia.mini.main": {
+      "arrays": {
+        "textures": {
+          "Array.ia_vv": [
+            "Texture.default",
+            "Texture.vm",
+            "Texture.vn",
+            "Texture.v0"
+          ]
+        }
+      },
+      "geometry": "Geometry.main",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+      ]
+    },
+    "controller.render.ia.mini.sails": {
+      "arrays": {
+        "textures": {
+          "Array.ia_vv": [
+            "Texture.default",
+            "Texture.vm",
+            "Texture.vn",
+            "Texture.v0"
+          ]
+        }
+      },
+      "geometry": "Geometry.sails",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+      ]
+    },
+    "controller.render.ia.mini.uncolored": {
+      "arrays": {
+        "textures": {
+          "Array.ia_vv": [
+            "Texture.default",
+            "Texture.vm",
+            "Texture.vn",
+            "Texture.v0"
+          ]
+        }
+      },
+      "geometry": "Geometry.uncolored",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+      ]
+    },
+    "controller.render.ia.mini.weapon": {
+      "arrays": {
+        "textures": {
+          "Array.ia_vv": [
+            "Texture.default",
+            "Texture.vm",
+            "Texture.vn",
+            "Texture.v0"
+          ]
+        }
+      },
+      "geometry": "Geometry.weapon",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+      ]
+    }
+  }
+}

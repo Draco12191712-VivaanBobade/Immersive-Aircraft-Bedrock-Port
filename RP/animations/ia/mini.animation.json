@@ -1,0 +1,219 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ia.mini.pose": {
+      "loop": true,
+      "bones": {
+        "ia_held": {
+          "rotation": [
+            "c.is_first_person ? 27.0 : -20.0",
+            "c.is_first_person ? -39.0 : -32.5",
+            "c.is_first_person ? -159.0 : 0.0"
+          ],
+          "position": [
+            "0",
+            "c.is_first_person ? 14.5 : 19.0",
+            "c.is_first_person ? 2.4 : -4.0"
+          ],
+          "scale": "c.is_first_person ? 1.0 : 0.65"
+        }
+      }
+    },
+    "animation.ia.mini.size": {
+      "loop": true,
+      "bones": {
+        "ia_mini": {
+          "scale": "v.ia_k"
+        }
+      }
+    },
+    "animation.ia.mini.aircraft": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "0",
+            "math.sin(q.life_time * 120) * 0.4 + v.ia_wb * 0.3",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 2 - math.clamp(q.camera_rotation(0), -60, 60) * 0.25",
+            "v.ia_sw * 0.4",
+            "-v.ia_sw * 2.5"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.weapon": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.03",
+            "v.ia_wb * 0.25 - v.ia_sp * 0.8",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 2 + v.ia_sp * 18",
+            "0",
+            "v.ia_sw * 0.6"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.biplane.spin": {
+      "loop": true,
+      "bones": {
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 100"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.gyrodyne.spin": {
+      "loop": true,
+      "bones": {
+        "propeller": {
+          "rotation": [
+            0,
+            "-(v.ia_spin * 100)",
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.airship.spin": {
+      "loop": true,
+      "bones": {
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 80"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.cargo_airship.spin": {
+      "loop": true,
+      "bones": {
+        "small_propeller_left": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 120"
+          ]
+        },
+        "small_propeller_right": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 120"
+          ]
+        },
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 80"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.warship.spin": {
+      "loop": true,
+      "bones": {
+        "propeller": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 40"
+          ]
+        },
+        "propeller2": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 40"
+          ]
+        },
+        "propeller4": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 40"
+          ]
+        },
+        "propeller3": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 40"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.quadrocopter.spin": {
+      "loop": true,
+      "bones": {
+        "propellor_0": {
+          "rotation": [
+            0,
+            "-(v.ia_spin * 150)",
+            0.0
+          ]
+        },
+        "propellor_3": {
+          "rotation": [
+            0,
+            "-(v.ia_spin * 150)",
+            0.0
+          ]
+        },
+        "propellor_2": {
+          "rotation": [
+            0,
+            "-(-v.ia_spin * 150)",
+            0.0
+          ]
+        },
+        "propellor_1": {
+          "rotation": [
+            0,
+            "-(-v.ia_spin * 150)",
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.bamboo_hopper.spin": {
+      "loop": true,
+      "bones": {
+        "propellor_center": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 60"
+          ]
+        },
+        "propellor_left": {
+          "rotation": [
+            0,
+            0,
+            "v.ia_spin * 100"
+          ]
+        },
+        "propellor_right": {
+          "rotation": [
+            0,
+            0,
+            "-v.ia_spin * 100"
+          ]
+        }
+      }
+    }
+  }
+}
