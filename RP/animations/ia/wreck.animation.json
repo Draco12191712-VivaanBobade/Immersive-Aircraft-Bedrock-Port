@@ -1,0 +1,17 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ia.wreck.tilt": {
+      "loop": true,
+      "bones": {
+        "ia_root": {
+          "rotation": [
+            "(q.property('ia:wr') - 3.5) * 4",
+            "0",
+            "(math.mod(q.property('ia:wr') * 3, 8) - 3.5) * 3"
+          ]
+        }
+      }
+    }
+  }
+}

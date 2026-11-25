@@ -1,0 +1,90 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:wreck",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "t0": "textures/ia/entity/biplane",
+        "t0_vm": "textures/ia/entity/biplane_vm",
+        "t0_vn": "textures/ia/entity/biplane_vn",
+        "t0_v0": "textures/ia/entity/biplane_v0",
+        "t0_vmh": "textures/ia/entity/biplane_vmh",
+        "t0_vh": "textures/ia/entity/biplane_vh",
+        "t1": "textures/ia/entity/gyrodyne",
+        "t1_vm": "textures/ia/entity/gyrodyne_vm",
+        "t1_vn": "textures/ia/entity/gyrodyne_vn",
+        "t1_v0": "textures/ia/entity/gyrodyne_v0",
+        "t1_vmh": "textures/ia/entity/gyrodyne_vmh",
+        "t1_vh": "textures/ia/entity/gyrodyne_vh",
+        "t2": "textures/ia/entity/quadrocopter",
+        "t2_vm": "textures/ia/entity/quadrocopter_vm",
+        "t2_vn": "textures/ia/entity/quadrocopter_vn",
+        "t2_v0": "textures/ia/entity/quadrocopter_v0",
+        "t2_vmh": "textures/ia/entity/quadrocopter_vmh",
+        "t2_vh": "textures/ia/entity/quadrocopter_vh",
+        "t3": "textures/ia/entity/bamboo_hopper",
+        "t3_vm": "textures/ia/entity/bamboo_hopper_vm",
+        "t3_vn": "textures/ia/entity/bamboo_hopper_vn",
+        "t3_v0": "textures/ia/entity/bamboo_hopper_v0",
+        "t3_vmh": "textures/ia/entity/bamboo_hopper_vmh",
+        "t3_vh": "textures/ia/entity/bamboo_hopper_vh",
+        "t4": "textures/ia/entity/airship",
+        "t4_vm": "textures/ia/entity/airship_vm",
+        "t4_vn": "textures/ia/entity/airship_vn",
+        "t4_v0": "textures/ia/entity/airship_v0",
+        "t4_vmh": "textures/ia/entity/airship_vmh",
+        "t4_vh": "textures/ia/entity/airship_vh",
+        "t5": "textures/ia/entity/cargo_airship",
+        "t5_vm": "textures/ia/entity/cargo_airship_vm",
+        "t5_vn": "textures/ia/entity/cargo_airship_vn",
+        "t5_v0": "textures/ia/entity/cargo_airship_v0",
+        "t5_vmh": "textures/ia/entity/cargo_airship_vmh",
+        "t5_vh": "textures/ia/entity/cargo_airship_vh",
+        "t6": "textures/ia/entity/warship",
+        "t6_vm": "textures/ia/entity/warship_vm",
+        "t6_vn": "textures/ia/entity/warship_vn",
+        "t6_v0": "textures/ia/entity/warship_v0",
+        "t6_vmh": "textures/ia/entity/warship_vmh",
+        "t6_vh": "textures/ia/entity/warship_vh"
+      },
+      "geometry": {
+        "g0": "geometry.ia.wreck.biplane.back",
+        "g1": "geometry.ia.wreck.biplane.front",
+        "g2": "geometry.ia.wreck.biplane.wings",
+        "g3": "geometry.ia.wreck.gyrodyne.back",
+        "g4": "geometry.ia.wreck.gyrodyne.front",
+        "g5": "geometry.ia.wreck.quadrocopter.back",
+        "g6": "geometry.ia.wreck.quadrocopter.front",
+        "g7": "geometry.ia.wreck.quadrocopter.wings",
+        "g8": "geometry.ia.wreck.bamboo_hopper.back",
+        "g9": "geometry.ia.wreck.bamboo_hopper.front",
+        "g10": "geometry.ia.wreck.bamboo_hopper.wings",
+        "g11": "geometry.ia.wreck.airship.balloon_back",
+        "g12": "geometry.ia.wreck.airship.balloon_front",
+        "g13": "geometry.ia.wreck.airship.gondola",
+        "g14": "geometry.ia.wreck.airship.rigging",
+        "g15": "geometry.ia.wreck.cargo_airship.balloon_back",
+        "g16": "geometry.ia.wreck.cargo_airship.balloon_front",
+        "g17": "geometry.ia.wreck.cargo_airship.gondola",
+        "g18": "geometry.ia.wreck.cargo_airship.rigging",
+        "g19": "geometry.ia.wreck.warship.back",
+        "g20": "geometry.ia.wreck.warship.front",
+        "g21": "geometry.ia.wreck.warship.wings"
+      },
+      "animations": {
+        "tilt": "animation.ia.wreck.tilt"
+      },
+      "scripts": {
+        "animate": [
+          "tilt"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ia.wreck"
+      ]
+    }
+  }
+}

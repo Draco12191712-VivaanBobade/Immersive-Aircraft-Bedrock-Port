@@ -1,0 +1,98 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ia:wreck",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "properties": {
+        "ia:wk": {
+          "type": "int",
+          "range": [
+            0,
+            21
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "ia:wt": {
+          "type": "int",
+          "range": [
+            0,
+            6
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "ia:wr": {
+          "type": "int",
+          "range": [
+            0,
+            7
+          ],
+          "default": 0,
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      "ia:gone": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "ia_wreck",
+          "inanimate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 0.5
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "breathes_water": true,
+        "breathes_air": true,
+        "breathes_lava": true,
+        "breathes_solids": true
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "time": 150,
+        "randomInterval": false,
+        "time_down_event": {
+          "event": "ia:expire",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "ia:expire": {
+        "add": {
+          "component_groups": [
+            "ia:gone"
+          ]
+        }
+      }
+    }
+  }
+}
