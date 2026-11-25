@@ -18,7 +18,8 @@
               "ia:gyrodyne",
               "ia:quadrocopter",
               "ia:bamboo_hopper",
-              "ia:aircraft_finder"
+              "ia:aircraft_finder",
+              "ia:aircraft_settings"
             ]
           },
           {

@@ -208,6 +208,9 @@
     },
     "ia_searchlight": {
       "textures": "textures/ia/items/searchlight"
+    },
+    "ia_aircraft_settings": {
+      "textures": "textures/ia/items/aircraft_settings"
     }
   }
 }
