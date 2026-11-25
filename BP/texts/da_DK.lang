@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Vindpåvirkning under nedbør
 option.immersive_aircraft.windThunderWeather=Vindpåvirkning under tordenvejr
 option.immersive_aircraft.allowPvp=Luftkampe: våben rammer andre spillere og deres luftfartøjer.
 option.immersive_aircraft.nosedives=Styrtdyk: uden brændstof eller skudt ned styrtdykker fly lodret og eksploderer ved nedslaget (fra: de glider ned, eller eksploderer med det samme, når de skydes ned).
-ia.settings.note=Minecraft kan endnu ikke oversætte navnene på indstillingerne nedenfor. Du kan også ændre alle indstillinger på dit sprog i spillet: genstanden "Aircraft Settings" → "World settings (operators)".
+ia.settings.note=Minecraft kan endnu ikke oversætte navnene på indstillingerne nedenfor. Du kan også ændre alle indstillinger på dit sprog i spillet: genstanden "Luftfartøjsindstillinger" → "Verdensindstillinger (operatører)".

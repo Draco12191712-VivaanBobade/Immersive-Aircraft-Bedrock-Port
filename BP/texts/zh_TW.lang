@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=降雨時的風。
 option.immersive_aircraft.windThunderWeather=打雷時有更大的風。
 option.immersive_aircraft.allowPvp=空戰：武器會擊中其他玩家及其載具。
 option.immersive_aircraft.nosedives=俯衝：燃料耗盡或被擊落時，飛機會垂直俯衝並在撞擊時爆炸（關閉：滑翔下降，或被擊落時立即爆炸）。
-ia.settings.note=Minecraft 目前還無法翻譯下方選項的名稱。你也可以在遊戲中用你的語言修改每個選項：「Aircraft Settings」物品 →「World settings (operators)」。
+ia.settings.note=Minecraft 目前還無法翻譯下方選項的名稱。你也可以在遊戲中用你的語言修改每個選項：「載具設定」物品 →「世界設定（管理員）」。

@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Vítr při srážkách.
 option.immersive_aircraft.windThunderWeather=Extra vítr při bouřce.
 option.immersive_aircraft.allowPvp=Vzdušné souboje: zbraně zasahují ostatní hráče a jejich letadla.
 option.immersive_aircraft.nosedives=Střemhlavé pády: bez paliva nebo sestřelená letadla padají kolmo dolů a při dopadu vybuchnou (vyp.: klouzají dolů, nebo po sestřelení hned vybuchnou).
-ia.settings.note=Minecraft zatím neumí přeložit názvy možností níže. Každou možnost můžeš změnit ve svém jazyce i ve hře: předmět „Aircraft Settings" → „World settings (operators)".
+ia.settings.note=Minecraft zatím neumí přeložit názvy možností níže. Každou možnost můžeš změnit ve svém jazyce i ve hře: předmět „Nastavení letadel" → „Nastavení světa (operátoři)".

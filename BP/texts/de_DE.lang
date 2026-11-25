@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Wind bei Niederschlag.
 option.immersive_aircraft.windThunderWeather=Extra Wind bei Gewitter.
 option.immersive_aircraft.allowPvp=Luftkämpfe: Waffen treffen andere Spieler und ihre Fluggeräte.
 option.immersive_aircraft.nosedives=Sturzflüge: Ohne Treibstoff oder abgeschossen stürzen Flugzeuge senkrecht ab und explodieren beim Aufprall (aus: Sie gleiten nach unten oder explodieren beim Abschuss sofort).
-ia.settings.note=Minecraft kann die Namen der Optionen unten noch nicht übersetzen. Im Spiel kannst du jede Option auch in deiner Sprache ändern: Gegenstand „Aircraft Settings" → „World settings (operators)".
+ia.settings.note=Minecraft kann die Namen der Optionen unten noch nicht übersetzen. Im Spiel kannst du jede Option auch in deiner Sprache ändern: Gegenstand „Fluggerät-Einstellungen" → „Welteinstellungen (Operatoren)".

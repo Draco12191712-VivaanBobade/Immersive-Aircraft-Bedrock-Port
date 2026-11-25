@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Angin pada saat hujan.
 option.immersive_aircraft.windThunderWeather=Angin ekstra saat guntur.
 option.immersive_aircraft.allowPvp=Pertempuran udara: senjata mengenai pemain lain dan pesawat mereka.
 option.immersive_aircraft.nosedives=Menukik: kehabisan bahan bakar atau tertembak jatuh, pesawat menukik lurus ke bawah dan meledak saat menghantam (mati: pesawat meluncur turun, atau langsung meledak saat ditembak jatuh).
-ia.settings.note=Minecraft belum bisa menerjemahkan nama opsi di bawah. Kamu juga bisa mengubah setiap opsi dalam bahasamu di dalam game: item "Aircraft Settings" → "World settings (operators)".
+ia.settings.note=Minecraft belum bisa menerjemahkan nama opsi di bawah. Kamu juga bisa mengubah setiap opsi dalam bahasamu di dalam game: item "Pengaturan Pesawat" → "Pengaturan dunia (operator)".

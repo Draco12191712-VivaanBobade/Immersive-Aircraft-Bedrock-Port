@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Szél az esőzéskor.
 option.immersive_aircraft.windThunderWeather=Extra szél a mennydörgésnél.
 option.immersive_aircraft.allowPvp=Légi csaták: a fegyverek eltalálják a többi játékost és a légi járműveiket.
 option.immersive_aircraft.nosedives=Zuhanórepülés: üzemanyag nélkül vagy lelőve a repülőgépek függőlegesen lezuhannak, és becsapódáskor felrobbannak (ki: lesiklanak, vagy lelövéskor azonnal felrobbannak).
-ia.settings.note=A Minecraft még nem tudja lefordítani az alábbi beállítások nevét. Minden beállítást a saját nyelveden is módosíthatsz a játékban: „Aircraft Settings" tárgy → „World settings (operators)".
+ia.settings.note=A Minecraft még nem tudja lefordítani az alábbi beállítások nevét. Minden beállítást a saját nyelveden is módosíthatsz a játékban: „Légi jármű beállítások" tárgy → „Világbeállítások (operátorok)".

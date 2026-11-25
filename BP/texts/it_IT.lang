@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Vento alle precipitazioni.
 option.immersive_aircraft.windThunderWeather=Vento extra al tuono.
 option.immersive_aircraft.allowPvp=Battaglie aeree: le armi colpiscono gli altri giocatori e i loro velivoli.
 option.immersive_aircraft.nosedives=Picchiate: senza carburante o abbattuti, gli aerei scendono in picchiata verticale ed esplodono all'impatto (disattivato: planano verso il basso, o esplodono subito se abbattuti).
-ia.settings.note=Minecraft non può ancora tradurre i nomi delle opzioni qui sotto. Puoi anche modificare ogni opzione nella tua lingua nel gioco: oggetto "Aircraft Settings" → "World settings (operators)".
+ia.settings.note=Minecraft non può ancora tradurre i nomi delle opzioni qui sotto. Puoi anche modificare ogni opzione nella tua lingua nel gioco: oggetto "Impostazioni dei velivoli" → "Impostazioni del mondo (operatori)".

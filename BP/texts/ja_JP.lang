@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=雨天時の風による影響
 option.immersive_aircraft.windThunderWeather=雷雨時の風による影響
 option.immersive_aircraft.allowPvp=空中戦：武器が他のプレイヤーとその機体に当たる。
 option.immersive_aircraft.nosedives=急降下：燃料切れや撃墜されると、飛行機は真下に急降下して衝突時に爆発する（オフ：滑空して降りるか、撃墜時にすぐ爆発する）。
-ia.settings.note=Minecraft はまだ下の設定名を翻訳できません。すべての設定はゲーム内でも自分の言語で変更できます：「Aircraft Settings」アイテム →「World settings (operators)」。
+ia.settings.note=Minecraft はまだ下の設定名を翻訳できません。すべての設定はゲーム内でも自分の言語で変更できます：「乗り物の設定」アイテム →「ワールド設定（オペレーター）」。

@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Vindpåverkan vid nederbörd
 option.immersive_aircraft.windThunderWeather=Vindpåverkan vid åskväder
 option.immersive_aircraft.allowPvp=Luftstrider: vapen träffar andra spelare och deras flygfarkoster.
 option.immersive_aircraft.nosedives=Störtdykningar: utan bränsle eller nedskjutna dyker flygplan rakt ner och exploderar vid nedslaget (av: de glider ner, eller exploderar direkt när de skjuts ner).
-ia.settings.note=Minecraft kan inte översätta namnen på alternativen nedan än. Du kan också ändra varje alternativ på ditt språk i spelet: föremålet "Aircraft Settings" → "World settings (operators)".
+ia.settings.note=Minecraft kan inte översätta namnen på alternativen nedan än. Du kan också ändra varje alternativ på ditt språk i spelet: föremålet "Flygfarkostinställningar" → "Världsinställningar (operatörer)".

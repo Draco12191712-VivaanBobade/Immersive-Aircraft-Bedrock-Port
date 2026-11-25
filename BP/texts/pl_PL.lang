@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Wiatr podczas opadów.
 option.immersive_aircraft.windThunderWeather=Dodatkowy wiatr podczas burzy.
 option.immersive_aircraft.allowPvp=Bitwy powietrzne: broń trafia innych graczy i ich statki powietrzne.
 option.immersive_aircraft.nosedives=Lot nurkowy: bez paliwa lub zestrzelone samoloty spadają pionowo w dół i wybuchają przy uderzeniu (wył.: szybują w dół lub od razu wybuchają po zestrzeleniu).
-ia.settings.note=Minecraft nie potrafi jeszcze przetłumaczyć nazw opcji poniżej. Każdą opcję możesz też zmienić w swoim języku w grze: przedmiot „Aircraft Settings" → „World settings (operators)".
+ia.settings.note=Minecraft nie potrafi jeszcze przetłumaczyć nazw opcji poniżej. Każdą opcję możesz też zmienić w swoim języku w grze: przedmiot „Ustawienia statków" → „Ustawienia świata (operatorzy)".

@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Vindpåvirkning under nedbør
 option.immersive_aircraft.windThunderWeather=Vindpåvirkning under tordenvær
 option.immersive_aircraft.allowPvp=Luftkamper: våpen treffer andre spillere og luftfartøyene deres.
 option.immersive_aircraft.nosedives=Stup: uten drivstoff eller skutt ned stuper fly rett ned og eksploderer i nedslaget (av: de glir ned, eller eksploderer med en gang når de skytes ned).
-ia.settings.note=Minecraft kan ikke oversette navnene på innstillingene nedenfor ennå. Du kan også endre alle innstillingene på ditt språk i spillet: gjenstanden "Aircraft Settings" → "World settings (operators)".
+ia.settings.note=Minecraft kan ikke oversette navnene på innstillingene nedenfor ennå. Du kan også endre alle innstillingene på ditt språk i spillet: gjenstanden "Luftfartøyinnstillinger" → "Verdensinnstillinger (operatører)".

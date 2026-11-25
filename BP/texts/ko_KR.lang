@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=강우 시 바람.
 option.immersive_aircraft.windThunderWeather=천둥에 추가 바람.
 option.immersive_aircraft.allowPvp=공중전: 무기가 다른 플레이어와 그들의 항공기에 맞습니다.
 option.immersive_aircraft.nosedives=급강하: 연료가 떨어지거나 격추되면 비행기가 수직으로 급강하하여 충돌할 때 폭발합니다 (끔: 활공하며 내려가거나 격추되면 즉시 폭발합니다).
-ia.settings.note=Minecraft는 아직 아래 옵션 이름을 번역할 수 없습니다. 모든 옵션은 게임 안에서도 내 언어로 바꿀 수 있습니다: "Aircraft Settings" 아이템 → "World settings (operators)".
+ia.settings.note=Minecraft는 아직 아래 옵션 이름을 번역할 수 없습니다. 모든 옵션은 게임 안에서도 내 언어로 바꿀 수 있습니다: "항공기 설정" 아이템 → "월드 설정(관리자)".

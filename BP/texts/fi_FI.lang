@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Tuuli sateella.
 option.immersive_aircraft.windThunderWeather=Lisätuulta ukkosella.
 option.immersive_aircraft.allowPvp=Ilmataistelut: aseet osuvat muihin pelaajiin ja heidän ilma-aluksiinsa.
 option.immersive_aircraft.nosedives=Syöksyt: polttoaineen loppuessa tai alas ammuttuina lentokoneet syöksyvät suoraan alas ja räjähtävät osuessaan maahan (pois: ne liitävät alas, tai räjähtävät heti alas ammuttuina).
-ia.settings.note=Minecraft ei vielä osaa kääntää alla olevien asetusten nimiä. Voit myös muuttaa jokaista asetusta omalla kielelläsi pelissä: esine "Aircraft Settings" → "World settings (operators)".
+ia.settings.note=Minecraft ei vielä osaa kääntää alla olevien asetusten nimiä. Voit myös muuttaa jokaista asetusta omalla kielelläsi pelissä: esine "Ilma-alusten asetukset" → "Maailman asetukset (operaattorit)".

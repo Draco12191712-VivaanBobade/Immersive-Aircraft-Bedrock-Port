@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Wind bij regen.
 option.immersive_aircraft.windThunderWeather=Extra wind bij onweer.
 option.immersive_aircraft.allowPvp=Luchtgevechten: wapens raken andere spelers en hun luchtvaartuigen.
 option.immersive_aircraft.nosedives=Duikvluchten: zonder brandstof of neergeschoten duiken vliegtuigen recht naar beneden en ontploffen bij de inslag (uit: ze glijden naar beneden, of ontploffen meteen als ze worden neergeschoten).
-ia.settings.note=Minecraft kan de namen van de opties hieronder nog niet vertalen. Je kunt elke optie ook in het spel in je eigen taal wijzigen: voorwerp "Aircraft Settings" → "World settings (operators)".
+ia.settings.note=Minecraft kan de namen van de opties hieronder nog niet vertalen. Je kunt elke optie ook in het spel in je eigen taal wijzigen: voorwerp "Luchtvaartuiginstellingen" → "Wereldinstellingen (operators)".

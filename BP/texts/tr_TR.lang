@@ -51,4 +51,4 @@ option.immersive_aircraft.windRainWeather=Yağışta rüzgar.
 option.immersive_aircraft.windThunderWeather=Fırtınada ekstra rüzgar.
 option.immersive_aircraft.allowPvp=Hava savaşları: silahlar diğer oyunculara ve hava araçlarına isabet eder.
 option.immersive_aircraft.nosedives=Pike dalışlar: yakıtı bittiğinde veya vurulduğunda uçaklar dimdik aşağı dalar ve çarpınca patlar (kapalı: süzülerek iner ya da vurulunca hemen patlar).
-ia.settings.note=Minecraft aşağıdaki seçeneklerin adlarını henüz çeviremiyor. Her seçeneği oyun içinde kendi dilinde de değiştirebilirsin: "Aircraft Settings" eşyası → "World settings (operators)".
+ia.settings.note=Minecraft aşağıdaki seçeneklerin adlarını henüz çeviremiyor. Her seçeneği oyun içinde kendi dilinde de değiştirebilirsin: "Hava Aracı Ayarları" eşyası → "Dünya ayarları (operatörler)".
