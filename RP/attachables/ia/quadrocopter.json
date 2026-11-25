@@ -2,10 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:attachable": {
     "description": {
-      "identifier": "ia:quadrocopter.ia3d",
-      "item": {
-        "ia:quadrocopter": "q.is_pack_setting_enabled('ia:items_3d')"
-      },
+      "identifier": "ia:quadrocopter",
       "materials": {
         "default": "entity_alphatest"
       },
@@ -15,15 +12,18 @@
         "vn": "textures/ia/entity/quadrocopter_vn",
         "v0": "textures/ia/entity/quadrocopter_v0",
         "vmh": "textures/ia/entity/quadrocopter_vmh",
-        "vh": "textures/ia/entity/quadrocopter_vh"
+        "vh": "textures/ia/entity/quadrocopter_vh",
+        "icon": "textures/ia/items/quadrocopter"
       },
       "geometry": {
-        "main": "geometry.ia.mini.quadrocopter.main"
+        "main": "geometry.ia.mini.quadrocopter.main",
+        "flat": "geometry.ia.flat"
       },
       "animations": {
         "pose": "animation.ia.mini.pose",
         "size": "animation.ia.mini.size",
         "react": "animation.ia.mini.aircraft",
+        "flat": "animation.ia.flat.wield",
         "spin": "animation.ia.mini.quadrocopter.spin"
       },
       "scripts": {
@@ -45,11 +45,17 @@
           "pose",
           "size",
           "react",
+          "flat",
           "spin"
         ]
       },
       "render_controllers": [
-        "controller.render.ia.mini.main"
+        {
+          "controller.render.ia.mini.main": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.flat": "!(!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d'))"
+        }
       ]
     }
   }

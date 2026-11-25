@@ -2,10 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:attachable": {
     "description": {
-      "identifier": "ia:bamboo_hopper.ia3d",
-      "item": {
-        "ia:bamboo_hopper": "q.is_pack_setting_enabled('ia:items_3d')"
-      },
+      "identifier": "ia:bamboo_hopper",
       "materials": {
         "default": "entity_alphatest"
       },
@@ -15,15 +12,18 @@
         "vn": "textures/ia/entity/bamboo_hopper_vn",
         "v0": "textures/ia/entity/bamboo_hopper_v0",
         "vmh": "textures/ia/entity/bamboo_hopper_vmh",
-        "vh": "textures/ia/entity/bamboo_hopper_vh"
+        "vh": "textures/ia/entity/bamboo_hopper_vh",
+        "icon": "textures/ia/items/bamboo_hopper"
       },
       "geometry": {
-        "main": "geometry.ia.mini.bamboo_hopper.main"
+        "main": "geometry.ia.mini.bamboo_hopper.main",
+        "flat": "geometry.ia.flat"
       },
       "animations": {
         "pose": "animation.ia.mini.pose",
         "size": "animation.ia.mini.size",
         "react": "animation.ia.mini.aircraft",
+        "flat": "animation.ia.flat.wield",
         "spin": "animation.ia.mini.bamboo_hopper.spin"
       },
       "scripts": {
@@ -45,11 +45,17 @@
           "pose",
           "size",
           "react",
+          "flat",
           "spin"
         ]
       },
       "render_controllers": [
-        "controller.render.ia.mini.main"
+        {
+          "controller.render.ia.mini.main": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.flat": "!(!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d'))"
+        }
       ]
     }
   }

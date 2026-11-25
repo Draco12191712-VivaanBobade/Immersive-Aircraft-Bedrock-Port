@@ -2,10 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:attachable": {
     "description": {
-      "identifier": "ia:reinforced_airframe.ia3d",
-      "item": {
-        "ia:reinforced_airframe": "q.is_pack_setting_enabled('ia:items_3d')"
-      },
+      "identifier": "ia:reinforced_airframe",
       "materials": {
         "default": "entity_alphatest"
       },
@@ -15,15 +12,18 @@
         "vn": "textures/ia/entity/held_reinforced_airframe_vn",
         "v0": "textures/ia/entity/held_reinforced_airframe_v0",
         "vmh": "textures/ia/entity/held_reinforced_airframe_vmh",
-        "vh": "textures/ia/entity/held_reinforced_airframe_vh"
+        "vh": "textures/ia/entity/held_reinforced_airframe_vh",
+        "icon": "textures/ia/items/reinforced_airframe"
       },
       "geometry": {
-        "weapon": "geometry.ia.mini.reinforced_airframe"
+        "weapon": "geometry.ia.mini.reinforced_airframe",
+        "flat": "geometry.ia.flat"
       },
       "animations": {
         "pose": "animation.ia.mini.pose",
         "size": "animation.ia.mini.size",
-        "react": "animation.ia.mini.part"
+        "react": "animation.ia.mini.part",
+        "flat": "animation.ia.flat.wield"
       },
       "scripts": {
         "pre_animation": [
@@ -43,11 +43,17 @@
         "animate": [
           "pose",
           "size",
-          "react"
+          "react",
+          "flat"
         ]
       },
       "render_controllers": [
-        "controller.render.ia.mini.weapon"
+        {
+          "controller.render.ia.mini.weapon": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.flat": "!(!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d'))"
+        }
       ]
     }
   }

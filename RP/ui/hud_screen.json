@@ -26,35 +26,281 @@
       }
     ]
   },
-  "horse_heart_renderer": {
-    "type": "panel",
-    "size": [
-      1,
-      1
-    ],
-    "layer": 1,
-    "controls": [
+  "centered_gui_elements_at_bottom_middle": {
+    "modifications": [
       {
-        "ia_mount_hearts": {
-          "type": "custom",
-          "renderer": "horse_heart_renderer",
-          "size": [
-            1,
-            1
-          ],
-          "layer": 1,
-          "bindings": [
-            {
-              "binding_name": "#hud_title_text_string",
-              "binding_type": "global"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#hud_title_text_string = '§r§i§d§e§r') or (#hud_title_text_string = '§s§c§o§p§e§r')))",
-              "target_property_name": "#visible"
+        "array_name": "controls",
+        "operation": "insert_after",
+        "control_name": "horse_heart_rend_0",
+        "value": [
+          {
+            "ia_horse_heart_rend_0": {
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "layer": 1,
+              "bindings": [
+                {
+                  "binding_name": "#hud_title_text_string",
+                  "binding_type": "global"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#hud_title_text_string = '§r§i§d§e§r') or (#hud_title_text_string = '§s§c§o§p§e§r')))",
+                  "target_property_name": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "horse_heart_rend_0@hud.horse_heart_renderer": {
+                    "offset": [
+                      180,
+                      -56
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "bindings": [
+                      {
+                        "binding_name": "#creative_horse_hearts",
+                        "binding_name_override": "#visible"
+                      }
+                    ]
+                  }
+                }
+              ]
             }
-          ]
-        }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "control_name": "horse_heart_rend_0"
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_after",
+        "control_name": "horse_heart_rend_1",
+        "value": [
+          {
+            "ia_horse_heart_rend_1": {
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "layer": 1,
+              "bindings": [
+                {
+                  "binding_name": "#hud_title_text_string",
+                  "binding_type": "global"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#hud_title_text_string = '§r§i§d§e§r') or (#hud_title_text_string = '§s§c§o§p§e§r')))",
+                  "target_property_name": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "horse_heart_rend_1@hud.horse_heart_renderer": {
+                    "offset": [
+                      180,
+                      -50
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "bindings": [
+                      {
+                        "binding_name": "#survival_horse_hearts",
+                        "binding_name_override": "#visible"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "control_name": "horse_heart_rend_1"
+      }
+    ]
+  },
+  "centered_gui_elements_at_bottom_middle_touch": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_after",
+        "control_name": "horse_heart_rend_0",
+        "value": [
+          {
+            "ia_horse_heart_rend_0": {
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "layer": 1,
+              "bindings": [
+                {
+                  "binding_name": "#hud_title_text_string",
+                  "binding_type": "global"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#hud_title_text_string = '§r§i§d§e§r') or (#hud_title_text_string = '§s§c§o§p§e§r')))",
+                  "target_property_name": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "horse_heart_rend_0@hud.horse_heart_renderer": {
+                    "offset": [
+                      200,
+                      -56
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "bindings": [
+                      {
+                        "binding_name": "#creative_horse_hearts",
+                        "binding_name_override": "#visible"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "control_name": "horse_heart_rend_0"
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_after",
+        "control_name": "horse_heart_rend_1",
+        "value": [
+          {
+            "ia_horse_heart_rend_1": {
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "layer": 1,
+              "bindings": [
+                {
+                  "binding_name": "#hud_title_text_string",
+                  "binding_type": "global"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#hud_title_text_string = '§r§i§d§e§r') or (#hud_title_text_string = '§s§c§o§p§e§r')))",
+                  "target_property_name": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "horse_heart_rend_1@hud.horse_heart_renderer": {
+                    "offset": [
+                      200,
+                      -50
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "bindings": [
+                      {
+                        "binding_name": "#survival_horse_hearts",
+                        "binding_name_override": "#visible"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "control_name": "horse_heart_rend_1"
+      }
+    ]
+  },
+  "not_centered_gui_elements": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_after",
+        "control_name": "horse_heart_rend",
+        "value": [
+          {
+            "ia_horse_heart_rend": {
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "layer": 1,
+              "bindings": [
+                {
+                  "binding_name": "#hud_title_text_string",
+                  "binding_type": "global"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#hud_title_text_string = '§r§i§d§e§r') or (#hud_title_text_string = '§s§c§o§p§e§r')))",
+                  "target_property_name": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "horse_heart_rend@hud.horse_heart_renderer": {
+                    "offset": [
+                      -2,
+                      2
+                    ],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "layer": 1,
+                    "bindings": [
+                      {
+                        "binding_name": "#horse_hearts_touch",
+                        "binding_name_override": "#visible"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "control_name": "horse_heart_rend"
       }
     ]
   }

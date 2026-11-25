@@ -2,10 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:attachable": {
     "description": {
-      "identifier": "ia:warship.ia3d",
-      "item": {
-        "ia:warship": "q.is_pack_setting_enabled('ia:items_3d')"
-      },
+      "identifier": "ia:warship",
       "materials": {
         "default": "entity_alphatest"
       },
@@ -15,17 +12,20 @@
         "vn": "textures/ia/entity/warship_vn",
         "v0": "textures/ia/entity/warship_v0",
         "vmh": "textures/ia/entity/warship_vmh",
-        "vh": "textures/ia/entity/warship_vh"
+        "vh": "textures/ia/entity/warship_vh",
+        "icon": "textures/ia/items/warship_icon"
       },
       "geometry": {
         "main": "geometry.ia.mini.warship.main",
         "sails": "geometry.ia.mini.warship.sails",
-        "uncolored": "geometry.ia.mini.warship.uncolored"
+        "uncolored": "geometry.ia.mini.warship.uncolored",
+        "flat": "geometry.ia.flat"
       },
       "animations": {
         "pose": "animation.ia.mini.pose",
         "size": "animation.ia.mini.size",
         "react": "animation.ia.mini.aircraft",
+        "flat": "animation.ia.flat.wield",
         "spin": "animation.ia.mini.warship.spin"
       },
       "scripts": {
@@ -47,13 +47,23 @@
           "pose",
           "size",
           "react",
+          "flat",
           "spin"
         ]
       },
       "render_controllers": [
-        "controller.render.ia.mini.main",
-        "controller.render.ia.mini.sails",
-        "controller.render.ia.mini.uncolored"
+        {
+          "controller.render.ia.mini.main": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.mini.sails": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.mini.uncolored": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.flat": "!(!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d'))"
+        }
       ]
     }
   }

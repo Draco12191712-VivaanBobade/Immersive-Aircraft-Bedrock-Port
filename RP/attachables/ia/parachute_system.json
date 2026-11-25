@@ -2,10 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:attachable": {
     "description": {
-      "identifier": "ia:parachute_system.ia3d",
-      "item": {
-        "ia:parachute_system": "q.is_pack_setting_enabled('ia:items_3d')"
-      },
+      "identifier": "ia:parachute_system",
       "materials": {
         "default": "entity_alphatest"
       },
@@ -15,15 +12,18 @@
         "vn": "textures/ia/entity/held_parachute_system_vn",
         "v0": "textures/ia/entity/held_parachute_system_v0",
         "vmh": "textures/ia/entity/held_parachute_system_vmh",
-        "vh": "textures/ia/entity/held_parachute_system_vh"
+        "vh": "textures/ia/entity/held_parachute_system_vh",
+        "icon": "textures/ia/items/parachute_system"
       },
       "geometry": {
-        "weapon": "geometry.ia.mini.parachute_system"
+        "weapon": "geometry.ia.mini.parachute_system",
+        "flat": "geometry.ia.flat"
       },
       "animations": {
         "pose": "animation.ia.mini.pose",
         "size": "animation.ia.mini.size",
         "react": "animation.ia.mini.part",
+        "flat": "animation.ia.flat.wield",
         "move": "animation.ia.mini.parachute_system.move"
       },
       "scripts": {
@@ -45,11 +45,17 @@
           "pose",
           "size",
           "react",
+          "flat",
           "move"
         ]
       },
       "render_controllers": [
-        "controller.render.ia.mini.weapon"
+        {
+          "controller.render.ia.mini.weapon": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.flat": "!(!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d'))"
+        }
       ]
     }
   }

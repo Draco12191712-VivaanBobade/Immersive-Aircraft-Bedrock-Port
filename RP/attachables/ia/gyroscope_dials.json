@@ -2,10 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:attachable": {
     "description": {
-      "identifier": "ia:gyroscope_dials.ia3d",
-      "item": {
-        "ia:gyroscope_dials": "q.is_pack_setting_enabled('ia:items_3d')"
-      },
+      "identifier": "ia:gyroscope_dials",
       "materials": {
         "default": "entity_alphatest"
       },
@@ -15,15 +12,18 @@
         "vn": "textures/ia/entity/held_gyroscope_dials_vn",
         "v0": "textures/ia/entity/held_gyroscope_dials_v0",
         "vmh": "textures/ia/entity/held_gyroscope_dials_vmh",
-        "vh": "textures/ia/entity/held_gyroscope_dials_vh"
+        "vh": "textures/ia/entity/held_gyroscope_dials_vh",
+        "icon": "textures/ia/items/gyroscope_dials"
       },
       "geometry": {
-        "weapon": "geometry.ia.mini.gyroscope_dials"
+        "weapon": "geometry.ia.mini.gyroscope_dials",
+        "flat": "geometry.ia.flat"
       },
       "animations": {
         "pose": "animation.ia.mini.pose",
         "size": "animation.ia.mini.size",
         "react": "animation.ia.mini.part",
+        "flat": "animation.ia.flat.wield",
         "move": "animation.ia.mini.gyroscope_dials.move"
       },
       "scripts": {
@@ -45,11 +45,17 @@
           "pose",
           "size",
           "react",
+          "flat",
           "move"
         ]
       },
       "render_controllers": [
-        "controller.render.ia.mini.weapon"
+        {
+          "controller.render.ia.mini.weapon": "!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d')"
+        },
+        {
+          "controller.render.ia.flat": "!(!q.is_in_ui && q.is_pack_setting_enabled('ia:items_3d'))"
+        }
       ]
     }
   }
