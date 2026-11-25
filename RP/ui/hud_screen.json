@@ -21,8 +21,40 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(not ((#hud_title_text_string = '§s§c§o§p§e§r') or (#hud_title_text_string = '§n§o§s§c§r')))",
+        "source_property_name": "(not ((#hud_title_text_string = '§s§c§o§p§e§r') or (#hud_title_text_string = '§n§o§s§c§r') or (#hud_title_text_string = '§r§i§d§e§r')))",
         "target_property_name": "#visible"
+      }
+    ]
+  },
+  "horse_heart_renderer": {
+    "type": "panel",
+    "size": [
+      1,
+      1
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "ia_mount_hearts": {
+          "type": "custom",
+          "renderer": "horse_heart_renderer",
+          "size": [
+            1,
+            1
+          ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string = '§r§i§d§e§r') or (#hud_title_text_string = '§s§c§o§p§e§r')))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   }

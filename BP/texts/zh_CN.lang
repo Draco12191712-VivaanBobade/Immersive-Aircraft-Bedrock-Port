@@ -50,4 +50,4 @@ option.immersive_aircraft.windClearWeather=晴朗天气时的风效应。
 option.immersive_aircraft.windRainWeather=雨天时的风效应。
 option.immersive_aircraft.windThunderWeather=雷雨时的风效应。
 option.immersive_aircraft.allowPvp=Aerial battles: weapons hit other players and their aircraft.
-option.immersive_aircraft.stalls=Stalls: climbing or diving too steeply, or running out of fuel, sends a plane into a nosedive.
+option.immersive_aircraft.nosedives=Nosedives: out of fuel or shot down, planes dive straight down and explode on impact (off: they glide down, or blow up at once when shot down).

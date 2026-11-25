@@ -104,8 +104,8 @@
     },
     {
       "type": "toggle",
-      "text": "Stalls and nosedives (too steep, or out of fuel)",
-      "name": "ia:stalls",
+      "text": "Nosedives: out of fuel or shot down, planes dive straight down and explode on impact",
+      "name": "ia:nosedives",
       "default": true
     },
     {
