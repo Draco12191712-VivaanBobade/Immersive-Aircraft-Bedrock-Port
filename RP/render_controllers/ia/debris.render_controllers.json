@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ia.debris": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.ia_vv_default[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "c0": "q.property('ia:dk') == 0"
+        },
+        {
+          "c1": "q.property('ia:dk') == 1"
+        },
+        {
+          "c2": "q.property('ia:dk') == 2"
+        },
+        {
+          "c3": "q.property('ia:dk') == 3"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.ia_vv_default": [
+            "Texture.default",
+            "Texture.default_vm",
+            "Texture.default_vn",
+            "Texture.default_v0"
+          ]
+        }
+      }
+    }
+  }
+}

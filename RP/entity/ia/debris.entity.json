@@ -1,0 +1,23 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ia:debris",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/ia/entity/debris",
+        "default_vm": "textures/ia/entity/debris_vm",
+        "default_vn": "textures/ia/entity/debris_vn",
+        "default_v0": "textures/ia/entity/debris_v0"
+      },
+      "geometry": {
+        "default": "geometry.ia.debris"
+      },
+      "render_controllers": [
+        "controller.render.ia.debris"
+      ]
+    }
+  }
+}
