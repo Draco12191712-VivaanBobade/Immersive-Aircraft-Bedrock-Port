@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_hull_reinforcement",
         "vm": "textures/ia/entity/held_hull_reinforcement_vm",
         "vn": "textures/ia/entity/held_hull_reinforcement_vn",
-        "v0": "textures/ia/entity/held_hull_reinforcement_v0"
+        "v0": "textures/ia/entity/held_hull_reinforcement_v0",
+        "vmh": "textures/ia/entity/held_hull_reinforcement_vmh",
+        "vh": "textures/ia/entity/held_hull_reinforcement_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.hull_reinforcement"

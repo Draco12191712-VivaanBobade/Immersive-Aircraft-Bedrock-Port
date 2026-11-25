@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_aircraft_settings",
         "vm": "textures/ia/entity/held_aircraft_settings_vm",
         "vn": "textures/ia/entity/held_aircraft_settings_vn",
-        "v0": "textures/ia/entity/held_aircraft_settings_v0"
+        "v0": "textures/ia/entity/held_aircraft_settings_v0",
+        "vmh": "textures/ia/entity/held_aircraft_settings_vmh",
+        "vh": "textures/ia/entity/held_aircraft_settings_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.aircraft_settings"

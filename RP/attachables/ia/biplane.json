@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/biplane",
         "vm": "textures/ia/entity/biplane_vm",
         "vn": "textures/ia/entity/biplane_vn",
-        "v0": "textures/ia/entity/biplane_v0"
+        "v0": "textures/ia/entity/biplane_v0",
+        "vmh": "textures/ia/entity/biplane_vmh",
+        "vh": "textures/ia/entity/biplane_vh"
       },
       "geometry": {
         "main": "geometry.ia.mini.biplane.main"

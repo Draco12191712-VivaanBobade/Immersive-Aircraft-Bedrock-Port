@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_bomb_bay_module",
         "vm": "textures/ia/entity/held_bomb_bay_module_vm",
         "vn": "textures/ia/entity/held_bomb_bay_module_vn",
-        "v0": "textures/ia/entity/held_bomb_bay_module_v0"
+        "v0": "textures/ia/entity/held_bomb_bay_module_v0",
+        "vmh": "textures/ia/entity/held_bomb_bay_module_vmh",
+        "vh": "textures/ia/entity/held_bomb_bay_module_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.bomb_bay_module"

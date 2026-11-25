@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/quadrocopter",
         "vm": "textures/ia/entity/quadrocopter_vm",
         "vn": "textures/ia/entity/quadrocopter_vn",
-        "v0": "textures/ia/entity/quadrocopter_v0"
+        "v0": "textures/ia/entity/quadrocopter_v0",
+        "vmh": "textures/ia/entity/quadrocopter_vmh",
+        "vh": "textures/ia/entity/quadrocopter_vh"
       },
       "geometry": {
         "main": "geometry.ia.mini.quadrocopter.main"

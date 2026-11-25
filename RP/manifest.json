@@ -55,11 +55,19 @@
           "text": "Normal maps"
         },
         {
+          "name": "height",
+          "text": "Heightmaps (experimental)"
+        },
+        {
           "name": "none",
           "text": "None (flat)"
         }
       ],
       "default": "normal"
+    },
+    {
+      "type": "label",
+      "text": "Heightmaps are experimental (aircraft and 3D items only). If surfaces look flat or the content log shows texture errors, switch back to Normal maps."
     },
     {
       "type": "label",

@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_sturdy_pipes",
         "vm": "textures/ia/entity/held_sturdy_pipes_vm",
         "vn": "textures/ia/entity/held_sturdy_pipes_vn",
-        "v0": "textures/ia/entity/held_sturdy_pipes_v0"
+        "v0": "textures/ia/entity/held_sturdy_pipes_v0",
+        "vmh": "textures/ia/entity/held_sturdy_pipes_vmh",
+        "vh": "textures/ia/entity/held_sturdy_pipes_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.sturdy_pipes"

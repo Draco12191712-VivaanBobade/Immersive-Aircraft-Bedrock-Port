@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_propeller",
         "vm": "textures/ia/entity/held_propeller_vm",
         "vn": "textures/ia/entity/held_propeller_vn",
-        "v0": "textures/ia/entity/held_propeller_v0"
+        "v0": "textures/ia/entity/held_propeller_v0",
+        "vmh": "textures/ia/entity/held_propeller_vmh",
+        "vh": "textures/ia/entity/held_propeller_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.propeller"

@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_improved_landing_gear",
         "vm": "textures/ia/entity/held_improved_landing_gear_vm",
         "vn": "textures/ia/entity/held_improved_landing_gear_vn",
-        "v0": "textures/ia/entity/held_improved_landing_gear_v0"
+        "v0": "textures/ia/entity/held_improved_landing_gear_v0",
+        "vmh": "textures/ia/entity/held_improved_landing_gear_vmh",
+        "vh": "textures/ia/entity/held_improved_landing_gear_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.improved_landing_gear"

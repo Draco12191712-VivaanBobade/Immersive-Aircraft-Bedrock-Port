@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_sail",
         "vm": "textures/ia/entity/held_sail_vm",
         "vn": "textures/ia/entity/held_sail_vn",
-        "v0": "textures/ia/entity/held_sail_v0"
+        "v0": "textures/ia/entity/held_sail_v0",
+        "vmh": "textures/ia/entity/held_sail_vmh",
+        "vh": "textures/ia/entity/held_sail_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.sail"

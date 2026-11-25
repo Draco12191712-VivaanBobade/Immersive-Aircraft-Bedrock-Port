@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_searchlight",
         "vm": "textures/ia/entity/held_searchlight_vm",
         "vn": "textures/ia/entity/held_searchlight_vn",
-        "v0": "textures/ia/entity/held_searchlight_v0"
+        "v0": "textures/ia/entity/held_searchlight_v0",
+        "vmh": "textures/ia/entity/held_searchlight_vmh",
+        "vh": "textures/ia/entity/held_searchlight_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.searchlight"

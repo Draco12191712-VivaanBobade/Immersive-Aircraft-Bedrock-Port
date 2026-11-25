@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_external_cargo_hooks",
         "vm": "textures/ia/entity/held_external_cargo_hooks_vm",
         "vn": "textures/ia/entity/held_external_cargo_hooks_vn",
-        "v0": "textures/ia/entity/held_external_cargo_hooks_v0"
+        "v0": "textures/ia/entity/held_external_cargo_hooks_v0",
+        "vmh": "textures/ia/entity/held_external_cargo_hooks_vmh",
+        "vh": "textures/ia/entity/held_external_cargo_hooks_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.external_cargo_hooks"

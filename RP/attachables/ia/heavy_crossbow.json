@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/heavy_crossbow",
         "vm": "textures/ia/entity/heavy_crossbow_vm",
         "vn": "textures/ia/entity/heavy_crossbow_vn",
-        "v0": "textures/ia/entity/heavy_crossbow_v0"
+        "v0": "textures/ia/entity/heavy_crossbow_v0",
+        "vmh": "textures/ia/entity/heavy_crossbow_vmh",
+        "vh": "textures/ia/entity/heavy_crossbow_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.heavy_crossbow"

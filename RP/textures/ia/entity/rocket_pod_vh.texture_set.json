@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "rocket_pod_vh",
+    "heightmap": "rocket_pod_heightmap"
+  }
+}

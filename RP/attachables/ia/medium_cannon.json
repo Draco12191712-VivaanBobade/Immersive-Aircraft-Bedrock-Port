@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/cannon",
         "vm": "textures/ia/entity/cannon_vm",
         "vn": "textures/ia/entity/cannon_vn",
-        "v0": "textures/ia/entity/cannon_v0"
+        "v0": "textures/ia/entity/cannon_v0",
+        "vmh": "textures/ia/entity/cannon_vmh",
+        "vh": "textures/ia/entity/cannon_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.medium_cannon"

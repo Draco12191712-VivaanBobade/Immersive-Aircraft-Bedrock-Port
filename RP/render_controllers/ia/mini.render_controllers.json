@@ -8,7 +8,9 @@
             "Texture.default",
             "Texture.vm",
             "Texture.vn",
-            "Texture.v0"
+            "Texture.v0",
+            "Texture.vmh",
+            "Texture.vh"
           ]
         }
       },
@@ -19,7 +21,7 @@
         }
       ],
       "textures": [
-        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+        "Array.ia_vv[(q.is_pack_setting_selected('ia:vv_surface', 'height') ? (q.is_pack_setting_enabled('ia:vv_mers') ? 4 : 5) : ((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)))]"
       ]
     },
     "controller.render.ia.mini.sails": {
@@ -29,7 +31,9 @@
             "Texture.default",
             "Texture.vm",
             "Texture.vn",
-            "Texture.v0"
+            "Texture.v0",
+            "Texture.vmh",
+            "Texture.vh"
           ]
         }
       },
@@ -40,7 +44,7 @@
         }
       ],
       "textures": [
-        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+        "Array.ia_vv[(q.is_pack_setting_selected('ia:vv_surface', 'height') ? (q.is_pack_setting_enabled('ia:vv_mers') ? 4 : 5) : ((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)))]"
       ]
     },
     "controller.render.ia.mini.uncolored": {
@@ -50,7 +54,9 @@
             "Texture.default",
             "Texture.vm",
             "Texture.vn",
-            "Texture.v0"
+            "Texture.v0",
+            "Texture.vmh",
+            "Texture.vh"
           ]
         }
       },
@@ -61,7 +67,7 @@
         }
       ],
       "textures": [
-        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+        "Array.ia_vv[(q.is_pack_setting_selected('ia:vv_surface', 'height') ? (q.is_pack_setting_enabled('ia:vv_mers') ? 4 : 5) : ((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)))]"
       ]
     },
     "controller.render.ia.mini.weapon": {
@@ -71,7 +77,9 @@
             "Texture.default",
             "Texture.vm",
             "Texture.vn",
-            "Texture.v0"
+            "Texture.v0",
+            "Texture.vmh",
+            "Texture.vh"
           ]
         }
       },
@@ -82,7 +90,7 @@
         }
       ],
       "textures": [
-        "Array.ia_vv[(q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)]"
+        "Array.ia_vv[(q.is_pack_setting_selected('ia:vv_surface', 'height') ? (q.is_pack_setting_enabled('ia:vv_mers') ? 4 : 5) : ((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)))]"
       ]
     }
   }

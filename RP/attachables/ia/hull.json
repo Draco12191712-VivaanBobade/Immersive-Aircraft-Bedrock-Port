@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_hull",
         "vm": "textures/ia/entity/held_hull_vm",
         "vn": "textures/ia/entity/held_hull_vn",
-        "v0": "textures/ia/entity/held_hull_v0"
+        "v0": "textures/ia/entity/held_hull_v0",
+        "vmh": "textures/ia/entity/held_hull_vmh",
+        "vh": "textures/ia/entity/held_hull_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.hull"

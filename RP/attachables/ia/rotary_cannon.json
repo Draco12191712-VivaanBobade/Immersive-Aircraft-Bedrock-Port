@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/rotary_cannon",
         "vm": "textures/ia/entity/rotary_cannon_vm",
         "vn": "textures/ia/entity/rotary_cannon_vn",
-        "v0": "textures/ia/entity/rotary_cannon_v0"
+        "v0": "textures/ia/entity/rotary_cannon_v0",
+        "vmh": "textures/ia/entity/rotary_cannon_vmh",
+        "vh": "textures/ia/entity/rotary_cannon_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.rotary_cannon"

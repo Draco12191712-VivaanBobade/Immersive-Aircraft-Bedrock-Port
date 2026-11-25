@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/bomb_rack",
         "vm": "textures/ia/entity/bomb_rack_vm",
         "vn": "textures/ia/entity/bomb_rack_vn",
-        "v0": "textures/ia/entity/bomb_rack_v0"
+        "v0": "textures/ia/entity/bomb_rack_v0",
+        "vmh": "textures/ia/entity/bomb_rack_vmh",
+        "vh": "textures/ia/entity/bomb_rack_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.heavy_bomb"

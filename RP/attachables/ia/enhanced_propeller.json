@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_enhanced_propeller",
         "vm": "textures/ia/entity/held_enhanced_propeller_vm",
         "vn": "textures/ia/entity/held_enhanced_propeller_vn",
-        "v0": "textures/ia/entity/held_enhanced_propeller_v0"
+        "v0": "textures/ia/entity/held_enhanced_propeller_v0",
+        "vmh": "textures/ia/entity/held_enhanced_propeller_vmh",
+        "vh": "textures/ia/entity/held_enhanced_propeller_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.enhanced_propeller"

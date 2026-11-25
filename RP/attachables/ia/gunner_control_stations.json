@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_gunner_control_stations",
         "vm": "textures/ia/entity/held_gunner_control_stations_vm",
         "vn": "textures/ia/entity/held_gunner_control_stations_vn",
-        "v0": "textures/ia/entity/held_gunner_control_stations_v0"
+        "v0": "textures/ia/entity/held_gunner_control_stations_v0",
+        "vmh": "textures/ia/entity/held_gunner_control_stations_vmh",
+        "vh": "textures/ia/entity/held_gunner_control_stations_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.gunner_control_stations"

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "ordnance_vmh",
+    "metalness_emissive_roughness": "ordnance_mers",
+    "heightmap": "ordnance_heightmap"
+  }
+}

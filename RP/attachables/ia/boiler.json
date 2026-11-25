@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_boiler",
         "vm": "textures/ia/entity/held_boiler_vm",
         "vn": "textures/ia/entity/held_boiler_vn",
-        "v0": "textures/ia/entity/held_boiler_v0"
+        "v0": "textures/ia/entity/held_boiler_v0",
+        "vmh": "textures/ia/entity/held_boiler_vmh",
+        "vh": "textures/ia/entity/held_boiler_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.boiler"

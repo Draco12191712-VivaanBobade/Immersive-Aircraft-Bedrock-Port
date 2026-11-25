@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/missile_rail",
         "vm": "textures/ia/entity/missile_rail_vm",
         "vn": "textures/ia/entity/missile_rail_vn",
-        "v0": "textures/ia/entity/missile_rail_v0"
+        "v0": "textures/ia/entity/missile_rail_v0",
+        "vmh": "textures/ia/entity/missile_rail_vmh",
+        "vh": "textures/ia/entity/missile_rail_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.heat_seeking_missile"

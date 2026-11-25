@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "held_autopilot_vmh",
+    "metalness_emissive_roughness": "held_autopilot_mers",
+    "heightmap": "held_autopilot_heightmap"
+  }
+}

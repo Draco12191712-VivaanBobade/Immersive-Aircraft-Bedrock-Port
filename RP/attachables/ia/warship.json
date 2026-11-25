@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/warship",
         "vm": "textures/ia/entity/warship_vm",
         "vn": "textures/ia/entity/warship_vn",
-        "v0": "textures/ia/entity/warship_v0"
+        "v0": "textures/ia/entity/warship_v0",
+        "vmh": "textures/ia/entity/warship_vmh",
+        "vh": "textures/ia/entity/warship_vh"
       },
       "geometry": {
         "main": "geometry.ia.mini.warship.main",

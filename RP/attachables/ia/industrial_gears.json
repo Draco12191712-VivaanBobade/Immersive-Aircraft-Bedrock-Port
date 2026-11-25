@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_industrial_gears",
         "vm": "textures/ia/entity/held_industrial_gears_vm",
         "vn": "textures/ia/entity/held_industrial_gears_vn",
-        "v0": "textures/ia/entity/held_industrial_gears_v0"
+        "v0": "textures/ia/entity/held_industrial_gears_v0",
+        "vmh": "textures/ia/entity/held_industrial_gears_vmh",
+        "vh": "textures/ia/entity/held_industrial_gears_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.industrial_gears"

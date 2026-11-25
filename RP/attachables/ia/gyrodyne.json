@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/gyrodyne",
         "vm": "textures/ia/entity/gyrodyne_vm",
         "vn": "textures/ia/entity/gyrodyne_vn",
-        "v0": "textures/ia/entity/gyrodyne_v0"
+        "v0": "textures/ia/entity/gyrodyne_v0",
+        "vmh": "textures/ia/entity/gyrodyne_vmh",
+        "vh": "textures/ia/entity/gyrodyne_vh"
       },
       "geometry": {
         "main": "geometry.ia.mini.gyrodyne.main"

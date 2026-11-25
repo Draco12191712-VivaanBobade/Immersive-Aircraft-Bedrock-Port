@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/bomb_bay",
         "vm": "textures/ia/entity/bomb_bay_vm",
         "vn": "textures/ia/entity/bomb_bay_vn",
-        "v0": "textures/ia/entity/bomb_bay_v0"
+        "v0": "textures/ia/entity/bomb_bay_v0",
+        "vmh": "textures/ia/entity/bomb_bay_vmh",
+        "vh": "textures/ia/entity/bomb_bay_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.bomb_bay"

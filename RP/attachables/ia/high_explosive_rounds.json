@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_high_explosive_rounds",
         "vm": "textures/ia/entity/held_high_explosive_rounds_vm",
         "vn": "textures/ia/entity/held_high_explosive_rounds_vn",
-        "v0": "textures/ia/entity/held_high_explosive_rounds_v0"
+        "v0": "textures/ia/entity/held_high_explosive_rounds_v0",
+        "vmh": "textures/ia/entity/held_high_explosive_rounds_vmh",
+        "vh": "textures/ia/entity/held_high_explosive_rounds_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.high_explosive_rounds"

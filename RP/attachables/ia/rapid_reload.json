@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_rapid_reload",
         "vm": "textures/ia/entity/held_rapid_reload_vm",
         "vn": "textures/ia/entity/held_rapid_reload_vn",
-        "v0": "textures/ia/entity/held_rapid_reload_v0"
+        "v0": "textures/ia/entity/held_rapid_reload_v0",
+        "vmh": "textures/ia/entity/held_rapid_reload_vmh",
+        "vh": "textures/ia/entity/held_rapid_reload_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.rapid_reload"

@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/machine_gun",
         "vm": "textures/ia/entity/machine_gun_vm",
         "vn": "textures/ia/entity/machine_gun_vn",
-        "v0": "textures/ia/entity/machine_gun_v0"
+        "v0": "textures/ia/entity/machine_gun_v0",
+        "vmh": "textures/ia/entity/machine_gun_vmh",
+        "vh": "textures/ia/entity/machine_gun_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.light_machine_gun"

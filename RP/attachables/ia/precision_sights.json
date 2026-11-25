@@ -13,7 +13,9 @@
         "default": "textures/ia/entity/held_precision_sights",
         "vm": "textures/ia/entity/held_precision_sights_vm",
         "vn": "textures/ia/entity/held_precision_sights_vn",
-        "v0": "textures/ia/entity/held_precision_sights_v0"
+        "v0": "textures/ia/entity/held_precision_sights_v0",
+        "vmh": "textures/ia/entity/held_precision_sights_vmh",
+        "vh": "textures/ia/entity/held_precision_sights_vh"
       },
       "geometry": {
         "weapon": "geometry.ia.mini.precision_sights"
