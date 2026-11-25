@@ -19,16 +19,16 @@
   },
   "header": {
     "name": "§6§lImmersive Aircraft§r §9[RP]§r",
-    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.4.0 \"Realms Compatiblilty Update\"",
+    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.5.0 \"Aerial Combat Update\"",
     "min_engine_version": "1.26.0",
     "uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
-    "version": "1.4.0"
+    "version": "1.5.0"
   },
   "modules": [
     {
       "type": "resources",
       "uuid": "a3f7b9c1-2e4d-4c8a-9f6b-5d1e3a7c0b94",
-      "version": "1.4.0"
+      "version": "1.5.0"
     }
   ],
   "capabilities": [
@@ -37,13 +37,25 @@
   "settings": [
     {
       "type": "label",
-      "text": "Vibrant Visuals"
+      "text": "ia.settings.vv"
+    },
+    {
+      "type": "label",
+      "text": "ia.settings.note.rp"
+    },
+    {
+      "type": "label",
+      "text": "ia.settings.vv.mers"
     },
     {
       "type": "toggle",
       "name": "ia:vv_mers",
       "text": "Shiny metal (MERS maps)",
       "default": true
+    },
+    {
+      "type": "label",
+      "text": "ia.settings.vv.surface"
     },
     {
       "type": "dropdown",
@@ -67,11 +79,11 @@
     },
     {
       "type": "label",
-      "text": "Heightmaps are experimental (aircraft and 3D items only). If surfaces look flat or the content log shows texture errors, switch back to Normal maps."
+      "text": "ia.settings.hand"
     },
     {
       "type": "label",
-      "text": "Items"
+      "text": "ia.settings.hand.desc"
     },
     {
       "type": "toggle",

@@ -51,3 +51,4 @@ option.immersive_aircraft.windRainWeather=Wind at rainfall.
 option.immersive_aircraft.windThunderWeather=Extra wind at thunder.
 option.immersive_aircraft.allowPvp=Aerial battles: weapons hit other players and their aircraft.
 option.immersive_aircraft.nosedives=Nosedives: out of fuel or shot down, planes dive straight down and explode on impact (off: they glide down, or blow up at once when shot down).
+ia.settings.note=Minecraft can't translate the option names below yet. You can also change every option in your language in the game: "Aircraft Settings" item → "World settings (operators)".
