@@ -5,7 +5,7 @@
       "identifier": "ia:bomb_bay_module",
       "menu_category": {
         "category": "items",
-        "group": "ia:itemGroup.name.immersive_aircraft"
+        "group": "ia:itemGroup.name.upgrades"
       }
     },
     "components": {

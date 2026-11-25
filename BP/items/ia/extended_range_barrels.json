@@ -5,7 +5,7 @@
       "identifier": "ia:extended_range_barrels",
       "menu_category": {
         "category": "items",
-        "group": "ia:itemGroup.name.immersive_aircraft"
+        "group": "ia:itemGroup.name.upgrades"
       }
     },
     "components": {

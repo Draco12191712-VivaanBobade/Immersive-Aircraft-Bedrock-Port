@@ -4,8 +4,8 @@
     "description": {
       "identifier": "ia:autopilot",
       "menu_category": {
-        "category": "equipment",
-        "group": "ia:itemGroup.name.immersive_aircraft"
+        "category": "items",
+        "group": "ia:itemGroup.name.upgrades"
       }
     },
     "components": {

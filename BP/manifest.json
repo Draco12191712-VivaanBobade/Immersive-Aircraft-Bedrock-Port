@@ -103,6 +103,12 @@
       "default": true
     },
     {
+      "type": "toggle",
+      "text": "Stalls and nosedives (too steep, or out of fuel)",
+      "name": "ia:stalls",
+      "default": true
+    },
+    {
       "type": "slider",
       "text": "Wind in clear weather",
       "name": "ia:windClearWeather",
@@ -215,6 +221,12 @@
       "type": "toggle",
       "text": "Auto-fire at monsters in your sights",
       "name": "ia:autoFire",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "text": "Aerial battles: weapons hit other players and their aircraft",
+      "name": "ia:allowPvp",
       "default": true
     },
     {

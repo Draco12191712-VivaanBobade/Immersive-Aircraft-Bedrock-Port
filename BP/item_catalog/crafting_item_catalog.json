@@ -8,7 +8,7 @@
           {
             "group_identifier": {
               "icon": "ia:biplane",
-              "name": "ia:itemGroup.name.immersive_aircraft"
+              "name": "ia:itemGroup.name.aircraft"
             },
             "items": [
               "ia:airship",
@@ -18,12 +18,19 @@
               "ia:gyrodyne",
               "ia:quadrocopter",
               "ia:bamboo_hopper",
+              "ia:aircraft_finder"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ia:rotary_cannon",
+              "name": "ia:itemGroup.name.weapons"
+            },
+            "items": [
               "ia:rotary_cannon",
-              "ia:heavy_crossbow",
               "ia:telescope",
+              "ia:heavy_crossbow",
               "ia:bomb_bay",
-              "ia:aircraft_finder",
-              "ia:autopilot",
               "ia:light_machine_gun",
               "ia:medium_machine_gun",
               "ia:heavy_machine_gun",
@@ -54,41 +61,50 @@
         "groups": [
           {
             "group_identifier": {
+              "icon": "ia:enhanced_propeller",
+              "name": "ia:itemGroup.name.upgrades"
+            },
+            "items": [
+              "ia:armor_piercing_rounds",
+              "ia:armor_plating",
+              "ia:bomb_bay_module",
+              "ia:eco_engine",
+              "ia:enhanced_propeller",
+              "ia:extended_range_barrels",
+              "ia:external_cargo_hooks",
+              "ia:gunner_control_stations",
+              "ia:gyroscope",
+              "ia:gyroscope_dials",
+              "ia:gyroscope_hud",
+              "ia:high_capacity_magazines",
+              "ia:high_explosive_rounds",
+              "ia:hull_reinforcement",
+              "ia:improved_landing_gear",
+              "ia:incendiary_rounds",
+              "ia:industrial_gears",
+              "ia:nether_engine",
+              "ia:parachute_system",
+              "ia:precision_sights",
+              "ia:rapid_reload",
+              "ia:reinforced_airframe",
+              "ia:searchlight",
+              "ia:steel_boiler",
+              "ia:sturdy_pipes",
+              "ia:supercharger",
+              "ia:autopilot"
+            ]
+          },
+          {
+            "group_identifier": {
               "icon": "ia:engine",
-              "name": "ia:itemGroup.name.immersive_aircraft"
+              "name": "ia:itemGroup.name.parts"
             },
             "items": [
               "ia:hull",
               "ia:engine",
               "ia:sail",
               "ia:propeller",
-              "ia:boiler",
-              "ia:enhanced_propeller",
-              "ia:eco_engine",
-              "ia:nether_engine",
-              "ia:steel_boiler",
-              "ia:industrial_gears",
-              "ia:sturdy_pipes",
-              "ia:gyroscope",
-              "ia:gyroscope_hud",
-              "ia:gyroscope_dials",
-              "ia:hull_reinforcement",
-              "ia:improved_landing_gear",
-              "ia:armor_piercing_rounds",
-              "ia:high_explosive_rounds",
-              "ia:extended_range_barrels",
-              "ia:rapid_reload",
-              "ia:precision_sights",
-              "ia:incendiary_rounds",
-              "ia:high_capacity_magazines",
-              "ia:bomb_bay_module",
-              "ia:gunner_control_stations",
-              "ia:supercharger",
-              "ia:armor_plating",
-              "ia:reinforced_airframe",
-              "ia:external_cargo_hooks",
-              "ia:parachute_system",
-              "ia:searchlight"
+              "ia:boiler"
             ]
           }
         ]

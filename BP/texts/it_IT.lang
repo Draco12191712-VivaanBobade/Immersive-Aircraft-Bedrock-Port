@@ -49,3 +49,5 @@ option.immersive_aircraft.wearPerMinute=Durability lost per minute of flight, in
 option.immersive_aircraft.windClearWeather=Effetto vento di base.
 option.immersive_aircraft.windRainWeather=Vento alle precipitazioni.
 option.immersive_aircraft.windThunderWeather=Vento extra al tuono.
+option.immersive_aircraft.allowPvp=Aerial battles: weapons hit other players and their aircraft.
+option.immersive_aircraft.stalls=Stalls: climbing or diving too steeply, or running out of fuel, sends a plane into a nosedive.

@@ -49,3 +49,5 @@ option.immersive_aircraft.wearPerMinute=Durability lost per minute of flight, in
 option.immersive_aircraft.windClearWeather=기본 바람 효과.
 option.immersive_aircraft.windRainWeather=강우 시 바람.
 option.immersive_aircraft.windThunderWeather=천둥에 추가 바람.
+option.immersive_aircraft.allowPvp=Aerial battles: weapons hit other players and their aircraft.
+option.immersive_aircraft.stalls=Stalls: climbing or diving too steeply, or running out of fuel, sends a plane into a nosedive.

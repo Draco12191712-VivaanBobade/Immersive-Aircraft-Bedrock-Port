@@ -5,7 +5,7 @@
       "identifier": "ia:gyrodyne",
       "menu_category": {
         "category": "equipment",
-        "group": "ia:itemGroup.name.immersive_aircraft"
+        "group": "ia:itemGroup.name.aircraft"
       }
     },
     "components": {

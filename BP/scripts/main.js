@@ -2283,6 +2283,8 @@ var CFD = {
   repairMaterials: false,
   heavyWeaponsBreakBlocks: true,
   autoFire: true,
+  allowPvp: true,
+  stalls: true,
   fuelList: {
     "minecraft:blaze_powder": 1200,
   },
@@ -2316,6 +2318,9 @@ var M = new Map(),
   OR = [],
   SM = [],
   FL = [],
+  AL = [],
+  XQ = [],
+  LRF = new Map(),
   PP = {},
   cc = null,
   WX = {};
@@ -2443,6 +2448,8 @@ var CB = [
   "defaultCanEnter",
   "lookSteering",
   "flightCameraEffects",
+  "allowPvp",
+  "stalls",
 ];
 var CN = [
   "speedMultiplier",
@@ -2504,6 +2511,8 @@ var OPT = [
   "repairMaterials",
   "heavyWeaponsBreakBlocks",
   "autoFire",
+  "allowPvp",
+  "stalls",
 ];
 
 function gps() {
@@ -2729,6 +2738,7 @@ function sob() {
     ["ia_fuel", "Fuel Burned in Aircraft"],
     ["ia_damage", "Damage Caused to Aircraft"],
     ["ia_crashes", "Crashed Aircraft"],
+    ["ia_kills", "Aircraft Shot Down"],
   ];
   for (var x of x2)
     if (!w.scoreboard.getObjective(x[0])) w.scoreboard.addObjective(x[0], x[1]);
@@ -2947,6 +2957,7 @@ function lfe(s, dir, f) {
 function grv(e, s) {
   var c = s.d.cls;
   if (c == "airplane") {
+    if (s.sd > 0) return 0.04;
     if (s.k == "bamboo_hopper" && s.fh > 0) return -0.04 * s.fh;
     var d = fw(s);
     return (1 - lfe(s, d, 1 - Math.abs(d.y))) * 0.04;
@@ -3008,7 +3019,7 @@ function cpw(e, s, d) {
     L3 = ln(v2),
     dr2 = Math.abs(dt(d, nm(v2))),
     n2 = nm(v2),
-    t2 = P(s, "lift") * (s.d.cls == "airplane" ? lfe(s, d, 1) : 1),
+    t2 = P(s, "lift") * (s.d.cls == "airplane" ? lfe(s, d, 1) : 1) * (s.sd > 0 ? 0.2 : 1),
     q2 = ad(n2, sc(ad(d, sc(n2, -1)), t2)),
     k2 = L3 * (dr2 * F + 1 - F);
   s.vx = q2.x * k2;
@@ -3355,7 +3366,10 @@ function spa(e, s, q, mp, n) {
   if (pcr(e)) return true;
   if (q.ammo <= 0) {
     var pi = rdr(e)[0];
-    if (isP(pi)) say(pi, { translate: "immersive_aircraft.out_of_ammo" });
+    if (isP(pi) && (!AF || T - (s.oam || -999) > 100)) {
+      s.oam = T;
+      say(pi, { translate: "immersive_aircraft.out_of_ammo" });
+    }
     return false;
   }
   q.ammo -= n;
@@ -3384,7 +3398,7 @@ function frc(e, s, mt, d) {
   var pos = wps(e, s, mt, v3(0, 0.825, -0.375), 1, d),
     spd = sv(s),
     v = ad(sht(d, 4 * (s.u.weaponRange || 1), (s.u.weaponSpread || 1)), spd),
-    b = e.dimension.spawnEntity("ia:bullet", pos),
+    b = e.dimension.spawnEntity((bcp(), "ia:bullet"), pos),
     pi = rdr(e)[0];
   b.applyImpulse(v);
   BU.push(
@@ -3438,7 +3452,7 @@ function cfi(e, s, W, q, ix, p) {
     q.rl += 0.25;
     if (Math.floor(o) != Math.floor(q.rl)) {
       if (spa(e, s, q, gc().gunpowderAmmunition, 10))
-        frc(e, s, mt, p.getViewDirection());
+        frc(e, s, mt, vdr(p, e, 4 * (s.u.weaponRange || 1)));
     }
   } else if (W.t == "hc") {
     if (q.cd <= 0) {
@@ -3470,13 +3484,16 @@ function afw(W) {
   if (W.t == "rc") return AF.v;
   return d.mount == "FRONT" ? AF.f : d.mount == "ROTATING" ? AF.v : false;
 }
-function afm(e, s, p) {
+function afm(e, s, p, mo) {
   var o = { v: false, f: false },
     h = p.getHeadLocation(),
     d = p.getViewDirection(),
     l0 = e.location,
-    fw = mv(rmx(s), v3(0, 0, 1));
-  for (var x of p.dimension.getEntities({ location: h, maxDistance: 56, families: ["monster"] })) {
+    fw = mv(rmx(s), v3(0, 0, 1)),
+    lq = pst(p).lk,
+    lt = lq ? w.getEntity(lq) : undefined;
+  if (lt && lt.isValid && lt.dimension.id == p.dimension.id && tok(lt, e, p)) aft(o, lt, h, d, l0, fw);
+  if (mo) for (var x of p.dimension.getEntities({ location: h, maxDistance: 56, families: ["monster"] })) {
     if (!x.isValid || x.id == e.id || rdo(x) === e) continue;
     var l = x.location,
       dx = l.x - h.x,
@@ -3538,10 +3555,10 @@ function xfi(e, s, W, q, mt, p) {
     rng = u.weaponRange || 1,
     spr = u.weaponSpread || 1;
   if (k == "gun") {
-    var ad0 = p.getViewDirection(),
+    var ad0 = vdr(p, e, d.spd * rng),
       pos = wps(e, s, mt, v3(0, d.big ? 0.42 : 0.35, 0), d.big ? 1.1 : 0.8, ad0),
       v = ad(sht(ad0, d.spd * rng, d.inc * spr), sv0),
-      b = dm.spawnEntity("ia:bullet", pos);
+      b = dm.spawnEntity((bcp(), "ia:bullet"), pos);
     b.applyImpulse(v);
     BU.push(bul(b, v, p, e, s, d.dmg, d.big));
     mzl(e, pos, ad(sc(nm(ad0), 0.25), sv0));
@@ -3590,8 +3607,10 @@ function xfi(e, s, W, q, mt, p) {
     ord(e, s, "rocket", mp, lv, p, { g: 0.004, dr: 1, acc: 0.12, mx: 3.5 * rng, dmg: d.dmg, exp: d.exp, brk: d.brk, lf: 120 });
     dm.playSound("firework.launch", e.location, { volume: 1, pitch: 0.8 });
   } else if (k == "heat" || k == "radar") {
-    var tg = null;
-    if (k == "radar") {
+    var tg = null,
+      lt0 = pst(p).lk ? w.getEntity(pst(p).lk) : undefined;
+    if (lt0 && lt0.isValid && tok(lt0, e, p)) tg = lt0.id;
+    else if (k == "radar") {
       try {
         for (var h of p.getEntitiesFromViewDirection({ maxDistance: 160 }))
           if (tok(h.entity, e, p)) {
@@ -3605,7 +3624,7 @@ function xfi(e, s, W, q, mt, p) {
   }
 }
 function tok(x, e, p) {
-  if (!x || !x.isValid || x.id == e.id || x.id == p.id) return false;
+  if (!x || !x.isValid || x.id == e.id || x.id == p.id || pvx(x, p.id)) return false;
   if (!x.getComponent("minecraft:health")) return false;
   var r = rdo(x);
   if (r && r.id == e.id) return false;
@@ -3638,6 +3657,12 @@ function hst(dm, pos, fwd, e, p) {
 }
 function ord(e, s, kind, pos, v, p, o) {
   var x;
+  while (OR.length >= 96) {
+    var oo = OR.shift();
+    try {
+      if (oo.e.isValid) oo.e.remove();
+    } catch (z) { }
+  }
   try {
     x = e.dimension.spawnEntity("ia:ordnance", pos);
   } catch (z) {
@@ -3657,6 +3682,8 @@ function ord(e, s, kind, pos, v, p, o) {
 function boom(o, l, hit) {
   var dm = o.e.dimension,
     ow = o.ow ? w.getEntity(o.ow) : undefined;
+  if (hit && hit.isValid) hmk(ow, hit);
+  if (o.exp) xqa(o.ve, l, o.exp);
   if (hit && hit.isValid && o.dmg)
     try {
       hit.applyDamage(
@@ -3717,9 +3744,10 @@ function tor() {
             }
         }
         if (t && t.isValid) {
-          var to = ad(ad(t.location, v3(0, 0.6, 0)), sc(l, -1)),
+          var th = isA(t) ? HS[t.typeId.slice(3)] || [2.5, 0.6] : [2.5, 0.6],
+            to = ad(ad(t.location, v3(0, th[1], 0)), sc(l, -1)),
             sp = ln(v);
-          if (ln(to) < 2.5) {
+          if (ln(to) < th[0]) {
             boom(o, t.location, t.typeId == "ia:ordnance" ? null : t);
             e.remove();
             OR.splice(i, 1);
@@ -3773,7 +3801,7 @@ function tor() {
       try {
         for (var h2 of dm.getEntitiesFromRay(l, n, { maxDistance: Math.ceil(L2) + 1 })) {
           var x2 = h2.entity;
-          if (!x2 || x2.id == e.id || x2.id == o.ow || x2.id == o.ve || x2.typeId == "minecraft:item" || x2.typeId == "ia:bullet" || x2.typeId == "ia:ordnance")
+          if (!x2 || x2.id == e.id || x2.id == o.ow || x2.id == o.ve || x2.typeId == "minecraft:item" || x2.typeId == "ia:bullet" || x2.typeId == "ia:ordnance" || pvx(x2, o.ow))
             continue;
           var ro = rdo(x2);
           if (ro && ro.id == o.ve) continue;
@@ -3784,6 +3812,11 @@ function tor() {
           break;
         }
       } catch (x) { }
+      var ah2 = ahs(dm.id, l, n, L2, o.ve, o.ow);
+      if (ah2 && ah2.d < hd) {
+        hd = ah2.d;
+        hit = ah2.e;
+      }
       try {
         var bh2 = dm.getBlockFromRay(l, n, {
           maxDistance: Math.max(1, Math.ceil(L2)),
@@ -3882,11 +3915,11 @@ function gcs(e, s, p) {
   if (T < (g.nx || 0)) return;
   g.nx = (g.nx && T - g.nx < 2 ? g.nx : T) + 2 / (s.u.weaponRate || 1);
   if (!spa(e, s, g, { "minecraft:gunpowder": Math.round(24 * (s.u.weaponAmmo || 1)) }, 1)) return;
-  var d = p.getViewDirection(),
+  var d = vdr(p, e, 4.5 * (s.u.weaponRange || 1)),
     h = p.getHeadLocation(),
     pos = v3(h.x + d.x * 1.2, h.y + d.y * 1.2, h.z + d.z * 1.2),
     v = ad(sht(d, 4.5 * (s.u.weaponRange || 1), 1.6 * (s.u.weaponSpread || 1)), sv(s)),
-    b = e.dimension.spawnEntity("ia:bullet", pos);
+    b = e.dimension.spawnEntity((bcp(), "ia:bullet"), pos);
   b.applyImpulse(v);
   BU.push(bul(b, v, p, e, s, 2.5));
   e.dimension.playSound("ia.cannon", e.location, { volume: 0.6, pitch: 1.3 + Math.random() * 0.1 });
@@ -4016,7 +4049,8 @@ function tbu() {
           x.typeId == "minecraft:xp_orb" ||
           x.typeId == "ia:bullet" ||
           x.typeId == "ia:cargo_hold" ||
-          x.typeId == "ia:stash"
+          x.typeId == "ia:stash" ||
+          pvx(x, b.ow)
         )
           continue;
         var ro = rdo(x);
@@ -4026,6 +4060,11 @@ function tbu() {
           hit = x;
         }
         break;
+      }
+      var ah = ahs(dm.id, p, n, L2, b.ve, b.ow);
+      if (ah && ah.d < hd) {
+        hd = ah.d;
+        hit = ah.e;
       }
       var bh;
       try {
@@ -4049,6 +4088,7 @@ function tbu() {
       if (hit && hit != "b") {
         var ow = b.ow ? w.getEntity(b.ow) : undefined;
         var dg = b.dmg === undefined ? gc().rotaryCannonDamage : b.dmg;
+        hmk(ow, hit);
         if (b.ap && (isP(hit) || hit.getComponent("minecraft:equippable")))
           dg *= 1.3;
         hit.applyDamage(
@@ -4062,6 +4102,7 @@ function tbu() {
             hit.setOnFire(4, true);
           } catch (x) { }
       }
+      if (hit && b.he) xqa(b.ve, e.location, b.big ? 1.6 : 1);
       if (hit && b.he)
         cex(e.dimension, e.location, b.big ? 1.6 : 1, {
           breaksBlocks: false,
@@ -4261,10 +4302,20 @@ function hrt(e, s, a, src) {
   }
   var at = src.damagingEntity,
     pj = src.damagingProjectile;
-  if (isP(at) && at.getGameMode() == GameMode.Creative) {
+  if (isP(at) && !pj && at.getGameMode() == GameMode.Creative) {
     din(e, s);
     rmv(e, s);
     return;
+  }
+  if (
+    isP(at) &&
+    !rdr(e).some(function (x) {
+      return x.id == at.id;
+    })
+  ) {
+    s.la = at.id;
+    s.lan = at.name;
+    s.lat = T;
   }
   if (a > 0 && isP(at) && !rdr(e).length && !pj) a = Math.max(5, a);
   s.hd = -s.hd;
@@ -4279,6 +4330,7 @@ function apd(e, s, a, fo) {
     pi = rdr(e)[0];
   if (h <= 0) {
     s.hp = 0;
+    skd(e, s, pi);
     if (isP(pi)) sco("ia_crashes", pi, 1);
     var l = e.location,
       dm = e.dimension;
@@ -4297,6 +4349,208 @@ function apd(e, s, a, fo) {
     s.hp = h;
     e.setDynamicProperty("ia:hp", h);
     if (isP(pi)) sco("ia_damage", pi, Math.floor(a * 20 + 0.5));
+  }
+}
+function skd(e, s, pi) {
+  if (!s.lat || T - s.lat > 100 || (pi && pi.id == s.la)) return;
+  var o = own(e);
+  if (!isP(pi) && (!o || o == s.la)) return;
+  var at = w.getEntity(s.la),
+    an = { translate: "entity." + e.typeId + ".name" },
+    m = isP(pi)
+      ? { rawtext: [{ text: "§c» §r" }, { translate: "ia.battle.shot_down", with: { rawtext: [{ text: s.lan }, { text: pi.name }, an] } }] }
+      : { rawtext: [{ text: "§c» §r" }, { translate: "ia.battle.shot_down_empty", with: { rawtext: [{ text: s.lan }, an] } }] };
+  if (isP(at)) sco("ia_kills", at, 1);
+  for (var p of w.getAllPlayers())
+    try {
+      p.sendMessage(m);
+    } catch (x) { }
+}
+function cxp(p, cs) {
+  if (cs != EDC.blockExplosion && cs != EDC.entityExplosion) return false;
+  var q = pst(p),
+    r = rdo(p),
+    id = isA(r) ? r.id : T - (q.lrt || -99) < 40 ? q.lra : null;
+  return !!id && xqn(id, p.location, 3);
+}
+function cxa(e) {
+  return xqn(e.id, e.location, 4);
+}
+function xqn(id, l, m) {
+  for (var x of XQ)
+    if (x.ve == id && T - x.t <= 2 && Math.hypot(l.x - x.x, l.y - x.y, l.z - x.z) <= x.r * 2 + m) return true;
+  return false;
+}
+function xqa(ve, l, r) {
+  if (!ve) return;
+  XQ.push({ ve: ve, t: T, x: l.x, y: l.y, z: l.z, r: r });
+  if (XQ.length > 64) XQ.shift();
+}
+var HS = {
+  biplane: [2.8, 0.6],
+  gyrodyne: [2.2, 0.8],
+  airship: [2.4, 2.0],
+  cargo_airship: [2.8, 2.2],
+  warship: [4.5, 3.25],
+  quadrocopter: [1.3, 0.4],
+  bamboo_hopper: [3.5, 1.0],
+};
+function ahc(e, s) {
+  var h = HS[s.k] || [2, 0.5],
+    l = e.location;
+  return { e: e, d: e.dimension.id, c: v3(l.x, l.y + h[1], l.z), r: h[0] };
+}
+function pvx(x, ow) {
+  if (gc().allowPvp) return false;
+  if (isP(x)) return true;
+  if (isA(x)) {
+    if (rdr(x).some(isP)) return true;
+    var o = own(x);
+    if (o && o != ow) return true;
+  }
+  return false;
+}
+function ahs(dm, p, n, L2, ve, ow) {
+  var b = null;
+  for (var a of AL) {
+    if (a.d != dm || a.e.id == ve || !a.e.isValid || pvx(a.e, ow)) continue;
+    var cx = a.c.x - p.x,
+      cy = a.c.y - p.y,
+      cz = a.c.z - p.z,
+      t = cl(cx * n.x + cy * n.y + cz * n.z, 0, L2),
+      dx = cx - n.x * t,
+      dy = cy - n.y * t,
+      dz = cz - n.z * t;
+    if (dx * dx + dy * dy + dz * dz < a.r * a.r && (!b || t < b.d)) b = { e: a.e, d: t };
+  }
+  return b;
+}
+function hmk(p, x) {
+  if (!isP(p) || !(isP(x) || isA(x))) return;
+  var q = pst(p);
+  if (q.hm == T) return;
+  q.hm = T;
+  try {
+    p.playSound("random.orb", { pitch: 1.8, volume: 0.45 });
+  } catch (z) { }
+}
+function tgc(t) {
+  var l = t.location;
+  return isA(t) ? v3(l.x, l.y + (HS[t.typeId.slice(3)] || [2, 0.5])[1], l.z) : v3(l.x, l.y + 0.9, l.z);
+}
+function tvl(t) {
+  if (isA(t)) return sv(gs(t));
+  try {
+    return t.getVelocity();
+  } catch (x) {
+    return v3(0, 0, 0);
+  }
+}
+function vdr(p, e, spd) {
+  var d = p.getViewDirection(),
+    lq = pst(p).lk,
+    t = lq ? w.getEntity(lq) : undefined;
+  if (!t || !t.isValid || t.dimension.id != p.dimension.id) return d;
+  var h = p.getHeadLocation(),
+    c = tgc(t),
+    rv = ad(tvl(t), sc(e ? sv(gs(e)) : v3(0, 0, 0), -1)),
+    to = ad(c, sc(h, -1)),
+    dd = ln(to);
+  if (dd < 1 || dd > 160 || dt(nm(to), d) < 0.94) return d;
+  var tt = dd / Math.max(0.5, spd);
+  for (var i = 0; i < 2; i++) tt = ln(ad(ad(c, sc(rv, tt)), sc(h, -1))) / Math.max(0.5, spd);
+  return nm(ad(ad(c, sc(rv, tt)), sc(h, -1)));
+}
+function aft(o, t, h, d, l0, fw) {
+  var c = tgc(t),
+    r = isA(t) ? (HS[t.typeId.slice(3)] || [2])[0] : 0.7,
+    dx = c.x - h.x,
+    dy = c.y - h.y,
+    dz = c.z - h.z,
+    dd = Math.sqrt(dx * dx + dy * dy + dz * dz),
+    fx = c.x - l0.x,
+    fy = c.y - l0.y,
+    fz = c.z - l0.z,
+    fd = Math.sqrt(fx * fx + fy * fy + fz * fz);
+  if (dd > 2 && dd < 150 && (dx * d.x + dy * d.y + dz * d.z) / dd > Math.cos(Math.max(Math.asin(Math.min(1, r / dd)), 0.14))) o.v = true;
+  if (fd > 3 && fd < 150 && (fx * fw.x + fy * fw.y + fz * fw.z) / fd > Math.cos(Math.max(Math.asin(Math.min(1, r / fd)), 0.1))) o.f = true;
+}
+function tla(e, s, p, q) {
+  var h = p.getHeadLocation(),
+    d = p.getViewDirection(),
+    b = null,
+    bd = 1e9,
+    cur = q.lk ? w.getEntity(q.lk) : undefined;
+  try {
+    for (var x of p.getEntitiesFromViewDirection({ maxDistance: 120 }))
+      if (tok(x.entity, e, p)) {
+        b = x.entity;
+        bd = x.distance;
+        break;
+      }
+  } catch (z) { }
+  var ah = ahs(p.dimension.id, h, d, 120, e.id, p.id);
+  if (ah && ah.d < bd && tok(ah.e, e, p)) b = ah.e;
+  if (cur && (!cur.isValid || cur.dimension.id != p.dimension.id || !tok(cur, e, p) || ln(ad(tgc(cur), sc(h, -1))) > 160)) cur = null;
+  if (cur) {
+    if (dt(nm(ad(tgc(cur), sc(h, -1))), d) > 0.6) q.lks = T;
+    if (T - q.lks > 100) cur = null;
+  }
+  if (!cur && q.lk) {
+    q.lk = null;
+    try {
+      p.playSound("note.bass", { pitch: 0.8, volume: 0.6 });
+    } catch (z) { }
+  }
+  if (b && (!cur || b.id != cur.id)) {
+    if (q.lkc == b.id) q.lkt += 2;
+    else {
+      q.lkc = b.id;
+      q.lkt = 2;
+    }
+    if (q.lkt >= 16) {
+      q.lk = b.id;
+      q.lks = T;
+      q.lkc = null;
+      q.lkt = 0;
+      try {
+        p.playSound("note.pling", { pitch: 1.6, volume: 0.8 });
+      } catch (z) { }
+    }
+  } else {
+    q.lkc = null;
+    q.lkt = 0;
+  }
+}
+function tlh(p) {
+  var q = pst(p),
+    t = q.lk ? w.getEntity(q.lk) : undefined;
+  if (t && t.isValid) {
+    var dd = Math.round(ln(ad(t.location, sc(p.location, -1)))),
+      nx = t.nameTag
+        ? { text: t.nameTag }
+        : isP(t)
+          ? { text: t.name }
+          : { translate: "entity." + (t.typeId.indexOf("minecraft:") == 0 ? t.typeId.slice(10) : t.typeId) + ".name" },
+      ex = "";
+    if (isA(t)) {
+      var pp = rdr(t)[0];
+      ex = " §f" + Math.round(gs(t).hp * 100) + "%" + (isP(pp) ? " §7(" + pp.name + ")" : "");
+    }
+    return { rawtext: [{ text: "§c[+] " }, { translate: "ia.lock.target" }, { text: ": §f" }, nx, { text: " §7" + dd + "m" + ex }] };
+  }
+  if (q.lkc && q.lkt > 0) {
+    var n = Math.min(8, Math.round(q.lkt / 2));
+    return { rawtext: [{ text: "§e[" + "|".repeat(n) + "§8" + "|".repeat(8 - n) + "§e] " }, { translate: "ia.lock.locking" }] };
+  }
+  return null;
+}
+function bcp() {
+  while (BU.length >= 160) {
+    var ob = BU.shift();
+    try {
+      if (ob.e.isValid) ob.e.remove();
+    } catch (x) { }
   }
 }
 function col(e, s, dmg, pi) {
@@ -4348,6 +4602,9 @@ function din(e, s) {
 }
 function dro(e, s) {
   if (!gc().dropAircraft) return;
+  stz(e, s, mki(e, s));
+}
+function mki(e, s) {
   var it = new IS("ia:" + s.k, 1);
   var nm = e.getDynamicProperty("ia:name");
   if (typeof nm == "string" && nm) it.nameTag = nm;
@@ -4360,13 +4617,13 @@ function dro(e, s) {
         blue: (s.dye & 255) / 255,
       };
   }
-  stz(e, s, it);
+  return it;
 }
 function stz(e, s, it) {
   var cn = inv(e),
     h = hcn(e, s),
     dm = e.dimension,
-    l = e.location,
+    l = s.dl || e.location,
     n = 0,
     fi = [];
   if (h && s.bank) bks(e, s);
@@ -5010,6 +5267,42 @@ function dsm(e, s, p) {
       p.teleport(v3(t.x, Math.floor(t.y), t.z));
   });
 }
+function own(e) {
+  var o = e.getDynamicProperty("ia:ow");
+  return typeof o == "string" ? o : undefined;
+}
+function onm(e) {
+  var n = e.getDynamicProperty("ia:on");
+  return typeof n == "string" ? n : "?";
+}
+function lkk(e) {
+  return e.getDynamicProperty("ia:lk") === true;
+}
+function mng(p, e) {
+  var o = own(e);
+  return !o || o == p.id || p.commandPermissionLevel >= CommandPermissionLevel.GameDirectors;
+}
+function blk(p, e) {
+  return lkk(e) && !mng(p, e);
+}
+function lkm(p, e) {
+  say(p, { rawtext: [{ text: "§c" }, { translate: "ia.lock.locked", with: [onm(e)] }] });
+}
+function pku(p, e, s) {
+  if (!e.isValid || s.hp <= 0 || s.pu) return;
+  if (blk(p, e)) return lkm(p, e);
+  if (rdr(e).length) return say(p, { translate: "ia.pickup.riders" });
+  if (s.hk) return say(p, { translate: "ia.pickup.hook" });
+  if ((!e.isOnGround && !e.isInWater) || ln(vl(s)) > 0.08)
+    return say(p, { translate: "ia.pickup.moving" });
+  if (s.hp < 1) return say(p, { translate: "ia.pickup.repair" });
+  s.pu = true;
+  s.dl = p.location;
+  stz(e, s, mki(e, s));
+  rmv(e, s);
+  p.dimension.playSound("random.pop", p.location);
+  say(p, { translate: "ia.pickup.done" });
+}
 function lkd(p) {
   var x = p.getRotation().x;
   return cl((-x - 30) / 25, 0, 1) - cl((x - 30) / 25, 0, 1);
@@ -5056,7 +5349,7 @@ function tpl(e, s, rs) {
     if (s.oof && !e.isOnGround) {
       var lp = lk ? pi.getRotation().x : -fy * 12;
       s.mz = cl(
-        (Math.max(lp, (s.agl || 99) > 7 ? 14 : 0) -
+        (Math.max(lp, (s.agl || 99) > 7 ? (gc().stalls ? 60 : 14) : 0) -
           s.pit -
           s.pz.s * P(s, "pitchSpeed") * 8) /
         20,
@@ -5078,12 +5371,44 @@ function tpl(e, s, rs) {
         });
     } else s.mz = fy;
   }
+  if (s.sd > 0) s.mz = cl((65 - s.pit - s.pz.s * P(s, "pitchSpeed") * 8) / 20, -1, 1);
   if (s.ap) {
     if (fy < -0.8 && s.d.cls == "airplane") apo(e, s, pi, false);
     else apc(e, s, pi);
   }
 }
 
+function stl(e, s, c, rs, pi, og, iw) {
+  if (s.d.cls != "airplane" || !c.stalls || !rs.length || og || iw) {
+    s.sd = 0;
+    s.sk = 0;
+    return;
+  }
+  var fs = dt(vl(s), fw(s)) * 20;
+  if (s.sd > 0) {
+    s.sd--;
+    s.cu.STALL = 10;
+    s.mw = 6;
+    if (s.sd < 50 && s.pit > 35 && fs > 9) s.sd = 0;
+    if (isP(pi) && s.sd % 10 == 0)
+      try {
+        pi.camera.addShake({ intensity: 0.35, duration: 0.5, type: "Rotational" });
+      } catch (x) { }
+    return;
+  }
+  if (s.pit < -50 || s.pit > 72 || (s.pit < -20 && fs < 3.5)) s.sk = (s.sk || 0) + 1;
+  else s.sk = 0;
+  if (s.sk > 8) {
+    s.sk = 0;
+    s.sd = 80;
+    if (isP(pi)) {
+      say(pi, { rawtext: [{ text: "§c§l" }, { translate: "ia.stall.warn" }] });
+      try {
+        pi.playSound("note.bass", { pitch: 0.5, volume: 1 });
+      } catch (x) { }
+    }
+  }
+}
 function tk(e, s) {
   var c = gc(),
     d = s.d,
@@ -5094,6 +5419,7 @@ function tk(e, s) {
     iw = e.isInWater;
   upg(e, s);
   s.oof = d.fuelType != "fat" && rs.length > 0 && ut(e, s) == 0;
+  stl(e, s, c, rs, pi, og, iw);
   if (s.oof && !og && s.tc % 5 == 0) {
     var gh = null;
     try {
@@ -5278,6 +5604,13 @@ function tk(e, s) {
   }
 }
 
+function tch(p) {
+  try {
+    return p.inputInfo.lastInputModeUsed == InputMode.Touch;
+  } catch (x) {
+    return false;
+  }
+}
 function hnd(p) {
   var eq = p.getComponent("minecraft:equippable");
   return eq ? eq.getEquipment(EquipmentSlot.Mainhand) : undefined;
@@ -5289,7 +5622,9 @@ function pcm(p) {
 function hud(e, s, p) {
   var c = gc(),
     o = [],
-    q = pw(e, s);
+    q = pw(e, s),
+    tl = tlh(p);
+  if (tl) o.push(tl);
   if (s.d.gui == "engine" && c.showHotbarEngineGauge) {
     var f = Math.round(q * 10),
       tg = Math.round(s.tg * 10),
@@ -5396,6 +5731,7 @@ function ptk(p) {
     if (q.rid != r.id) {
       q.rid = r.id;
       q.at = 0;
+      p.setDynamicProperty("ia:cs", true);
       p.inputPermissions.setPermissionCategory(IPC.Dismount, true);
       if (pcm(p)) {
         p.camera.setCamera("minecraft:third_person");
@@ -5403,11 +5739,11 @@ function ptk(p) {
       }
       say(p, {
         translate:
-          s.d.cls == "airplane"
+          (s.d.cls == "airplane"
             ? "ia.controls.airplane"
             : s.d.cls == "gyrodyne"
               ? "ia.controls.gyrodyne"
-              : "ia.controls.rotorcraft",
+              : "ia.controls.rotorcraft") + (tch(p) ? ".touch" : ""),
       });
     }
     q.at++;
@@ -5431,8 +5767,9 @@ function ptk(p) {
     if (z && T % 20 == 0) sco2(p, SCOPE);
     if (!z && T % 3 == 0) fov(p, q, r, s);
     if (jfi(p)) wus(p);
-    if (gc().autoFire && T % 2 == 0 && q.at > 20) {
-      var am = afm(r, s, p);
+    if (T % 2 == 0) tla(r, s, p, q);
+    if (T % 2 == 0 && q.at > 20 && (gc().autoFire || q.lk)) {
+      var am = afm(r, s, p, gc().autoFire);
       if (am.v || am.f) {
         q.afu = T + 6;
         q.afm = am;
@@ -5447,6 +5784,10 @@ function ptk(p) {
     if (T % 2 == 0) rtl(p, q, s);
     var r0 = rdr(r)[0];
     if (r0 && r0.id == p.id && T % 2 == 0 && q.mu < T) hud(r, s, p);
+    else if (r0 && r0.id != p.id && T % 4 == 0 && q.mu < T) {
+      var tl0 = tlh(p);
+      if (tl0) p.onScreenDisplay.setActionBar(tl0);
+    }
   } else if (!r && p.isSneaking && T % 2 == 0) {
     for (var e of p.dimension.getEntities({
       families: ["ia_aircraft"],
@@ -5462,7 +5803,13 @@ function ptk(p) {
     }
   }
   if (!(r && isA(r)) && q.rid) {
+    q.lra = q.rid;
+    q.lrt = T;
     q.rid = null;
+    q.lk = null;
+    q.lkc = null;
+    q.lkt = 0;
+    p.setDynamicProperty("ia:cs", undefined);
     q.tp = q.tr = undefined;
     if (q.pch && !p.isOnGround) {
       try {
@@ -5586,7 +5933,16 @@ function pan(p, t) {
     q = pst(p),
     f = new ActionFormData(),
     a = [],
-    bd = [];
+    bd = [],
+    lb = blk(p, e);
+  if (lb && !me) {
+    var lf = new ActionFormData();
+    lf.title({ translate: "entity." + e.typeId + ".name" });
+    lf.body({ rawtext: [{ text: "§c" }, { translate: "ia.lock.locked", with: [onm(e)] }] });
+    lf.button({ translate: "ia.panel.close" });
+    shw(lf, p, function () { });
+    return;
+  }
   upg(e, s);
   var nm = e.getDynamicProperty("ia:name");
   f.title(
@@ -5599,6 +5955,14 @@ function pan(p, t) {
     { translate: "ia.panel.health" },
     { text: ": §f" + Math.round(s.hp * 100) + "%\n" },
   );
+  if (own(e))
+    bd.push(
+      { text: "§6" },
+      { translate: "ia.panel.owner" },
+      { text: ": §f" + onm(e) + " §7" },
+      { translate: lkk(e) ? "ia.panel.locked" : "ia.panel.unlocked" },
+      { text: "\n" },
+    );
   if (s.d.fuelType == "fat")
     bd.push(
       { text: "§6" },
@@ -5715,9 +6079,12 @@ function pan(p, t) {
   }
   bd.push({ text: "\n§7" }, { translate: "ia.panel.inventory_hint" });
   f.body({ rawtext: bd });
-  f.button({ translate: "ia.panel.manage" });
-  a.push("m");
+  if (!lb) {
+    f.button({ translate: "ia.panel.manage" });
+    a.push("m");
+  }
   if (
+    !lb &&
     rs.some(function (x) {
       return !isP(x);
     })
@@ -5725,9 +6092,17 @@ function pan(p, t) {
     f.button({ translate: "ia.panel.eject" });
     a.push("ej");
   }
-  if (hsz(e, s)) {
+  if (hsz(e, s) && !lb) {
     f.button({ translate: "ia.panel.cargo_bank", with: [String(s.bank + 1)] });
     a.push("bk");
+  }
+  if (mng(p, e)) {
+    f.button({ translate: lkk(e) ? "ia.panel.unlock" : "ia.panel.lock" });
+    a.push("lk");
+  }
+  if (!me && !lb && !rs.length) {
+    f.button({ translate: "ia.panel.pickup" });
+    a.push("pu");
   }
   if (me && cbo(e, s)) {
     f.button({ translate: "ia.panel.boost" });
@@ -5803,6 +6178,16 @@ function pan(p, t) {
       }
     } else if (x == "dm") dsm(e, s, p);
     else if (x == "st") stf(p, e);
+    else if (x == "lk") {
+      if (!mng(p, e)) return;
+      if (!own(e)) {
+        e.setDynamicProperty("ia:ow", p.id);
+        e.setDynamicProperty("ia:on", p.name);
+      }
+      var nl = !lkk(e);
+      e.setDynamicProperty("ia:lk", nl);
+      say(p, { translate: nl ? "ia.lock.on" : "ia.lock.off" });
+    } else if (x == "pu") pku(p, e, s);
     else if (x == "hk") hko(e, s, p);
     else if (x == "ap") apf(p, e);
     else if (x == "mf") {
@@ -6376,6 +6761,7 @@ function lor(it, n) {
       ],
     });
     for (var st in UPG[id]) {
+      if (UFL[st]) continue;
       var v = UPG[id][st],
         pc = Math.round(v * 100);
       o.push({
@@ -6388,9 +6774,54 @@ function lor(it, n) {
         ],
       });
     }
-  } else return false;
+    if (!JUP[k])
+      o.push({
+        rawtext: [
+          { text: "§7§o" },
+          { translate: "item.immersive_aircraft." + k + ".description" },
+        ],
+      });
+  } else if (id == "ia:aircraft_finder")
+    o.push({
+      rawtext: [
+        { text: "§7§o" },
+        { translate: "item.immersive_aircraft." + k + ".description" },
+      ],
+    });
+  else return false;
   it.setLore(o);
   return true;
+}
+var UFL = { armorPiercing: 1, explosiveRounds: 1, incendiary: 1, bombBay: 1, gunnerStations: 1, cargoHooks: 1, parachutes: 1, searchlight: 1 },
+  JUP = { enhanced_propeller: 1, eco_engine: 1, nether_engine: 1, steel_boiler: 1, industrial_gears: 1, sturdy_pipes: 1, gyroscope: 1, gyroscope_hud: 1, gyroscope_dials: 1, hull_reinforcement: 1, improved_landing_gear: 1 };
+function lks(it) {
+  var o = [];
+  try {
+    JSON.stringify(it.getRawLore(), function (k, v) {
+      if (k == "translate" || k == "text") o.push(v);
+      return v;
+    });
+  } catch (x) { }
+  return o.join("|");
+}
+function rlo(p, c, i, x) {
+  var kk = p.id + ":" + i + ":" + x.typeId,
+    t0 = LRF.get(kk),
+    n0 = x.getRawLore().length;
+  if (n0 && t0 !== undefined && T - t0 < 40) return;
+  var o = lks(x);
+  if (!lor(x, nn(x))) return;
+  if (n0 && lks(x) == o) return;
+  if (n0) LRF.set(kk, T);
+  if (LRF.size > 4000) LRF.clear();
+  c.setItem(i, x);
+}
+function rla(p) {
+  var c = p.getComponent("minecraft:inventory").container;
+  for (var i = 0; i < c.size; i++) {
+    var x = c.getItem(i);
+    if (x && x.typeId.startsWith("ia:") && !ukey(x)) rlo(p, c, i, x);
+  }
 }
 function nn(it) {
   return it.maxAmount == 1 ? it.getDynamicProperty("ia:n") || 0 : 0;
@@ -6430,6 +6861,8 @@ function plc(p, pos, it) {
   e.setRotation({ x: 0, y: yw });
   var s = gs(e);
   s.yaw = yw;
+  e.setDynamicProperty("ia:ow", p.id);
+  e.setDynamicProperty("ia:on", p.name);
   if (it.nameTag) e.setDynamicProperty("ia:name", it.nameTag);
   var dc = idc(it);
   if (dc == 15517836) dc = -1;
@@ -6671,6 +7104,13 @@ w.beforeEvents.playerInteractWithEntity.subscribe(function (ev) {
       return x.id == p.id;
     });
   var it = ev.itemStack;
+  if (!me && blk(p, e)) {
+    ev.cancel = true;
+    sy.run(function () {
+      if (e.isValid && p.isValid) lkm(p, e);
+    });
+    return;
+  }
   if (it && it.typeId == "ia:aircraft_finder") {
     ev.cancel = true;
     sy.run(function () {
@@ -6717,11 +7157,16 @@ w.beforeEvents.playerInteractWithEntity.subscribe(function (ev) {
 });
 w.beforeEvents.entityHurt.subscribe(function (ev) {
   var e = ev.hurtEntity;
+  if (isP(e)) {
+    if (XQ.length && cxp(e, ev.damageSource.cause)) ev.cancel = true;
+    return;
+  }
   if (!isA(e)) return;
   ev.cancel = true;
   var ds = ev.damageSource,
     cs = ds.cause,
     hp = ds.damagingEntity;
+  if ((cs == EDC.blockExplosion || cs == EDC.entityExplosion) && XQ.length && cxa(e)) return;
   if (
     isP(hp) &&
     rdr(e).some(function (x) {
@@ -6750,6 +7195,7 @@ w.beforeEvents.entityHurt.subscribe(function (ev) {
     cs == EDC.drowning
   )
     return;
+  if (isP(hp) && !ds.damagingProjectile && blk(hp, e) && hp.getGameMode() != GameMode.Creative) return;
   var src = {
     cause: cs,
     damagingEntity: ds.damagingEntity,
@@ -6813,12 +7259,34 @@ w.afterEvents.playerSpawn.subscribe(function (ev) {
   p.inputPermissions.setPermissionCategory(IPC.Dismount, true);
   q.rid = null;
   sco2(p, SCOFF);
-  if (q.cam || q.sc) {
-    p.camera.clear();
-    q.cam = false;
-    q.sc = false;
-  }
+  if (q.cam || q.sc || p.getDynamicProperty("ia:cs")) rcv(p, q);
+  sy.runTimeout(function () {
+    if (p.isValid) rla(p);
+  }, 20);
 });
+function rcv(p, q) {
+  try {
+    p.camera.clear();
+  } catch (x) { }
+  try {
+    p.runCommand("camera @s fov_clear");
+  } catch (x) { }
+  q.cam = false;
+  q.sc = false;
+  q.fov = 0;
+  p.inputPermissions.setPermissionCategory(IPC.Dismount, true);
+  sco2(p, SCOFF);
+  p.setDynamicProperty("ia:cs", undefined);
+}
+function rvc(p) {
+  var r = rdo(p);
+  if (isA(r)) {
+    var rr = r.getComponent("minecraft:rideable");
+    if (rr) rr.ejectRider(p);
+  }
+  rcv(p, pst(p));
+  p.sendMessage({ translate: "ia.recover.done" });
+}
 w.afterEvents.playerInventoryItemChange.subscribe(function (ev) {
   var it = ev.itemStack;
   if (!it || !it.typeId.startsWith("ia:")) return;
@@ -6827,10 +7295,9 @@ w.afterEvents.playerInventoryItemChange.subscribe(function (ev) {
     c.setItem(ev.slot);
     return;
   }
-  if (it.getRawLore().length) return;
   var x = c.getItem(ev.slot);
-  if (!x || x.typeId != it.typeId || x.getRawLore().length) return;
-  if (lor(x, nn(x))) c.setItem(ev.slot, x);
+  if (!x || x.typeId != it.typeId) return;
+  rlo(ev.player, c, ev.slot, x);
 });
 sy.beforeEvents.startup.subscribe(function (ev) {
   var r = ev.customCommandRegistry;
@@ -6850,6 +7317,22 @@ sy.beforeEvents.startup.subscribe(function (ev) {
       return { status: CustomCommandStatus.Success };
     },
   );
+  r.registerCommand(
+    {
+      name: "ia:recover",
+      description: "Reset your camera and controls after flying",
+      permissionLevel: CommandPermissionLevel.Any,
+      cheatsRequired: false,
+    },
+    function (o) {
+      var p = o.sourceEntity;
+      if (isP(p))
+        sy.run(function () {
+          if (p.isValid) rvc(p);
+        });
+      return { status: CustomCommandStatus.Success };
+    },
+  );
 });
 sy.runInterval(function () {
   T++;
@@ -6859,6 +7342,8 @@ sy.runInterval(function () {
   }
   if (T % 40 == 0) cc = null;
   if (T % 20 == 1) scn();
+  while (XQ.length && T - XQ[0].t > 3) XQ.shift();
+  AL = [];
   for (var id of Array.from(L)) {
     var e = w.getEntity(id);
     if (!e || !e.isValid) {
@@ -6869,6 +7354,7 @@ sy.runInterval(function () {
       var s0 = gs(e);
       pkt(e, s0);
       tk(e, s0);
+      if (e.isValid) AL.push(ahc(e, s0));
     } catch (x) {
       if (T % 200 == 0) console.warn("[ia] " + x);
     }

@@ -5,7 +5,7 @@
       "identifier": "ia:heavy_bomb",
       "menu_category": {
         "category": "equipment",
-        "group": "ia:itemGroup.name.immersive_aircraft"
+        "group": "ia:itemGroup.name.weapons"
       }
     },
     "components": {
