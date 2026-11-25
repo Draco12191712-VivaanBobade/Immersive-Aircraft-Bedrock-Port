@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ia.rider.chute": {
+      "loop": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -128",
+            0,
+            "q.is_in_ui ? 0 : 12"
+          ]
+        },
+        "leftarm": {
+          "rotation": [
+            "q.is_in_ui ? 0 : -128",
+            0,
+            "q.is_in_ui ? 0 : -12"
+          ]
+        },
+        "rightleg": {
+          "rotation": [
+            "q.is_in_ui ? 0 : (-8 - this)",
+            "q.is_in_ui ? 0 : (4 - this)",
+            "q.is_in_ui ? 0 : -this"
+          ]
+        },
+        "leftleg": {
+          "rotation": [
+            "q.is_in_ui ? 0 : (-8 - this)",
+            "q.is_in_ui ? 0 : (-4 - this)",
+            "q.is_in_ui ? 0 : -this"
+          ]
+        }
+      }
+    }
+  }
+}
