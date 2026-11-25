@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "held_nether_engine",
+    "metalness_emissive_roughness": "held_nether_engine_mers",
+    "normal": "held_nether_engine_normal"
+  }
+}

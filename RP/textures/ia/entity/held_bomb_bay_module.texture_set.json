@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "held_bomb_bay_module",
+    "metalness_emissive_roughness": "held_bomb_bay_module_mers",
+    "normal": "held_bomb_bay_module_normal"
+  }
+}

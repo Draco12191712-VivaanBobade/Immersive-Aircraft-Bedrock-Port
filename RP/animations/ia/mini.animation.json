@@ -27,6 +27,40 @@
         }
       }
     },
+    "animation.ia.mini.part": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.04",
+            "v.ia_wb * 0.35 + math.sin(q.life_time * 80) * 0.12",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 3",
+            "0",
+            "v.ia_sw * 0.8"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.rumble": {
+      "loop": true,
+      "bones": {
+        "ia_react": {
+          "position": [
+            "v.ia_sw * 0.04 + math.sin(q.life_time * 3100) * (0.05 + 0.08 * v.ia_mv)",
+            "v.ia_wb * 0.3 + math.cos(q.life_time * 2700) * (0.05 + 0.08 * v.ia_mv)",
+            "0"
+          ],
+          "rotation": [
+            "v.ia_wb * 2",
+            "0",
+            "v.ia_sw * 0.6"
+          ]
+        }
+      }
+    },
     "animation.ia.mini.aircraft": {
       "loop": true,
       "bones": {
@@ -211,6 +245,133 @@
             0,
             0,
             "-v.ia_spin * 100"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.propeller.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "0",
+            "0",
+            "v.ia_spin * 100.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.enhanced_propeller.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "0",
+            "0",
+            "v.ia_spin * 130.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.industrial_gears.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "0",
+            "0",
+            "v.ia_spin * 80.0"
+          ]
+        },
+        "spin_r": {
+          "rotation": [
+            "0",
+            "0",
+            "v.ia_spin * -110.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.gyroscope.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "0",
+            "v.ia_spin * 90.0",
+            "0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.gyroscope_dials.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "0",
+            "v.ia_spin * 60.0",
+            "0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.aircraft_finder.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "0",
+            "v.ia_spin * 40.0",
+            "0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.rapid_reload.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "0",
+            "0",
+            "v.ia_spin * 110.0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.supercharger.move": {
+      "loop": true,
+      "bones": {
+        "spin": {
+          "rotation": [
+            "v.ia_spin * 160.0",
+            "0",
+            "0"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.sail.move": {
+      "loop": true,
+      "bones": {
+        "cloth": {
+          "scale": [
+            "1 + math.sin(q.life_time * 700) * 0.08 * (0.3 + v.ia_mv)",
+            "1 + math.sin(q.life_time * 530) * 0.04 * (0.3 + v.ia_mv)",
+            "1"
+          ]
+        }
+      }
+    },
+    "animation.ia.mini.parachute_system.move": {
+      "loop": true,
+      "bones": {
+        "cloth": {
+          "scale": [
+            "1 + math.sin(q.life_time * 700) * 0.08 * (0.3 + v.ia_mv)",
+            "1 + math.sin(q.life_time * 530) * 0.04 * (0.3 + v.ia_mv)",
+            "1"
           ]
         }
       }

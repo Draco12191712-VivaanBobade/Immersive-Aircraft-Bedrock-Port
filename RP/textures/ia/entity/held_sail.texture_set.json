@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "held_sail",
+    "metalness_emissive_roughness": "held_sail_mers",
+    "normal": "held_sail_normal"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "held_bomb_bay_module_vn",
+    "normal": "held_bomb_bay_module_normal"
+  }
+}

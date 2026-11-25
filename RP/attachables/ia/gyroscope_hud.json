@@ -1,0 +1,52 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ia:gyroscope_hud.ia3d",
+      "item": {
+        "ia:gyroscope_hud": "q.is_pack_setting_enabled('ia:items_3d')"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/ia/entity/held_gyroscope_hud",
+        "vm": "textures/ia/entity/held_gyroscope_hud_vm",
+        "vn": "textures/ia/entity/held_gyroscope_hud_vn",
+        "v0": "textures/ia/entity/held_gyroscope_hud_v0"
+      },
+      "geometry": {
+        "weapon": "geometry.ia.mini.gyroscope_hud"
+      },
+      "animations": {
+        "pose": "animation.ia.mini.pose",
+        "size": "animation.ia.mini.size",
+        "react": "animation.ia.mini.part"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.ia_k = 0.75;",
+          "v.ia_cy = q.camera_rotation(1);",
+          "v.ia_d = math.clamp(math.mod(v.ia_cy - (v.ia_py ?? v.ia_cy) + 540, 360) - 180, -25, 25);",
+          "v.ia_py = v.ia_cy;",
+          "v.ia_sw = math.lerp(v.ia_sw ?? 0, v.ia_d, 0.15);",
+          "v.ia_dm = q.modified_distance_moved;",
+          "v.ia_v = math.clamp((v.ia_dm - (v.ia_pm ?? v.ia_dm)) / math.max(q.delta_time, 0.001), 0, 8);",
+          "v.ia_pm = v.ia_dm;",
+          "v.ia_mv = math.lerp(v.ia_mv ?? 0, math.clamp(v.ia_v / 4.3, 0, 1), 0.2);",
+          "v.ia_wb = math.sin(v.ia_dm * 38.17) * v.ia_mv;",
+          "v.ia_sp = math.lerp(v.ia_sp ?? 0, v.ia_v > 5.0 ? 1 : 0, 0.1);",
+          "v.ia_spin = (v.ia_spin ?? 0) + q.delta_time * (3 + 12 * v.ia_mv);"
+        ],
+        "animate": [
+          "pose",
+          "size",
+          "react"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ia.mini.weapon"
+      ]
+    }
+  }
+}

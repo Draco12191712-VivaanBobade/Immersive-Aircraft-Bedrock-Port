@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "held_parachute_system",
+    "metalness_emissive_roughness": "held_parachute_system_mers",
+    "normal": "held_parachute_system_normal"
+  }
+}
