@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_precision_sights_vm",
         "vn": "textures/ia/entity/held_precision_sights_vn",
         "v0": "textures/ia/entity/held_precision_sights_v0",
+        "vmh": "textures/ia/entity/held_precision_sights_vmh",
+        "vh": "textures/ia/entity/held_precision_sights_vh",
         "icon": "textures/ia/items/precision_sights"
       },
       "geometry": {

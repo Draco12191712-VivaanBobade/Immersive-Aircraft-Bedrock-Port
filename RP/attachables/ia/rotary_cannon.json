@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/rotary_cannon_vm",
         "vn": "textures/ia/entity/rotary_cannon_vn",
         "v0": "textures/ia/entity/rotary_cannon_v0",
+        "vmh": "textures/ia/entity/rotary_cannon_vmh",
+        "vh": "textures/ia/entity/rotary_cannon_vh",
         "icon": "textures/ia/items/rotary_cannon"
       },
       "geometry": {

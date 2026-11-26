@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_rapid_reload_vm",
         "vn": "textures/ia/entity/held_rapid_reload_vn",
         "v0": "textures/ia/entity/held_rapid_reload_v0",
+        "vmh": "textures/ia/entity/held_rapid_reload_vmh",
+        "vh": "textures/ia/entity/held_rapid_reload_vh",
         "icon": "textures/ia/items/rapid_reload"
       },
       "geometry": {

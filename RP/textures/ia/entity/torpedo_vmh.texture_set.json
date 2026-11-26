@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "torpedo_vmh",
+    "metalness_emissive_roughness": "torpedo_mers",
+    "heightmap": "torpedo_heightmap"
+  }
+}

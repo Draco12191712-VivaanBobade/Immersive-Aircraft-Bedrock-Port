@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_sturdy_pipes_vm",
         "vn": "textures/ia/entity/held_sturdy_pipes_vn",
         "v0": "textures/ia/entity/held_sturdy_pipes_v0",
+        "vmh": "textures/ia/entity/held_sturdy_pipes_vmh",
+        "vh": "textures/ia/entity/held_sturdy_pipes_vh",
         "icon": "textures/ia/items/sturdy_pipes"
       },
       "geometry": {

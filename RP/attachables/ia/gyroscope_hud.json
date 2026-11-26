@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_gyroscope_hud_vm",
         "vn": "textures/ia/entity/held_gyroscope_hud_vn",
         "v0": "textures/ia/entity/held_gyroscope_hud_v0",
+        "vmh": "textures/ia/entity/held_gyroscope_hud_vmh",
+        "vh": "textures/ia/entity/held_gyroscope_hud_vh",
         "icon": "textures/ia/items/gyroscope_hud"
       },
       "geometry": {

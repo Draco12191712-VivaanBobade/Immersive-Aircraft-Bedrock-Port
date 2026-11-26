@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_supercharger_vm",
         "vn": "textures/ia/entity/held_supercharger_vn",
         "v0": "textures/ia/entity/held_supercharger_v0",
+        "vmh": "textures/ia/entity/held_supercharger_vmh",
+        "vh": "textures/ia/entity/held_supercharger_vh",
         "icon": "textures/ia/items/supercharger"
       },
       "geometry": {

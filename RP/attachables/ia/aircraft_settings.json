@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_aircraft_settings_vm",
         "vn": "textures/ia/entity/held_aircraft_settings_vn",
         "v0": "textures/ia/entity/held_aircraft_settings_v0",
+        "vmh": "textures/ia/entity/held_aircraft_settings_vmh",
+        "vh": "textures/ia/entity/held_aircraft_settings_vh",
         "icon": "textures/ia/items/aircraft_settings"
       },
       "geometry": {

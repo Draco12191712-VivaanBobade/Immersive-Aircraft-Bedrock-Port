@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/torpedo_vm",
         "vn": "textures/ia/entity/torpedo_vn",
         "v0": "textures/ia/entity/torpedo_v0",
+        "vmh": "textures/ia/entity/torpedo_vmh",
+        "vh": "textures/ia/entity/torpedo_vh",
         "icon": "textures/ia/items/depth_charge"
       },
       "geometry": {

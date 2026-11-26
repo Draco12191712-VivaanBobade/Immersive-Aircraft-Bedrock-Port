@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_external_cargo_hooks_vm",
         "vn": "textures/ia/entity/held_external_cargo_hooks_vn",
         "v0": "textures/ia/entity/held_external_cargo_hooks_v0",
+        "vmh": "textures/ia/entity/held_external_cargo_hooks_vmh",
+        "vh": "textures/ia/entity/held_external_cargo_hooks_vh",
         "icon": "textures/ia/items/external_cargo_hooks"
       },
       "geometry": {

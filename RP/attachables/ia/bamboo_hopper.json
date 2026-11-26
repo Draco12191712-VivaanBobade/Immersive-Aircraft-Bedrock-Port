@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/bamboo_hopper_vm",
         "vn": "textures/ia/entity/bamboo_hopper_vn",
         "v0": "textures/ia/entity/bamboo_hopper_v0",
+        "vmh": "textures/ia/entity/bamboo_hopper_vmh",
+        "vh": "textures/ia/entity/bamboo_hopper_vh",
         "icon": "textures/ia/items/bamboo_hopper"
       },
       "geometry": {

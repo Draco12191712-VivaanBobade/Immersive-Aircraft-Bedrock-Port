@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "rotary_cannon_vmh",
+    "metalness_emissive_roughness": "rotary_cannon_mers",
+    "heightmap": "rotary_cannon_heightmap"
+  }
+}

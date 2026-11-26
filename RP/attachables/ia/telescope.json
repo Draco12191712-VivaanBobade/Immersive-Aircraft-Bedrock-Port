@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/telescope_vm",
         "vn": "textures/ia/entity/telescope_vn",
         "v0": "textures/ia/entity/telescope_v0",
+        "vmh": "textures/ia/entity/telescope_vmh",
+        "vh": "textures/ia/entity/telescope_vh",
         "icon": "textures/ia/items/telescope"
       },
       "geometry": {

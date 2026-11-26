@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_gunner_control_stations_vm",
         "vn": "textures/ia/entity/held_gunner_control_stations_vn",
         "v0": "textures/ia/entity/held_gunner_control_stations_v0",
+        "vmh": "textures/ia/entity/held_gunner_control_stations_vmh",
+        "vh": "textures/ia/entity/held_gunner_control_stations_vh",
         "icon": "textures/ia/items/gunner_control_stations"
       },
       "geometry": {

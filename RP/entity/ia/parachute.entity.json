@@ -10,7 +10,9 @@
         "default": "textures/ia/entity/parachute",
         "default_vm": "textures/ia/entity/parachute_vm",
         "default_vn": "textures/ia/entity/parachute_vn",
-        "default_v0": "textures/ia/entity/parachute_v0"
+        "default_v0": "textures/ia/entity/parachute_v0",
+        "default_vmh": "textures/ia/entity/parachute_vmh",
+        "default_vh": "textures/ia/entity/parachute_vh"
       },
       "geometry": {
         "default": "geometry.ia.parachute"

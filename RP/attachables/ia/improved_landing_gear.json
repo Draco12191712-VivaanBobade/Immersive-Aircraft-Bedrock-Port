@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_improved_landing_gear_vm",
         "vn": "textures/ia/entity/held_improved_landing_gear_vn",
         "v0": "textures/ia/entity/held_improved_landing_gear_v0",
+        "vmh": "textures/ia/entity/held_improved_landing_gear_vmh",
+        "vh": "textures/ia/entity/held_improved_landing_gear_vh",
         "icon": "textures/ia/items/improved_landing_gear"
       },
       "geometry": {

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "quadrocopter_vmh",
+    "metalness_emissive_roughness": "quadrocopter_mers",
+    "heightmap": "quadrocopter_heightmap"
+  }
+}

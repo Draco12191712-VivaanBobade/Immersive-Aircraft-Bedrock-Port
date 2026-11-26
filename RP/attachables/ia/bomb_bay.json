@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/bomb_bay_vm",
         "vn": "textures/ia/entity/bomb_bay_vn",
         "v0": "textures/ia/entity/bomb_bay_v0",
+        "vmh": "textures/ia/entity/bomb_bay_vmh",
+        "vh": "textures/ia/entity/bomb_bay_vh",
         "icon": "textures/ia/items/bomb_bay"
       },
       "geometry": {

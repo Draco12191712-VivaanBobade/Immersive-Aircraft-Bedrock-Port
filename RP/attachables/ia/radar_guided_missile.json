@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/missile_rail_vm",
         "vn": "textures/ia/entity/missile_rail_vn",
         "v0": "textures/ia/entity/missile_rail_v0",
+        "vmh": "textures/ia/entity/missile_rail_vmh",
+        "vh": "textures/ia/entity/missile_rail_vh",
         "icon": "textures/ia/items/radar_guided_missile"
       },
       "geometry": {

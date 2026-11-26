@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_armor_plating_vm",
         "vn": "textures/ia/entity/held_armor_plating_vn",
         "v0": "textures/ia/entity/held_armor_plating_v0",
+        "vmh": "textures/ia/entity/held_armor_plating_vmh",
+        "vh": "textures/ia/entity/held_armor_plating_vh",
         "icon": "textures/ia/items/armor_plating"
       },
       "geometry": {

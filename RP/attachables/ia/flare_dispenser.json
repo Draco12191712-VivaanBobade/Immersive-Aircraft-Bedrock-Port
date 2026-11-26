@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/dispenser_vm",
         "vn": "textures/ia/entity/dispenser_vn",
         "v0": "textures/ia/entity/dispenser_v0",
+        "vmh": "textures/ia/entity/dispenser_vmh",
+        "vh": "textures/ia/entity/dispenser_vh",
         "icon": "textures/ia/items/flare_dispenser"
       },
       "geometry": {

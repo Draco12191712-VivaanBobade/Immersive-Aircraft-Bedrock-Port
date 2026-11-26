@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/rocket_pod_vm",
         "vn": "textures/ia/entity/rocket_pod_vn",
         "v0": "textures/ia/entity/rocket_pod_v0",
+        "vmh": "textures/ia/entity/rocket_pod_vmh",
+        "vh": "textures/ia/entity/rocket_pod_vh",
         "icon": "textures/ia/items/light_rocket_pod"
       },
       "geometry": {

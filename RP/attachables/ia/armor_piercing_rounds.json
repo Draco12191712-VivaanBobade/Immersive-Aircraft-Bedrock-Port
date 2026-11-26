@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_armor_piercing_rounds_vm",
         "vn": "textures/ia/entity/held_armor_piercing_rounds_vn",
         "v0": "textures/ia/entity/held_armor_piercing_rounds_v0",
+        "vmh": "textures/ia/entity/held_armor_piercing_rounds_vmh",
+        "vh": "textures/ia/entity/held_armor_piercing_rounds_vh",
         "icon": "textures/ia/items/armor_piercing_rounds"
       },
       "geometry": {

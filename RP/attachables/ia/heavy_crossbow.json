@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/heavy_crossbow_vm",
         "vn": "textures/ia/entity/heavy_crossbow_vn",
         "v0": "textures/ia/entity/heavy_crossbow_v0",
+        "vmh": "textures/ia/entity/heavy_crossbow_vmh",
+        "vh": "textures/ia/entity/heavy_crossbow_vh",
         "icon": "textures/ia/items/heavy_crossbow"
       },
       "geometry": {

@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_gyroscope_dials_vm",
         "vn": "textures/ia/entity/held_gyroscope_dials_vn",
         "v0": "textures/ia/entity/held_gyroscope_dials_v0",
+        "vmh": "textures/ia/entity/held_gyroscope_dials_vmh",
+        "vh": "textures/ia/entity/held_gyroscope_dials_vh",
         "icon": "textures/ia/items/gyroscope_dials"
       },
       "geometry": {

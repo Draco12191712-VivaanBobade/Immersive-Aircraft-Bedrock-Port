@@ -1,0 +1,7 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "held_aircraft_finder_vh",
+    "heightmap": "held_aircraft_finder_heightmap"
+  }
+}

@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_high_capacity_magazines_vm",
         "vn": "textures/ia/entity/held_high_capacity_magazines_vn",
         "v0": "textures/ia/entity/held_high_capacity_magazines_v0",
+        "vmh": "textures/ia/entity/held_high_capacity_magazines_vmh",
+        "vh": "textures/ia/entity/held_high_capacity_magazines_vh",
         "icon": "textures/ia/items/high_capacity_magazines"
       },
       "geometry": {

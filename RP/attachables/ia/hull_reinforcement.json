@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_hull_reinforcement_vm",
         "vn": "textures/ia/entity/held_hull_reinforcement_vn",
         "v0": "textures/ia/entity/held_hull_reinforcement_v0",
+        "vmh": "textures/ia/entity/held_hull_reinforcement_vmh",
+        "vh": "textures/ia/entity/held_hull_reinforcement_vh",
         "icon": "textures/ia/items/hull_reinforcement"
       },
       "geometry": {

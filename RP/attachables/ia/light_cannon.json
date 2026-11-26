@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/cannon_vm",
         "vn": "textures/ia/entity/cannon_vn",
         "v0": "textures/ia/entity/cannon_v0",
+        "vmh": "textures/ia/entity/cannon_vmh",
+        "vh": "textures/ia/entity/cannon_vh",
         "icon": "textures/ia/items/light_cannon"
       },
       "geometry": {

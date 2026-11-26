@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_extended_range_barrels_vm",
         "vn": "textures/ia/entity/held_extended_range_barrels_vn",
         "v0": "textures/ia/entity/held_extended_range_barrels_v0",
+        "vmh": "textures/ia/entity/held_extended_range_barrels_vmh",
+        "vh": "textures/ia/entity/held_extended_range_barrels_vh",
         "icon": "textures/ia/items/extended_range_barrels"
       },
       "geometry": {

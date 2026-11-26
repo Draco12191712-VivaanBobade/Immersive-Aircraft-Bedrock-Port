@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/cargo_airship_vm",
         "vn": "textures/ia/entity/cargo_airship_vn",
         "v0": "textures/ia/entity/cargo_airship_v0",
+        "vmh": "textures/ia/entity/cargo_airship_vmh",
+        "vh": "textures/ia/entity/cargo_airship_vh",
         "icon": "textures/ia/items/cargo_airship_icon"
       },
       "geometry": {

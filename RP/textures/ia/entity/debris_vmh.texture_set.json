@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:texture_set": {
+    "color": "debris_vmh",
+    "metalness_emissive_roughness": "debris_mers",
+    "heightmap": "debris_heightmap"
+  }
+}

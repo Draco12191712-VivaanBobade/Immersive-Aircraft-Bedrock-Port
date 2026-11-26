@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_industrial_gears_vm",
         "vn": "textures/ia/entity/held_industrial_gears_vn",
         "v0": "textures/ia/entity/held_industrial_gears_v0",
+        "vmh": "textures/ia/entity/held_industrial_gears_vmh",
+        "vh": "textures/ia/entity/held_industrial_gears_vh",
         "icon": "textures/ia/items/industrial_gears"
       },
       "geometry": {

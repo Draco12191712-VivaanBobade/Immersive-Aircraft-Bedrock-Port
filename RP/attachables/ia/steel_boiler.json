@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_steel_boiler_vm",
         "vn": "textures/ia/entity/held_steel_boiler_vn",
         "v0": "textures/ia/entity/held_steel_boiler_v0",
+        "vmh": "textures/ia/entity/held_steel_boiler_vmh",
+        "vh": "textures/ia/entity/held_steel_boiler_vh",
         "icon": "textures/ia/items/steel_boiler"
       },
       "geometry": {

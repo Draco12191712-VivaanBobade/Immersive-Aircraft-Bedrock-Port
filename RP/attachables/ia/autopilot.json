@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_autopilot_vm",
         "vn": "textures/ia/entity/held_autopilot_vn",
         "v0": "textures/ia/entity/held_autopilot_v0",
+        "vmh": "textures/ia/entity/held_autopilot_vmh",
+        "vh": "textures/ia/entity/held_autopilot_vh",
         "icon": "textures/ia/items/autopilot"
       },
       "geometry": {

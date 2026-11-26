@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/autocannon_vm",
         "vn": "textures/ia/entity/autocannon_vn",
         "v0": "textures/ia/entity/autocannon_v0",
+        "vmh": "textures/ia/entity/autocannon_vmh",
+        "vh": "textures/ia/entity/autocannon_vh",
         "icon": "textures/ia/items/medium_autocannon"
       },
       "geometry": {

@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_reinforced_airframe_vm",
         "vn": "textures/ia/entity/held_reinforced_airframe_vn",
         "v0": "textures/ia/entity/held_reinforced_airframe_v0",
+        "vmh": "textures/ia/entity/held_reinforced_airframe_vmh",
+        "vh": "textures/ia/entity/held_reinforced_airframe_vh",
         "icon": "textures/ia/items/reinforced_airframe"
       },
       "geometry": {

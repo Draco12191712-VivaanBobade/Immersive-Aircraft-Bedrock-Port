@@ -11,6 +11,8 @@
         "vm": "textures/ia/entity/held_parachute_system_vm",
         "vn": "textures/ia/entity/held_parachute_system_vn",
         "v0": "textures/ia/entity/held_parachute_system_v0",
+        "vmh": "textures/ia/entity/held_parachute_system_vmh",
+        "vh": "textures/ia/entity/held_parachute_system_vh",
         "icon": "textures/ia/items/parachute_system"
       },
       "geometry": {
