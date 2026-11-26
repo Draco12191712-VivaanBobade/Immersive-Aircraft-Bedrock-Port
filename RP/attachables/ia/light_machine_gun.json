@@ -11,8 +11,6 @@
         "vm": "textures/ia/entity/machine_gun_vm",
         "vn": "textures/ia/entity/machine_gun_vn",
         "v0": "textures/ia/entity/machine_gun_v0",
-        "vmh": "textures/ia/entity/machine_gun_vmh",
-        "vh": "textures/ia/entity/machine_gun_vh",
         "icon": "textures/ia/items/light_machine_gun"
       },
       "geometry": {
@@ -20,10 +18,12 @@
         "flat": "geometry.ia.flat"
       },
       "animations": {
-        "pose": "animation.ia.mini.pose",
+        "pose_fp": "animation.ia.mini.pose_fp",
+        "pose_tp": "animation.ia.mini.pose_tp",
         "size": "animation.ia.mini.size",
         "react": "animation.ia.mini.weapon",
-        "flat": "animation.ia.flat.wield"
+        "flat_fp": "animation.ia.flat.wield_fp",
+        "flat_tp": "animation.ia.flat.wield_tp"
       },
       "scripts": {
         "pre_animation": [
@@ -41,10 +41,20 @@
           "v.ia_spin = (v.ia_spin ?? 0) + q.delta_time * (3 + 12 * v.ia_mv);"
         ],
         "animate": [
-          "pose",
+          {
+            "pose_fp": "c.is_first_person"
+          },
+          {
+            "pose_tp": "!c.is_first_person"
+          },
           "size",
           "react",
-          "flat"
+          {
+            "flat_fp": "c.is_first_person"
+          },
+          {
+            "flat_tp": "!c.is_first_person"
+          }
         ]
       },
       "render_controllers": [

@@ -10,9 +10,7 @@
         "default": "textures/ia/entity/debris",
         "default_vm": "textures/ia/entity/debris_vm",
         "default_vn": "textures/ia/entity/debris_vn",
-        "default_v0": "textures/ia/entity/debris_v0",
-        "default_vmh": "textures/ia/entity/debris_vmh",
-        "default_vh": "textures/ia/entity/debris_vh"
+        "default_v0": "textures/ia/entity/debris_v0"
       },
       "geometry": {
         "default": "geometry.ia.debris"

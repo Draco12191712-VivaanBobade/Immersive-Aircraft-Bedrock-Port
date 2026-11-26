@@ -9,7 +9,7 @@
         }
       ],
       "textures": [
-        "Array.ia_vv_default[(q.is_pack_setting_selected('ia:vv_surface', 'height') ? (q.is_pack_setting_enabled('ia:vv_mers') ? 4 : 5) : ((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)))]"
+        "Array.ia_vv_default[((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0))]"
       ],
       "arrays": {
         "textures": {
@@ -17,9 +17,7 @@
             "Texture.default",
             "Texture.default_vm",
             "Texture.default_vn",
-            "Texture.default_v0",
-            "Texture.default_vmh",
-            "Texture.default_vh"
+            "Texture.default_v0"
           ]
         }
       }

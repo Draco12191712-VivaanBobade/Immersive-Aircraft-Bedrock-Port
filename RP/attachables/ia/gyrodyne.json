@@ -11,8 +11,6 @@
         "vm": "textures/ia/entity/gyrodyne_vm",
         "vn": "textures/ia/entity/gyrodyne_vn",
         "v0": "textures/ia/entity/gyrodyne_v0",
-        "vmh": "textures/ia/entity/gyrodyne_vmh",
-        "vh": "textures/ia/entity/gyrodyne_vh",
         "icon": "textures/ia/items/gyrodyne"
       },
       "geometry": {
@@ -20,10 +18,12 @@
         "flat": "geometry.ia.flat"
       },
       "animations": {
-        "pose": "animation.ia.mini.pose",
+        "pose_fp": "animation.ia.mini.pose_fp",
+        "pose_tp": "animation.ia.mini.pose_tp",
         "size": "animation.ia.mini.size",
         "react": "animation.ia.mini.aircraft",
-        "flat": "animation.ia.flat.wield",
+        "flat_fp": "animation.ia.flat.wield_fp",
+        "flat_tp": "animation.ia.flat.wield_tp",
         "spin": "animation.ia.mini.gyrodyne.spin"
       },
       "scripts": {
@@ -42,10 +42,20 @@
           "v.ia_spin = (v.ia_spin ?? 0) + q.delta_time * (3 + 12 * v.ia_mv);"
         ],
         "animate": [
-          "pose",
+          {
+            "pose_fp": "c.is_first_person"
+          },
+          {
+            "pose_tp": "!c.is_first_person"
+          },
           "size",
           "react",
-          "flat",
+          {
+            "flat_fp": "c.is_first_person"
+          },
+          {
+            "flat_tp": "!c.is_first_person"
+          },
           "spin"
         ]
       },

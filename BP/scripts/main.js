@@ -6974,7 +6974,7 @@ function dvm(p) {
           ? Object.keys(AC).map(function (k) {
             return "ia:" + k;
           })
-          : Object.keys(UPG).concat(Object.keys(WPI));
+          : Object.keys(UPG).concat(Object.keys(WPI), ["ia:aircraft_settings"]);
       for (var id of ids) {
         var lf = pc.addItem(new IS(id, 1));
         if (lf) p.dimension.spawnItem(lf, p.location);
@@ -7773,10 +7773,10 @@ w.afterEvents.playerSpawn.subscribe(function (ev) {
   if (!p.getDynamicProperty("ia:gs"))
     sy.runTimeout(function () {
       if (!p.isValid || p.getDynamicProperty("ia:gs")) return;
-      p.setDynamicProperty("ia:gs", true);
       try {
         var lo = p.getComponent("minecraft:inventory").container.addItem(new IS("ia:aircraft_settings", 1));
         if (lo) p.dimension.spawnItem(lo, p.location);
+        p.setDynamicProperty("ia:gs", true);
       } catch (x) { }
     }, 60);
   sy.runTimeout(function () {

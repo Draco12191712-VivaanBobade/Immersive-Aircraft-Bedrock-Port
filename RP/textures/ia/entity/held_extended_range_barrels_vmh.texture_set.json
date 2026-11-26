@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "held_extended_range_barrels_vmh",
-    "metalness_emissive_roughness": "held_extended_range_barrels_mers",
-    "heightmap": "held_extended_range_barrels_heightmap"
-  }
-}

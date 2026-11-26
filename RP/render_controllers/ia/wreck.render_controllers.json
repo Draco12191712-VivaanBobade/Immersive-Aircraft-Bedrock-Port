@@ -35,44 +35,30 @@
             "Texture.t0_vm",
             "Texture.t0_vn",
             "Texture.t0_v0",
-            "Texture.t0_vmh",
-            "Texture.t0_vh",
             "Texture.t1",
             "Texture.t1_vm",
             "Texture.t1_vn",
             "Texture.t1_v0",
-            "Texture.t1_vmh",
-            "Texture.t1_vh",
             "Texture.t2",
             "Texture.t2_vm",
             "Texture.t2_vn",
             "Texture.t2_v0",
-            "Texture.t2_vmh",
-            "Texture.t2_vh",
             "Texture.t3",
             "Texture.t3_vm",
             "Texture.t3_vn",
             "Texture.t3_v0",
-            "Texture.t3_vmh",
-            "Texture.t3_vh",
             "Texture.t4",
             "Texture.t4_vm",
             "Texture.t4_vn",
             "Texture.t4_v0",
-            "Texture.t4_vmh",
-            "Texture.t4_vh",
             "Texture.t5",
             "Texture.t5_vm",
             "Texture.t5_vn",
             "Texture.t5_v0",
-            "Texture.t5_vmh",
-            "Texture.t5_vh",
             "Texture.t6",
             "Texture.t6_vm",
             "Texture.t6_vn",
-            "Texture.t6_v0",
-            "Texture.t6_vmh",
-            "Texture.t6_vh"
+            "Texture.t6_v0"
           ]
         }
       },
@@ -83,7 +69,7 @@
         }
       ],
       "textures": [
-        "Array.ia_wk_tex[q.property('ia:wt') * 6 + ((q.is_pack_setting_selected('ia:vv_surface', 'height') ? (q.is_pack_setting_enabled('ia:vv_mers') ? 4 : 5) : ((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0))))]"
+        "Array.ia_wk_tex[q.property('ia:wt') * 4 + (((q.is_pack_setting_enabled('ia:vv_mers') ? 0 : 2) + (q.is_pack_setting_selected('ia:vv_surface', 'none') ? 1 : 0)))]"
       ],
       "overlay_color": {
         "r": 0.06,

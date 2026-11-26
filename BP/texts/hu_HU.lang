@@ -1,3 +1,5 @@
+pack.name=§6§lImmerzív légi járművek§r §c[BP]§r
+pack.description=§eVanilla stílusú, testreszabható és fejleszthető légi járművek a kétfedelűtől a léghajóig!§r\n\n§7Eredeti mod: §fConczin§r\n§7Bedrock port: §bDraco12191712§r\n§7Licenc: §fGPL v3§r\n§8v1.5.0 "Aerial Combat Update"
 ia.settings.damage=§6§lSérülés, lezuhanások és fegyverek
 ia.settings.flight=§6§lRepülés
 ia.settings.items=§6§lElejtett tárgyak

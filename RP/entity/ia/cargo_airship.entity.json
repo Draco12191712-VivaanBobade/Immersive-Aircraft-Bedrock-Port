@@ -15,11 +15,7 @@
         "tex1_v0": "textures/ia/entity/airship_color_v0",
         "tex0_vm": "textures/ia/entity/cargo_airship_vm",
         "tex0_vn": "textures/ia/entity/cargo_airship_vn",
-        "tex0_v0": "textures/ia/entity/cargo_airship_v0",
-        "tex1_vmh": "textures/ia/entity/airship_color_vmh",
-        "tex1_vh": "textures/ia/entity/airship_color_vh",
-        "tex0_vmh": "textures/ia/entity/cargo_airship_vmh",
-        "tex0_vh": "textures/ia/entity/cargo_airship_vh"
+        "tex0_v0": "textures/ia/entity/cargo_airship_v0"
       },
       "geometry": {
         "banner_0": "geometry.ia.cargo_airship.banner_0",

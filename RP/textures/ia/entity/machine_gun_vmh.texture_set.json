@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "machine_gun_vmh",
-    "metalness_emissive_roughness": "machine_gun_mers",
-    "heightmap": "machine_gun_heightmap"
-  }
-}

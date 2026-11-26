@@ -1,3 +1,5 @@
+pack.name=§6§lImmersiivinen ilma-alus§r §c[BP]§r
+pack.description=§eJoukko vanilla-tyylisiä, muokattavia ja päivitettäviä ilma-aluksia kaksitasoista ilmalaivoihin!§r\n\n§7Alkuperäisen modin tekijä: §fConczin§r\n§7Bedrock-version tekijä: §bDraco12191712§r\n§7Lisenssi: §fGPL v3§r\n§8v1.5.0 "Aerial Combat Update"
 ia.settings.damage=§6§lVahingot, maahansyöksyt ja aseet
 ia.settings.flight=§6§lLentäminen
 ia.settings.items=§6§lPudotukset

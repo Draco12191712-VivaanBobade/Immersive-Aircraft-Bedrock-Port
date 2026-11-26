@@ -18,8 +18,8 @@
     }
   },
   "header": {
-    "name": "§6§lImmersive Aircraft§r §9[RP]§r",
-    "description": "§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.5.0 \"Aerial Combat Update\"",
+    "name": "pack.name",
+    "description": "pack.description",
     "min_engine_version": "1.26.0",
     "uuid": "5e9d3c27-1a8b-4f6e-b4c2-7d0a9e8f1b63",
     "version": "1.5.0"
@@ -65,10 +65,6 @@
         {
           "name": "normal",
           "text": "Normal maps"
-        },
-        {
-          "name": "height",
-          "text": "Heightmaps (experimental)"
         },
         {
           "name": "none",

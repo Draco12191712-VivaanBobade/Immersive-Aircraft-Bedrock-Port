@@ -1,3 +1,5 @@
+pack.name=§6§l몰입형 항공기§r §c[BP]§r
+pack.description=§e복엽기부터 비행선까지, 바닐라 스타일로 꾸미고 업그레이드할 수 있는 항공기 모음!§r\n\n§7원작 모드: §fConczin§r\n§7Bedrock 이식: §bDraco12191712§r\n§7라이선스: §fGPL v3§r\n§8v1.5.0 "Aerial Combat Update"
 ia.settings.damage=§6§l피해, 추락 및 무기
 ia.settings.flight=§6§l비행
 ia.settings.items=§6§l드롭

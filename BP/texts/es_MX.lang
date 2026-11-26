@@ -1,3 +1,5 @@
+pack.name=§6§lAviones Inmersivos§r §c[BP]§r
+pack.description=§e¡Un conjunto de aeronaves de estilo vanilla, personalizables y mejorables, desde biplanos hasta dirigibles!§r\n\n§7Mod original de: §fConczin§r\n§7Port a Bedrock de: §bDraco12191712§r\n§7Licencia: §fGPL v3§r\n§8v1.5.0 "Aerial Combat Update"
 ia.settings.damage=§6§lDaño, accidentes y armas
 ia.settings.flight=§6§lVuelo
 ia.settings.items=§6§lObjetos soltados

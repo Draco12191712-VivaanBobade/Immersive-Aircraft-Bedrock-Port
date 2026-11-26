@@ -1,7 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "held_nether_engine_vh",
-    "heightmap": "held_nether_engine_heightmap"
-  }
-}

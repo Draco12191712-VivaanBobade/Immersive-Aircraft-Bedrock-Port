@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "held_reinforced_airframe_vmh",
-    "metalness_emissive_roughness": "held_reinforced_airframe_mers",
-    "heightmap": "held_reinforced_airframe_heightmap"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "held_sail_vmh",
-    "metalness_emissive_roughness": "held_sail_mers",
-    "heightmap": "held_sail_heightmap"
-  }
-}

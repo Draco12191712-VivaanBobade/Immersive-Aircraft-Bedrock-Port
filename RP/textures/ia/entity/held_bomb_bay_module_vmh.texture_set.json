@@ -1,8 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "held_bomb_bay_module_vmh",
-    "metalness_emissive_roughness": "held_bomb_bay_module_mers",
-    "heightmap": "held_bomb_bay_module_heightmap"
-  }
-}

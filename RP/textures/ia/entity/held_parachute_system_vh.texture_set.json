@@ -1,7 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "held_parachute_system_vh",
-    "heightmap": "held_parachute_system_heightmap"
-  }
-}

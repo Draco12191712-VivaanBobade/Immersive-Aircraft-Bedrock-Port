@@ -1,3 +1,5 @@
+pack.name=§6§lImmersive Aircraft§r §c[BP]§r
+pack.description=§eA set of vanilla style, customizable and upgradable aircraft, from biplanes to airships!§r\n\n§7Original mod by: §fConczin§r\n§7Bedrock port by: §bDraco12191712§r\n§7License: §fGPL v3§r\n§8v1.5.0 "Aerial Combat Update"
 ia.settings.damage=§6§lDamage, crashes and weapons
 ia.settings.flight=§6§lFlight
 ia.settings.items=§6§lDrops

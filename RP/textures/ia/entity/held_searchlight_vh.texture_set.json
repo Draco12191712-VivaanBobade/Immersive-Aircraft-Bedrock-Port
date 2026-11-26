@@ -1,7 +1,0 @@
-{
-  "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "held_searchlight_vh",
-    "heightmap": "held_searchlight_heightmap"
-  }
-}
